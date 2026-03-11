@@ -1,70 +1,27 @@
-############################
 # Python
-############################
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.so
-*.egg-info/
-*.egg
-build/
-dist/
 
-############################
-# Virtual Environment
-############################
-.venv/
-venv/
-env/
-ENV/
+# Virtual env / local env
+.env
+.venv
 
-############################
-# IDE
-############################
-.idea/
-.vscode/
-
-############################
-# OS files
-############################
-.DS_Store
-Thumbs.db
-
-############################
-# Logs
-############################
-*.log
-
-############################
-# Training outputs
-############################
-runs/
-checkpoints/
-artifacts/
-
-############################
-# Dataset
-############################
-data/raw/
+# Data
 data/interim/
 data/processed/
 
-############################
-# Model weights
-############################
-*.pt
-*.pth
-*.ckpt
-*.onnx
+# Generated manifests
+data/manifests/
 
-############################
-# TensorBoard
-############################
-events.out.tfevents*
+# Training artifacts
+artifacts/experiments/**/checkpoints/
+artifacts/experiments/**/tensorboard/
+artifacts/experiments/**/*.pt
+artifacts/experiments/**/*.jsonl
 
-############################
-# Cache
-############################
-.cache/
-*.cache
+# Editor / system
+.vscode/
+.idea/
+.DS_Store
