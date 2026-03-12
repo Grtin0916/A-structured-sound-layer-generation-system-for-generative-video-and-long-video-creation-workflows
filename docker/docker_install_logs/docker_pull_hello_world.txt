@@ -1,0 +1,5 @@
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:85404b3c53951c3ff5d40de0972b1bb21fafa2e8daa235355baf44f33db9dbdd
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest
