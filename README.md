@@ -187,42 +187,143 @@ python src/infer/compare_pt_onnx.py \
 - 当前结果表明 PyTorch 与 ONNX Runtime 前向输出已基本对齐
 - 后续可在此基础上继续进行 ONNX Runtime 推理与 benchmark
 
+#### 6.3 ONNX Runtime 单次推理
+
+ORT 推理脚本路径：
+
+```text
+src/infer/infer_ort.py
+```
+
+执行单次 ORT 推理（推荐先用随机输入验证链路）：
+
+```bash
+python src/infer/infer_ort.py \
+  --config configs/train/baseline.yaml \
+  --onnx artifacts/onnx/baseline_v1.onnx \
+  --provider CPUExecutionProvider \
+  --input-mode random \
+  --input-shape 1,1,64,313 \
+  --seed 42
+```
+
+如需使用真实样本进行推理验证：
+
+```bash
+python src/infer/infer_ort.py \
+  --config configs/train/baseline.yaml \
+  --onnx artifacts/onnx/baseline_v1.onnx \
+  --provider CPUExecutionProvider \
+  --input-mode real \
+  --sample-index 0
+```
+
+说明：
+
+- 当前 ORT 推理默认使用 `baseline_v1.onnx`
+- 当前默认 provider 为 `CPUExecutionProvider`
+- 当前默认输入规格与已导出的固定 shape 保持一致：`(1, 1, 64, 313)`
+
+#### 6.4 ONNX Runtime Benchmark
+
+ORT benchmark 脚本路径：
+
+```text
+src/infer/bench_ort.py
+```
+
+执行 benchmark：
+
+```bash
+python src/infer/bench_ort.py \
+  --config configs/train/baseline.yaml \
+  --onnx artifacts/onnx/baseline_v1.onnx \
+  --provider CPUExecutionProvider \
+  --input-mode random \
+  --input-shape 1,1,64,313 \
+  --warmup 20 \
+  --runs 200 \
+  --csv artifacts/logs/bench_ort_cpu.csv \
+  --markdown docs/benchmarks/ort_cpu_baseline.md
+```
+
+说明：
+
+- 当前 benchmark 统计 `session.run()` 的推理耗时
+- 当前记录指标包括 `P50 / P90 / P95 / P99 / mean / std`
+- 当前 benchmark 结果默认输出为：
+  - `artifacts/logs/bench_ort_cpu.csv`
+  - `docs/benchmarks/ort_cpu_baseline.md`
+
+#### 6.5 Docker 最小运行
+
+Dockerfile 路径：
+
+```text
+docker/ort_cpu.Dockerfile
+```
+
+构建最小 CPU 镜像：
+
+```bash
+docker build \
+  --build-arg http_proxy=http://host.docker.internal:7890 \
+  --build-arg https_proxy=http://host.docker.internal:7890 \
+  --build-arg HTTP_PROXY=http://host.docker.internal:7890 \
+  --build-arg HTTPS_PROXY=http://host.docker.internal:7890 \
+  -f docker/ort_cpu.Dockerfile \
+  -t audio-ort-cpu:latest .
+```
+
+运行容器默认命令：
+
+```bash
+docker run --rm audio-ort-cpu:latest
+```
+
+如需在容器内执行 benchmark：
+
+```bash
+docker run --rm audio-ort-cpu:latest \
+  python src/infer/bench_ort.py \
+  --config configs/train/baseline.yaml \
+  --onnx artifacts/onnx/baseline_v1.onnx \
+  --provider CPUExecutionProvider \
+  --input-mode random \
+  --input-shape 1,1,64,313 \
+  --warmup 20 \
+  --runs 200 \
+  --csv artifacts/logs/bench_ort_cpu.csv \
+  --markdown docs/benchmarks/ort_cpu_baseline.md
+```
+
+说明：
+
+- 当前 Docker 最小镜像用于验证 ORT 推理与 benchmark 链路
+- 当前代理环境下，构建阶段需显式传入代理参数
+- 当前最小镜像目标是先完成可构建、可运行、可复现的 CPU 推理闭环
 ---
 
 ### 7. 输出目录说明
 
-训练输出默认保存在：
-
-```text
-artifacts/experiments/baseline_v1/
-```
-
-其中包括：
-
-- `checkpoints/last.pt`：最后一个 checkpoint
-- `checkpoints/best.pt`：当前最优 checkpoint
-- `tensorboard/`：TensorBoard 日志
-- `metrics.jsonl`：训练指标日志
-- `config_resolved.yaml`：训练时解析后的配置文件
-
-ONNX 相关输出保存在：
+ONNX / ORT / benchmark 相关输出保存在：
 
 ```text
 artifacts/onnx/
 artifacts/logs/
+docs/benchmarks/
 ```
 
 其中包括：
 
 - `artifacts/onnx/baseline_v1.onnx`：导出的 ONNX 模型
 - `artifacts/logs/onnx_parity.md`：PyTorch / ONNX 对齐校验报告
+- `artifacts/logs/bench_ort_cpu.csv`：ORT benchmark 结构化结果
+- `docs/benchmarks/ort_cpu_baseline.md`：ORT benchmark 文字化报告
 
 ---
 
 ## 每日更新小结
-
-
-
 ### 2026-03-9/3.10-周一/周二
 
 - 完成 ESC-50 / ESC-10 最小数据集准备与处理流程
@@ -246,19 +347,26 @@ artifacts/logs/
 - 跑通周三主线任务的最小导出与对齐闭环
 
 ---
+### 2026-03-12-周四
 
+- 完成 `src/infer/infer_ort.py` 编写与 ORT 单次推理链路验证
+- 完成 `src/infer/bench_ort.py` 编写与 benchmark 测试流程搭建
+- 完成 `artifacts/logs/bench_ort_cpu.csv` 结果导出
+- 完成 `docs/benchmarks/ort_cpu_baseline.md` benchmark 报告记录
+- 完成 `docker/ort_cpu.Dockerfile` 最小 CPU 镜像编写
+- 完成周四主线任务的 ORT 推理、benchmark 与 Docker 最小闭环
+
+--- 
 ## 当前阶段完成内容
 
-当前已完成 `baseline_v1` 的最小训练与导出闭环：
+### 当前阶段完成内容
 
-- 完成 ESC-10 miniset 的下载、筛选与预处理
-- 完成 `wav + sidecar json + manifest` 数据组织
-- 完成 manifest 构建脚本
-- 完成 dataset 读取逻辑
-- 完成最小 mel autoencoder baseline
-- 完成训练脚本，支持 train / valid
-- 完成 checkpoint 保存（last / best）
-- 完成 TensorBoard 记录与可视化验证
+- 完成 baseline v1 数据闭环验证
+- 完成最小可训练 pipeline 搭建
+- 完成 checkpoint 保存与 TensorBoard 记录
 - 完成 ONNX 导出脚本
 - 完成 PyTorch / ONNX 前向结果对齐校验
 - 完成 `baseline_v1.onnx` 导出与 parity report 记录
+- 完成 ONNX Runtime 单次推理脚本
+- 完成 ORT benchmark 脚本与结果记录
+- 完成 Docker 最小 CPU 推理镜像闭环
