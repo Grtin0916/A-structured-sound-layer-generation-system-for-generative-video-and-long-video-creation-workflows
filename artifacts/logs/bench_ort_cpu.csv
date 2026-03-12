@@ -1,0 +1,2 @@
+onnx,provider_request,provider_actual,input_mode,input_source,input_shape,output_shape,warmup,runs,batch_size,intra_op_threads,inter_op_threads,min_ms,p50_ms,p90_ms,p95_ms,p99_ms,max_ms,mean_ms,std_ms,throughput_samples_per_sec
+artifacts/onnx/baseline_v1.onnx,CPUExecutionProvider,['CPUExecutionProvider'],random,"random(shape=(1, 1, 64, 313), seed=42)","(1, 1, 64, 313)","(1, 1, 64, 313)",20,200,1,0,0,17.1482610021485,23.73488850571448,28.899052998167463,29.766481501428643,31.599205045786203,38.28602400608361,24.247348905482795,3.395456652935995,41.24162207992482
