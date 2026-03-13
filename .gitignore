@@ -25,3 +25,28 @@ artifacts/experiments/**/*.jsonl
 .vscode/
 .idea/
 .DS_Store
+
+# local training / export artifacts
+artifacts/experiments/
+artifacts/onnx/
+checkpoints/
+runs/
+
+# local raw data
+data/raw/
+
+# optional local notebooks
+notebooks/LeetCode/
+notebooks/SLAM-VIO/
+# local training / export artifacts
+artifacts/experiments/
+artifacts/onnx/
+checkpoints/
+runs/
+
+# local raw data
+data/raw/
+
+# optional local notebooks
+notebooks/LeetCode/
+notebooks/SLAM-VIO/

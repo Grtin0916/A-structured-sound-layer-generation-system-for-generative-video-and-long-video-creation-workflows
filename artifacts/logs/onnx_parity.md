@@ -35,6 +35,5 @@
 - ONNX min/max: `-9.7427082062` / `3.8616178036`
 
 ## Conclusion
-结论：baseline_v1 在 CPU / ONNX Runtime 下与 PyTorch 前向结果对齐通过。
-当前固定输入规格为 (1, 1, 64, 313)，mean abs error=5.1313e-06，max abs error=1.04904e-05，allclose=True。
-可进入周四 ORT 推理与 bench 阶段。
+当前样本下，PyTorch 与 ONNX Runtime 输出已经完成逐元素对齐检查。
+如 `Allclose=True` 且误差量级很小，可认为周三主线的 parity check 基本通过。
