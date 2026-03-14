@@ -343,9 +343,8 @@ docker run --rm audio-ort-cpu:latest
 
 ## 当前阶段总结
 
-到目前为止，这个仓库已经完成了第一阶段最重要的几件事：
-
-- 把数据、训练、导出、推理、benchmark 串成了一条可复验主线
-- 把 `baseline_v1` 做成了一个有 checkpoint、有日志、有 ONNX、有 benchmark 的最小工程样本
-- 把周内零散的实验操作收成了可执行脚本与清晰的 README 入口
-- 为后续继续推进 AudioCraft、音频生成模型、结构化声音层建模和更完整系统实现打下了工程基础
+## Week 1 Evidence Index
+- Weekly summary: `docs/weekly/2026-03-14_week01_summary.md`
+- Postmortem: `docs/postmortems/2026-03-14_week01_postmortem.md`
+- ORT benchmark: `docs/benchmarks/ort_cpu_baseline.md`
+- Baseline result note: `results/baseline_v1.md`

@@ -17,24 +17,27 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 WORKDIR /workspace
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get -o Acquire::Retries=5 update && \
+    apt-get -o Acquire::Retries=5 install -y --no-install-recommends \
     ffmpeg \
-    libsndfile1 \
-    && rm -rf /var/lib/apt/lists/*
+    libsndfile1 && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install --upgrade pip
 
 RUN pip install \
-    numpy \
-    pyyaml \
-    soundfile \
-    librosa \
-    tqdm \
-    tensorboard \
-    onnx \
-    onnxruntime \
-    torch \
-    torchaudio
+ numpy \
+ pyyaml \
+ soundfile \
+ librosa \
+ tqdm \
+ tensorboard \
+ onnx \
+ onnxruntime \
+ onnxscript  \
+ torch \
+ torchaudio \
+ torchcodec
 
 COPY . /workspace
 ENV PYTHONPATH=/workspace

@@ -23,6 +23,20 @@
   - 这一版 ONNX 可以作为 week01 基线证据
   - 但还不能宣称“对动态 shape 已充分验证”
 
+## 问题 B：Docker 镜像中 torchaudio.load 依赖未闭合
+- 现象：
+  - 容器内执行 `bash scripts/run_demo.sh demo` 时，`torchaudio.load()` 报错：
+    `ImportError: TorchCodec is required for load_with_torchcodec`
+- 根因：
+  - Dockerfile 安装了 `torch` 和 `torchaudio`，但没有显式安装 `torchcodec`
+  - 同时依赖未做版本钉住，存在“latest 漂移”风险
+- 修复：
+  - 在 Dockerfile 中补装 `torchcodec`
+  - 后续将 `torch` / `torchaudio` 版本固定为本地已验证版本
+- 影响范围：
+  - 影响容器内数据集读取、ONNX 导出链路
+  - 不影响本地已完成的 Week 1 主线证据
+
 ## 3. 指标证据
 - Input shape: `(1, 1, 64, 313)`
 - Mean abs error: `0.0000051313`
