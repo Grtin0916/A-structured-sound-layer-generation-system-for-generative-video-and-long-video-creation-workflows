@@ -1,0 +1,42 @@
+]1341;command_started;command=6563686f20223d3d3d3d3d20676974203d3d3d3d3d22===== git =====
+bf418ad
+
+===== python =====
+Python 3.9.23
+
+===== packages =====
+Name: torch
+Version: 2.1.0+cu118
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: https://pytorch.org/
+Author: PyTorch Team
+Author-email: packages@pytorch.org
+License: BSD-3
+Location: /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages
+Requires: filelock, fsspec, jinja2, networkx, sympy, triton, typing-extensions
+Required-by: demucs, dora_search, encodec, flashy, julius, openunmix, torchaudio, torchdata, torchdiffeq, torchmetrics, torchtext, torchvision, xformers
+---
+Name: onnx
+Version: 1.19.1
+Summary: Open Neural Network Exchange
+Home-page: https://onnx.ai/
+Author: 
+Author-email: ONNX Contributors <onnx-technical-discuss@lists.lfaidata.foundation>
+License: Apache License v2.0
+Location: /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages
+Requires: ml_dtypes, numpy, protobuf, typing_extensions
+Required-by: 
+---
+Name: onnxruntime
+Version: 1.19.2
+Summary: ONNX Runtime is a runtime accelerator for Machine Learning models
+Home-page: https://onnxruntime.ai
+Author: Microsoft Corporation
+Author-email: onnxruntime@microsoft.com
+License: MIT License
+Location: /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages
+Requires: coloredlogs, flatbuffers, numpy, packaging, protobuf, sympy
+Required-by: 
+
+===== docker =====
+Docker version 28.1.1, build 4eba377

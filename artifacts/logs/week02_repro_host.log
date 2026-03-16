@@ -1,0 +1,66 @@
+[STEP] export onnx
+/home/GRT/work/audio_engineering_repo_skeleton_v1/src/models/model.py:132: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if out.shape[-2:] != x.shape[-2:]:
+================================================================================
+[OK] ONNX export finished.
+[Info] Config      : configs/train/baseline.yaml
+[Info] Checkpoint  : artifacts/experiments/baseline_v1/checkpoints/best.pt
+[Info] Output ONNX : artifacts/onnx/baseline_v1.onnx
+[Info] Device      : cpu
+[Info] Opset       : 17
+[Info] Example src : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
+[Info] Input name  : mel
+[Info] Output name : recon_mel
+[Info] Input shape : (1, 1, 64, 313)
+[Info] Output shape: (1, 1, 64, 313)
+================================================================================
+[OK] onnx.checker.check_model passed.
+[STEP] compare pytorch and onnxruntime
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000051313
+[Info] Max abs err   : 0.0000104904
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity.md
+================================================================================
+[STEP] run onnxruntime inference
+================================================================================
+[OK] ORT inference finished.
+[Info] ONNX path        : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req     : CPUExecutionProvider
+[Info] Provider actual  : ['CPUExecutionProvider']
+[Info] Input source     : random(shape=(1, 1, 64, 313), seed=42)
+[Info] Input name       : mel
+[Info] Output name      : recon_mel
+[Info] Input shape      : (1, 1, 64, 313)
+[Info] Output shape     : (1, 1, 64, 313)
+[Info] Output min / max : -3.984205 / 2.514611
+[Info] Intra threads    : 0
+[Info] Inter threads    : 0
+================================================================================
+[STEP] benchmark onnxruntime
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : random(shape=(1, 1, 64, 313), seed=42)
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 25.9407
+[Info] P95 ms          : 31.4442
+[Info] P99 ms          : 34.2762
+[Info] Mean ms         : 25.5162
+[Info] Std ms          : 3.9204
+[Info] Throughput      : 39.1907 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_cpu.csv
+[Info] Markdown        : docs/benchmarks/ort_cpu_baseline.md
+================================================================================
