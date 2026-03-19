@@ -50,3 +50,6 @@ data/raw/
 # optional local notebooks
 notebooks/LeetCode/
 notebooks/SLAM-VIO/
+
+# cpp
+build/
