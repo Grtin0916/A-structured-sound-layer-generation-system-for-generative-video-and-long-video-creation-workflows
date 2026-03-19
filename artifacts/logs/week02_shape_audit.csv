@@ -1,0 +1,7 @@
+case_name,input_name,model_declared_shape,test_shape,expected_pass,actual_pass,match_expectation,output_shape,note,error
+valid_ref,mel,"[1, 1, 64, 313]","(1, 1, 64, 313)",True,True,True,"(1, 1, 64, 313)",reference fixed shape,
+valid_same_shape_alt,mel,"[1, 1, 64, 313]","(1, 1, 64, 313)",True,True,True,"(1, 1, 64, 313)",same legal shape,
+invalid_width_minus_1,mel,"[1, 1, 64, 313]","(1, 1, 64, 312)",False,False,True,None,width mismatch,[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Got invalid dimensions for input: mel for the following indices  index: 3 Got: 312 Expected: 313  Please fix either the inputs/outputs or the model.
+invalid_width_plus_1,mel,"[1, 1, 64, 313]","(1, 1, 64, 314)",False,False,True,None,width mismatch,[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Got invalid dimensions for input: mel for the following indices  index: 3 Got: 314 Expected: 313  Please fix either the inputs/outputs or the model.
+invalid_channel_2,mel,"[1, 1, 64, 313]","(1, 2, 64, 313)",False,False,True,None,channel mismatch,[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Got invalid dimensions for input: mel for the following indices  index: 1 Got: 2 Expected: 1  Please fix either the inputs/outputs or the model.
+invalid_batch_2,mel,"[1, 1, 64, 313]","(2, 1, 64, 313)",False,False,True,None,batch mismatch,[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Got invalid dimensions for input: mel for the following indices  index: 0 Got: 2 Expected: 1  Please fix either the inputs/outputs or the model.

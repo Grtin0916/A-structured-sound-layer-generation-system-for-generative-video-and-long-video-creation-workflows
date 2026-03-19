@@ -13,37 +13,45 @@ ENV HTTPS_PROXY=${HTTPS_PROXY}
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONPATH=/workspace
 
 WORKDIR /workspace
 
 RUN apt-get -o Acquire::Retries=5 update && \
     apt-get -o Acquire::Retries=5 install -y --no-install-recommends \
+    bash \
     ffmpeg \
     libsndfile1 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN python -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip && \
+    pip install \
+      numpy \
+      pyyaml \
+      soundfile \
+      librosa \
+      tqdm \
+      tensorboard \
+      onnx \
+      onnxruntime \
+      onnxscript \
+      torch \
+      torchaudio \
+      torchcodec
 
-RUN pip install \
- numpy \
- pyyaml \
- soundfile \
- librosa \
- tqdm \
- tensorboard \
- onnx \
- onnxruntime \
- onnxscript  \
- torch \
- torchaudio \
- torchcodec
+COPY configs /workspace/configs
+COPY scripts /workspace/scripts
+COPY src /workspace/src
+COPY data /workspace/data
+COPY results /workspace/results
+COPY docs /workspace/docs
+COPY README.md /workspace/README.md
+COPY artifacts/experiments /workspace/artifacts/experiments
+COPY artifacts/onnx /workspace/artifacts/onnx
 
-COPY . /workspace
-ENV PYTHONPATH=/workspace
+RUN mkdir -p \
+    /workspace/artifacts/logs \
+    /workspace/docs/benchmarks
 
-CMD ["python", "src/infer/infer_ort.py", \
-     "--config", "configs/train/baseline.yaml", \
-     "--onnx", "artifacts/onnx/baseline_v1.onnx", \
-     "--provider", "CPUExecutionProvider", \
-     "--input-mode", "random"]
+CMD ["bash", "scripts/run_demo.sh", "demo"]
