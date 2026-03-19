@@ -196,3 +196,8 @@ artifacts/experiments/baseline_v1/
 - 增强评估指标与误差分析
 - 尝试更强的时频建模结构
 - 逐步从最小重建任务扩展到更贴近目标任务的声音层生成任务
+
+
+## Related experiment cards
+
+- `results/baseline_v1_week02_experiment_card.md`：记录 Week02 阶段的 ONNX 导出、PT/ORT 对齐、ORT CPU smoke 与 benchmark 闭环验证。
