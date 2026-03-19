@@ -53,12 +53,21 @@ jobs:
       - name: Run smoke demo
         run: |
           bash scripts/run_demo.sh demo 2>&1 | tee artifacts/logs/week02_ci_smoke_github.log
+          
+      - name: List smoke outputs
+        if: always()
+        run: |
+          pwd
+          ls -lh artifacts/onnx || true
+          ls -lh artifacts/logs || true
+          ls -lh docs/benchmarks || true
 
       - name: Upload smoke artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: week02-smoke-artifacts
+          if-no-files-found: error
           path: |
             artifacts/onnx/baseline_v1.onnx
             artifacts/logs/onnx_parity.md
