@@ -115,3 +115,94 @@ Week 2 继续采用以下工程基线：
 3. 周三：做 shape stability / export audit；
 4. 周四：准备 Docker 对照与文档补齐；
 5. 周末前：更新 README、周报和结果摘要。
+
+## 2026-03-19 Update
+
+### Decision Update
+
+The current primary smoke path is anchored on `baseline_v1`.
+
+The validated minimum path is:
+
+    bash scripts/run_demo.sh demo
+
+This path currently covers:
+
+1. ONNX export
+2. PyTorch vs ONNXRuntime parity check
+3. ONNXRuntime CPU inference
+4. ORT CPU benchmark
+
+The path has now been validated in both:
+
+- local host environment
+- GitHub Actions smoke workflow
+
+### Current Mainline Decision
+
+`baseline_v1` is the only component that enters the Week02 main smoke path.
+
+This means the current repository mainline is defined as:
+
+- reproducible baseline checkpoint
+- ONNX exportability
+- PT / ORT parity
+- ORT CPU smoke benchmark
+- CI reproducibility through `.github/workflows/smoke.yml`
+
+### Deferred Modules
+
+The following modules are explicitly deferred from the current main smoke path:
+
+- **AudioCraft**
+  - role: future controllable generation / structured audio layer generation candidate
+  - reason for deferral: not required for validating the current minimum reproducible inference/export path
+
+- **AudioLDM / diffusion-based audio generation**
+  - role: future ambience / foley / open-domain audio generation candidate
+  - reason for deferral: generation capability is not a prerequisite for the current baseline smoke contract
+
+- **Spleeter / source separation tools**
+  - role: future data preparation / vocal-background separation utility
+  - reason for deferral: useful as tooling support, but not part of the Week02 main inference/export validation chain
+
+### Why This Decision
+
+The current project phase prioritizes:
+
+- minimum reproducibility
+- traceable experiment records
+- CI-validatable export/inference path
+- stable repository structure
+
+Adding generation or separation modules into the mainline before the baseline smoke contract is stabilized would increase scope, reduce debuggability, and weaken weekly deliverable clarity.
+
+### Consequences
+
+Positive:
+
+- the repository now has a clear Week02 technical spine
+- smoke validation is measurable and repeatable
+- future modules can be attached against a stable baseline
+
+Trade-off:
+
+- current mainline does not yet represent the final structured sound layer generation system
+- generation-side capability is intentionally postponed
+
+### Entry Criteria for Future Bridge-In
+
+A deferred module can enter the mainline only if it satisfies at least one of the following:
+
+1. it directly strengthens the current reproducible export/inference path;
+2. it becomes necessary for the next milestone’s system demonstration;
+3. it has a minimal runnable interface and does not break current smoke stability;
+4. it can be documented with clear inputs, outputs, artifacts, and rollback boundaries.
+
+### Immediate Next Focus
+
+The immediate follow-up remains:
+
+- keeping `baseline_v1` as the stable smoke anchor;
+- improving repository entry documentation;
+- continuing weekly algorithm notes and engineering record consolidation.
