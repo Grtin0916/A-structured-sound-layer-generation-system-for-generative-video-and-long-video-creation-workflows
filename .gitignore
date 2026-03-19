@@ -53,3 +53,9 @@ notebooks/SLAM-VIO/
 
 # cpp
 build/
+
+# allow week02 smoke checkpoint
+!artifacts/experiments/
+!artifacts/experiments/baseline_v1/
+!artifacts/experiments/baseline_v1/checkpoints/
+!artifacts/experiments/baseline_v1/checkpoints/best.pt
