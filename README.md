@@ -53,7 +53,7 @@ cd ~/work/audio_engineering_repo_skeleton_v1
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 ```
 
-### 2. 2026-3-exi13 周五主线最小复现
+### 2. 2026-03-20 周五主线最小复现
 
 如果你只想快速复现当前已经验证通过的 ONNX / ORT 链路，直接运行：
 

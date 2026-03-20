@@ -1,0 +1,19 @@
+{
+  "path": "data/interim/esc50_raw/audio/1-155858-D-25.wav",
+  "exists": true,
+  "format_name": "wav",
+  "format_long_name": "WAV / WAVE (Waveform Audio)",
+  "size_bytes": 441044,
+  "bit_rate": 705670,
+  "duration_sec_ffprobe": 5.0,
+  "stream_types": [
+    "audio"
+  ],
+  "num_streams": 1,
+  "audio_codec": "pcm_s16le",
+  "audio_sr_ffprobe": 44100,
+  "audio_channels_ffprobe": 1,
+  "audio_sr": 44100,
+  "audio_channels": 1,
+  "audio_duration_sec_librosa": 5.0
+}

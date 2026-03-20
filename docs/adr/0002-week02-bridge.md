@@ -102,7 +102,7 @@ Week 2 继续采用以下工程基线：
 - Version freeze:
   `artifacts/logs/week02_versions.txt`
 - Repro audit:
-  `docs/postmortems/week02_repro_audit.md`
+  `docs/postmortems/2026-03-16_week02_repro_audit.md`
 - Parity report:
   `artifacts/logs/onnx_parity.md`
 - Benchmark:
@@ -206,3 +206,35 @@ The immediate follow-up remains:
 - keeping `baseline_v1` as the stable smoke anchor;
 - improving repository entry documentation;
 - continuing weekly algorithm notes and engineering record consolidation.
+
+## 2026-03-20 Update
+
+### Tooling Boundary Clarification
+
+A new utility prototype, `tools/media_probe/probe_media.py`, is introduced in Week 02 as a tooling-side helper.
+
+Its role is limited to:
+
+- probing audio/video container and stream metadata via `ffprobe`
+- optionally enriching audio metadata with `librosa`
+- optionally enriching video metadata with `cv2`
+- producing JSON summaries for dataset intake and future pipeline audits
+
+`media_probe` is **not** part of the current baseline main smoke path.
+
+### Why It Stays Outside Main Smoke
+
+1. the current main smoke contract is still centered on `baseline_v1` export/inference reproducibility;
+2. media probing is a support capability, not a prerequisite for ONNX/ORT validation;
+3. video-related dependencies may introduce environment drift, so the tool remains isolated from the baseline contract;
+4. the tool is useful now for data auditing, but it should not weaken the simplicity of the current smoke path.
+
+### Consequence
+
+`tools/media_probe/` is accepted as a tooling-layer bridge component, while the repository mainline remains unchanged:
+
+- `baseline_v1`
+- ONNX export
+- PT / ORT parity
+- ORT CPU benchmark
+- CI smoke reproducibility
