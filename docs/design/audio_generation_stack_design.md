@@ -1,335 +1,545 @@
-# Audio Generation Stack Design (Week 02 draft)
+# audio_generation_stack_design
 
-## 1. 背景
+## 1. Purpose
 
-当前仓库已经完成 `baseline_v1` 的最小可复现闭环，覆盖：
+This document defines the long-horizon audio generation stack for this repository.
 
-- 数据准备
-- baseline 训练
-- ONNX 导出
-- PT / ORT 对齐
-- ORT CPU 推理
-- benchmark
-- Docker 下的最小 CPU 验证
+The goal is **not** to claim that the full video-to-audio generation system is already implemented.
+The goal is to make the repository structurally ready for that system by clearly separating:
 
-这条链路解决的是“工程主干先站稳”的问题，但还没有覆盖未来系统真正需要的媒体审计、音频生成、素材分离与复杂工作流拼接能力。
+- the current stable baseline path
+- the neutral media tool layer
+- future generation backbones
+- future separation and preprocessing utilities
+- future workflow orchestration and deployment paths
 
-因此，Week 02 的桥接目标不是把所有模块强行塞进主线，而是先建立一套清晰的栈分层与接入边界。
-
----
-
-## 2. 当前设计目标
-
-本阶段目标不是追求功能最多，而是追求：
-
-1. 主线稳定
-2. 工具位先落地
-3. 新模块先分层，不乱入主 smoke
-4. 后续扩展时输入输出边界明确
-5. 环境依赖冲突可控
+At the end of Week 2, the repository already has a stable engineering baseline centered on `baseline_v1`.
+This design document explains how that baseline connects to the future structured sound-layer generation system without polluting the current supported runtime.
 
 ---
 
-## 3. 分层结构
+## 2. Design Goals
 
-### 3.1 主线基座层：`baseline_v1`
+The stack is designed around the following goals:
 
-角色：
+1. Keep one stable and reproducible baseline path.
+2. Make future audio generation modules easy to attach.
+3. Separate tool-layer infrastructure from the main runtime spine.
+4. Support future video-conditioned or workflow-conditioned audio generation.
+5. Make deployment, benchmarking, and later service integration easier.
+6. Keep repository structure explainable and maintainable over multiple weeks.
 
-- 当前唯一受支持的工程主线模型
-- 当前 smoke / benchmark / CI 的锚点
-- 当前仓库“可复验、可比对、可部署”的最小闭环
+In plain terms:
 
-当前责任范围：
-
-- PyTorch checkpoint
-- ONNX export
-- PT / ORT parity
-- ORT CPU inference
-- benchmark
-- CI smoke
-
-结论：
-
-`baseline_v1` 继续作为 Week 02 的唯一主线，不被其他模块替代。
+- the current repo must stay runnable,
+- future growth must stay possible,
+- and the boundaries must stay clear.
 
 ---
 
-### 3.2 工具层：`tools/media_probe`
+## 3. Non-Goals for the Current Stage
 
-角色：
+This document does **not** assume the repository already supports:
 
-- 媒体探针工具
-- 在素材入库或生成链路接入前做基础审计
-- 输出 JSON，作为后续 manifest、数据检查、资产治理的前置工具
+- full video-to-audio generation
+- production-grade long-form soundtrack synthesis
+- tightly integrated AudioCraft / AudioLDM / Spleeter runtime
+- end-to-end serving with Java / gRPC / Kubernetes
+- final deployment-scale performance optimization
 
-当前责任范围：
+Those are future stages.
 
-- 通过 `ffprobe` 读取容器和流信息
-- 通过 `librosa` 补充音频采样率、时长、声道数
-- 通过 `cv2`（可选）补充视频帧率、宽高与帧数
-
-结论：
-
-`media_probe` 属于工具层，不进入当前 baseline 主 smoke 路径。
+Week 2 only defines where these things belong and how they should connect later.
 
 ---
 
-### 3.3 未来生成层：AudioCraft
+## 4. System View
 
-角色预期：
+The long-term target system can be understood as a layered stack.
 
-- 未来可控音频生成主候选
-- 更贴近“结构化声音层生成”的目标系统方向
-- 用于后续构建声音层、片段级生成、条件控制与组合调度
+### Layer A: Stable baseline spine
 
-当前状态：
-
-- 保持为后续桥接对象
-- 仅进行仓库层面的定位与设计，不纳入本周主 smoke
-
-结论：
-
-AudioCraft 是未来主生成候选，但现在不应该挤占 `baseline_v1` 的工程主线位置。
-
----
-
-### 3.4 未来扩展生成层：AudioLDM
-
-角色预期：
-
-- 开域音频生成、环境音生成、foley 候选
-- 可作为扩散路线的补充生成模块
-
-当前状态：
-
-- 暂不进入主线
-- 先作为设计层面的候选分支存在
-
-结论：
-
-AudioLDM 是候选桥接模块，不是当前仓库的主 spine。
-
----
-
-### 3.5 数据准备与分离工具层：Spleeter
-
-角色预期：
-
-- 用于人声/伴奏或前景/背景的分离
-- 可在后续数据清洗、素材拆分、stem 构建中提供辅助能力
-
-当前状态：
-
-- 不进入当前 baseline smoke 路径
-- 只保留为工具层候选
-
-结论：
-
-Spleeter 的价值在数据准备和资产预处理，不在当前导出/推理主合同中。
-
----
-
-## 4. 为什么现在必须分层，而不是强行并线
-
-原因很现实：
-
-1. 当前项目最稳的部分是 `baseline_v1` 的导出/推理闭环；
-2. AudioCraft / AudioLDM / Spleeter 解决的是“未来系统能力”，不是“本周最小可复现交付”；
-3. 工具依赖和生成依赖往往比 baseline 更重、更杂、更容易发生版本冲突；
-4. 如果现在把所有模块强行塞进一个环境、一个 smoke、一个 README，调试成本会立刻爆炸。
-
-一句话总结就是：
-
-> 先把主干钉死，再把支路按层接上；别上来就把全家桶焊在一起。
-
----
-
-## 5. 环境隔离原则
-
-这是当前最需要写清楚的部分。
-
-本周在尝试安装 `opencv-python` 之后，`numpy` 从 `1.26.4` 漂移到了 `2.0.2`，已经出现依赖冲突告警。这个现象本身就说明：
-
-- 媒体工具依赖
-- 训练 / 推理依赖
-- Web / UI 或其他第三方依赖
-
-并不适合长期共栈。
-
-因此，后续建议采用分环境策略：
-
-### 5.1 baseline 环境
-
-用于：
-
-- PyTorch 训练
-- ONNX 导出
-- ORT 推理
-- benchmark
-- CI 对齐
-
-要求：
-
-- 版本稳定
-- 只服务主线
-- 不随意安装媒体工具依赖
-
-### 5.2 media 工具环境
-
-用于：
-
-- `ffprobe`
-- `librosa`
-- `cv2`
-- 未来批量媒体审计工具
-
-要求：
-
-- 与 baseline 解耦
-- 可以容纳视频工具链依赖
-- 不直接承载主 smoke
-
-### 5.3 生成实验环境
-
-用于：
-
-- AudioCraft
-- AudioLDM
-- 未来生成侧试验
-
-要求：
-
-- 独立演化
-- 与 baseline 的复现合同分离
-- 通过文档约定输入输出，不靠环境混装解决集成问题
-
----
-
-## 6. 输入输出边界
-
-### 6.1 `media_probe` 输入
-
-输入：
-
-- 单个音频或视频文件路径
-
-输出：
-
-- 单个 JSON 摘要
-
-用途：
-
-- 媒体资产预检查
-- manifest 构建前元信息确认
-- 未来批处理脚本的基础单元
-
-### 6.2 `baseline_v1` 输入
-
-输入：
-
-- 已处理好的音频数据
-- manifest
-- 训练配置
-
-输出：
-
-- checkpoint
-- ONNX
-- parity report
-- benchmark report
-
-### 6.3 未来生成模块输入
-
-输入可能包括：
-
-- 文本条件
-- 参考音频
-- 分层控制信号
-- 时间段级调度信息
-
-输出可能包括：
-
-- 音频片段
-- 背景层 / 前景层 / Foley 层
-- 中间 stem 或可组合素材
-
----
-
-## 7. 当前主 smoke 合同
-
-截至 Week 02，主 smoke 合同保持不变：
+Current owner:
 
 - `baseline_v1`
+
+Responsibilities:
+
+- dataset loading
+- training
+- checkpoint saving
 - ONNX export
-- PT / ORT parity
-- ORT CPU benchmark
-- CI smoke reproducibility
+- PyTorch vs ONNX Runtime parity
+- ONNX Runtime inference
+- CPU benchmark
+- Docker replay
+- CI smoke
 
-下列模块明确不进入当前主 smoke：
+This is the current supported engineering path.
 
-- `tools/media_probe`
-- AudioCraft
-- AudioLDM
+### Layer B: Neutral media tool layer
+
+Current owner:
+
+- `tools/media_probe/`
+
+Responsibilities:
+
+- inspect audio/video files
+- extract metadata
+- provide input contracts for later workflow assembly
+- reduce ambiguity before generation or evaluation stages
+
+This layer is infrastructure, not the main model path.
+
+### Layer C: Future generation backbones
+
+Planned candidates:
+
+- AudioCraft / MusicGen / AudioGen
+- AudioLDM family
+
+Responsibilities:
+
+- text-to-audio generation
+- background / ambience generation
+- Foley-like sound generation
+- controllable audio content generation
+
+These modules are staged, not default.
+
+### Layer D: Future separation / preprocessing utilities
+
+Planned candidate:
+
 - Spleeter
 
-原因不是它们没价值，而是当前还不到把它们绑进主链的时候。
+Responsibilities:
+
+- source separation
+- stem extraction
+- preprocessing for layered generation workflows
+- possible support for evaluation and remix-style workflows
+
+This module is also staged, not default.
+
+### Layer E: Workflow orchestration and serving
+
+Future scope:
+
+- service wrapper
+- workflow chaining
+- deployment contracts
+- observability
+- performance regression tracking
+
+This layer is not active yet, but the current repository should be built so that this layer can grow on top of it later.
 
 ---
 
-## 8. Week 02 已落地的桥接成果
+## 5. Why the Stack Is Split This Way
 
-当前已完成的最小桥接成果：
+If all modules are merged into one runtime too early, the repository becomes hard to debug, hard to reproduce, and hard to explain.
 
-1. 明确了主线与桥接模块边界；
-2. 在 `tools/media_probe/` 中落地了媒体探针原型；
-3. 已完成对真实 `.wav` 样本的探测与日志留档；
-4. 将“媒体审计”从概念变成了仓库内真实存在的工具位。
+Typical failure mode:
 
----
+- a baseline exists
+- a probe tool exists
+- a generation library exists
+- a separation tool exists
+- all of them get mixed into one "demo"
+- nobody can tell which part is actually stable
 
-## 9. 风险与约束
+This design intentionally avoids that trap.
 
-### 9.1 风险
+The current principle is:
 
-- 依赖冲突导致 baseline 环境被污染
-- 工具层和主线混栈导致 smoke 不稳定
-- 未来模块太早并线，仓库复杂度失控
+- baseline spine stays small and reliable
+- tools stay neutral
+- future modules get explicit landing zones
+- integration happens only after boundaries are written down
 
-### 9.2 约束
-
-- 本周不追求生成效果展示
-- 本周不追求多模块统一环境
-- 本周只要求把桥接关系和工具位落地清楚
-
----
-
-## 10. 下一步建议
-
-### 10.1 近端动作
-
-1. 固化 `media_probe` 的 README 与 smoke 日志
-2. 修正 README 和 ADR 中的路径/命名问题
-3. 回滚或隔离当前被 `opencv-python` 改动过的依赖环境
-4. 完成本周 DSA 记录补齐
-
-### 10.2 后续动作
-
-1. 让 `media_probe` 支持目录批量扫描
-2. 增加 CSV / JSONL 汇总输出
-3. 为后续 manifest 或资产表接入统一字段合同
-4. 在独立环境中验证 AudioCraft / AudioLDM / Spleeter 的最小入口
-5. 再决定哪些模块值得正式桥接进下周系统演示链路
+That is slower in appearance, but much safer in engineering terms.
 
 ---
 
-## 11. 结论
+## 6. Current Module Roles
 
-当前仓库的正确推进方式不是“把所有音频模块一次性装进去”，而是：
+### 6.1 `baseline_v1`
 
-- 保住 `baseline_v1` 这条稳定主干
-- 把 `media_probe` 作为工具层桥接能力落下来
-- 把生成与分离模块保留为后续扩展位
-- 通过环境隔离和文档边界控制复杂度
+Role:
 
-这条路线更慢一点，但不会把仓库做成依赖地雷阵。
+- current engineering anchor
+- current smoke baseline
+- reference point for ONNX / ORT export and inference validation
+- benchmark center for Week 1–2
+
+Why it exists:
+
+- to provide a stable and reproducible path before the repository grows more complex
+
+What it is not:
+
+- not the final audio generation model
+- not the final multimodal system
+- not the final deployment target
+
+### 6.2 `tools/media_probe/`
+
+Role:
+
+- neutral media inspection utility
+
+Expected inputs:
+
+- audio file
+- video file
+- future containerized media assets
+
+Expected outputs:
+
+- path
+- duration
+- stream types
+- sample rate
+- channels
+- fps
+- width
+- height
+- codec / container metadata where available
+
+Why it matters:
+
+future video-to-audio workflows should not guess media properties.
+They should read them first.
+
+### 6.3 AudioCraft
+
+Role in this repository:
+
+- primary future generation backbone candidate
+
+Why this role is reasonable:
+
+AudioCraft is an audio generation research library and includes models such as MusicGen and AudioGen, so it naturally fits the "main generation backbone" slot for later staged integration. :contentReference[oaicite:4]{index=4}
+
+Current status in this repo:
+
+- design-level role defined
+- optional environment/smoke record can be added
+- not part of current baseline runtime
+
+### 6.4 AudioLDM
+
+Role in this repository:
+
+- alternative generation backbone
+- especially useful as a backup or specialized path for environment sound / Foley-like generation experiments
+
+Why this role is reasonable:
+
+the official repository frames AudioLDM as supporting speech, sound effects, music, and broader audio generation, which makes it a good staged candidate for environment or prompt-driven audio generation tasks. :contentReference[oaicite:5]{index=5}
+
+Current status in this repo:
+
+- design-level role defined
+- not in the default runtime path
+
+### 6.5 Spleeter
+
+Role in this repository:
+
+- source separation utility candidate
+
+Why this role is reasonable:
+
+Spleeter is designed for source separation with pretrained models and is therefore better treated as a preprocessing / decomposition tool than as a main generative backbone. :contentReference[oaicite:6]{index=6}
+
+Current status in this repo:
+
+- staged utility candidate
+- can later support stem extraction, remix workflows, and evaluation preparation
+- not part of the default baseline runtime
+
+### 6.6 ffprobe / FFmpeg-family utilities
+
+Role in this repository:
+
+- low-level media inspection and conversion substrate
+
+Why this role is reasonable:
+
+`ffprobe` is built to gather container and stream information in human- and machine-readable form, so it is the correct foundation for metadata-level probing before model inference or generation. :contentReference[oaicite:7]{index=7}
+
+Current status in this repo:
+
+- conceptual dependency for media probing
+- may be called by tool-layer scripts
+- not part of `baseline_v1` logic
+
+### 6.7 librosa / OpenCV
+
+Repository role:
+
+- Python-side helper stack for lightweight signal or frame-level inspection
+
+Expected future usage:
+
+- librosa for waveform/audio metadata and lightweight feature-side checks
+- OpenCV for frame count / fps / resolution / basic video-side utility checks
+
+These libraries belong to the tool layer, not to the core baseline runtime.
+
+---
+
+## 7. Proposed Long-Term Workflow
+
+The future workflow can be described as:
+
+### Stage 1: Input probing
+
+Input:
+
+- raw video
+- raw audio
+- extracted clips
+
+Tooling:
+
+- `media_probe`
+- ffprobe
+- lightweight Python-side helpers
+
+Output:
+
+- normalized metadata summary
+- basic input contract checks
+
+### Stage 2: Optional decomposition / preparation
+
+Input:
+
+- raw or probed media assets
+
+Tooling:
+
+- Spleeter or related preprocessing utilities
+- future audio segmentation helpers
+- future alignment helpers
+
+Output:
+
+- stems
+- cleaned reference tracks
+- separated components
+- task-specific preparation assets
+
+### Stage 3: Generation
+
+Input:
+
+- prompts
+- optional video cues
+- optional reference audio
+- optional decomposed stems
+
+Tooling candidates:
+
+- AudioCraft
+- AudioLDM
+- future custom models
+
+Output:
+
+- generated sound layers
+- ambience
+- Foley-like assets
+- music or soundscape candidates
+
+### Stage 4: Layer composition / alignment
+
+Input:
+
+- generated layers
+- original video timing
+- optional separated stems
+- metadata contracts from Stage 1
+
+Future responsibilities:
+
+- temporal alignment
+- layer mixing
+- gain and routing policy
+- structured output packaging
+
+### Stage 5: Runtime evaluation and deployment
+
+Input:
+
+- model outputs
+- packaged artifacts
+- benchmark targets
+
+Future responsibilities:
+
+- ONNX / runtime export where relevant
+- service wrapping
+- observability
+- regression tracking
+- deployment-ready packaging
+
+---
+
+## 8. Why `media_probe` Is a Tool Layer Instead of Main Runtime Logic
+
+This is one of the most important design decisions in the repository.
+
+`media_probe` is a tool layer because:
+
+1. it serves many future workflows, not only one model
+2. it is useful before generation, after generation, and during evaluation
+3. it should remain independently testable
+4. it should not make the baseline runtime more fragile
+5. it belongs to infrastructure, not to model identity
+
+So the correct relationship is:
+
+- `baseline_v1` remains the supported model path
+- `media_probe` supports future workflow assembly
+- generation backbones consume or benefit from probed metadata later
+
+This keeps the repository clean.
+
+---
+
+## 9. Repository Mapping
+
+The stack maps to the repository as follows.
+
+### 9.1 Stable baseline spine
+
+- `src/`
+- `scripts/`
+- `configs/`
+- `artifacts/experiments/`
+- `artifacts/onnx/`
+- `artifacts/logs/`
+- `results/baseline_v1.md`
+
+### 9.2 Tool layer
+
+- `tools/media_probe/`
+
+### 9.3 Architecture and design memory
+
+- `docs/adr/0002-week02-bridge.md`
+- `docs/design/audio_generation_stack_design.md`
+
+### 9.4 Weekly and evidence narrative
+
+- `docs/weekly/`
+- `docs/benchmarks/`
+- `docs/postmortems/`
+
+This separation matches the repository rule that design docs belong to `docs/design/`, architecture decisions belong to `docs/adr/`, experiment cards belong to `results/`, and raw logs belong to `artifacts/logs/`.
+
+---
+
+## 10. Current Supported Path vs Future Path
+
+### 10.1 Current supported path
+
+Today, the repository officially supports:
+
+- `baseline_v1`
+- export -> parity -> inference -> benchmark
+- Docker replay
+- CI smoke
+- media probing as a separate utility
+
+### 10.2 Future staged path
+
+Later, the repository should support:
+
+- video-conditioned or workflow-conditioned audio generation
+- optional separation before generation
+- structured layer generation
+- stronger generation backbones
+- richer evaluation and deployment flows
+
+The key point is:
+
+the future path must grow **on top of** the stable current path,
+not replace it prematurely with a giant unstable demo.
+
+---
+
+## 11. Integration Policy
+
+Before any future generation/separation module becomes part of the default runtime, it should satisfy at least the following:
+
+1. role is clearly written in ADR/design docs
+2. environment assumptions are recorded
+3. one smoke fact exists
+4. repository entrypoint is explicit
+5. failure mode does not break the baseline spine
+6. logs or evidence can be stored in the existing structure
+
+This keeps the project from turning into a folder full of vibes and broken imports.
+
+---
+
+## 12. Immediate Next Steps
+
+Near-term next steps should be conservative.
+
+### Priority 1
+
+Keep the `baseline_v1` spine stable and documented.
+
+### Priority 2
+
+Preserve `media_probe` as an independent utility and improve its README / sample outputs when needed.
+
+### Priority 3
+
+Add exactly one traceable smoke fact for either:
+
+- AudioCraft environment check
+- Spleeter Docker help / minimal invocation
+
+### Priority 4
+
+Only after the above, consider a small integration prototype that uses:
+
+- metadata from `media_probe`
+- one staged generation or separation module
+- a narrow, testable workflow target
+
+---
+
+## 13. Risks
+
+### 13.1 Over-integration risk
+
+Trying to force all future modules into the baseline runtime too early will destroy clarity.
+
+### 13.2 Narrative drift risk
+
+If design, ADR, weekly summary, and result card all start repeating different versions of the same story, the repo becomes harder to maintain.
+
+### 13.3 Tool/runtime boundary drift
+
+If utility-layer scripts silently become baseline dependencies, debugging cost will rise fast.
+
+### 13.4 Architecture vanity risk
+
+It is easy to write a cool-looking design for a giant system.
+It is much harder to keep a small system reproducible.
+This repository should prefer the second.
+
+---
+
+## 14. One-Sentence Design Rule
+
+Build the repository as a stable baseline spine plus a neutral media tool layer plus explicitly staged future generation/separation branches, so that the long-term structured sound-layer generation system can grow without breaking the current reproducible path.

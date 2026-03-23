@@ -1,240 +1,338 @@
-# 0002 - Use baseline_v1 + host-side ONNX/ORT path as the Week 2 engineering baseline
+# 0002-week02-bridge
 
 - Status: accepted
-- Date: 2026-03-16
+- Date: 2026-03-21
 
 ## Context
 
-Week 1 已经完成 baseline_v1 的最小可运行链路，并产出了以下核心资产：
+This repository is evolving from a Week 1 minimal engineering baseline into a longer-horizon project for structured sound-layer generation in generative video and long-video workflows.
 
-- PyTorch checkpoint:
-  `artifacts/experiments/baseline_v1/checkpoints/best.pt`
-- ONNX export:
-  `artifacts/onnx/baseline_v1.onnx`
-- PT vs ORT parity report:
-  `artifacts/logs/onnx_parity.md`
-- ORT benchmark report:
-  `docs/benchmarks/ort_cpu_baseline.md`
+By the end of Week 1, the repository already had a usable baseline path centered on `baseline_v1`:
 
-在 2026-03-16 的 host 环境复跑中，最短复现入口：
+- minimal dataset preparation
+- manifest-based loading
+- training and validation
+- checkpoint saving
+- ONNX export
+- PyTorch vs ONNX Runtime parity
+- ONNX Runtime CPU inference
+- benchmark logging
 
-bash scripts/run_demo.sh demo
+During Week 2, the project scope widened in two different directions at the same time:
 
-已经成功完成以下步骤：
+1. **Engineering hardening of the current baseline**
+   - multi-sample parity and benchmark
+   - export stability / shape audit
+   - Docker replay
+   - GitHub Actions smoke workflow
+   - result card / weekly summary / benchmark docs
 
-1. export onnx
-2. compare pytorch and onnxruntime
-3. run onnxruntime inference
-4. benchmark onnxruntime
+2. **Bridge work toward the long-term structured audio generation system**
+   - `tools/media_probe/`
+   - `docs/design/audio_generation_stack_design.md`
+   - staged understanding of AudioCraft / AudioLDM / Spleeter roles
 
-本次复跑的关键信息如下：
+This created a structural risk:
 
-- parity allclose: True
-- mean abs err: 0.0000051313
-- max abs err: 0.0000104904
-- benchmark p50: 25.9407 ms
-- benchmark p99: 34.2762 ms
-- throughput: 39.1907 samples/s
+- if every new idea is mixed directly into the main runtime path,
+  the repository becomes harder to explain, harder to test, and harder to reproduce;
+- if all bridge work remains only in notes and discussion,
+  the long-term project never becomes a real engineering trajectory inside the repo.
 
-同时，导出阶段出现了 1 个 TracerWarning，说明当前 trace 图在其他 shape 上的泛化仍需后续审计，但在当前固定 shape 合同输入下功能已验证通过。
+Therefore, Week 2 requires an explicit architecture decision:
+**how should the current baseline, the neutral media utility layer, and future generation / separation branches relate to each other inside this repository?**
+
+---
+
+## Decision Drivers
+
+The decision is driven by the following needs:
+
+1. Keep one stable and supported main runtime path.
+2. Preserve reproducibility and CI friendliness.
+3. Avoid mixing tool-layer code with the baseline inference path.
+4. Give the long-term project real repository landing zones instead of abstract future ideas.
+5. Make later integration of generation, separation, and media I/O possible without rewriting Week 2 assets.
+6. Keep the repository explainable for future self-review, interviews, and incremental system growth.
+
+---
+
+## Considered Options
+
+### Option A: Merge tool layer and future generation modules directly into the baseline runtime now
+
+Examples:
+
+- make `media_probe` part of `scripts/run_demo.sh`
+- force AudioCraft / AudioLDM / Spleeter into the current smoke path
+- treat Week 2 as the start of an integrated end-to-end system
+
+#### Pros
+
+- looks ambitious
+- gives an illusion of faster system integration
+- fewer conceptual boundaries on paper
+
+#### Cons
+
+- high coupling
+- harder debugging
+- more fragile CI and Docker replay
+- harder to know whether failures come from baseline, runtime, or future bridge modules
+- Week 2 evidence becomes noisy and difficult to compare over time
+
+### Option B: Keep `baseline_v1` as the only supported main runtime spine, treat `media_probe` as a neutral tool layer, and stage AudioCraft / AudioLDM / Spleeter as future branches with explicit but non-default repository positions
+
+#### Pros
+
+- stable main path
+- lower cognitive load
+- easier Docker / CI / benchmark maintenance
+- easier repository storytelling
+- bridge modules still become real repository assets instead of vague ideas
+
+#### Cons
+
+- long-term system integration appears slower
+- current repository does not yet look like a full audio generation platform
+- some future-facing modules remain staged rather than fully active
+
+---
 
 ## Decision
 
-Week 2 继续采用以下工程基线：
+We choose **Option B**.
 
-1. 保留 baseline_v1 作为当前唯一受支持的主线模型基线；
-2. 保留 host-side demo 复跑链路作为最短审计入口；
-3. 以 ONNX/ORT 导出、对齐、推理、benchmark 作为部署侧主验证路径；
-4. 本周新增工作优先围绕“审计、稳定性、对比、文档化”展开，而不是立即切换新模型或重做训练；
-5. 只有在以下任一条件出现时，才考虑替换当前基线：
-   - 多样本 parity 明显失稳；
-   - Docker 路径与 host 路径出现不可接受偏差；
-   - shape stability 审计失败；
-   - 新方案在正确性和性能上同时显著优于 baseline_v1。
+### 1. `baseline_v1` remains the single supported main runtime baseline
 
-## Rationale
+`baseline_v1` is the current engineering anchor of the repository.
 
-选择这条路径的原因：
+It remains the only baseline that is:
 
-1. Week 1 的产物已经形成了从 checkpoint 到 ONNX 再到 ORT benchmark 的完整闭环；
-2. 今天的 host 复跑已经证明这条链路不是一次性成功，而是可以重复执行；
-3. 当前最需要补的是工程可信度，而不是继续增加系统复杂度；
-4. 先把“能稳定复现、能解释、能比较”做扎实，后续再扩展 Docker、多样本、shape smoke test，会更稳。
+- expected to pass the main demo path
+- tied to ONNX export and ORT validation
+- used in Docker replay
+- referenced by the Week 2 result card, benchmark docs, postmortems, and weekly summary
+- suitable for the current CI smoke workflow
+
+This means the repository continues to have one clear answer to:
+**what is the current supported path?**
+
+The answer is:
+`baseline_v1` and its demo / export / parity / infer / benchmark spine.
+
+### 2. `tools/media_probe/` is defined as a neutral tool layer, not part of the baseline main runtime
+
+`media_probe` is intentionally placed under `tools/` rather than `scripts/` or `src/engine/`.
+
+Its role is to provide reusable media inspection capability for future pipelines, including:
+
+- duration
+- sample rate
+- channels
+- fps
+- container / codec / stream metadata
+- basic input contract checking
+
+It is **not** currently part of the `baseline_v1` smoke path.
+
+Reason:
+
+- it serves future video/audio workflow integration,
+- but it should not make the current main runtime path more fragile.
+
+In short:
+
+`media_probe` is infrastructure for future workflow assembly, not a replacement for the current baseline spine.
+
+### 3. AudioCraft, AudioLDM, and Spleeter are staged as future branches, not mixed into the default runtime
+
+Their current repository roles are defined as follows:
+
+- **AudioCraft**: primary future generation backbone candidate
+- **AudioLDM**: alternative text-to-audio / environment / Foley generation candidate
+- **Spleeter**: source separation utility candidate
+
+At Week 2, they are allowed to appear in:
+
+- ADR discussion
+- design documents
+- environment checks
+- optional smoke records
+- future branch planning
+
+They are **not** allowed to silently redefine the current default supported runtime.
+
+This boundary is deliberate.
+
+The repository should not pretend that a staged module is already part of the production-like main path.
+
+### 4. Design documents, ADRs, benchmark reports, weekly summaries, and result cards each keep separate responsibilities
+
+This bridge decision also fixes documentation boundaries:
+
+- `docs/adr/` records architecture decisions
+- `docs/design/` records long-horizon system structure and module roles
+- `docs/benchmarks/` records human-readable performance summaries
+- `docs/postmortems/` records audits and one-off investigations
+- `docs/weekly/` records weekly summaries
+- `results/` records model cards / experiment cards / result summaries
+- `artifacts/logs/` stores runtime logs, CSVs, and generated evidence
+
+This prevents Week 2 bridge work from degenerating into scattered notes.
+
+### 5. The repository is treated as a long-term engineering base, not as a one-week demo folder
+
+This decision formally defines the repository as:
+
+- an engineering base that already has a stable baseline,
+- plus explicitly staged extension points for future audio generation system growth.
+
+That is the key bridge.
+
+The long-term project is no longer "outside the repo".
+It is now structurally represented inside the repo, but without destabilizing the supported baseline.
+
+---
+
+## Decision Outcome
+
+The repository architecture is now interpreted in three layers:
+
+### Layer 1: Stable main runtime spine
+
+Current owner:
+
+- `baseline_v1`
+
+Current responsibilities:
+
+- train
+- export
+- parity
+- inference
+- benchmark
+- Docker replay
+- CI smoke
+
+This is the path that should stay boring, reliable, and easy to rerun.
+
+### Layer 2: Neutral tool layer
+
+Current owner:
+
+- `tools/media_probe/`
+
+Current responsibilities:
+
+- media inspection
+- metadata extraction
+- input contract support
+- future workflow assistance
+
+This layer supports future system assembly but does not redefine the baseline path.
+
+### Layer 3: Future generation / separation branches
+
+Current staged candidates:
+
+- AudioCraft
+- AudioLDM
+- Spleeter
+
+Current responsibilities:
+
+- role clarification
+- optional environment or smoke checks
+- later integration planning
+
+These branches are real repository concerns, but they are not the current default runtime.
+
+---
 
 ## Consequences
 
-### Positive
+### Positive Consequences
 
-- Week 2 的所有工作都能围绕一个清晰、稳定的技术底座展开；
-- 后续 Docker 对照、多样本 parity、shape audit 都有统一参照物；
-- README、周报、实验记录、benchmark 文档可以持续复用同一套口径。
+1. The repository keeps one clean supported path.
+2. Week 2 documents now have a stable narrative center.
+3. Future modules can be added without rewriting the baseline story.
+4. CI and Docker stay focused on a small, reproducible target.
+5. The long-term project now has explicit landing zones inside the repo.
+6. Interviews, reviews, and future self-maintenance become easier because the architecture is explainable.
 
-### Negative
+### Negative Consequences
 
-- 暂时不会引入更激进的新模型或新部署路径；
-- 可能会错过一些短期“看起来更快”的试验机会；
-- 当前 TracerWarning 说明导出图的泛化边界仍不完全清楚。
+1. Some future-facing modules remain only staged rather than fully exercised.
+2. The repository may look less ambitious than a fully integrated prototype.
+3. More discipline is required to avoid sneaking future branch logic into the baseline path.
 
-### Risks
+### Neutral but Important Consequence
 
-- 目前只验证了固定 shape 与单条 demo 主链；
-- benchmark 还没有形成多次重复统计；
-- host 与 Docker 的性能差异尚未完成系统比较。
+This decision intentionally prioritizes:
 
-## Alternatives considered
+- reproducibility over integration speed
+- structure over appearance
+- sustained project growth over short-term "big system" optics
 
-### Alternative A: 立即切到新模型/新结构
-未采用。  
-原因：当前最缺的是工程可审计性，不是模型多样性。
+That tradeoff is accepted.
 
-### Alternative B: 重新从训练开始走 full 流程
-未采用。  
-原因：今天的目标是复现审计，而不是重算一遍已有结果。
+---
 
-### Alternative C: 只保留 PyTorch，不继续推进 ONNX/ORT
-未采用。  
-原因：本项目后续明确需要服务部署与推理侧，因此 ONNX/ORT 路径必须继续保留。
+## What This ADR Explicitly Forbids
 
-## Evidence
+The following behaviors are considered architecture drift and should be avoided unless a later ADR changes the policy:
 
-- Repro log:
-  `artifacts/logs/week02_repro_host.log`
-- Version freeze:
-  `artifacts/logs/week02_versions.txt`
-- Repro audit:
-  `docs/postmortems/2026-03-16_week02_repro_audit.md`
-- Parity report:
-  `artifacts/logs/onnx_parity.md`
-- Benchmark:
-  `docs/benchmarks/ort_cpu_baseline.md`
+1. Treating `media_probe` as if it were already part of the default baseline runtime.
+2. Adding AudioCraft / AudioLDM / Spleeter as mandatory dependencies for the main smoke path without a new architecture decision.
+3. Moving bridge notes into random weekly or log documents instead of maintaining ADR / design boundaries.
+4. Splitting the same evolving bridge topic into many date-based note files.
+5. Presenting staged future modules as already supported default production paths.
 
-## Next actions
+---
 
-1. 周一：完成本 ADR、完成算法题记录；
-2. 周二：做多样本 parity / benchmark；
-3. 周三：做 shape stability / export audit；
-4. 周四：准备 Docker 对照与文档补齐；
-5. 周末前：更新 README、周报和结果摘要。
+## What This ADR Enables Next
 
-## 2026-03-19 Update
+This decision makes the following next steps straightforward:
 
-### Decision Update
+1. Keep `baseline_v1` stable while refining docs, results, Docker, and CI.
+2. Add one optional, traceable smoke fact for AudioCraft or Spleeter without polluting the main path.
+3. Continue expanding `docs/design/audio_generation_stack_design.md`.
+4. Later introduce a dedicated integration branch or a new ADR for generation-chain onboarding.
+5. Build future video-to-audio workflow assembly on top of:
+   - a stable baseline spine
+   - a neutral media tool layer
+   - explicitly staged generation / separation modules
 
-The current primary smoke path is anchored on `baseline_v1`.
+---
 
-The validated minimum path is:
+## Status Check After Week 2
 
-    bash scripts/run_demo.sh demo
+At the end of Week 2, this ADR means:
 
-This path currently covers:
+- the baseline path is real
+- the bridge is real
+- the boundaries are real
+- the full integrated system is not yet the default path
 
-1. ONNX export
-2. PyTorch vs ONNXRuntime parity check
-3. ONNXRuntime CPU inference
-4. ORT CPU benchmark
+That is acceptable.
 
-The path has now been validated in both:
+Week 2 is about making the repository credible, not pretending it is already complete.
 
-- local host environment
-- GitHub Actions smoke workflow
+---
 
-### Current Mainline Decision
+## Related Files
 
-`baseline_v1` is the only component that enters the Week02 main smoke path.
+- `results/baseline_v1.md`
+- `docs/weekly/2026-03-21_week02_summary.md`
+- `docs/design/audio_generation_stack_design.md`
+- `docs/postmortems/2026-03-16_week02_repro_audit.md`
+- `docs/postmortems/2026-03-18_week02_shape_audit.md`
+- `tools/media_probe/README.md`
+- `.github/workflows/smoke.yml`
 
-This means the current repository mainline is defined as:
+---
 
-- reproducible baseline checkpoint
-- ONNX exportability
-- PT / ORT parity
-- ORT CPU smoke benchmark
-- CI reproducibility through `.github/workflows/smoke.yml`
+## One-Sentence Summary
 
-### Deferred Modules
-
-The following modules are explicitly deferred from the current main smoke path:
-
-- **AudioCraft**
-  - role: future controllable generation / structured audio layer generation candidate
-  - reason for deferral: not required for validating the current minimum reproducible inference/export path
-
-- **AudioLDM / diffusion-based audio generation**
-  - role: future ambience / foley / open-domain audio generation candidate
-  - reason for deferral: generation capability is not a prerequisite for the current baseline smoke contract
-
-- **Spleeter / source separation tools**
-  - role: future data preparation / vocal-background separation utility
-  - reason for deferral: useful as tooling support, but not part of the Week02 main inference/export validation chain
-
-### Why This Decision
-
-The current project phase prioritizes:
-
-- minimum reproducibility
-- traceable experiment records
-- CI-validatable export/inference path
-- stable repository structure
-
-Adding generation or separation modules into the mainline before the baseline smoke contract is stabilized would increase scope, reduce debuggability, and weaken weekly deliverable clarity.
-
-### Consequences
-
-Positive:
-
-- the repository now has a clear Week02 technical spine
-- smoke validation is measurable and repeatable
-- future modules can be attached against a stable baseline
-
-Trade-off:
-
-- current mainline does not yet represent the final structured sound layer generation system
-- generation-side capability is intentionally postponed
-
-### Entry Criteria for Future Bridge-In
-
-A deferred module can enter the mainline only if it satisfies at least one of the following:
-
-1. it directly strengthens the current reproducible export/inference path;
-2. it becomes necessary for the next milestone’s system demonstration;
-3. it has a minimal runnable interface and does not break current smoke stability;
-4. it can be documented with clear inputs, outputs, artifacts, and rollback boundaries.
-
-### Immediate Next Focus
-
-The immediate follow-up remains:
-
-- keeping `baseline_v1` as the stable smoke anchor;
-- improving repository entry documentation;
-- continuing weekly algorithm notes and engineering record consolidation.
-
-## 2026-03-20 Update
-
-### Tooling Boundary Clarification
-
-A new utility prototype, `tools/media_probe/probe_media.py`, is introduced in Week 02 as a tooling-side helper.
-
-Its role is limited to:
-
-- probing audio/video container and stream metadata via `ffprobe`
-- optionally enriching audio metadata with `librosa`
-- optionally enriching video metadata with `cv2`
-- producing JSON summaries for dataset intake and future pipeline audits
-
-`media_probe` is **not** part of the current baseline main smoke path.
-
-### Why It Stays Outside Main Smoke
-
-1. the current main smoke contract is still centered on `baseline_v1` export/inference reproducibility;
-2. media probing is a support capability, not a prerequisite for ONNX/ORT validation;
-3. video-related dependencies may introduce environment drift, so the tool remains isolated from the baseline contract;
-4. the tool is useful now for data auditing, but it should not weaken the simplicity of the current smoke path.
-
-### Consequence
-
-`tools/media_probe/` is accepted as a tooling-layer bridge component, while the repository mainline remains unchanged:
-
-- `baseline_v1`
-- ONNX export
-- PT / ORT parity
-- ORT CPU benchmark
-- CI smoke reproducibility
+Keep `baseline_v1` as the only supported main runtime spine, define `media_probe` as a neutral tool layer, stage AudioCraft / AudioLDM / Spleeter as future branches with explicit repository roles, and use this boundary to turn the repo into a real long-term engineering base instead of a pile of loosely connected experiments.  

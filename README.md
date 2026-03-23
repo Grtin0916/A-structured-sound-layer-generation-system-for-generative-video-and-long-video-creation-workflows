@@ -265,7 +265,7 @@ python src/infer/bench_ort.py \
 Dockerfile：
 
 ```text
-docker/ort_cpu.Dockerfile
+docker/Dockerfile
 ```
 
 构建：
@@ -276,7 +276,7 @@ docker build \
   --build-arg https_proxy=http://host.docker.internal:7890 \
   --build-arg HTTP_PROXY=http://host.docker.internal:7890 \
   --build-arg HTTPS_PROXY=http://host.docker.internal:7890 \
-  -f docker/ort_cpu.Dockerfile \
+  -f docker/Dockerfile \
   -t audio-ort-cpu:latest .
 ```
 
@@ -327,7 +327,7 @@ docker run --rm audio-ort-cpu:latest
 - 完成 `src/infer/bench_ort.py` 编写与 benchmark 测试流程搭建
 - 完成 `artifacts/logs/bench_ort_cpu.csv` 结果导出
 - 完成 `docs/benchmarks/ort_cpu_baseline.md` benchmark 报告记录
-- 完成 `docker/ort_cpu.Dockerfile` 最小 CPU 镜像编写
+- 完成 `docker/Dockerfile` 最小 CPU 镜像编写
 - 完成周四主线任务的 ORT 推理、benchmark 与 Docker 最小闭环
 
 ### 2026-03-13（周五）

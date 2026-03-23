@@ -1,203 +1,375 @@
-# baseline_v1
+# A Structured Sound-Layer Generation System for Generative Video and Long-Video Creation Workflows
 
-## 1. 实验目标
+## Overview
 
-`baseline_v1` 的目标不是追求复杂模型或高指标，而是先完成一个**最小可复现训练闭环**，用于验证当前工程骨架能够支持：
+This repository is an engineering-first project for building a structured sound-layer generation system for generative video and long-video creation workflows.
 
-- 数据准备与预处理
-- manifest 驱动的数据读取
-- 最小模型训练
-- checkpoint 保存
-- TensorBoard 可视化
-- GitHub 交付
+At the current stage, the repository does **not** aim to present a final large-scale audio generation system. Instead, it focuses on building a **reproducible, inspectable, and extensible engineering baseline** that can support future work on:
 
-这一步的定位很明确：先把链路打通，再谈后续结构升级。别一上来就挑战全家桶，不然很容易把项目做成“看起来很忙，实际上没闭环”。
+- layered sound generation
+- environment and Foley generation
+- audio separation and preprocessing
+- video-to-audio workflow integration
+- deployment-oriented inference and evaluation
 
----
-
-## 2. 数据处理流程
-
-本实验使用 ESC-50 中筛选得到的 ESC-10 最小子集，构建 `esc10_miniset` 作为当前 baseline 的训练数据。
-
-### 数据处理步骤
-
-1. 下载原始 ESC-50 数据
-2. 筛选 ESC-10 子集
-3. 按类别构建平衡的 train / valid 划分
-4. 对音频进行统一处理：
-   - 转为 mono
-   - 重采样到 16 kHz
-   - 固定为 5 秒长度
-5. 保存为处理后的 `.wav`
-6. 为每条音频生成同名 `.json` sidecar 元数据
-7. 生成 train / valid manifest
-
-### 数据组织方式
-
-```text
-data/
-├─ processed/
-│  └─ esc10_miniset/
-│     ├─ train/
-│     └─ valid/
-└─ manifests/
-   ├─ esc10_miniset_train.jsonl
-   └─ esc10_miniset_valid.jsonl
-```
-
-### 当前数据规模
-
-- train: 80 条
-- valid: 20 条
+The current supported baseline is `baseline_v1`, a minimal mel-spectrogram reconstruction model used to validate the repository's end-to-end engineering spine:
+data -> training -> checkpoint -> ONNX export -> ONNX Runtime inference -> benchmark -> Docker replay -> CI smoke
 
 ---
 
-## 3. 数据读取方式
+## Current Status
 
-训练数据采用 **manifest 驱动** 的方式加载。
+The repository has completed a Week 1 to Week 2 transition from a "minimal training demo" to a **v0.2 engineering baseline**.
 
-每条 manifest 记录包括：
+What is already working:
 
-- `audio_path`
-- `meta_path`
-- `sample_rate`
-- `channels`
-- `num_frames`
-- `duration`
+- minimal dataset preparation and manifest-based loading
+- baseline training and validation
+- checkpoint saving and experiment logging
+- ONNX export from the trained checkpoint
+- PyTorch vs ONNX Runtime parity check
+- ONNX Runtime CPU inference and benchmarking
+- multi-sample parity and benchmark evidence
+- Docker-based replay of the CPU inference path
+- GitHub Actions smoke workflow
+- media probing utility as a neutral tool layer for future video/audio pipelines
 
-dataset 在读取时完成以下操作：
+What is **not** claimed yet:
 
-1. 加载波形
-2. 再次保证 mono
-3. 再次保证长度固定
-4. 动态计算 log-mel
-5. 读取 sidecar json 中的 `text` 与 `label`
+- final production-quality audio generation
+- dynamic-shape-safe deployment for arbitrary inputs
+- integrated AudioCraft / AudioLDM / Spleeter generation pipeline
+- full service-level performance characterization
 
-最终返回字段包括：
-
-- `waveform`
-- `mel`
-- `text`
-- `label`
-- `path`
-
-这种设计的好处是工程上比较稳：磁盘上只保存规范化 wav 和 json，不提前把 mel 烤死，后面改特征参数也不用整批重做。
+In plain English: this repo is already a solid base, but it is still the base.
 
 ---
 
-## 4. 模型结构
+## Main Supported Path
 
-当前模型为一个**最小 mel autoencoder**，输入和输出均为 log-mel 频谱。
+The current main supported path is the `baseline_v1` demo spine.
 
-### 模型输入
+Recommended entry:
 
-- shape: `[B, 1, 64, T]`
+`bash scripts/run_demo.sh demo`
 
-### 模型结构概述
+This path is intended to validate the smallest stable pipeline:
 
-- stem 卷积块
-- 两级 encoder 下采样
-- bottleneck 特征压缩
-- 两级 decoder 上采样
-- 输出 head 重建 mel
+1. export the trained model to ONNX
+2. run PyTorch vs ONNX Runtime parity check
+3. run ONNX Runtime inference
+4. run ONNX Runtime CPU benchmark
 
-### 结构特点
+If you want to replay the broader pipeline from earlier stages, use:
 
-- 使用卷积块完成局部时频建模
-- 使用 skip connection 保留细节
-- 输出尺寸强制对齐输入尺寸
-- 训练目标简单直接，适合最小 baseline 验证
-
-当前版本的目的不是生成最终高质量音频，而是验证：
-
-- 输入接口正确
-- 前向传播稳定
-- loss 可下降
-- checkpoint 可保存
-- 可视化链路可用
+`bash scripts/run_demo.sh full`
 
 ---
 
-## 5. 训练配置
+## Why This Repository Exists
 
-### 主要配置
+A lot of research repos die in the exact same way: interesting ideas, messy execution.
 
-- sample rate: 16000
-- clip seconds: 5.0
-- n_fft: 1024
-- hop_length: 256
-- win_length: 1024
-- n_mels: 64
+This repository takes the opposite route.
 
-### 训练超参数
+The immediate goal is to make sure the project has:
 
-- batch size: 8
-- optimizer: AdamW
-- learning rate: 1e-3
-- weight decay: 1e-4
-- loss: `L1 + 0.1 * MSE`
+- a stable directory structure
+- a traceable experiment path
+- reproducible inference assets
+- benchmark evidence that can be compared over time
+- clean hooks for future model and system upgrades
 
-### 训练脚本
-
-```bash
-python src/engine/train.py --config configs/train/baseline.yaml --device cuda
-```
+That makes it suitable as a long-horizon engineering base for future work in structured audio generation for video workflows.
 
 ---
 
-## 6. 输出结果
+## Repository Structure
 
-训练完成后，输出目录位于：
+Top-level directories are organized by responsibility.
 
-```text
-artifacts/experiments/baseline_v1/
-```
+- `configs/`  
+  configuration files for training and runtime
 
-包含以下内容：
+- `data/`  
+  processed datasets, manifests, and related data assets
 
-- `checkpoints/last.pt`
-- `checkpoints/best.pt`
-- `tensorboard/`
-- `metrics.jsonl`
-- `config_resolved.yaml`
+- `src/`  
+  core training and model code
 
-### 当前结果说明
+- `scripts/`  
+  runnable project entrypoints such as demo, benchmark, and audit scripts
 
-当前 baseline 已经完成以下验证：
+- `artifacts/`  
+  generated outputs such as checkpoints, ONNX files, logs, metrics, and experiment assets
 
-- 训练流程可跑通
-- 验证流程可跑通
-- checkpoint 保存正常
-- TensorBoard 记录正常
-- baseline_v1 已形成可复现实验闭环
+- `results/`  
+  model cards and result summaries
 
----
+- `docs/`  
+  weekly summaries, benchmark notes, design docs, ADRs, and postmortems
 
-## 7. 当前结论
+- `tools/`  
+  utility modules decoupled from the main training/inference path
 
-`baseline_v1` 的价值不在于性能有多强，而在于它已经把**最小工程链条**打通：
+- `docker/`  
+  container build assets for reproducible replay
 
-- 数据进得来
-- 模型跑得动
-- loss 能记录
-- 结果能保存
-- 可视化能查看
-- 仓库能交付
-
-这一步相当于把地基打实。后面不管你是想往 AudioCraft 风格继续靠，还是往更复杂的声音层生成任务延伸，至少现在不是“概念空转”了，而是已经有了一个能跑、能记、能复现的起点。
+- `.github/workflows/`  
+  CI smoke workflows
 
 ---
 
-## 8. 下一步
+## Quick Start
 
-基于 `baseline_v1`，后续可以继续推进：
+### 1. Environment
 
-- 补充更完整的实验记录与结果对照
-- 增强评估指标与误差分析
-- 尝试更强的时频建模结构
-- 逐步从最小重建任务扩展到更贴近目标任务的声音层生成任务
+Use a Python environment that already contains the dependencies required by your current setup for:
 
+- PyTorch
+- NumPy
+- ONNX
+- ONNX Runtime
+- audio preprocessing libraries used by this repository
 
-## Related experiment cards
+If you are continuing from the existing weekly workflow, reuse your prepared environment rather than rebuilding everything from zero.
 
-- `results/baseline_v1_week02_experiment_card.md`：记录 Week02 阶段的 ONNX 导出、PT/ORT 对齐、ORT CPU smoke 与 benchmark 闭环验证。
+### 2. Minimal Demo
+
+Run the main supported demo path:
+
+`bash scripts/run_demo.sh demo`
+
+### 3. Full Replay
+
+Run the broader replay path:
+
+`bash scripts/run_demo.sh full`
+
+### 4. Training Entry
+
+The baseline training entry is:
+
+`python src/engine/train.py --config configs/train/baseline.yaml --device cuda`
+
+### 5. Main Example Input
+
+A representative example audio file used in the current baseline path is:
+
+`data/processed/esc10_miniset/valid/5-177957-C-40.wav`
+
+---
+
+## Data
+
+The current baseline uses a minimal ESC-10 subset derived from ESC-50.
+
+Current dataset organization includes:
+
+- processed train split
+- processed valid split
+- manifest files
+- per-sample sidecar metadata
+
+Key characteristics of the current data path:
+
+- mono audio
+- resampled to 16 kHz
+- fixed clip duration
+- manifest-driven loading
+- dynamic log-mel computation during dataset reading
+
+This setup is intentionally simple and stable so that the engineering path remains easy to debug and extend.
+
+---
+
+## Baseline Model
+
+The current baseline model is `baseline_v1`.
+
+Role of `baseline_v1`:
+
+- the main smoke baseline for the repository
+- the anchor point for ONNX and ONNX Runtime validation
+- the reference model for CPU benchmark tracking
+- the current center of README, result card, benchmark docs, and weekly summaries
+
+It is a **minimal mel autoencoder-style baseline**, not the final target system.
+
+Its purpose is not to be flashy.
+Its purpose is to keep the main path stable, reproducible, and extensible.
+
+---
+
+## Key Outputs
+
+Important generated assets include:
+
+- trained checkpoints under `artifacts/experiments/baseline_v1/`
+- exported ONNX model under `artifacts/onnx/`
+- parity logs under `artifacts/logs/`
+- benchmark CSVs under `artifacts/logs/`
+- result summary under `results/baseline_v1.md`
+
+Representative evidence files:
+
+- `artifacts/logs/onnx_parity.md`
+- `artifacts/logs/parity_multi_sample.csv`
+- `artifacts/logs/bench_ort_cpu.csv`
+- `artifacts/logs/bench_ort_multi_sample.csv`
+- `artifacts/logs/bench_ort_multi_sample_docker.csv`
+
+---
+
+## Documentation Map
+
+If you want the shortest path, start here:
+
+- [Main result card](results/baseline_v1.md)
+- [Week 2 summary](docs/weekly/2026-03-21_week02_summary.md)
+
+If you want benchmarking details:
+
+- [ORT CPU baseline](docs/benchmarks/ort_cpu_baseline.md)
+- [ORT CPU multi-sample](docs/benchmarks/ort_cpu_multi_sample.md)
+- [ORT CPU multi-sample in Docker](docs/benchmarks/ort_cpu_multi_sample_docker.md)
+- [Host vs Docker comparison](docs/benchmarks/ort_docker_cpu_compare.md)
+
+If you want audit and postmortem records:
+
+- [Week 2 repro audit](docs/postmortems/2026-03-16_week02_repro_audit.md)
+- [Week 2 shape audit](docs/postmortems/2026-03-18_week02_shape_audit.md)
+
+If you want architecture and long-horizon project context:
+
+- [Week 2 bridge ADR](docs/adr/0002-week02-bridge.md)
+- [Audio generation stack design](docs/design/audio_generation_stack_design.md)
+
+If you want the media utility layer:
+
+- [Media probe README](tools/media_probe/README.md)
+
+---
+
+## CI and Reproducibility
+
+This repository has already started moving from manual replay toward continuous reproducibility.
+
+Current reproducibility-related assets include:
+
+- Docker replay path for the CPU inference chain
+- benchmark comparison between host and Docker
+- GitHub Actions smoke workflow in `.github/workflows/smoke.yml`
+
+The project standard is simple:
+
+- if it cannot be rerun, it does not count
+- if it cannot be compared, it is hard to improve
+- if it cannot be explained, it will eventually rot
+
+---
+
+## Tool Layer and Future Integration
+
+The repository already contains a neutral utility layer for future audio/video workflow integration:
+
+- `tools/media_probe/`
+
+`media_probe` is currently treated as a **tool layer**, not part of the core `baseline_v1` runtime.
+
+Planned future directions include controlled integration of:
+
+- AudioCraft-style generation backbones
+- AudioLDM-style environment or Foley generation paths
+- Spleeter-style source separation utilities
+- video-to-audio structured workflow assembly
+
+Important boundary:
+
+these modules are currently **planned or staged**, not presented as already integrated production paths.
+
+---
+
+## Current Limitations
+
+The current baseline is intentionally narrow.
+
+Known limitations include:
+
+- the main ONNX / ORT path is still centered on fixed-shape validation
+- current benchmark evidence is smoke-level engineering evidence, not full deployment profiling
+- the main validated runtime path is CPUExecutionProvider-centered
+- the repo currently emphasizes engineering stability over generation sophistication
+
+That tradeoff is deliberate.
+Right now, correctness and reproducibility beat glamour.
+
+---
+
+## Roadmap
+
+Near-term priorities:
+
+1. keep the `baseline_v1` path stable and fully documented
+2. continue cleaning Docker and log asset placement
+3. add one concrete smoke fact for a future generation or separation branch
+4. gradually extend from the current baseline to a richer structured sound-layer workflow
+
+Longer-term priorities:
+
+- layered audio generation for video workflows
+- stronger model backbones
+- cleaner deployment contracts
+- broader runtime and evaluation support
+- better linkage between media analysis, generation, and final workflow assembly
+
+---
+
+## Project Philosophy
+
+This repository is built with an engineering-first mindset.
+
+The goal is not to pretend the big system is already done.
+The goal is to make sure each step is:
+
+- real
+- rerunnable
+- documented
+- comparable
+- extensible
+
+That is less glamorous than a giant one-shot repo drop.
+It is also how real systems survive contact with reality.
+
+---
+
+## Current Recommended Reading Order
+
+If you are new to this repository, read in this order:
+
+1. `README.md`
+2. `results/baseline_v1.md`
+3. `docs/weekly/2026-03-21_week02_summary.md`
+4. `docs/benchmarks/ort_docker_cpu_compare.md`
+5. `docs/adr/0002-week02-bridge.md`
+
+That gives you the shortest path from project intent to current evidence to future direction.
+
+---
+
+## Status Snapshot
+
+Current project state:
+
+- baseline path: working
+- ONNX export: working
+- ORT CPU inference: working
+- multi-sample parity evidence: available
+- multi-sample benchmark evidence: available
+- Docker replay: available
+- CI smoke: available
+- long-term generation stack integration: staged, not yet the default path
+
+In one sentence:
+
+this repository has moved beyond a toy demo, but it is still intentionally building the floor before building the skyscraper.

@@ -4,7 +4,7 @@
 This image is used to reproduce the current ONNX Runtime CPU inference path in a standardized container environment.
 
 ## Dockerfile location
-docker/ort_cpu.Dockerfile
+docker/Dockerfile
 
 ## Build context
 Build from the repository root so that `src/`, `configs/`, and `artifacts/onnx/` are available to the image.
@@ -12,7 +12,7 @@ Build from the repository root so that `src/`, `configs/`, and `artifacts/onnx/`
 ## Build
 
 Without proxy:
-    docker build -f docker/ort_cpu.Dockerfile -t audio-ort-cpu:week02 .
+    docker build -f docker/Dockerfile -t audio-ort-cpu:week02 .
 
 With proxy:
     docker build \
@@ -20,7 +20,7 @@ With proxy:
       --build-arg https_proxy=http://host.docker.internal:7890 \
       --build-arg HTTP_PROXY=http://host.docker.internal:7890 \
       --build-arg HTTPS_PROXY=http://host.docker.internal:7890 \
-      -f docker/ort_cpu.Dockerfile \
+      -f docker/Dockerfile \
       -t audio-ort-cpu:week02 .
 
 ## Smoke run
