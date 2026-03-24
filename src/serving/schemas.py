@@ -1,18 +1,19 @@
-from typing import Any, Dict, List, Optional, Literal
+from typing import Any, Dict, List, Literal, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class HealthzResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     status: Literal["ok"] = "ok"
     service_name: str = Field(..., description="Service identifier")
     api_version: str = Field(..., description="API version string")
 
-    class Config:
-        extra = "forbid"
-
 
 class MetadataResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     service_name: str = Field(..., description="Service identifier")
     api_version: str = Field(..., description="API version string")
     model_name: str = Field(..., description="Logical model name")
@@ -30,11 +31,10 @@ class MetadataResponse(BaseModel):
         description="Current contract type",
     )
 
-    class Config:
-        extra = "forbid"
-
 
 class ErrorResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     code: str = Field(..., description="Machine-readable error code")
     message: str = Field(..., description="Human-readable error message")
     details: Dict[str, Any] = Field(
@@ -42,11 +42,10 @@ class ErrorResponse(BaseModel):
         description="Optional structured error details",
     )
 
-    class Config:
-        extra = "forbid"
-
 
 class PredictRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     instance_id: str = Field(..., description="Request instance identifier")
     input_ref: str = Field(..., description="Input reference, currently local path string")
     input_type: Literal["mel_npy", "tensor_ref"] = Field(
@@ -56,8 +55,8 @@ class PredictRequest(BaseModel):
     expected_input_shape: List[int] = Field(
         ...,
         description="Client-declared expected input shape",
-        min_items=4,
-        max_items=4,
+        min_length=4,
+        max_length=4,
     )
 
     media_ref: Optional[str] = Field(
@@ -85,11 +84,10 @@ class PredictRequest(BaseModel):
         description="Reserved: request tags for later tracing/routing",
     )
 
-    class Config:
-        extra = "forbid"
-
 
 class PredictResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     instance_id: str = Field(..., description="Request instance identifier")
     status: Literal["accepted", "ok", "error"] = Field(
         ...,
@@ -110,6 +108,3 @@ class PredictResponse(BaseModel):
         default=None,
         description="Structured error object when request fails",
     )
-
-    class Config:
-        extra = "forbid"
