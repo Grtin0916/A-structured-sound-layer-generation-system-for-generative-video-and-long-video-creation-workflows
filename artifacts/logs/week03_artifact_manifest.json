@@ -1,0 +1,48 @@
+{
+  "week": "week03",
+  "day": "tuesday",
+  "service": {
+    "name": "baseline-v1-api",
+    "api_version": "v0.1",
+    "backend": "onnxruntime",
+    "provider_requested": "CPUExecutionProvider"
+  },
+  "model": {
+    "name": "baseline_v1",
+    "version": "baseline_v1",
+    "artifact_path": "artifacts/onnx/baseline_v1.onnx",
+    "input_name": "mel",
+    "output_name": "recon_mel",
+    "input_shape": [
+      1,
+      1,
+      64,
+      313
+    ],
+    "output_shape": [
+      1,
+      1,
+      64,
+      313
+    ],
+    "contract_type": "fixed_shape"
+  },
+  "smoke": {
+    "metadata_endpoint": "http://127.0.0.1:8000/metadata",
+    "predict_endpoint": "http://127.0.0.1:8000/predict",
+    "smoke_log": "artifacts/logs/week03_api_smoke.log",
+    "smoke_log_exists": true,
+    "predict_input": "artifacts/predict_inputs/week03_tue_sample.npy",
+    "predict_input_exists": true,
+    "predict_output": "artifacts/predict/week03-tue-001_recon_mel.npy",
+    "predict_output_exists": true
+  },
+  "future_reserved_fields": [
+    "media_ref",
+    "segment_id",
+    "blueprint_id",
+    "output_artifact_dir",
+    "generator_name",
+    "request_tags"
+  ]
+}

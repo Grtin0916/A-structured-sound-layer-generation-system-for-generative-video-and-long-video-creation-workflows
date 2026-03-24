@@ -1,0 +1,1 @@
+{"instance_id":"week03-tue-001","status":"ok","model_name":"baseline_v1","backend":"onnxruntime","provider_actual":"CPUExecutionProvider","output_ref":"artifacts/predict/week03-tue-001_recon_mel.npy","output_shape":[1,1,64,313],"error":null}
