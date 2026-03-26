@@ -1,0 +1,2 @@
+NAME            IMAGE         COMMAND                   SERVICE   CREATED        STATUS                  PORTS
+compose-api-1   compose-api   "python -m uvicorn s…"   api       11 hours ago   Up 11 hours (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp

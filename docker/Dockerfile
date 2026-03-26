@@ -27,6 +27,8 @@ RUN apt-get -o Acquire::Retries=5 update && \
 
 RUN python -m pip install --upgrade pip && \
     pip install \
+      fastapi \
+      uvicorn \
       numpy \
       pyyaml \
       soundfile \

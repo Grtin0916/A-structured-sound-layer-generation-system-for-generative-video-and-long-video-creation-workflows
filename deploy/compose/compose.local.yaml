@@ -1,0 +1,37 @@
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: docker/Dockerfile
+    working_dir: /workspace
+    environment:
+      PYTHONPATH: /workspace
+      OUTPUT_ARTIFACT_DIR: /workspace/artifacts/wav
+      MEDIA_ROOT: /workspace/data
+    command:
+      [
+        "python",
+        "-m",
+        "uvicorn",
+        "src.serving.app:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../..:/workspace
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=2).read()"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
