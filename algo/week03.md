@@ -443,3 +443,162 @@ class Solution(object):
 
 - 栈：括号匹配、最小栈、字符串回退
 - 队列：双栈模拟队列、时间窗口队列、单队列模拟栈
+
+---
+
+## LeetCode 394 - Decode String
+
+### 题意
+给定一个经过编码的字符串，按规则将其解码：
+
+- `k[encoded_string]`
+- 表示方括号内部的字符串正好重复 `k` 次
+
+例如：
+
+- `3[a]` -> `aaa`
+- `3[a2[c]]` -> `accaccacc`
+
+### 核心思路
+这题本质是：
+
+**遇到 `[` 时进入子问题，遇到 `]` 时回到上一层。**
+
+最稳的写法是用两个栈：
+
+- `num_stack`：存每一层的重复次数
+- `str_stack`：存进入当前 `[` 之前已经拼好的字符串
+
+扫描过程：
+
+- 如果是数字，就累积成当前数字 `num`
+- 如果是普通字母，就直接拼到当前字符串 `cur`
+- 如果遇到 `[`：
+  - 把当前数字压入 `num_stack`
+  - 把当前字符串压入 `str_stack`
+  - 然后重置 `num = 0`，`cur = ""`
+- 如果遇到 `]`：
+  - 取出重复次数
+  - 取出上一层字符串
+  - 执行拼接：`上一层 + 当前串 * 次数`
+
+### Python 代码
+
+~~~python
+class Solution(object):
+    def decodeString(self, s):
+        num_stack = []
+        str_stack = []
+        num = 0
+        cur = ""
+
+        for ch in s:
+            if ch.isdigit():
+                num = num * 10 + int(ch)
+            elif ch == '[':
+                num_stack.append(num)
+                str_stack.append(cur)
+                num = 0
+                cur = ""
+            elif ch == ']':
+                repeat = num_stack.pop()
+                prev = str_stack.pop()
+                cur = prev + cur * repeat
+            else:
+                cur += ch
+
+        return cur
+~~~
+
+### 复杂度
+
+- 时间复杂度：`O(n)`
+- 空间复杂度：`O(n)`
+
+### 边界情况
+
+- 多位数字，例如 `12[a]`
+- 多层嵌套，例如 `3[a2[c]]`
+- 普通字符与编码片段混合，例如 `2[abc]3[cd]ef`
+
+### 易错点
+
+- 数字要累积，不能只取单个字符
+- 遇到 `[` 时要同时保存“当前数字”和“当前已拼接字符串”
+- 遇到 `]` 时拼接顺序不能反，必须是 `prev + cur * repeat`
+
+---
+
+## LeetCode 739 - Daily Temperatures
+
+### 题意
+给定一个温度数组 `temperatures`，对于每一天，求还要等几天才会出现更高温度；如果之后都不会升高，就返回 `0`。
+
+### 核心思路
+这题是典型的：
+
+**单调栈求下一个更大元素。**
+
+栈里不直接存温度值，而是存**下标**，这样后面才能直接计算天数差。
+
+维护规则：
+
+- 栈中下标对应的温度保持**单调递减**
+- 当前温度如果比栈顶温度高，说明栈顶那一天等到了更高温度
+- 于是不断弹栈，并计算：
+  - `ans[idx] = i - idx`
+
+为什么用下标而不是值？
+
+因为题目要的不是“更大的温度是多少”，而是“还要等几天”。
+
+### Python 代码
+
+~~~python
+class Solution(object):
+    def dailyTemperatures(self, temperatures):
+        n = len(temperatures)
+        ans = [0] * n
+        stack = []
+
+        for i, t in enumerate(temperatures):
+            while stack and temperatures[stack[-1]] < t:
+                idx = stack.pop()
+                ans[idx] = i - idx
+            stack.append(i)
+
+        return ans
+~~~
+
+### 复杂度
+
+- 时间复杂度：`O(n)`
+- 空间复杂度：`O(n)`
+
+### 边界情况
+
+- 全部递增，例如 `[30, 31, 32, 33]`
+- 全部递减，例如 `[33, 32, 31, 30]`
+- 有重复值，例如 `[30, 30, 31]`
+
+### 易错点
+
+- 栈里要存下标，不要只存温度
+- 比较条件是“严格更高”，所以用 `<`，不是 `<=`
+- 最后栈中剩下的下标默认答案就是 `0`
+
+---
+
+## 周四补充小结
+
+今天新增两题：
+
+- 394：栈处理嵌套编码字符串
+- 739：单调栈处理下一个更大元素
+
+到这里，Week 03 前四天的栈 / 队列 / 单调栈模板进一步补齐：
+
+- 普通栈：20，155，2390，394
+- 队列：232，933，225
+- 单调栈：739
+

@@ -1,0 +1,32 @@
+/home/GRT/work/audio_engineering_repo_skeleton_v1/tools/media_probe/probe_media.py:76: UserWarning: PySoundFile failed. Trying audioread instead.
+  y, sr = librosa.load(path, sr=None, mono=False)
+/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{
+  "path": "data/interim/test_video_probe_smoke/335040.mp4",
+  "exists": true,
+  "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+  "format_long_name": "QuickTime / MOV",
+  "size_bytes": 262444862,
+  "bit_rate": 76588968,
+  "duration_sec_ffprobe": 27.413333,
+  "stream_types": [
+    "video",
+    "audio",
+    "data"
+  ],
+  "num_streams": 3,
+  "audio_codec": "aac",
+  "audio_sr_ffprobe": 48000,
+  "audio_channels_ffprobe": 2,
+  "video_codec": "h264",
+  "width_ffprobe": 3840,
+  "height_ffprobe": 2160,
+  "video_fps_ffprobe": 23.976023976023978,
+  "audio_sr": 48000,
+  "audio_channels": 2,
+  "audio_duration_sec_librosa": 27.413333,
+  "video_probe_warning": "cv2 不可用：No module named 'cv2'"
+}
