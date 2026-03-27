@@ -602,3 +602,165 @@ class Solution(object):
 - 队列：232，933，225
 - 单调栈：739
 
+
+---
+
+## LeetCode 496 - Next Greater Element I
+
+### 题意
+给定两个数组 `nums1` 和 `nums2`，其中 `nums1` 是 `nums2` 的子集。  
+对于 `nums1` 中每个元素，找到它在 `nums2` 中右侧第一个比它大的元素；如果不存在，返回 `-1`。
+
+### 核心思路
+这题和 739 属于同一类：
+
+**单调栈 + 哈希映射。**
+
+因为题目最终问的是 `nums1` 中的元素，但“下一个更大元素”的关系发生在 `nums2` 里，所以做法是：
+
+1. 先遍历 `nums2`
+2. 用单调递减栈维护“还没找到更大元素”的值
+3. 一旦当前值比栈顶大，就说明当前值是栈顶元素的 next greater
+4. 把这个关系记到字典里
+5. 最后按 `nums1` 顺序取答案
+
+### Python 代码
+
+~~~python
+class Solution(object):
+    def nextGreaterElement(self, nums1, nums2):
+        stack = []
+        next_greater = {}
+
+        for x in nums2:
+            while stack and stack[-1] < x:
+                next_greater[stack.pop()] = x
+            stack.append(x)
+
+        while stack:
+            next_greater[stack.pop()] = -1
+
+        return [next_greater[x] for x in nums1]
+~~~
+
+### 复杂度
+
+- 时间复杂度：`O(m + n)`
+- 空间复杂度：`O(n)`
+
+其中：
+- `m = len(nums1)`
+- `n = len(nums2)`
+
+### 边界情况
+
+- 所有元素都递减
+- 所有元素都递增
+- `nums1` 只有一个元素
+- 某些元素没有更大值，结果应为 `-1`
+
+### 易错点
+
+- 栈里存的是元素值，不是下标
+- 这是 739 的“值映射版”，不是原样抄下标模板
+- 最后别忘了把栈里剩余元素统一映射成 `-1`
+
+---
+
+## LeetCode 1047 - Remove All Adjacent Duplicates In String
+
+### 题意
+给定一个字符串，反复删除所有相邻且相同的字符，直到不能再删，返回最终结果。
+
+### 核心思路
+这题是标准的：
+
+**字符串栈消除。**
+
+做法：
+
+- 如果当前字符和栈顶相同，说明形成一对相邻重复字符，直接弹栈
+- 否则就把当前字符压栈
+- 最后把栈里的字符拼起来
+
+本质上是“边扫描边消除”，不需要真的多轮反复遍历原字符串。
+
+### Python 代码
+
+~~~python
+class Solution(object):
+    def removeDuplicates(self, s):
+        stack = []
+
+        for ch in s:
+            if stack and stack[-1] == ch:
+                stack.pop()
+            else:
+                stack.append(ch)
+
+        return ''.join(stack)
+~~~
+
+### 复杂度
+
+- 时间复杂度：`O(n)`
+- 空间复杂度：`O(n)`
+
+### 边界情况
+
+- 空字符串
+- 全部字符都相同
+- 删除一轮后又形成新的相邻重复
+- 最终结果为空字符串
+
+### 易错点
+
+- 不要把它想成“循环删除子串”，那样容易写复杂
+- 关键是“当前字符与栈顶比较”
+- 最后要 `''.join(stack)`，不是直接返回列表
+
+---
+
+## 周五二刷口述记录
+
+### 20 - Valid Parentheses
+- 模板类型：基础栈匹配
+- 关键点：右括号时先判空，再看是否和栈顶匹配
+- 最后必须检查栈是否为空
+- 易错点：把不匹配和空栈情况分开写漏掉
+
+### 155 - Min Stack
+- 模板类型：辅助栈同步最小值
+- 关键点：`min_stack` 每一层都记录“当前位置为止最小值”
+- `push / pop` 两个栈必须同步
+- 易错点：重复最小值时不能只在“更小”时更新
+
+### 232 - Implement Queue using Stacks
+- 模板类型：双栈模拟队列
+- 关键点：`out_stack` 空时才把 `in_stack` 倒过去
+- `push` 便宜，`pop / peek` 均摊 `O(1)`
+- 易错点：每次都倒栈会把思路写乱
+
+### 739 - Daily Temperatures
+- 模板类型：单调栈
+- 关键点：栈里存下标，不存值
+- 当前温度更高时，不断弹出并计算等待天数
+- 易错点：比较条件是严格更高，所以用 `<` 而不是 `<=`
+
+---
+
+## 周五补充小结
+
+今天新增两题：
+
+- 496：单调栈 + 哈希映射
+- 1047：字符串栈消除
+
+并对这周核心模板做了二刷口述：
+
+- 20
+- 155
+- 232
+- 739
+
+到这里，Week 03 的栈 / 队列 / 单调栈闭环已经比较完整。

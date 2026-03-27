@@ -543,3 +543,125 @@ This repository should prefer the second.
 ## 14. One-Sentence Design Rule
 
 Build the repository as a stable baseline spine plus a neutral media tool layer plus explicitly staged future generation/separation branches, so that the long-term structured sound-layer generation system can grow without breaking the current reproducible path.
+---
+
+## Week 03 Friday update: role clarification for MusicGen, AudioLDM, and Spleeter
+
+### 1. MusicGen / AudioCraft
+
+Role in the current repository:
+
+- primary stage-1 generation entry
+- current smoke generation path
+- first real waveform output path for the long-term project
+
+Current status:
+
+- environment verified
+- `musicgen-small` smoke passed
+- output example:
+  - `artifacts/wav/musicgen_smoke_001.wav`
+- log evidence:
+  - `artifacts/logs/week03_audiocraft_smoke.log`
+
+Why it matters:
+
+MusicGen is no longer only a future candidate in discussion.
+It is now the first generator that has produced a real repository artifact.
+
+Current responsibility boundary:
+
+- generate short ambient / background-bed style audio
+- serve as the first controllable generation baseline
+- provide output examples for blueprint design and later workflow integration
+
+Current non-goals:
+
+- not yet the final long-video soundtrack system
+- not yet a full layered multi-stem generator
+- not yet integrated into the serving / compose runtime path
+
+### 2. AudioLDM
+
+Role in the current repository:
+
+- secondary generation candidate
+- future environment / foley / sound-effect generation branch
+- comparison route for text-to-audio generation behavior
+
+Why it is staged instead of active:
+
+At Week 03, the repository already has one successful generation smoke through MusicGen.
+Therefore, AudioLDM should not replace the current successful smoke path immediately.
+
+Current responsibility boundary:
+
+- future candidate for short event-level audio generation
+- useful for sound effects, ambience fragments, or prompt-sensitive audio events
+- benchmark / comparison branch rather than default runtime
+
+Current non-goals:
+
+- not the current default smoke generator
+- not required to be fully installed and validated in Week 03
+- not yet wired into blueprint execution
+
+### 3. Spleeter
+
+Role in the current repository:
+
+- source separation utility
+- dataset preparation helper
+- evaluation / comparison support tool
+
+Why it matters:
+
+The long-term project is not only about generation.
+It also needs tools for:
+
+- preparing layered references
+- separating mixed tracks into stems
+- creating comparison baselines for structured audio layering
+
+Current responsibility boundary:
+
+- stem extraction from reference audio
+- support for data preparation and analysis
+- optional comparison path for layered workflows
+
+Current non-goals:
+
+- not a replacement for generation models
+- not the main runtime path
+- not the current smoke focus for Week 03
+
+### 4. Current layer interpretation
+
+At the end of Week 03, the generation stack should be interpreted as:
+
+- `media_probe`: input media inspection
+- `audio_blueprint_spec`: structured intermediate protocol
+- `MusicGen / AudioCraft`: current primary smoke generation path
+- `AudioLDM`: staged alternative generation branch
+- `Spleeter`: staged separation / preprocessing utility branch
+- serving / compose / workflow: later orchestration layer
+
+This interpretation is deliberate.
+
+The repository should now clearly distinguish:
+
+- what is already proven by artifact
+- what is staged for next-step integration
+- what belongs to generation
+- what belongs to separation
+- what belongs to orchestration
+
+### 5. Current conclusion
+
+By the end of Week 03:
+
+- MusicGen / AudioCraft = active and validated stage-1 generator
+- AudioLDM = staged alternative generator
+- Spleeter = staged separation and data-preparation utility
+
+This gives the repository a cleaner long-term structure and prevents future module mixing.
