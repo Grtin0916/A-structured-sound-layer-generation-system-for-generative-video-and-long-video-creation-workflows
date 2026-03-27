@@ -1,0 +1,34 @@
+torch: 2.1.0+cu118
+torchaudio: 2.1.0+cu118
+cuda_available: True
+device: NVIDIA A100-PCIE-40GB
+pythonpath_ok: /home/GRT/work/audio_engineering_repo_skeleton_v1
+audiocraft_installed: True
+ffmpeg_in_path: /home/GRT/anaconda3/envs/audio-mini/bin/ffmpeg
+ffprobe_in_path: /home/GRT/anaconda3/envs/audio-mini/bin/ffprobe
+wav_output_dir_exists: True
+ffprobe version 6.1.2 Copyright (c) 2007-2024 the FFmpeg developers
+built with gcc 13.3.0 (conda-forge gcc 13.3.0-1)
+configuration: --prefix=/home/GRT/anaconda3/envs/audio-mini --cc=/home/conda/feedstock_root/build_artifacts/ffmpeg_1730671262093/_build_env/bin/x86_64-conda-linux-gnu-cc --cxx=/home/conda/feedstock_root/build_artifacts/ffmpeg_1730671262093/_build_env/bin/x86_64-conda-linux-gnu-c++ --nm=/home/conda/feedstock_root/build_artifacts/ffmpeg_1730671262093/_build_env/bin/x86_64-conda-linux-gnu-nm --ar=/home/conda/feedstock_root/build_artifacts/ffmpeg_1730671262093/_build_env/bin/x86_64-conda-linux-gnu-ar --disable-doc --enable-openssl --enable-demuxer=dash --enable-hardcoded-tables --enable-libfreetype --enable-libharfbuzz --enable-libfontconfig --enable-libopenh264 --enable-libdav1d --disable-gnutls --enable-libmp3lame --enable-libvpx --enable-libass --enable-pthreads --enable-vaapi --enable-libopenvino --enable-gpl --enable-libx264 --enable-libx265 --enable-libaom --enable-libsvtav1 --enable-libxml2 --enable-pic --enable-shared --disable-static --enable-version3 --enable-zlib --enable-libopus --pkg-config=/home/conda/feedstock_root/build_artifacts/ffmpeg_1730671262093/_build_env/bin/pkg-config
+libavutil      58. 29.100 / 58. 29.100
+libavcodec     60. 31.102 / 60. 31.102
+libavformat    60. 16.100 / 60. 16.100
+libavdevice    60.  3.100 / 60.  3.100
+libavfilter     9. 12.100 /  9. 12.100
+libswscale      7.  5.100 /  7.  5.100
+libswresample   4. 12.100 /  4. 12.100
+libpostproc    57.  3.100 / 57.  3.100
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/audiocraft/__init__.py", line 24, in <module>
+    from . import data, modules, models
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/audiocraft/data/__init__.py", line 10, in <module>
+    from . import audio, audio_dataset, info_audio_dataset, music_dataset, sound_dataset
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/audiocraft/data/audio.py", line 22, in <module>
+    import av
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/av/__init__.py", line 20, in <module>
+    from av._core import time_base, library_versions
+ImportError: /lib/x86_64-linux-gnu/libstdc++.so.6: version `CXXABI_1.3.13' not found (required by /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/av/../../.././libopenvino_c.so.2440)
+/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+done
