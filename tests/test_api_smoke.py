@@ -79,3 +79,23 @@ def test_predict_invalid_shape(tmp_path):
     data = resp.json()
     assert data["status"] == "error"
     assert data["error"]["code"] == "INVALID_INPUT_SHAPE"
+
+
+def test_predict_invalid_input_ref():
+    resp = client.post(
+        "/predict",
+        json={
+            "instance_id": "pytest-week04-mon-missing-ref",
+            "input_ref": "tmp/definitely_not_exists/sample.npy",
+            "input_type": "mel_npy",
+            "expected_input_shape": [1, 1, 64, 313],
+        },
+    )
+    assert resp.status_code == 400
+
+    data = resp.json()
+    assert data["status"] == "error"
+    assert data["error"]["code"] == "INVALID_INPUT_REF"
+    assert data["error"]["message"] == "input_ref does not exist"
+    assert data["error"]["details"]["input_ref"] == "tmp/definitely_not_exists/sample.npy"
+    assert "resolved_path" in data["error"]["details"]
