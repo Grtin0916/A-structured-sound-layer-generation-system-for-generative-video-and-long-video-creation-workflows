@@ -99,3 +99,60 @@ def test_predict_invalid_input_ref():
     assert data["error"]["message"] == "input_ref does not exist"
     assert data["error"]["details"]["input_ref"] == "tmp/definitely_not_exists/sample.npy"
     assert "resolved_path" in data["error"]["details"]
+
+
+def test_predict_invalid_input_ref_bad_npy(tmp_path):
+    input_path = tmp_path / "broken.npy"
+    input_path.write_bytes(b"this is not a valid npy file")
+
+    resp = client.post(
+        "/predict",
+        json={
+            "instance_id": "pytest-week04-tue-bad-npy",
+            "input_ref": str(input_path),
+            "input_type": "mel_npy",
+            "expected_input_shape": [1, 1, 64, 313],
+        },
+    )
+    assert resp.status_code == 400
+
+    data = resp.json()
+    assert data["status"] == "error"
+    assert data["error"]["code"] == "INVALID_INPUT_REF"
+    assert data["error"]["message"] == "failed to load input_ref as .npy tensor"
+    assert data["error"]["details"]["input_ref"] == str(input_path)
+    assert "resolved_path" in data["error"]["details"]
+    assert "exception_type" in data["error"]["details"]
+
+
+def test_predict_inference_failed(tmp_path, monkeypatch):
+    import src.serving.app as serving_app
+
+    class FakeSession:
+        def run(self, *args, **kwargs):
+            raise RuntimeError("synthetic ort failure")
+
+    monkeypatch.setattr(serving_app, "get_session", lambda: FakeSession())
+
+    input_path = tmp_path / "valid.npy"
+    x = np.random.default_rng(123).standard_normal(FIXED_INPUT_SHAPE).astype(np.float32)
+    np.save(input_path, x)
+
+    resp = client.post(
+        "/predict",
+        json={
+            "instance_id": "pytest-week04-tue-infer-fail",
+            "input_ref": str(input_path),
+            "input_type": "mel_npy",
+            "expected_input_shape": [1, 1, 64, 313],
+        },
+    )
+    assert resp.status_code == 500
+
+    data = resp.json()
+    assert data["status"] == "error"
+    assert data["error"]["code"] == "INFERENCE_FAILED"
+    assert data["error"]["message"] == "ORT inference failed"
+    assert data["output_ref"] is None
+    assert data["output_shape"] is None
+    assert data["error"]["details"]["exception_type"] == "RuntimeError"

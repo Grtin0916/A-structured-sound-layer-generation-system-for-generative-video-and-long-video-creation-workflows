@@ -312,3 +312,71 @@ Week 03 周一的目标不是完成完整 ORT 推理服务，而是先冻结：
 4. 未来桥接字段已预留但未过度实现
 5. 文档路径放在 `docs/design/serving_api_spec.md`
 6. 后续 `src/serving/app.py` 与 `src/serving/schemas.py` 必须遵循本文档字段语义
+
+---
+
+## 13. Week 04 Tuesday reserved fields semantics
+
+本节用于把 `/predict` 请求体中的保留字段语义进一步冻结，避免后续 blueprint / generator 接入时出现同名字段含义漂移。
+
+### 13.1 Current rule
+
+以下字段在 Week 04 Tuesday 的定位统一为：
+
+- 只定义语义
+- 允许出现在 request schema 中
+- 当前不改变实际 ORT 推理行为
+- 当前不改变 artifact 落盘目录
+- 当前不触发复杂路由、调度或策略分发
+
+### 13.2 Field-by-field semantics
+
+#### `media_ref`
+- 语义：上游媒体引用
+- 当前用途：保留给后续 `source_video.path` / 输入媒体身份对齐
+- 当前状态：仅透传语义，不参与 `/predict` 执行分支判断
+
+#### `segment_id`
+- 语义：分段级标识
+- 当前用途：预留给后续 timeline / segment 粒度桥接
+- 当前状态：当前 blueprint 最小规范中尚未形成稳定直接映射，因此先保留，不参与执行逻辑
+
+#### `blueprint_id`
+- 语义：audio blueprint 唯一标识
+- 当前用途：对齐 blueprint 顶层 `blueprint_id`
+- 当前状态：当前不参与推理，仅用于后续请求与 blueprint 关联
+
+#### `output_artifact_dir`
+- 语义：调用方期望的输出 artifact 目录
+- 当前用途：先作为保留字段记录意图
+- 当前状态：本周不启用目录重定向；预测输出仍统一写入 `artifacts/predict/`
+- 设计边界：不能因为该字段存在就把输出写到任意自定义路径
+
+#### `generator_name`
+- 语义：调用方声明的生成器/后端偏好标识
+- 当前用途：为后续与 `metadata.generator_stack` 或 timeline 事件 `generator` 对齐做准备
+- 当前状态：本周不根据该字段切换实际推理后端；`baseline_v1` 仍固定走当前 ORT 路径
+- 设计边界：它是“声明性字段”，不是“立即生效的执行开关”
+
+#### `request_tags`
+- 语义：请求标签列表
+- 当前用途：为后续 tracing / routing / experiment tagging 预留
+- 当前状态：本周不进入业务逻辑，不参与 artifact 路径生成，不参与 provider 选择
+- 设计边界：只保留标签语义，不实现复杂标签驱动行为
+
+### 13.3 Current artifact policy clarification
+
+当前 `/predict` 的输出引用语义固定为：
+
+- 服务若产生预测输出文件，统一落到 `artifacts/predict/`
+- `output_ref` 返回相对于仓库根目录的相对路径
+- 当前不允许由 `output_artifact_dir`、`generator_name`、`request_tags` 等保留字段改变该规则
+
+### 13.4 Week 04 Tuesday acceptance
+
+本节补充完成后，视为当前阶段满足：
+
+1. 保留字段的“可写入”与“可生效”边界已经分开
+2. 当前实现不会因为保留字段而改变 ORT 推理路径
+3. 当前实现不会因为保留字段而改变 artifact 输出目录
+4. blueprint / media / generator 相关字段已经冻结最小语义，供后续桥接使用
