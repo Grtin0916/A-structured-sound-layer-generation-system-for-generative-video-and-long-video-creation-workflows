@@ -1,2 +1,10 @@
-.....                                                                    [100%]
-5 passed in 0.65s
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/GRT/work/audio_engineering_repo_skeleton_v1
+configfile: pytest.ini
+plugins: hydra-core-1.3.2, anyio-4.12.1
+collected 7 items
+
+tests/test_api_smoke.py .......                                          [100%]
+
+============================== 7 passed in 4.06s ===============================
