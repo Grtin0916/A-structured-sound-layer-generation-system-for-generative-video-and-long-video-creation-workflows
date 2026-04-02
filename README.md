@@ -1,10 +1,63 @@
 # A structured sound layer generation system for generative video and long video creation workflows
 
+## Verified Scope
+
+当前仓库已完成并留有证据的范围如下：
+
+- 已完成最小数据集准备、manifest 构建、baseline 训练、checkpoint 保存这一条基础训练链路
+- 已完成 `baseline_v1` 的 ONNX 导出
+- 已完成固定 shape 下的 PyTorch / ONNX 对齐校验
+- 已完成 ONNX Runtime CPU 单次推理验证
+- 已完成 ONNX Runtime benchmark，并已产出结果文件
+- 已完成 Docker 下的最小 CPU 验证链路
+- 已形成 Week04 的 serving / artifact contract 第一轮冻结
+- 已为 `/predict` 的 smoke 路径与负路径保留日志证据
+
+一句话说，当前仓库已经具备一条**可复验的最小工程闭环**，可作为后续 blueprint seed、generator audit、评测体系与服务化扩展的工程地基。
+
+---
+
+## Not Yet Verified
+
+以下内容仍未进入“已验证”范围，当前不能写满：
+
+- `media_probe -> blueprint seed JSON` 的正式映射与首条 seed 落盘
+- generator audit 的正式结论
+- 更完整的音频生成链可复验性结论
+- 主基地 observability 的正式实现与验证
+- scorecard / regression / evals 的体系化收口
+- 更完整的 serving runtime、性能优化与多阶段评测闭环
+
+这些方向已经进入路线规划，但截至当前远端仓库状态，还不应写成“已完成”。
+
+---
+
+## Next Hard Milestone
+
+接下来的硬里程碑按顺序是：
+
+1. **Week05：blueprint seed JSON**
+   - 把 `media_probe` 输出正式映射为 blueprint seed JSON
+   - 落第一条最小 seed
+   - 补对应 regression / mapping 文档
+
+2. **Week06：generator audit**
+   - 对 MusicGen / AudioCraft 相关生成链做正式审计
+   - 给出“可复现 / 不可复现 / 失败原因”的明确结论
+   - 形成可引用的审计记录与日志
+
+3. **随后：评测与可观测增强**
+   - 逐步补齐 scorecard、失败案例回归、observability 与更稳定的 serving 语义
+
+---
+
 ## 项目概览
 
 本仓库用于记录我围绕**“面向生成式视频与长视频创作工作流的结构化声音层生成系统”**所开展的学习、实验与最小可复现工程实践。
 
-当前阶段不追求大而全，重点是先把一条扎实的工程主线跑通：
+当前阶段不追求大而全，重点是先把一条扎实的工程主线跑通，并确保每一步都能沉淀为可引用的代码、日志、文档与产物，而不是停留在概念设计层。
+
+当前已跑通的工程主线包括：
 
 - 最小数据集准备
 - manifest 构建
@@ -22,11 +75,9 @@
 
 当前阶段的核心目标是：
 
-> 先完成一个贴合 AudioCraft 学习路线的最小训练、导出、推理与 benchmark 工程闭环。
+> 先完成一个贴合 AudioCraft 学习路线的最小训练、导出、推理与 benchmark 工程闭环，并在此基础上逐步推进 contract、seed、audit、eval 与 serving 相关能力。
 
 这不是最终系统形态，而是第一阶段的工程地基。
-
----
 
 ## 快速开始
 
