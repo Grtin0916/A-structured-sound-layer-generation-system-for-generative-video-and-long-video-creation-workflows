@@ -399,3 +399,29 @@ docker run --rm audio-ort-cpu:latest
 - Postmortem: `docs/postmortems/2026-03-14_week01_postmortem.md`
 - ORT benchmark: `docs/benchmarks/ort_cpu_baseline.md`
 - Baseline result note: `results/baseline_v1.md`
+
+
+## Week05 seed entry (verified)
+
+当前 Week05 已验证的最小入口：
+
+~~~bash
+python scripts/build_blueprint_seed.py --input artifacts/logs/week03_video_probe_smoke.json --output artifacts/manifests/seed_0001.json
+pytest -q tests/regression/test_blueprint_seed.py 2>&1 | tee artifacts/logs/week05_seed_regression.log
+~~~
+
+当前最小产物：
+
+~~~text
+artifacts/manifests/seed_0001.json
+docs/design/audio_blueprint_seed_mapping.md
+tests/regression/test_blueprint_seed.py
+scripts/build_blueprint_seed.py
+artifacts/logs/week05_seed_regression.log
+~~~
+
+说明：
+
+- 第一条命令用于从 media_probe 输出重建 seed_0001.json
+- 第二条命令用于重跑 week05 的 seed regression
+- 该入口服务于后续 generator audit / blueprint 扩展 / W6 联调
