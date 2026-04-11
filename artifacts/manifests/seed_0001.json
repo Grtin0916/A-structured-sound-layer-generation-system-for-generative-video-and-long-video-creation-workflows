@@ -1,0 +1,36 @@
+{
+  "blueprint_version": "v0.1",
+  "blueprint_id": "seed_0001",
+  "task_type": "video_audio_smoke",
+  "source_video": {
+    "path": "data/interim/test_video_probe_smoke/335040.mp4",
+    "duration_sec": 27.413333,
+    "has_audio": true,
+    "has_video": true
+  },
+  "media_probe": {
+    "log_ref": "artifacts/logs/week03_video_probe_smoke.json",
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "size_bytes": 262444862,
+    "bit_rate": 76588968,
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    "video": {
+      "codec": "h264",
+      "width": 3840,
+      "height": 2160,
+      "fps": 23.976023976023978
+    }
+  },
+  "timeline": [],
+  "output_stems": [],
+  "metadata": {
+    "segment_id": "seg_0001_full",
+    "generator_name": "seed_builder_v0",
+    "output_artifact_dir": "artifacts/wav/seed_0001",
+    "source_stage": "week05_seed_mapping"
+  }
+}
