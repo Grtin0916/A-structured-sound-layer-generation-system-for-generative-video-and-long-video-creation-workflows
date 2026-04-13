@@ -77,3 +77,19 @@ elapsed_sec=19.75
 peak_allocated_mib=1712.06
 peak_reserved_mib=1790.00
 status=smoke_run_done
+selected_gpu_followup=0
+/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+[week06][generator_audit_001]
+status=followup_run_start
+prompt=minimal ambient electronic texture with soft pads
+duration_sec=5
+cuda_visible_devices=0
+gpu_mem_free_before_mib=24174.75
+gpu_mem_total_mib=40326.38
+output_path=artifacts/outputs/week06/musicgen_small_followup_5s_001.wav
+sample_rate=32000
+elapsed_sec=8.75
+peak_allocated_mib=1783.96
+peak_reserved_mib=2078.00
+status=followup_run_done
