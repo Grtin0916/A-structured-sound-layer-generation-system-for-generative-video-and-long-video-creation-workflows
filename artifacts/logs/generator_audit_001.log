@@ -1,3 +1,52 @@
 [week06][generator_audit_001]
 status=initialized
 note=template created, environment probe pending
+[week06][generator_audit_001]
+status=env_probe_start
+timestamp=2026-04-13 17:10:43
+repo_commit=5e92e35
+python_version=Python 3.9.23
+torch_probe=torch=2.1.0+cu118; cuda_available=True
+torchaudio_probe=torchaudio=2.1.0+cu118
+audiocraft_probe=    Name: audiocraft
+    Version: 1.3.0
+    Summary: Audio generation research library for PyTorch
+    Home-page: https://github.com/facebookresearch/audiocraft
+    Author: FAIR Speech & Audio
+    Author-email: defossez@meta.com, jadecopet@meta.com
+    License: MIT License
+    Location: /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages
+    Requires: av, demucs, einops, encodec, flashy, gradio, huggingface_hub, hydra-core, hydra_colorlog, julius, librosa, num2words, numpy, protobuf, sentencepiece, spacy, torch, torchaudio, torchmetrics, torchtext, torchvision, tqdm, transformers, xformers
+    Required-by: 
+nvidia_smi<<EOF
+Mon Apr 13 17:11:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.127.08             Driver Version: 550.127.08     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-PCIE-40GB          Off |   00000000:17:00.0 Off |                    0 |
+| N/A   84C    P0            250W /  250W |   15733MiB /  40960MiB |     97%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-PCIE-40GB          Off |   00000000:C7:00.0 Off |                    0 |
+| N/A   66C    P0             73W /  250W |   15995MiB /  40960MiB |     98%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A      2189      G   /usr/lib/xorg/Xorg                              4MiB |
+|    0   N/A  N/A    378510      C   ...aconda3/envs/dformer/bin/python3.10      15284MiB |
+|    0   N/A  N/A    378511      C   ...aconda3/envs/dformer/bin/python3.10        416MiB |
+|    1   N/A  N/A      2189      G   /usr/lib/xorg/Xorg                              4MiB |
+|    1   N/A  N/A    378510      C   ...aconda3/envs/dformer/bin/python3.10        416MiB |
+|    1   N/A  N/A    378511      C   ...aconda3/envs/dformer/bin/python3.10      15546MiB |
++-----------------------------------------------------------------------------------------+
+EOF
+status=env_probe_done
