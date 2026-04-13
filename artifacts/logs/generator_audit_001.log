@@ -50,3 +50,30 @@ Mon Apr 13 17:11:07 2026
 +-----------------------------------------------------------------------------------------+
 EOF
 status=env_probe_done
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/audiocraft/__init__.py", line 24, in <module>
+    from . import data, modules, models
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/audiocraft/data/__init__.py", line 10, in <module>
+    from . import audio, audio_dataset, info_audio_dataset, music_dataset, sound_dataset
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/audiocraft/data/audio.py", line 22, in <module>
+    import av
+  File "/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/av/__init__.py", line 20, in <module>
+    from av._core import time_base, library_versions
+ImportError: /lib/x86_64-linux-gnu/libstdc++.so.6: version `CXXABI_1.3.15' not found (required by /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/av/../../.././././libtbb.so.12)
+selected_gpu=0
+/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:30: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+[week06][generator_audit_001]
+status=smoke_run_start
+prompt=minimal ambient electronic texture with soft pads
+duration_sec=2
+cuda_visible_devices=0
+gpu_mem_free_before_mib=24176.75
+gpu_mem_total_mib=40326.38
+output_path=artifacts/outputs/week06/musicgen_small_smoke_2s_001.wav
+sample_rate=32000
+elapsed_sec=19.75
+peak_allocated_mib=1712.06
+peak_reserved_mib=1790.00
+status=smoke_run_done
