@@ -98,9 +98,16 @@
 进入环境后执行：
 
 ```bash
-conda activate audio-mini
-cd ~/work/audio_engineering_repo_skeleton_v1
-export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+进入环境后建议：
+
+- 先激活环境：
+  - `conda activate audio-mini`
+  - `cd ~/work/audio_engineering_repo_skeleton_v1`
+
+- 仅在需要运行依赖 conda 动态库的 AudioCraft / MusicGen 相关命令时，按单条命令临时注入库路径：
+  - `LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH" python your_script.py`
+
+- 不建议长期在整个 shell 中全局 `export LD_LIBRARY_PATH`，否则可能影响 git / ssh / OpenSSL 等系统工具。
 ```
 
 ### 2. 2026-03-20 周五主线最小复现
