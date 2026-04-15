@@ -11,28 +11,41 @@
 - cuda_available: True
 
 ## Execution Path
-- step1: environment probe completed
+- step1: completed environment probe and verified current conda runtime
 - step2: verified audiocraft import under current conda env and LD_LIBRARY_PATH
-- step3: loaded pretrained model facebook/musicgen-small
-- step4: ran text-to-music smoke generation with duration=4 sec on GPU
-- step5: saved artifact to artifacts/generated/week06_generator_audit/musicgen_small_try001.wav
+- step3: loaded pretrained model `facebook/musicgen-small`
+- step4: completed run_001 text-to-music smoke generation with duration=4 sec
+- step5: completed run_002 controlled text-to-music generation with duration=8 sec
+- step6: saved artifacts under `artifacts/generated/week06_generator_audit/`
 
 ## Result Judgment
-- reproducibility: partial
-- status: local inference smoke path is reproducible under the current environment
+- reproducibility: reproducible_for_local_smoke_scope
+- status: local MusicGen small smoke path is reproducible under the current environment
+- validated_scope:
+  - model loading via `MusicGen.get_pretrained("facebook/musicgen-small")`
+  - GPU generation on A100 40GB
+  - wav artifact export via `audio_write`
 - evidence:
-  - audiocraft import succeeded
-  - musicgen-small generated a valid wav artifact
-  - elapsed_sec around 20.41 on A100 40GB
-- limitation:
-  - only one model path and one successful generation case have been validated
-  - earlier logs showed ABI-related import instability before current environment/path fix
+  - run_001 output: `artifacts/generated/week06_generator_audit/musicgen_small_try001.wav`
+  - run_002 output: `artifacts/generated/week06_generator_audit/musicgen_small_try002_8s.wav`
+  - run_001 status: success
+  - run_002 status: success
+  - run_002 elapsed_sec: 8.56
+  - run_002 peak_allocated_mib: 1817.75
+  - run_002 peak_reserved_mib: 2144.0
+
+## Limitation
+- current conclusion only covers local smoke inference scope for `facebook/musicgen-small`
+- it does not yet cover medium / melody / larger models
+- it does not yet establish a formal benchmark methodology
+- run_001 vs run_002 elapsed time should not be treated as a strict runtime comparison because first-run load / warmup effects are not isolated
 
 ## Root Cause / Failure Notes
 - earlier failure was related to libstdc++ / CXXABI mismatch triggered during av import
-- current environment no longer reproduces that failure after using the active conda env and corrected library path
+- current environment no longer reproduces that import failure under the active conda env and current library path
+- this means the environment issue is currently mitigated for the validated local smoke path, but should still be documented as an environment-sensitive risk
 
 ## Next Step
-1. run a second controlled audit case on musicgen-small
-2. compare 4s vs 8s generation behavior and memory/time
-3. then decide whether the audit can be upgraded from partial to reproducible for the local smoke scope
+1. sync README Verified Scope / Not Yet Verified / Next Hard Milestone with current Week06 evidence
+2. optionally add a stable wrapper script such as `scripts/run_generator_audit.sh`
+3. leave medium / melody models and richer evals to the next audit stage instead of over-expanding Week06

@@ -3,20 +3,23 @@
 ## Verified Scope
 
 当前仓库已完成并留有证据的范围如下：
+  * 已完成最小数据集准备、manifest 构建、baseline 训练、checkpoint 保存这一条基础训练链路
+  * 已完成 `baseline_v1` 的 ONNX 导出
+  * 已完成固定 shape 下的 PyTorch / ONNX 对齐校验
+  * 已完成 ONNX Runtime CPU 单次推理验证
+  * 已完成 ONNX Runtime benchmark，并已产出结果文件
+  * 已完成 Docker 下的最小 CPU 验证链路
+  * 已形成 Week04 的 serving / artifact contract 第一轮冻结
+  * 已为 `/predict` 的 smoke 路径与负路径保留日志证据
+  * 已完成 `media_probe -> blueprint seed JSON` 的首条最小映射落盘（`artifacts/manifests/seed_0001.json`）
+  * 已补 blueprint seed 的映射说明文档（`docs/design/audio_blueprint_seed_mapping.md`）
+  * 已补 blueprint seed 的 regression 测试（`tests/regression/test_blueprint_seed.py`）
+  * 已建立 generator audit 模板（`docs/evals/generator_audit_template.md`）
+  * 已完成 MusicGen small 本地 smoke 审计日志（`artifacts/logs/generator_audit_001.log`）
+  * 已完成 Week06 审计结论文档（`docs/postmortems/2026-04-17_week06_generator_audit.md`）
+  * 已完成 `facebook/musicgen-small` 的两轮本地 text-to-music smoke 生成，并保留输出产物
 
-- 已完成最小数据集准备、manifest 构建、baseline 训练、checkpoint 保存这一条基础训练链路
-- 已完成 `baseline_v1` 的 ONNX 导出
-- 已完成固定 shape 下的 PyTorch / ONNX 对齐校验
-- 已完成 ONNX Runtime CPU 单次推理验证
-- 已完成 ONNX Runtime benchmark，并已产出结果文件
-- 已完成 Docker 下的最小 CPU 验证链路
-- 已形成 Week04 的 serving / artifact contract 第一轮冻结
-- 已为 `/predict` 的 smoke 路径与负路径保留日志证据
-- 已完成 `media_probe -> blueprint seed JSON` 的首条最小映射落盘（`artifacts/manifests/seed_0001.json`）
-- 已补 blueprint seed 的映射说明文档（`docs/design/audio_blueprint_seed_mapping.md`）
-- 已补 blueprint seed 的 regression 测试（`tests/regression/test_blueprint_seed.py`）
-
-一句话说，当前仓库已经具备一条可复验的最小工程闭环，并且 Week05 的 blueprint seed 基线已经真正落盘；它可以作为后续 generator audit、评测体系与服务化扩展的工程地基。
+一句话说，当前仓库已经不只是 Week05 的 seed 基线落盘，还已经完成了 Week06 的 `musicgen-small` 本地 smoke audit 闭环；它可以作为后续 scorecard、eval 与更大模型审计的起点。
 
 * * *
 
@@ -24,13 +27,13 @@
 
 以下内容仍未进入“已验证”范围，当前不能写满：
 
-- generator audit 的正式结论
-- MusicGen / AudioCraft 相关生成链的可复验性结论
-- 主基地 observability 的正式实现与验证
-- scorecard / regression / evals 的体系化收口
-- 更完整的 serving runtime、性能优化与多阶段评测闭环
+  * `facebook/musicgen-medium` / `melody` / 更大模型的可复验性结论
+  * 主基地 observability 的正式实现与验证
+  * scorecard / regression / evals 的体系化收口
+  * 更完整的 serving runtime、性能优化与多阶段评测闭环
+  * 严格可比较的 generator benchmark 方法学
 
-这些方向已经进入路线规划，但截至当前远端仓库状态，还不应写成“已完成”。
+这些方向已经进入路线规划，但截至当前仓库状态，还不应写成“已完成”。
 
 * * *
 
@@ -38,17 +41,12 @@
 
 接下来的硬里程碑按顺序是：
 
-1. Week06：generator audit
-
-   - 建立 `docs/evals/generator_audit_template.md`
-   - 记录环境探测、依赖版本、CUDA / torch 状态与首轮实验日志
-   - 先用 `facebook/musicgen-small` 做第一轮可复验性试跑
-   - 给出“可复现 / 不可复现 / 失败原因”的明确结论
-
-2. 随后：评测与可观测增强
-
-   - 逐步补齐 scorecard、失败案例回归、observability 与更稳定的 serving 语义
-   - 把 generator audit 的输入/输出结构进一步演化为后续 eval / runtime 对比的统一入口
+  1. Week06 收口：README / weekly / audit 证据同步
+     * 同步 Verified Scope / Not Yet Verified / Next Hard Milestone
+     * 确保证据链与日志、文档、产物一致
+  2. 随后：评测与可观测增强
+     * 逐步补齐 scorecard、失败案例回归、observability 与更稳定的 serving 语义
+     * 把 generator audit 的输入/输出结构进一步演化为后续 eval / runtime 对比的统一入口
 
 * * *
 
