@@ -45,7 +45,13 @@
 - current environment no longer reproduces that import failure under the active conda env and current library path
 - this means the environment issue is currently mitigated for the validated local smoke path, but should still be documented as an environment-sensitive risk
 
+## Current Judgment and Week07 Interface
+- current Week06 judgment is stable for the validated local smoke scope of `facebook/musicgen-small`
+- the README, weekly summary, postmortem, audit log, and generated artifacts are now treated as the Week06 closure set
+- this conclusion must not be over-extended to `facebook/musicgen-medium`, `facebook/musicgen-melody`, larger models, formal benchmark claims, or training-closure claims
+- the Week07 interface is to map the current audit inputs, generated artifacts, failure notes, and judgment fields into later scorecard / eval / runtime comparison headers
+
 ## Next Step
-1. sync README Verified Scope / Not Yet Verified / Next Hard Milestone with current Week06 evidence
-2. optionally add a stable wrapper script such as `scripts/run_generator_audit.sh`
-3. leave medium / melody models and richer evals to the next audit stage instead of over-expanding Week06
+1. keep Week06 closure stable by maintaining consistency across README, weekly summary, postmortem, log, and generated artifacts
+2. use the current generator audit structure as an input template for later scorecard / eval / runtime comparison work instead of expanding Week06 scope
+3. shift daily execution focus to Java auth boundary hardening and Cloud OTel reproducibility after mainbase closure
