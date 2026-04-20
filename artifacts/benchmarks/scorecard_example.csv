@@ -1,0 +1,5 @@
+eval_group,subject,case_id,input_type,status,failure_tag,metric_key,metric_value,evidence_path,note
+functional,facebook/musicgen-small,week06_smoke_001,text_prompt,pass,none,artifact_exists,1,artifacts/logs/generator_audit_001.log,Week06 local smoke audit evidence
+functional,blueprint_seed_mapping,seed_0001,media_probe,pass,none,seed_written,1,artifacts/manifests/seed_0001.json,Seed mapping artifact already committed
+performance,baseline_v1,ort_cpu_baseline,mel,pass,none,benchmark_recorded,1,artifacts/logs/bench_ort_cpu.csv,Use historical ORT CPU benchmark as v1 evidence
+failure_regression,generator_audit,week06_audit_summary,text_prompt,pass,none,postmortem_exists,1,docs/postmortems/2026-04-17_week06_generator_audit.md,Postmortem exists and can seed failure taxonomy

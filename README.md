@@ -18,8 +18,9 @@
   * 已完成 MusicGen small 本地 smoke 审计日志（`artifacts/logs/generator_audit_001.log`）
   * 已完成 Week06 审计结论文档（`docs/postmortems/2026-04-17_week06_generator_audit.md`）
   * 已完成 `facebook/musicgen-small` 的两轮本地 text-to-music smoke 生成，并保留输出产物
+  * 已完成 `docs/evals/scorecard_v1.md` 骨架与 `artifacts/benchmarks/scorecard_example.csv` 最小样例落盘，作为 Week07 的 scorecard 入口
 
-一句话说，当前仓库已经不只是 Week05 的 seed 基线落盘，还已经完成了 Week06 的 `musicgen-small` 本地 smoke audit 闭环；它可以作为后续 scorecard、eval 与更大模型审计的起点。
+一句话说，当前仓库已经不只是 Week05 的 seed 基线落盘，还已经完成了 Week06 的 `musicgen-small` 本地 smoke audit 闭环，并进入 Week07 的 scorecard 初版阶段；它可以作为后续 scorecard、eval 与更大模型审计的起点。
 
 * * *
 
@@ -29,7 +30,7 @@
 
   * `facebook/musicgen-medium` / `melody` / 更大模型的可复验性结论
   * 主基地 observability 的正式实现与验证
-  * scorecard / regression / evals 的体系化收口
+  * scorecard 当前仅到 v1 skeleton + sample CSV，尚未形成严格可比较的方法学、扩展 regression 覆盖与自动化收口
   * 更完整的 serving runtime、性能优化与多阶段评测闭环
   * 严格可比较的 generator benchmark 方法学
 
@@ -41,14 +42,13 @@
 
 接下来的硬里程碑按顺序是：
 
-  1. Week06 收口：README / weekly / audit 证据同步
-     * 同步 Verified Scope / Not Yet Verified / Next Hard Milestone
-     * 确保证据链与日志、文档、产物一致
-  2. 随后：评测与可观测增强
-     * 逐步补齐 scorecard、失败案例回归、observability 与更稳定的 serving 语义
-     * 把 generator audit 的输入/输出结构进一步演化为后续 eval / runtime 对比的统一入口
-
-* * *
+1. Week07：scorecard 初版落盘
+   * 新增 `docs/evals/scorecard_v1.md`
+   * 新增 `artifacts/benchmarks/scorecard_example.csv`
+   * 用现有 Week06 audit、seed 与 benchmark 证据先固定功能 eval、性能 eval、失败回归 eval 三类字段，不补新实验凑表
+2. W8 阶段验收预热
+   * 同步 README 顶部三段、weekly 入口与 scorecard 证据
+   * 为后续 metrics、observability 与更严格 benchmark 方法学提供统一入口
 
 ## 项目概览
 
