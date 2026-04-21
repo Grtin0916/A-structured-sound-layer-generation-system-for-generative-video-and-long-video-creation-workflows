@@ -2,37 +2,22 @@
 
 ## Verified Scope
 
-当前仓库已完成并留有证据的范围如下：
-  * 已完成最小数据集准备、manifest 构建、baseline 训练、checkpoint 保存这一条基础训练链路
-  * 已完成 `baseline_v1` 的 ONNX 导出
-  * 已完成固定 shape 下的 PyTorch / ONNX 对齐校验
-  * 已完成 ONNX Runtime CPU 单次推理验证
-  * 已完成 ONNX Runtime benchmark，并已产出结果文件
-  * 已完成 Docker 下的最小 CPU 验证链路
-  * 已形成 Week04 的 serving / artifact contract 第一轮冻结
-  * 已为 `/predict` 的 smoke 路径与负路径保留日志证据
-  * 已完成 `media_probe -> blueprint seed JSON` 的首条最小映射落盘（`artifacts/manifests/seed_0001.json`）
-  * 已补 blueprint seed 的映射说明文档（`docs/design/audio_blueprint_seed_mapping.md`）
-  * 已补 blueprint seed 的 regression 测试（`tests/regression/test_blueprint_seed.py`）
-  * 已建立 generator audit 模板（`docs/evals/generator_audit_template.md`）
-  * 已完成 MusicGen small 本地 smoke 审计日志（`artifacts/logs/generator_audit_001.log`）
-  * 已完成 Week06 审计结论文档（`docs/postmortems/2026-04-17_week06_generator_audit.md`）
-  * 已完成 `facebook/musicgen-small` 的两轮本地 text-to-music smoke 生成，并保留输出产物
-  * 已完成 `docs/evals/scorecard_v1.md` 骨架与 `artifacts/benchmarks/scorecard_example.csv` 最小样例落盘，作为 Week07 的 scorecard 入口
+- 已完成 Week05 的 seed 基线落盘，仓库内已有 `artifacts/manifests/seed_0001.json` 可作为结构化输入映射样例。
+- 已完成 Week06 的 generator audit 证据收口，包括 audit 模板、审计日志、postmortem 与 README verified scope 同步。
+- 已完成 Week07 的 `docs/evals/scorecard_v1.md` 与 `artifacts/benchmarks/scorecard_example.csv` 初版落盘；当前 sample CSV 已扩到 7 条样例，覆盖 `functional`、`performance`、`failure_regression` 三类入口。
+- 当前主基地已经具备从 Week06 audit 证据继续上提到 scorecard、eval、failure regression 扩写的最小入口。
 
-一句话说，当前仓库已经不只是 Week05 的 seed 基线落盘，还已经完成了 Week06 的 `musicgen-small` 本地 smoke audit 闭环，并进入 Week07 的 scorecard 初版阶段；它可以作为后续 scorecard、eval 与更大模型审计的起点。
+一句话说，当前仓库已经从 Week06 的 generator audit 闭环，推进到 Week07 的 scorecard 可引用样例阶段；它可以作为后续 W8 metrics、formal eval 与更大模型审计的起点。
 
 * * *
 
 ## Not Yet Verified
 
-以下内容仍未进入“已验证”范围，当前不能写满：
-
-  * `facebook/musicgen-medium` / `melody` / 更大模型的可复验性结论
-  * 主基地 observability 的正式实现与验证
-  * scorecard 当前仅到 v1 skeleton + sample CSV，尚未形成严格可比较的方法学、扩展 regression 覆盖与自动化收口
-  * 更完整的 serving runtime、性能优化与多阶段评测闭环
-  * 严格可比较的 generator benchmark 方法学
+- scorecard 当前仍是 v1 sample，不是严格统一的方法学与自动化评测收口。
+- failure regression 目前只有最小 taxonomy 入口，尚未扩到更系统的错误分类与批量回归执行。
+- 当前未把 `facebook/musicgen-medium`、`melody` 或更大模型纳入正式可比较结论。
+- `/metrics`、Prometheus 抓取、Grafana dashboard 与统一指标命名仍属于 Week08 的后续工作，不应提前写成已完成。
+- 更完整的 serving runtime、性能优化与多阶段评测闭环仍未完成。
 
 这些方向已经进入路线规划，但截至当前仓库状态，还不应写成“已完成”。
 
@@ -42,13 +27,15 @@
 
 接下来的硬里程碑按顺序是：
 
-1. Week07：scorecard 初版落盘
-   * 新增 `docs/evals/scorecard_v1.md`
-   * 新增 `artifacts/benchmarks/scorecard_example.csv`
-   * 用现有 Week06 audit、seed 与 benchmark 证据先固定功能 eval、性能 eval、失败回归 eval 三类字段，不补新实验凑表
-2. W8 阶段验收预热
-   * 同步 README 顶部三段、weekly 入口与 scorecard 证据
-   * 为后续 metrics、observability 与更严格 benchmark 方法学提供统一入口
+1. Week07：收口 scorecard 证据与 README / weekly 入口
+   * 继续补足 scorecard example 的 evidence coverage 与 failure regression 样例
+   * 同步 README 顶部三段、weekly 入口与 scorecard 证据描述
+   * 让主基地在 W8 阶段验收前具备可直接引用的 scorecard 入口
+
+2. Week08：进入 metrics 化与命名统一预热
+   * 补 `/metrics` 与 Prometheus 抓取入口
+   * 统一 contract / runtime / artifact 指标命名
+   * 为后续 Grafana dashboard 落盘做准备
 
 ## 项目概览
 

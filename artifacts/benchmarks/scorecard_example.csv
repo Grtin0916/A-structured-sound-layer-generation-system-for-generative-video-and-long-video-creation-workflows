@@ -1,5 +1,8 @@
 eval_group,subject,case_id,input_type,status,failure_tag,metric_key,metric_value,evidence_path,note
 functional,facebook/musicgen-small,week06_smoke_001,text_prompt,pass,none,artifact_exists,1,artifacts/logs/generator_audit_001.log,Week06 local smoke audit evidence
 functional,blueprint_seed_mapping,seed_0001,media_probe,pass,none,seed_written,1,artifacts/manifests/seed_0001.json,Seed mapping artifact already committed
-performance,baseline_v1,ort_cpu_baseline,mel,pass,none,benchmark_recorded,1,artifacts/logs/bench_ort_cpu.csv,Use historical ORT CPU benchmark as v1 evidence
-failure_regression,generator_audit,week06_audit_summary,text_prompt,pass,none,postmortem_exists,1,docs/postmortems/2026-04-17_week06_generator_audit.md,Postmortem exists and can seed failure taxonomy
+functional,scorecard_v1,week07_scorecard_doc,other,pass,none,doc_exists,1,docs/evals/scorecard_v1.md,Scorecard entry document exists and is tracked
+performance,baseline_v1,ort_cpu_baseline_csv,mel,pass,none,benchmark_recorded,1,artifacts/logs/bench_ort_cpu.csv,Historical ORT CPU benchmark recorded in csv
+performance,baseline_v1,ort_cpu_baseline_doc,mel,pass,none,benchmark_doc_exists,1,docs/benchmarks/ort_cpu_baseline.md,Human-readable benchmark note exists
+failure_regression,generator_audit,week06_audit_postmortem,text_prompt,pass,none,postmortem_exists,1,docs/postmortems/2026-04-17_week06_generator_audit.md,Week06 postmortem can seed failure taxonomy
+failure_regression,generator_audit,week06_summary_boundary,text_prompt,pass,none,scope_boundary_written,1,docs/weekly/2026-04-17_week06_summary.md,Weekly summary records what was intentionally out of scope
