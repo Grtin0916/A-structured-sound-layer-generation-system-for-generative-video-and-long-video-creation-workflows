@@ -43,7 +43,7 @@
 |---|---|
 | functional | `artifacts/logs/generator_audit_001.log`, `artifacts/manifests/seed_0001.json` |
 | performance | `docs/benchmarks/ort_cpu_baseline.md`, `artifacts/logs/bench_ort_cpu.csv` |
-| failure_regression | `docs/postmortems/2026-04-17_week06_generator_audit.md` |
+| failure_regression | `docs/postmortems/2026-04-13_week06_generator_audit_round1.md`, `docs/postmortems/2026-04-17_week06_generator_audit.md`, `docs/weekly/2026-04-17_week06_summary.md` |
 
 ## 6. Out of scope for v1
 - `musicgen-medium` / `melody` / larger models

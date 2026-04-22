@@ -4,7 +4,7 @@
 
 - 已完成 Week05 的 seed 基线落盘，仓库内已有 `artifacts/manifests/seed_0001.json` 可作为结构化输入映射样例。
 - 已完成 Week06 的 generator audit 证据收口，包括 audit 模板、审计日志、postmortem 与 README verified scope 同步。
-- 已完成 Week07 的 `docs/evals/scorecard_v1.md` 与 `artifacts/benchmarks/scorecard_example.csv` 初版落盘；当前 sample CSV 已扩到 7 条样例，覆盖 `functional`、`performance`、`failure_regression` 三类入口。
+- 已完成 Week07 的 `docs/evals/scorecard_v1.md` 与 `artifacts/benchmarks/scorecard_example.csv` 初版落盘；当前 sample CSV 已扩到 10 条样例，覆盖 `functional`、`performance`、`failure_regression` 三类入口。
 - 当前主基地已经具备从 Week06 audit 证据继续上提到 scorecard、eval、failure regression 扩写的最小入口。
 
 一句话说，当前仓库已经从 Week06 的 generator audit 闭环，推进到 Week07 的 scorecard 可引用样例阶段；它可以作为后续 W8 metrics、formal eval 与更大模型审计的起点。
@@ -14,7 +14,7 @@
 ## Not Yet Verified
 
 - scorecard 当前仍是 v1 sample，不是严格统一的方法学与自动化评测收口。
-- failure regression 目前只有最小 taxonomy 入口，尚未扩到更系统的错误分类与批量回归执行。
+- failure regression 已形成最小 taxonomy，当前已有 5 条样例，但尚未扩到更系统的错误分类与批量回归执行。
 - 当前未把 `facebook/musicgen-medium`、`melody` 或更大模型纳入正式可比较结论。
 - `/metrics`、Prometheus 抓取、Grafana dashboard 与统一指标命名仍属于 Week08 的后续工作，不应提前写成已完成。
 - 更完整的 serving runtime、性能优化与多阶段评测闭环仍未完成。
@@ -82,20 +82,20 @@
 - onnx
 - onnxruntime
 
-进入环境后执行：
-
-```bash
 进入环境后建议：
 
-- 先激活环境：
-  - `conda activate audio-mini`
-  - `cd ~/work/audio_engineering_repo_skeleton_v1`
-
-- 仅在需要运行依赖 conda 动态库的 AudioCraft / MusicGen 相关命令时，按单条命令临时注入库路径：
-  - `LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH" python your_script.py`
-
-- 不建议长期在整个 shell 中全局 `export LD_LIBRARY_PATH`，否则可能影响 git / ssh / OpenSSL 等系统工具。
+```bash
+conda activate audio-mini
+cd ~/work/audio_engineering_repo_skeleton_v1
 ```
+
+仅在需要运行依赖 conda 动态库的 AudioCraft / MusicGen 相关命令时，再按单条命令临时注入库路径：
+
+```bash
+LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH" python your_script.py
+```
+
+不建议长期在整个 shell 中全局 `export LD_LIBRARY_PATH`，否则可能影响 git / ssh / OpenSSL 等系统工具。
 
 ### 2. 2026-03-20 周五主线最小复现
 
