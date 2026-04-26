@@ -6,6 +6,7 @@ import numpy as np
 import onnxruntime as ort
 import yaml
 from fastapi import FastAPI, Response, status
+from prometheus_client import make_asgi_app
 
 from src.serving.schemas import (
     ErrorResponse,
@@ -106,9 +107,12 @@ app = FastAPI(
     version=API_VERSION,
     description=(
         "Temporary Python service adapter for baseline_v1. "
-        "Current scope: /healthz, /metadata, /predict with ORT."
+        "Current scope: /healthz, /metadata, /predict, /metrics with ORT."
     ),
 )
+
+metrics_app = make_asgi_app()
+app.mount("/metrics", metrics_app)
 
 
 @app.get(

@@ -30,6 +30,20 @@ def test_metadata():
     assert data["contract_type"] == "fixed_shape"
 
 
+def test_metrics_endpoint_exposes_prometheus_text():
+    resp = client.get("/metrics")
+    assert resp.status_code in (200, 307)
+
+    if resp.status_code == 307:
+        resp = client.get("/metrics/")
+        assert resp.status_code == 200
+
+    assert "text/plain" in resp.headers["content-type"]
+    body = resp.text
+    assert "# HELP" in body
+    assert "# TYPE" in body
+
+
 def test_predict_happy_path(tmp_path):
     input_path = tmp_path / "sample.npy"
     x = np.random.default_rng(42).standard_normal(FIXED_INPUT_SHAPE).astype(np.float32)

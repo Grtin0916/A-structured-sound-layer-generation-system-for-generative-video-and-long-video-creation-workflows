@@ -1,0 +1,6 @@
+HTTP/1.1 307 Temporary Redirect
+date: Sun, 26 Apr 2026 04:39:22 GMT
+server: uvicorn
+content-length: 0
+location: http://127.0.0.1:8000/metrics/
+

@@ -5,9 +5,12 @@
 - 已完成 Week05 的 seed 基线落盘，仓库内已有 `artifacts/manifests/seed_0001.json` 可作为结构化输入映射样例。
 - 已完成 Week06 的 generator audit 证据收口，包括 audit 模板、审计日志、postmortem 与 README verified scope 同步。
 - 已完成 Week07 的 `docs/evals/scorecard_v1.md` 与 `artifacts/benchmarks/scorecard_example.csv` 初版落盘；当前 sample CSV 已扩到 10 条样例，覆盖 `functional`、`performance`、`failure_regression` 三类入口。
-- 当前主基地已经具备从 Week06 audit 证据继续上提到 scorecard、eval、failure regression 扩写的最小入口。
+- 已完成 Week08 的 metrics 命名草稿：`docs/design/metrics_naming.md`，统一了 `mainbase_contract_*`、`mainbase_runtime_*`、`mainbase_artifact_*` 三类指标命名口径。
+- 已完成 Week08 的最小 `/metrics` 暴露入口：`src/serving/app.py` 已通过 `prometheus_client.make_asgi_app()` 挂载 Prometheus ASGI app，`tests/test_api_smoke.py` 已新增 metrics smoke test，`pytest tests/test_api_smoke.py -q` 当前为 `8 passed`。
+- 已新增 Week08 Prometheus 最小抓取配置：`monitoring/prometheus/prometheus.yml`，当前 job 为 `mainbase-serving`，metrics path 为 `/metrics`，本地验证证据保存在 `artifacts/logs/week08_metrics_*`。
+- 当前 `/metrics` 访问语义已验证：`/metrics` 返回 307 redirect，`/metrics/` 返回 Prometheus text format，并包含默认 `python_info` 与 `process_*` 指标。
 
-一句话说，当前仓库已经从 Week06 的 generator audit 闭环，推进到 Week07 的 scorecard 可引用样例阶段；它可以作为后续 W8 metrics、formal eval 与更大模型审计的起点。
+一句话说，当前仓库已经从 Week07 的 scorecard 可引用样例阶段，推进到 Week08 的 metrics naming、Prometheus 暴露入口与最小 scrape config 阶段；它可以作为后续 dashboard、custom metrics 与 formal eval observability 的起点。
 
 * * *
 
@@ -16,7 +19,9 @@
 - scorecard 当前仍是 v1 sample，不是严格统一的方法学与自动化评测收口。
 - failure regression 已形成最小 taxonomy，当前已有 5 条样例，但尚未扩到更系统的错误分类与批量回归执行。
 - 当前未把 `facebook/musicgen-medium`、`melody` 或更大模型纳入正式可比较结论。
-- `/metrics`、Prometheus 抓取、Grafana dashboard 与统一指标命名仍属于 Week08 的后续工作，不应提前写成已完成。
+- 当前 `/metrics` 已能暴露 Prometheus text format，但尚未接入自定义 `mainbase_contract_*`、`mainbase_runtime_*`、`mainbase_artifact_*` 指标采集逻辑。
+- Prometheus scrape config 已落盘并通过 YAML 解析，但尚未通过真实 Prometheus server 完成 scrape target 状态验证。
+- Grafana dashboard 尚未落盘；`monitoring/grafana/dashboards/mainbase-overview.json` 仍属于 Week08 后续工作。
 - 更完整的 serving runtime、性能优化与多阶段评测闭环仍未完成。
 
 这些方向已经进入路线规划，但截至当前仓库状态，还不应写成“已完成”。
@@ -27,15 +32,15 @@
 
 接下来的硬里程碑按顺序是：
 
-1. Week07：收口 scorecard 证据与 README / weekly 入口
-   * 继续补足 scorecard example 的 evidence coverage 与 failure regression 样例
-   * 同步 README 顶部三段、weekly 入口与 scorecard 证据描述
-   * 让主基地在 W8 阶段验收前具备可直接引用的 scorecard 入口
+1. Week08：收口 metrics 化最小证据
+   * 保留 `/metrics` 与 `/metrics/` 的 curl 日志证据
+   * 固定 `docs/design/metrics_naming.md` 与 `monitoring/prometheus/prometheus.yml`
+   * 明确当前只完成默认 Python/process metrics 暴露，不把 custom metrics 与 Grafana dashboard 提前写成已完成
 
-2. Week08：进入 metrics 化与命名统一预热
-   * 补 `/metrics` 与 Prometheus 抓取入口
-   * 统一 contract / runtime / artifact 指标命名
-   * 为后续 Grafana dashboard 落盘做准备
+2. Week08：进入 dashboard 与 custom metrics 预热
+   * 补 `monitoring/grafana/dashboards/mainbase-overview.json`
+   * 选择 1–2 个低风险 custom metrics 接入点
+   * 为后续 formal eval、runtime benchmark 与 failure regression observability 留入口
 
 ## 项目概览
 
