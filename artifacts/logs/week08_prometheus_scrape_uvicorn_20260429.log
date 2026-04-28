@@ -1,0 +1,64 @@
+nohup: 忽略输入
+INFO:     Started server process [3390396]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44762 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42854 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:42854 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45794 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:45794 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40174 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:40174 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35100 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:35100 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32778 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:32778 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47146 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:47146 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57310 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:57310 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39118 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:39118 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52202 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52202 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43100 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:43100 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46796 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:46796 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56758 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:56758 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45680 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:45680 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48046 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:48046 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33128 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:33128 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35848 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:35848 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33822 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:33822 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58088 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58088 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50020 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50020 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34286 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:34286 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43128 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:43128 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41924 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:41924 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58440 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58440 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56804 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:56804 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48616 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:48616 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50286 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50286 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60660 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:60660 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40228 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:40228 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48138 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:48138 - "GET /metrics/ HTTP/1.1" 200 OK

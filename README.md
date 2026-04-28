@@ -15,20 +15,22 @@
 * * *
 - 已完成 Week08 Grafana dashboard 初版：`monitoring/grafana/dashboards/mainbase-overview.json` 已落盘并通过 `python -m json.tool` 校验；当前面板仅覆盖 `python_info`、`process_resident_memory_bytes`、`process_cpu_seconds_total`、`process_start_time_seconds` 等默认 Prometheus 指标，不声明 custom `mainbase_*` 指标已经接入。
 
+- 已完成 Week08 真实 Prometheus scrape target 验证：使用 Prometheus server 容器读取 `monitoring/prometheus/prometheus.yml`，在宿主机端口 `9091` 复验 `mainbase-serving` target 进入 `up` 状态，`lastError` 为空；证据保存在 `artifacts/logs/week08_prometheus_targets_20260429_retry9091_after_wait.json`。
+
 ## Not Yet Verified
 
 - scorecard 当前仍是 v1 sample，不是严格统一的方法学与自动化评测收口。
 - failure regression 已形成最小 taxonomy，当前已有 5 条样例，但尚未扩到更系统的错误分类与批量回归执行。
 - 当前未把 `facebook/musicgen-medium`、`melody` 或更大模型纳入正式可比较结论。
 - 当前 `/metrics` 已能暴露 Prometheus text format，但尚未接入自定义 `mainbase_contract_*`、`mainbase_runtime_*`、`mainbase_artifact_*` 指标采集逻辑。
-- Prometheus scrape config 已落盘并通过 YAML 解析，但尚未通过真实 Prometheus server 完成 scrape target 状态验证。
+- Prometheus scrape target 已通过真实 Prometheus server 复验；后续仍未验证长期运行、告警、dashboard provisioning 与生产级 scrape 拓扑。
 - Grafana dashboard 已完成默认指标初版，但尚未接入更完整的业务面板、dashboard provisioning 与真实 Grafana 导入验证。
 - 更完整的 serving runtime、性能优化与多阶段评测闭环仍未完成。
 
 这些方向已经进入路线规划，但截至当前仓库状态，还不应写成“已完成”。
 
 * * *
-- custom `mainbase_*` 指标、真实 Prometheus scrape target 状态、更完整的 Grafana dashboard 面板仍未验证；当前 dashboard 只作为 Week08 默认指标入口。
+- custom `mainbase_*` 指标、更完整的 Grafana dashboard 面板、dashboard provisioning 与生产级告警仍未验证；当前 dashboard 只作为 Week08 默认指标入口。
 
 ## Next Hard Milestone
 
@@ -37,7 +39,7 @@
 1. Week08：收口 metrics 化最小证据
    * 保留 `/metrics` 与 `/metrics/` 的 curl 日志证据
    * 固定 `docs/design/metrics_naming.md` 与 `monitoring/prometheus/prometheus.yml`
-   * 明确当前只完成默认 Python/process metrics 暴露与 dashboard 初版，不把 custom metrics、真实 scrape target 与完整 Grafana 导入提前写成已完成
+   * 明确当前只完成默认 Python/process metrics 暴露、Prometheus target up 复验与 dashboard 初版，不把 custom metrics、完整 Grafana 导入与生产级告警提前写成已完成
 
 2. Week08：进入 dashboard 初版复验与 custom metrics 预热
    * 复验 `monitoring/grafana/dashboards/mainbase-overview.json` 的 JSON 格式、默认指标查询与 README 边界描述
