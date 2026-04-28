@@ -1,0 +1,6 @@
+prometheus, version 3.11.1 (branch: HEAD, revision: 1bd2f3a9fdedf52e6f613449cc4c50e86ca24676)
+  build user:       root@b1d74f9af457
+  build date:       20260407-15:01:56
+  go version:       go1.26.1
+  platform:         linux/amd64
+  tags:             netgo,builtinassets
