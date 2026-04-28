@@ -13,6 +13,7 @@
 一句话说，当前仓库已经从 Week07 的 scorecard 可引用样例阶段，推进到 Week08 的 metrics naming、Prometheus 暴露入口与最小 scrape config 阶段；它可以作为后续 dashboard、custom metrics 与 formal eval observability 的起点。
 
 * * *
+- 已完成 Week08 Grafana dashboard 初版：`monitoring/grafana/dashboards/mainbase-overview.json` 已落盘并通过 `python -m json.tool` 校验；当前面板仅覆盖 `python_info`、`process_resident_memory_bytes`、`process_cpu_seconds_total`、`process_start_time_seconds` 等默认 Prometheus 指标，不声明 custom `mainbase_*` 指标已经接入。
 
 ## Not Yet Verified
 
@@ -21,12 +22,13 @@
 - 当前未把 `facebook/musicgen-medium`、`melody` 或更大模型纳入正式可比较结论。
 - 当前 `/metrics` 已能暴露 Prometheus text format，但尚未接入自定义 `mainbase_contract_*`、`mainbase_runtime_*`、`mainbase_artifact_*` 指标采集逻辑。
 - Prometheus scrape config 已落盘并通过 YAML 解析，但尚未通过真实 Prometheus server 完成 scrape target 状态验证。
-- Grafana dashboard 尚未落盘；`monitoring/grafana/dashboards/mainbase-overview.json` 仍属于 Week08 后续工作。
+- Grafana dashboard 已完成默认指标初版，但尚未接入更完整的业务面板、dashboard provisioning 与真实 Grafana 导入验证。
 - 更完整的 serving runtime、性能优化与多阶段评测闭环仍未完成。
 
 这些方向已经进入路线规划，但截至当前仓库状态，还不应写成“已完成”。
 
 * * *
+- custom `mainbase_*` 指标、真实 Prometheus scrape target 状态、更完整的 Grafana dashboard 面板仍未验证；当前 dashboard 只作为 Week08 默认指标入口。
 
 ## Next Hard Milestone
 
@@ -35,10 +37,10 @@
 1. Week08：收口 metrics 化最小证据
    * 保留 `/metrics` 与 `/metrics/` 的 curl 日志证据
    * 固定 `docs/design/metrics_naming.md` 与 `monitoring/prometheus/prometheus.yml`
-   * 明确当前只完成默认 Python/process metrics 暴露，不把 custom metrics 与 Grafana dashboard 提前写成已完成
+   * 明确当前只完成默认 Python/process metrics 暴露与 dashboard 初版，不把 custom metrics、真实 scrape target 与完整 Grafana 导入提前写成已完成
 
-2. Week08：进入 dashboard 与 custom metrics 预热
-   * 补 `monitoring/grafana/dashboards/mainbase-overview.json`
+2. Week08：进入 dashboard 初版复验与 custom metrics 预热
+   * 复验 `monitoring/grafana/dashboards/mainbase-overview.json` 的 JSON 格式、默认指标查询与 README 边界描述
    * 选择 1–2 个低风险 custom metrics 接入点
    * 为后续 formal eval、runtime benchmark 与 failure regression observability 留入口
 
