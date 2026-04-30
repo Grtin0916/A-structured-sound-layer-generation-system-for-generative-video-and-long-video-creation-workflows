@@ -2,6 +2,8 @@
 
 ## Verified Scope
 
+- 已完成 S1 阶段总结：`docs/weekly/2026-05-01_stage_s1_mainbase.md` 已收口 W4-W8 的 serving contract、blueprint seed、generator audit、scorecard_v1 与 Week08 metrics / Prometheus / dashboard baseline 证据，并明确 custom `mainbase_*` 指标、完整 Grafana 导入和生产级告警仍未验证。
+
 - 已完成 Week05 的 seed 基线落盘，仓库内已有 `artifacts/manifests/seed_0001.json` 可作为结构化输入映射样例。
 - 已完成 Week06 的 generator audit 证据收口，包括 audit 模板、审计日志、postmortem 与 README verified scope 同步。
 - 已完成 Week07 的 `docs/evals/scorecard_v1.md` 与 `artifacts/benchmarks/scorecard_example.csv` 初版落盘；当前 sample CSV 已扩到 10 条样例，覆盖 `functional`、`performance`、`failure_regression` 三类入口。
