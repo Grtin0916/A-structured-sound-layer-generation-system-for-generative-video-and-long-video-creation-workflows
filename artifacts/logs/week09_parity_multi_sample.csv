@@ -1,0 +1,11 @@
+sample_index,status,mean_abs_err,max_abs_err,mse,allclose,report
+0,ok,0.0000051313,0.0000104904,0.0000000000,True,artifacts/logs/onnx_parity_sample_00.md
+1,ok,0.0000008135,0.0000061989,0.0000000000,True,artifacts/logs/onnx_parity_sample_01.md
+2,ok,0.0000009150,0.0000071526,0.0000000000,True,artifacts/logs/onnx_parity_sample_02.md
+3,ok,0.0000007817,0.0000035763,0.0000000000,True,artifacts/logs/onnx_parity_sample_03.md
+4,ok,0.0000016702,0.0000066757,0.0000000000,True,artifacts/logs/onnx_parity_sample_04.md
+5,ok,0.0000008609,0.0000057220,0.0000000000,True,artifacts/logs/onnx_parity_sample_05.md
+6,ok,0.0000334792,0.0001068115,0.0000000018,True,artifacts/logs/onnx_parity_sample_06.md
+7,ok,0.0000009262,0.0000071526,0.0000000000,True,artifacts/logs/onnx_parity_sample_07.md
+8,ok,0.0000016823,0.0000166893,0.0000000000,True,artifacts/logs/onnx_parity_sample_08.md
+9,ok,0.0000043001,0.0000104904,0.0000000000,True,artifacts/logs/onnx_parity_sample_09.md

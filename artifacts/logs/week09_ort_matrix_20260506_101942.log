@@ -1,0 +1,455 @@
+===== Week09 ORT benchmark matrix =====
+date: 2026-05-06T10:19:42+08:00
+config: configs/train/baseline.yaml
+checkpoint: artifacts/experiments/baseline_v1/checkpoints/best.pt
+onnx: artifacts/onnx/baseline_v1.onnx
+manifest: data/manifests/esc10_miniset_valid.jsonl
+provider: CPUExecutionProvider
+device: cpu
+max_samples: 10
+warmup: 20
+runs: 200
+
+================================================================================
+[RUN] sample_index=0
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000051313
+[Info] Max abs err   : 0.0000104904
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_00.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 14.9341
+[Info] P95 ms          : 15.8479
+[Info] P99 ms          : 18.0979
+[Info] Mean ms         : 14.7842
+[Info] Std ms          : 0.9252
+[Info] Throughput      : 67.6398 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_00.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_00.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=1
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-A-41.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000008135
+[Info] Max abs err   : 0.0000061989
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_01.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-A-41.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 13.5552
+[Info] P95 ms          : 14.3548
+[Info] P99 ms          : 14.9485
+[Info] Mean ms         : 13.4399
+[Info] Std ms          : 0.5569
+[Info] Throughput      : 74.4055 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_01.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_01.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=2
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-B-41.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000009150
+[Info] Max abs err   : 0.0000071526
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_02.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-B-41.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 15.7764
+[Info] P95 ms          : 16.2370
+[Info] P99 ms          : 16.9445
+[Info] Mean ms         : 15.8258
+[Info] Std ms          : 0.2459
+[Info] Throughput      : 63.1878 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_02.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_02.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=3
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-186924-A-12.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000007817
+[Info] Max abs err   : 0.0000035763
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_03.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-186924-A-12.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 15.7426
+[Info] P95 ms          : 16.0477
+[Info] P99 ms          : 16.7180
+[Info] Mean ms         : 15.4608
+[Info] Std ms          : 0.8008
+[Info] Throughput      : 64.6797 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_03.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_03.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=4
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-191131-A-40.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000016702
+[Info] Max abs err   : 0.0000066757
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_04.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-191131-A-40.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 13.5075
+[Info] P95 ms          : 13.9957
+[Info] P99 ms          : 15.2293
+[Info] Mean ms         : 13.4629
+[Info] Std ms          : 0.4928
+[Info] Throughput      : 74.2782 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_04.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_04.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=5
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-193339-A-10.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000008609
+[Info] Max abs err   : 0.0000057220
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_05.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-193339-A-10.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 15.8035
+[Info] P95 ms          : 16.0387
+[Info] P99 ms          : 16.4774
+[Info] Mean ms         : 15.8258
+[Info] Std ms          : 0.1908
+[Info] Throughput      : 63.1881 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_05.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_05.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=6
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-194930-A-1.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000334792
+[Info] Max abs err   : 0.0001068115
+[Info] MSE           : 0.0000000018
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_06.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-194930-A-1.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 13.7263
+[Info] P95 ms          : 14.8703
+[Info] P99 ms          : 15.6034
+[Info] Mean ms         : 13.8362
+[Info] Std ms          : 0.4847
+[Info] Throughput      : 72.2743 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_06.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_06.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=7
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-195710-A-10.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000009262
+[Info] Max abs err   : 0.0000071526
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_07.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-195710-A-10.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 15.7833
+[Info] P95 ms          : 16.0689
+[Info] P99 ms          : 16.2938
+[Info] Mean ms         : 15.8054
+[Info] Std ms          : 0.1359
+[Info] Throughput      : 63.2696 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_07.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_07.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=8
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-A-20.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000016823
+[Info] Max abs err   : 0.0000166893
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_08.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-A-20.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 13.6678
+[Info] P95 ms          : 14.5218
+[Info] P99 ms          : 15.5736
+[Info] Mean ms         : 13.7723
+[Info] Std ms          : 0.4066
+[Info] Throughput      : 72.6093 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_08.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_08.md
+================================================================================
+
+================================================================================
+[RUN] sample_index=9
+================================================================================
+[OK] PT vs ONNX comparison finished.
+[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-G-20.wav
+[Info] Input shape   : (1, 1, 64, 313)
+[Info] PT shape      : (1, 1, 64, 313)
+[Info] ONNX shape    : (1, 1, 64, 313)
+[Info] Mean abs err  : 0.0000043001
+[Info] Max abs err   : 0.0000104904
+[Info] MSE           : 0.0000000000
+[Info] Allclose      : True
+[Info] atol / rtol   : 0.0001 / 0.0001
+[Info] Provider      : ['CPUExecutionProvider']
+[Info] Report        : artifacts/logs/onnx_parity_sample_09.md
+================================================================================
+
+================================================================================
+[OK] ORT benchmark finished.
+[Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
+[Info] Provider req    : CPUExecutionProvider
+[Info] Provider actual : ['CPUExecutionProvider']
+[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-G-20.wav
+[Info] Input shape     : (1, 1, 64, 313)
+[Info] Output shape    : (1, 1, 64, 313)
+[Info] Warmup / runs   : 20 / 200
+[Info] P50 ms          : 15.7804
+[Info] P95 ms          : 16.1149
+[Info] P99 ms          : 16.5062
+[Info] Mean ms         : 15.8085
+[Info] Std ms          : 0.2071
+[Info] Throughput      : 63.2571 samples/s
+[Info] CSV             : artifacts/logs/bench_ort_sample_09.csv
+[Info] Markdown        : artifacts/logs/bench_ort_sample_09.md
+================================================================================
+
+================================================================================
+[OK] wrote parity csv : artifacts/logs/week09_parity_multi_sample.csv
+[OK] wrote bench csv  : artifacts/logs/week09_bench_ort_multi_sample.csv
+[OK] wrote summary md : docs/benchmarks/ort_week09.md
+================================================================================
+wrote artifacts/benchmarks/ort_week09.csv
+{'date': '2026-05-04', 'model': 'artifacts/onnx/baseline_v1.onnx', 'provider': 'CPUExecutionProvider', 'manifest': 'data/manifests/esc10_miniset_valid.jsonl', 'samples': '10', 'ok_samples': '10', 'warmup': '20', 'runs': '200', 'mean_p50_ms': '14.8277', 'mean_p95_ms': '15.4098', 'mean_p99_ms': '16.2393', 'mean_ms': '14.8022', 'throughput_samples_per_sec': '67.8790', 'notes': 'Week09 initial CPUExecutionProvider matrix based on existing bench_ort_dataset.py'}
+
+===== Week09 CSV =====
+date,model,provider,manifest,samples,ok_samples,warmup,runs,mean_p50_ms,mean_p95_ms,mean_p99_ms,mean_ms,throughput_samples_per_sec,notes
+2026-05-04,artifacts/onnx/baseline_v1.onnx,CPUExecutionProvider,data/manifests/esc10_miniset_valid.jsonl,10,10,20,200,14.8277,15.4098,16.2393,14.8022,67.8790,Week09 initial CPUExecutionProvider matrix based on existing bench_ort_dataset.py
+
+===== Week09 summary =====
+# ORT CPU Multi-sample Benchmark
+
+## 1. Scope
+
+本报告记录多样本验证结果。
+
+相关输入：
+- ONNX: `artifacts/onnx/baseline_v1.onnx`
+- Manifest: `data/manifests/esc10_miniset_valid.jsonl`
+
+相关输出：
+- Parity CSV: `artifacts/logs/parity_multi_sample.csv`
+- ORT multi-sample CSV: `artifacts/logs/bench_ort_multi_sample.csv`
+
+---
+
+## 2. Parity Summary
+
+### 2.1 Overall result
+- Samples: 10
+- status=ok: 10
+- allclose=True: 10
+- pass rate: 100.00%
+
+### 2.2 Error statistics
+- mean(mean_abs_err): 0.0000050560
+- median(mean_abs_err): 0.0000012982
+- max(mean_abs_err): 0.0000334792
+- max(max_abs_err): 0.0001068115
+
+### 2.3 Observation
+- 多数样本的 `mean_abs_err` 处于较小量级；
+- 当前多样本数值一致性成立；
+- 如存在离群样本，应继续在后续 shape / export 审计中单独复查。
+
+---
+
+## 3. ORT CPU Latency Summary
+
+### 3.1 Aggregate statistics
+- samples: 10
+- mean(p50_ms): 14.8277
+- mean(p95_ms): 15.4098
+- mean(p99_ms): 16.2393
+- mean(mean_ms): 14.8022
+- mean(throughput_samples_per_sec): 67.8790
+
+### 3.2 Slowest / fastest samples
+- slowest sample by mean_ms: sample 2
+  - p50_ms: 15.7764
+  - mean_ms: 15.8258
+  - throughput: 63.1878
+
+- fastest sample by mean_ms: sample 1
+  - p50_ms: 13.5552
+  - mean_ms: 13.4399
+  - throughput: 74.4055
+
+---
+
+## 4. Conclusion
+
+截至当前：
+1. 多样本 PT / ORT 对齐结果已形成 CSV 证据；
+2. ORT CPU 多样本延迟与吞吐结果已形成 CSV 证据；
+3. 当前脚本已将周二 ad-hoc 循环固化为可重复执行入口；
+4. 下一步优先级应为：
+   - 复查离群样本
+   - 进入 shape stability / export audit
+   - 再进行今日收口提交

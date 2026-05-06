@@ -1,0 +1,2 @@
+date,model,provider,manifest,samples,ok_samples,warmup,runs,mean_p50_ms,mean_p95_ms,mean_p99_ms,mean_ms,throughput_samples_per_sec,notes
+2026-05-06,artifacts/onnx/baseline_v1.onnx,CPUExecutionProvider,data/manifests/esc10_miniset_valid.jsonl,10,10,20,200,14.8277,15.4098,16.2393,14.8022,67.8790,Week09 initial CPUExecutionProvider matrix based on existing bench_ort_dataset.py
