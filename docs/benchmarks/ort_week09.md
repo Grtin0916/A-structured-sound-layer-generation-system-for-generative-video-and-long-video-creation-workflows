@@ -122,3 +122,55 @@
 - 当前没有覆盖 CUDA / TensorRT / ORT GPU provider。
 - 当前没有覆盖端到端音频预处理与后处理。
 
+<!-- week09-profile-cpu-memory-start -->
+
+## 2026-05-07 ORT profiling / CPU / memory probe
+
+This probe records a conservative ONNX Runtime profiling run for the Week09 benchmark evidence chain. It is intentionally configured as a stable CPU baseline rather than an aggressive tuning run.
+
+### Scope
+
+- Model: `artifacts/onnx/baseline_v1.onnx`
+- Model size: `5.5474 MB`
+- ONNX Runtime: `1.19.2`
+- Providers used: `CPUExecutionProvider`
+- Graph optimization: `disable`
+- Threads: `1`
+- Warmup / runs: `1 / 5`
+- Input: `mel`, shape `[1, 1, 64, 313]`, dtype `float32`
+- Output: `recon_mel`, runtime shape `[1, 1, 64, 313]`
+
+### Result
+
+| Metric | Value |
+|---|---:|
+| latency mean | 202.4657 ms |
+| latency median | 201.8881 ms |
+| latency p95 | 204.119 ms |
+| latency min | 200.6414 ms |
+| latency max | 204.1398 ms |
+| wall time | 1.0124 s |
+| CPU user time | 0.7862 s |
+| CPU system time | 0.2262 s |
+| max RSS before | 159.5625 MB |
+| max RSS after | 660.8125 MB |
+
+### Evidence files
+
+- Metrics JSON: `artifacts/benchmarks/ort_week09_profile_20260507.json`
+- Profile trace: `artifacts/profiles/ort_week09_profile_20260507_2026-05-07_09-53-52.json`
+- Run log: `artifacts/logs/week09_ort_profile_20260507.log`
+- Script: `scripts/bench_ort_profile.py`
+
+### Interpretation
+
+The profile run confirms that the exported `baseline_v1.onnx` model can be loaded and executed through `CPUExecutionProvider` with fixed input/output shape `[1, 1, 64, 313]`. The run uses one ORT thread and disables graph optimization to preserve a stable baseline. Under this conservative configuration, median latency is 201.8881 ms and p95 latency is 204.119 ms across 5 measured runs.
+
+The memory evidence should be interpreted as process-level maximum resident set size during the profiling process, not as model-parameter memory alone. The profile JSON is kept as trace evidence for later operator-level inspection.
+
+### Boundary
+
+This probe does not claim production-grade performance tuning, GPU acceleration, CUDA provider coverage, TensorRT optimization, or final runtime selection. It only closes the Week09 requirement that ORT benchmark evidence includes profiling, CPU time, memory, input/output shape, command-level reproducibility, and stored artifacts.
+
+<!-- week09-profile-cpu-memory-end -->
+

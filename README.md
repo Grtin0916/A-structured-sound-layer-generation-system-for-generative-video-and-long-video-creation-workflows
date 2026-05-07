@@ -2,6 +2,25 @@
 
 ## Verified Scope
 
+<!-- week09-ort-profile-verified-start -->
+
+### Week09 ORT profiling / CPU / memory verified update
+
+Verified on 2026-05-07:
+
+- Added `scripts/bench_ort_profile.py` for a conservative ONNX Runtime CPU profiling probe.
+- Generated profiling metrics at `artifacts/benchmarks/ort_week09_profile_20260507.json`.
+- Generated ORT trace file at `artifacts/profiles/ort_week09_profile_20260507_2026-05-07_09-53-52.json`.
+- Captured run log at `artifacts/logs/week09_ort_profile_20260507.log`.
+- Fixed model/input scope: `artifacts/onnx/baseline_v1.onnx`, input shape `[1, 1, 64, 313]`, output shape `[1, 1, 64, 313]`.
+- Fixed runtime scope: provider `CPUExecutionProvider`, graph optimization `disable`, threads `1`, warmup/runs `1/5`.
+- Observed median latency `201.8881 ms`, p95 latency `204.119 ms`, CPU user/system `0.7862s/0.2262s`, max RSS after `660.8125 MB`.
+
+Boundary: this update verifies Week09 profiling / CPU / memory evidence only. It does not claim CUDA provider coverage, TensorRT acceleration, production tuning, GPU benchmarking, or final runtime selection.
+
+<!-- week09-ort-profile-verified-end -->
+
+
 - 已完成 S1 阶段总结：`docs/weekly/2026-05-01_stage_s1_mainbase.md` 已收口 W4-W8 的 serving contract、blueprint seed、generator audit、scorecard_v1 与 Week08 metrics / Prometheus / dashboard baseline 证据，并明确 custom `mainbase_*` 指标、完整 Grafana 导入和生产级告警仍未验证。
 
 - 已完成 Week05 的 seed 基线落盘，仓库内已有 `artifacts/manifests/seed_0001.json` 可作为结构化输入映射样例。

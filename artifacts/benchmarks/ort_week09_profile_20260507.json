@@ -1,0 +1,64 @@
+{
+  "date": "2026-05-07",
+  "mode": "week09_profile_cpu_memory",
+  "model": "artifacts/onnx/baseline_v1.onnx",
+  "model_size_mb": 5.5474,
+  "onnxruntime_version": "1.19.2",
+  "providers_used": [
+    "CPUExecutionProvider"
+  ],
+  "graph_optimization": "disable",
+  "threads": 1,
+  "warmup": 1,
+  "runs": 5,
+  "inputs": [
+    {
+      "name": "mel",
+      "type": "tensor(float)",
+      "declared_shape": [
+        1,
+        1,
+        64,
+        313
+      ],
+      "used_shape": [
+        1,
+        1,
+        64,
+        313
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "recon_mel",
+      "type": "tensor(float)",
+      "declared_shape": [
+        1,
+        1,
+        64,
+        313
+      ]
+    }
+  ],
+  "runtime_output_shapes": [
+    [
+      1,
+      1,
+      64,
+      313
+    ]
+  ],
+  "latency_ms_mean": 202.4657,
+  "latency_ms_median": 201.8881,
+  "latency_ms_p95": 204.119,
+  "latency_ms_min": 200.6414,
+  "latency_ms_max": 204.1398,
+  "wall_time_sec": 1.0124,
+  "cpu_user_sec": 0.7862,
+  "cpu_system_sec": 0.2262,
+  "max_rss_before_mb": 159.5625,
+  "max_rss_after_mb": 660.8125,
+  "profile_file": "artifacts/profiles/ort_week09_profile_20260507_2026-05-07_09-53-52.json"
+}
