@@ -2,6 +2,25 @@
 
 ## Verified Scope
 
+<!-- week10-dvc-evidence-verified-start -->
+
+### Week10 DVC-first experiment / artifact tracking verified update
+
+Verified on 2026-05-11:
+
+- Added local DVC project scaffold: `.dvc/`, `.dvcignore`, `dvc.yaml`, and `dvc.lock`.
+- Added `scripts/week10_register_ort_evidence.py` to register existing Week09 ORT benchmark, runtime matrix, and profiling evidence.
+- Added DVC stage `week10_ort_evidence`.
+- Generated metrics artifact: `artifacts/benchmarks/week10_ort_evidence_metrics.json`.
+- Generated manifest artifact: `artifacts/benchmarks/week10_ort_evidence_manifest.json`.
+- Captured local verification log: `artifacts/logs/week10_dvc_ort_evidence_20260511.log`.
+- Current metrics snapshot includes benchmark sample count, successful sample count, mean p50 / p95 latency, throughput, best runtime-matrix p50 / p95 / mean latency, best runtime throughput, and profile numeric field count.
+
+Boundary: this update verifies local DVC-first evidence registration only. It does not claim remote DVC storage, MLflow tracking server, team experiment registry, CUDAExecutionProvider benchmark, TensorRT / vLLM / SGLang comparison, or production runtime selection.
+
+<!-- week10-dvc-evidence-verified-end -->
+
+
 <!-- week09-ort-profile-verified-start -->
 
 ### Week09 ORT profiling / CPU / memory verified update
@@ -57,21 +76,20 @@ Boundary: this update verifies Week09 profiling / CPU / memory evidence only. It
 
 接下来的硬里程碑按顺序是：
 
-1. Week10：收口实验 / 产物追踪入口
-   * 新增 docs/design/experiment_tracking.md，明确 Week09 ORT benchmark、runtime matrix 与 profiling artifacts 的追踪口径
-   * 在 DVC-first 与 MLflow local fallback 之间做一次最小落地选择
-   * 不声明远端 artifact store、团队级 tracking server 或生产级 experiment registry
+1. Week10：保持主基地 DVC 追踪入口可复验
+   * 复验 `python -m dvc repro week10_ort_evidence`
+   * 复验 `python -m dvc metrics show`
+   * 保持 `docs/design/experiment_tracking.md`、`dvc.yaml`、`dvc.lock`、metrics、manifest 与 README 顶部 Verified Scope 同步
+   * 不继续横向扩展 ORT 参数矩阵，不提前声明 CUDA、TensorRT、vLLM、SGLang 或生产 runtime 选择
 
-2. Week10：把 Week09 ORT 证据接入可复验追踪链
-   * 复用 artifacts/benchmarks/ort_week09.csv
-   * 复用 artifacts/benchmarks/ort_week09_runtime_matrix.csv
-   * 复用 artifacts/benchmarks/ort_week09_profile_20260507.json
-   * 固定追踪命令、输入、输出、边界与日志
-   * 明确当前仍只验证 local CPU / ONNX Runtime evidence，不提前声明 CUDA、TensorRT、vLLM、SGLang 或生产 runtime 选择
+2. Week10：转入 Java API contract 与 Cloud SLO / alert 草案
+   * Java 仓库下一步应新增 `docs/api/openapi.yaml` 与 `docs/adr/0004-error-contract.md`
+   * Cloud 仓库下一步应新增 `docs/runbooks/slo.md` 与 `observability/prometheus/alerts.yaml`
+   * 三仓继续保持独立证据链，不混写工程文件
 
 3. Week11 预热：从 artifact tracking 过渡到更系统的 eval / runtime evidence
-   * 保持 README 顶部三段与实际证据同步
    * 后续再推进更完整的 runtime comparison、formal eval observability 与 failure regression automation
+   * README 顶部三段必须继续以真实仓库证据为准
 
 ## 项目概览
 
