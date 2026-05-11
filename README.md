@@ -57,15 +57,21 @@ Boundary: this update verifies Week09 profiling / CPU / memory evidence only. It
 
 接下来的硬里程碑按顺序是：
 
-1. Week08：收口 metrics 化最小证据
-   * 保留 `/metrics` 与 `/metrics/` 的 curl 日志证据
-   * 固定 `docs/design/metrics_naming.md` 与 `monitoring/prometheus/prometheus.yml`
-   * 明确当前只完成默认 Python/process metrics 暴露、Prometheus target up 复验与 dashboard 初版，不把 custom metrics、完整 Grafana 导入与生产级告警提前写成已完成
+1. Week10：收口实验 / 产物追踪入口
+   * 新增 docs/design/experiment_tracking.md，明确 Week09 ORT benchmark、runtime matrix 与 profiling artifacts 的追踪口径
+   * 在 DVC-first 与 MLflow local fallback 之间做一次最小落地选择
+   * 不声明远端 artifact store、团队级 tracking server 或生产级 experiment registry
 
-2. Week08：进入 dashboard 初版复验与 custom metrics 预热
-   * 复验 `monitoring/grafana/dashboards/mainbase-overview.json` 的 JSON 格式、默认指标查询与 README 边界描述
-   * 选择 1–2 个低风险 custom metrics 接入点
-   * 为后续 formal eval、runtime benchmark 与 failure regression observability 留入口
+2. Week10：把 Week09 ORT 证据接入可复验追踪链
+   * 复用 artifacts/benchmarks/ort_week09.csv
+   * 复用 artifacts/benchmarks/ort_week09_runtime_matrix.csv
+   * 复用 artifacts/benchmarks/ort_week09_profile_20260507.json
+   * 固定追踪命令、输入、输出、边界与日志
+   * 明确当前仍只验证 local CPU / ONNX Runtime evidence，不提前声明 CUDA、TensorRT、vLLM、SGLang 或生产 runtime 选择
+
+3. Week11 预热：从 artifact tracking 过渡到更系统的 eval / runtime evidence
+   * 保持 README 顶部三段与实际证据同步
+   * 后续再推进更完整的 runtime comparison、formal eval observability 与 failure regression automation
 
 ## 项目概览
 
