@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  week10_ort_evidence:
+    cmd: python scripts/week10_register_ort_evidence.py
+    deps:
+    - path: artifacts/benchmarks/ort_week09.csv
+      hash: md5
+      md5: 8e452666a4d3247d359a2116edcf7ad3
+      size: 377
+    - path: artifacts/benchmarks/ort_week09_profile_20260507.json
+      hash: md5
+      md5: 28b841343ce5e4cfeb1c4fd838f22224
+      size: 1218
+    - path: artifacts/benchmarks/ort_week09_runtime_matrix.csv
+      hash: md5
+      md5: 2635a3b23f26aa70fb81e5b2727b89fd
+      size: 2356
+    - path: scripts/week10_register_ort_evidence.py
+      hash: md5
+      md5: 824baa6c6b1c7c22493dc7b66e54c76a
+      size: 5188
+    outs:
+    - path: artifacts/benchmarks/week10_ort_evidence_manifest.json
+      hash: md5
+      md5: 35798da9fbbf1c8db0783851548814b4
+      size: 801
+    - path: artifacts/benchmarks/week10_ort_evidence_metrics.json
+      hash: md5
+      md5: c61599c84395874a0c39925ffd0ed7a9
+      size: 426

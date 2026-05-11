@@ -1,0 +1,24 @@
+{
+  "date": "2026-05-11",
+  "scope": "Week10 local DVC-first evidence registration only",
+  "tracking_route": "DVC-first",
+  "fallback_route": "MLflow local tracking",
+  "inputs": [
+    "artifacts/benchmarks/ort_week09.csv",
+    "artifacts/benchmarks/ort_week09_runtime_matrix.csv",
+    "artifacts/benchmarks/ort_week09_profile_20260507.json"
+  ],
+  "outputs": [
+    "artifacts/benchmarks/week10_ort_evidence_metrics.json",
+    "artifacts/benchmarks/week10_ort_evidence_manifest.json"
+  ],
+  "runtime_best_case_id": "graph_all_threads_default",
+  "boundary": [
+    "local CPU / ONNX Runtime evidence only",
+    "no remote DVC storage",
+    "no MLflow tracking server",
+    "no CUDAExecutionProvider benchmark",
+    "no TensorRT / vLLM / SGLang comparison",
+    "no production runtime selection"
+  ]
+}

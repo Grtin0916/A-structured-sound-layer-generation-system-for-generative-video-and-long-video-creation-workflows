@@ -1,0 +1,14 @@
+{
+  "week10_ort_evidence": {
+    "benchmark_samples": 10,
+    "benchmark_ok_samples": 10,
+    "benchmark_mean_p50_ms": 14.8277,
+    "benchmark_mean_p95_ms": 15.4098,
+    "benchmark_throughput_samples_per_sec": 67.879,
+    "runtime_best_p50_ms": 12.9175,
+    "runtime_best_p95_ms": 13.9046,
+    "runtime_best_mean_ms": 13.026,
+    "runtime_best_throughput_samples_per_sec": 76.7698,
+    "profile_numeric_field_count": 30
+  }
+}
