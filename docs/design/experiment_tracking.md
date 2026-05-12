@@ -90,3 +90,15 @@ Week10 minimum DoD for this branch:
 - A DVC or MLflow local tracking path is selected based on actual repository friction.
 - At least one existing Week09 benchmark / profile artifact is registered or logged through the selected route.
 - Evidence remains local and reproducible.
+
+## 8. Week10 Artifact Provenance Table
+
+| Evidence class | Source object | Registration command / stage | Output artifact | Verification log | Boundary |
+|---|---|---|---|---|---|
+| training artifact | `artifacts/experiments/baseline_v1/checkpoints/best.pt` | existing baseline training pipeline | checkpoint referenced by ONNX export | existing baseline / ONNX logs | not retrained in Week10 |
+| export artifact | `artifacts/onnx/baseline_v1.onnx` | existing ONNX export / parity chain | `baseline_v1.onnx` | existing ONNX / ORT logs | fixed local model only |
+| benchmark artifact | `artifacts/benchmarks/ort_week09.csv` | `python -m dvc repro week10_ort_evidence` | `artifacts/benchmarks/week10_ort_evidence_metrics.json` | `artifacts/logs/week10_artifact_provenance_20260513.log` | CPU / local evidence only |
+| runtime matrix artifact | `artifacts/benchmarks/ort_week09_runtime_matrix.csv` | `python -m dvc repro week10_ort_evidence` | `artifacts/benchmarks/week10_ort_evidence_manifest.json` | `artifacts/logs/week10_artifact_provenance_20260513.log` | no final runtime selection |
+| profiling artifact | `artifacts/benchmarks/ort_week09_profile_20260507.json` | `scripts/week10_register_ort_evidence.py` | numeric profile summary fields | `artifacts/logs/week10_artifact_provenance_20260513.log` | `CPUExecutionProvider` only |
+
+Week10 keeps DVC as local evidence registration. This does not claim remote DVC storage, an MLflow tracking server, a team registry, CUDA / TensorRT / vLLM / SGLang acceleration, or production runtime selection.
