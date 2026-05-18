@@ -1,0 +1,90 @@
+===== before status =====
+## main...origin/main
+ M dvc.lock
+ M dvc.yaml
+?? artifacts/evals/
+?? artifacts/logs/week11_dvc_eval_stage_20260518_161917.log
+?? artifacts/logs/week11_eval_v0_20260518_161224.log
+?? artifacts/logs/week11_mainbase_crossrepo_bridge_20260518_220539.log
+?? artifacts/manifests/week11_soundlayer_eval_samples.json
+?? scripts/run_eval.py
+ M dvc.lock
+ M dvc.yaml
+?? artifacts/evals/
+?? artifacts/logs/week11_dvc_eval_stage_20260518_161917.log
+?? artifacts/logs/week11_eval_v0_20260518_161224.log
+?? artifacts/logs/week11_mainbase_crossrepo_bridge_20260518_220539.log
+?? artifacts/manifests/week11_soundlayer_eval_samples.json
+?? scripts/run_eval.py
+
+===== create cross-repo bridge manifest =====
+
+===== create attach script =====
+
+===== update DVC stage week11_eval_v0 with bridge attach =====
+Added stage 'week11_eval_v0' in 'dvc.yaml'
+
+To track the changes with git, run:
+
+	git add artifacts/evals/.gitignore dvc.yaml
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+
+===== reproduce bridged eval stage =====
+Running stage 'week11_eval_v0':
+> bash -lc 'python scripts/run_eval.py --samples artifacts/manifests/week11_soundlayer_eval_samples.json --out-json artifacts/evals/week11_eval_v0.json --out-csv artifacts/evals/week11_eval_v0.csv --out-metrics artifacts/evals/week11_eval_v0_metrics.json && python scripts/attach_eval_bridge.py --bridge artifacts/manifests/week11_crossrepo_task_bridge.json --out-json artifacts/evals/week11_eval_v0.json --out-csv artifacts/evals/week11_eval_v0.csv --out-metrics artifacts/evals/week11_eval_v0_metrics.json'
+{"out_json": "artifacts/evals/week11_eval_v0.json", "out_csv": "artifacts/evals/week11_eval_v0.csv", "out_metrics": "artifacts/evals/week11_eval_v0_metrics.json", "metrics": {"sample_count": 5, "pass_count": 5, "pass_rate": 1.0, "semantic_proxy_mean": 0.765, "temporal_proxy_mean": 1.0}}
+{
+  "bridge_ok": true,
+  "external_task_id": "week11-k6-seed-created-001",
+  "json_rows_with_task_id": 5,
+  "csv_rows_with_task_id": 5,
+  "metrics": "artifacts/evals/week11_eval_v0_metrics.json"
+}
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.
+
+===== validate bridge artifacts =====
+bridge_validation_ok=true
+task_id= week11-k6-seed-created-001
+csv_rows= 5
+metrics_bridge_present= 1
+
+===== dvc metrics =====
+{"": {"data": {"artifacts/benchmarks/week10_ort_evidence_metrics.json": {"data": {"week10_ort_evidence": {"benchmark_samples": 10, "benchmark_ok_samples": 10, "benchmark_mean_p50_ms": 14.8277, "benchmark_mean_p95_ms": 15.4098, "benchmark_throughput_samples_per_sec": 67.879, "runtime_best_p50_ms": 12.9175, "runtime_best_p95_ms": 13.9046, "runtime_best_mean_ms": 13.026, "runtime_best_throughput_samples_per_sec": 76.7698, "profile_numeric_field_count": 30}}}, "artifacts/evals/week11_eval_v0_metrics.json": {"data": {"sample_count": 5, "pass_count": 5, "pass_rate": 1.0, "semantic_proxy_mean": 0.765, "temporal_proxy_mean": 1.0, "cross_repo_bridge_external_task_id_present": 1, "cross_repo_bridge_json_rows_with_task_id": 5, "cross_repo_bridge_csv_rows_with_task_id": 5, "cross_repo_bridge_java_commit_present": 1, "cross_repo_bridge_cloud_commit_present": 1, "cross_repo_bridge_checked_at_epoch": 1779113141}}}}}
+
+===== after status =====
+## main...origin/main
+ M dvc.lock
+ M dvc.yaml
+?? artifacts/evals/
+?? artifacts/logs/week11_dvc_eval_stage_20260518_161917.log
+?? artifacts/logs/week11_eval_v0_20260518_161224.log
+?? artifacts/logs/week11_mainbase_crossrepo_bridge_20260518_220539.log
+?? artifacts/manifests/week11_crossrepo_task_bridge.json
+?? artifacts/manifests/week11_soundlayer_eval_samples.json
+?? scripts/attach_eval_bridge.py
+?? scripts/run_eval.py
+ M dvc.lock
+ M dvc.yaml
+?? artifacts/evals/
+?? artifacts/logs/week11_dvc_eval_stage_20260518_161917.log
+?? artifacts/logs/week11_eval_v0_20260518_161224.log
+?? artifacts/logs/week11_mainbase_crossrepo_bridge_20260518_220539.log
+?? artifacts/manifests/week11_crossrepo_task_bridge.json
+?? artifacts/manifests/week11_soundlayer_eval_samples.json
+?? scripts/attach_eval_bridge.py
+?? scripts/run_eval.py
+ dvc.lock | 43 +++++++++++++++++++++++++++++++++++++++++++
+ dvc.yaml | 39 +++++++++++++++++++++++++++++++--------
+ 2 files changed, 74 insertions(+), 8 deletions(-)

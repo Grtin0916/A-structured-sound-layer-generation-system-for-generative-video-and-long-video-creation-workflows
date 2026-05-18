@@ -1,0 +1,10 @@
+{
+  "bridge_name": "week11_java_cloud_mainbase_eval_bridge",
+  "external_task_id": "week11-k6-seed-created-001",
+  "external_task_status": "CREATED",
+  "java_repo_commit": "8bf3971",
+  "cloud_repo_commit": "d03f9fb",
+  "java_query_path": "/api/media-tasks?page=0&size=5&status=CREATED&sort=created_at_desc",
+  "cloud_k6_summary": "loadtest/reports/week11_k6_smoke_summary_docker_seeded_authenticated_20260518_205831.json",
+  "purpose": "Bind mainbase Week11 eval evidence to the Java/Cloud authenticated seeded task path."
+}

@@ -1,0 +1,60 @@
+{
+  "version": "week11_eval_samples_v0",
+  "scope": "manual SoundLayer timeline samples for Eval-as-Product V0; no generated-audio quality claim",
+  "samples": [
+    {
+      "sample_id": "week11_city_walk_001",
+      "scene": "silent urban walking shot",
+      "duration_sec": 4.0,
+      "events": [
+        {"t": 0.8, "label": "footstep", "layer": "foley", "priority": 0.8},
+        {"t": 2.1, "label": "traffic ambience", "layer": "ambience", "priority": 0.6}
+      ],
+      "expected_layers": ["foley", "ambience"],
+      "expected_keywords": ["footstep", "traffic", "urban"]
+    },
+    {
+      "sample_id": "week11_door_close_002",
+      "scene": "person closes a wooden door",
+      "duration_sec": 3.0,
+      "events": [
+        {"t": 1.4, "label": "door close impact", "layer": "foley", "priority": 0.95}
+      ],
+      "expected_layers": ["foley"],
+      "expected_keywords": ["door", "close", "impact"]
+    },
+    {
+      "sample_id": "week11_rain_window_003",
+      "scene": "rain outside a window with quiet interior",
+      "duration_sec": 5.0,
+      "events": [
+        {"t": 0.0, "label": "rain ambience", "layer": "ambience", "priority": 0.7},
+        {"t": 2.6, "label": "distant thunder", "layer": "foley", "priority": 0.65}
+      ],
+      "expected_layers": ["ambience", "foley"],
+      "expected_keywords": ["rain", "window", "thunder"]
+    },
+    {
+      "sample_id": "week11_keyboard_typing_004",
+      "scene": "close-up hands typing on laptop in quiet room",
+      "duration_sec": 4.5,
+      "events": [
+        {"t": 0.5, "label": "keyboard typing", "layer": "foley", "priority": 0.85},
+        {"t": 0.0, "label": "quiet room tone", "layer": "ambience", "priority": 0.4}
+      ],
+      "expected_layers": ["foley", "ambience"],
+      "expected_keywords": ["keyboard", "typing", "room"]
+    },
+    {
+      "sample_id": "week11_bike_pass_005",
+      "scene": "bicycle passes camera on a street",
+      "duration_sec": 4.0,
+      "events": [
+        {"t": 1.2, "label": "bicycle wheel pass-by", "layer": "foley", "priority": 0.8},
+        {"t": 2.0, "label": "street ambience", "layer": "ambience", "priority": 0.55}
+      ],
+      "expected_layers": ["foley", "ambience"],
+      "expected_keywords": ["bicycle", "wheel", "street"]
+    }
+  ]
+}

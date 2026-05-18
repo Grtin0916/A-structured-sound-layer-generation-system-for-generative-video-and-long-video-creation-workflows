@@ -28,3 +28,46 @@ stages:
       hash: md5
       md5: c61599c84395874a0c39925ffd0ed7a9
       size: 426
+  week11_eval_v0:
+    cmd: bash -lc 'python scripts/run_eval.py --samples 
+      artifacts/manifests/week11_soundlayer_eval_samples.json --out-json 
+      artifacts/evals/week11_eval_v0.json --out-csv 
+      artifacts/evals/week11_eval_v0.csv --out-metrics 
+      artifacts/evals/week11_eval_v0_metrics.json && python 
+      scripts/attach_eval_bridge.py --bridge 
+      artifacts/manifests/week11_crossrepo_task_bridge.json --out-json 
+      artifacts/evals/week11_eval_v0.json --out-csv 
+      artifacts/evals/week11_eval_v0.csv --out-metrics 
+      artifacts/evals/week11_eval_v0_metrics.json'
+    deps:
+    - path: artifacts/manifests/week11_crossrepo_task_bridge.json
+      hash: md5
+      md5: 601366e28142991e1b78f5c062a425a7
+      size: 525
+    - path: artifacts/manifests/week11_soundlayer_eval_samples.json
+      hash: md5
+      md5: 3cda385b50c49afcc3cc29a6a929fa79
+      size: 2266
+    - path: scripts/attach_eval_bridge.py
+      hash: md5
+      md5: 8a7dd1c6c1b18fa12eb3dddc71c25ec8
+      size: 4529
+      isexec: true
+    - path: scripts/run_eval.py
+      hash: md5
+      md5: 119b952c1731019ae72521719cbf20ce
+      size: 6532
+      isexec: true
+    outs:
+    - path: artifacts/evals/week11_eval_v0.csv
+      hash: md5
+      md5: f4adf5cb89483d1b9723cc95905aa8f5
+      size: 1620
+    - path: artifacts/evals/week11_eval_v0.json
+      hash: md5
+      md5: 718dbaabf39d302d307bdd176ddee0c7
+      size: 4430
+    - path: artifacts/evals/week11_eval_v0_metrics.json
+      hash: md5
+      md5: c695832d6b78a911b4f185b3a481aa36
+      size: 418

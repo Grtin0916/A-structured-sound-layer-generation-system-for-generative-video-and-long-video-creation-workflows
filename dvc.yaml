@@ -2,13 +2,36 @@ stages:
   week10_ort_evidence:
     cmd: python scripts/week10_register_ort_evidence.py
     deps:
-      - scripts/week10_register_ort_evidence.py
-      - artifacts/benchmarks/ort_week09.csv
-      - artifacts/benchmarks/ort_week09_runtime_matrix.csv
-      - artifacts/benchmarks/ort_week09_profile_20260507.json
+    - scripts/week10_register_ort_evidence.py
+    - artifacts/benchmarks/ort_week09.csv
+    - artifacts/benchmarks/ort_week09_runtime_matrix.csv
+    - artifacts/benchmarks/ort_week09_profile_20260507.json
     metrics:
-      - artifacts/benchmarks/week10_ort_evidence_metrics.json:
-          cache: false
+    - artifacts/benchmarks/week10_ort_evidence_metrics.json:
+        cache: false
     outs:
-      - artifacts/benchmarks/week10_ort_evidence_manifest.json:
-          cache: false
+    - artifacts/benchmarks/week10_ort_evidence_manifest.json:
+        cache: false
+  week11_eval_v0:
+    cmd: bash -lc 'python scripts/run_eval.py --samples 
+      artifacts/manifests/week11_soundlayer_eval_samples.json --out-json 
+      artifacts/evals/week11_eval_v0.json --out-csv 
+      artifacts/evals/week11_eval_v0.csv --out-metrics 
+      artifacts/evals/week11_eval_v0_metrics.json && python 
+      scripts/attach_eval_bridge.py --bridge 
+      artifacts/manifests/week11_crossrepo_task_bridge.json --out-json 
+      artifacts/evals/week11_eval_v0.json --out-csv 
+      artifacts/evals/week11_eval_v0.csv --out-metrics 
+      artifacts/evals/week11_eval_v0_metrics.json'
+    deps:
+    - artifacts/manifests/week11_crossrepo_task_bridge.json
+    - artifacts/manifests/week11_soundlayer_eval_samples.json
+    - scripts/attach_eval_bridge.py
+    - scripts/run_eval.py
+    outs:
+    - artifacts/evals/week11_eval_v0.csv:
+        cache: false
+    - artifacts/evals/week11_eval_v0.json:
+        cache: false
+    metrics:
+    - artifacts/evals/week11_eval_v0_metrics.json
