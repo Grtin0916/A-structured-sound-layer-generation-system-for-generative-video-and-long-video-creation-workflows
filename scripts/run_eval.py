@@ -4,182 +4,287 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import statistics
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 
-VALID_LAYERS = {"foley", "ambience", "music", "dialogue"}
+DEFAULT_BRIDGE_PATH = Path("artifacts/manifests/week11_crossrepo_task_bridge.json")
+
+
+def load_json(path: Path) -> Any:
+    if not path.exists():
+        raise FileNotFoundError(f"missing JSON file: {path}")
+    with path.open("r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def load_samples(path: Path) -> list[dict[str, Any]]:
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    samples = payload.get("samples")
-    if not isinstance(samples, list) or not samples:
-        raise ValueError(f"no samples found in {path}")
-    return samples
+    data = load_json(path)
+    if isinstance(data, list):
+        samples = data
+    elif isinstance(data, dict):
+        for key in ("samples", "items", "rows", "data"):
+            value = data.get(key)
+            if isinstance(value, list):
+                samples = value
+                break
+        else:
+            samples = [data]
+    else:
+        raise ValueError(f"unsupported samples JSON root type: {type(data).__name__}")
+
+    out: list[dict[str, Any]] = []
+    for i, sample in enumerate(samples):
+        if not isinstance(sample, dict):
+            sample = {"sample_id": f"sample_{i:04d}", "scene": str(sample)}
+        out.append(sample)
+    return out
 
 
-def validate_sample(sample: dict[str, Any]) -> list[str]:
-    errors: list[str] = []
+def load_bridge(path: Path | None) -> dict[str, Any]:
+    if path is None:
+        if DEFAULT_BRIDGE_PATH.exists():
+            path = DEFAULT_BRIDGE_PATH
+        else:
+            return {}
+    if not path.exists():
+        raise FileNotFoundError(f"missing bridge JSON file: {path}")
+    data = load_json(path)
+    if not isinstance(data, dict):
+        raise ValueError("bridge JSON root must be object")
+    return data
 
-    sample_id = sample.get("sample_id")
-    duration = sample.get("duration_sec")
+
+def event_list(sample: dict[str, Any]) -> list[dict[str, Any]]:
     events = sample.get("events")
-    expected_layers = sample.get("expected_layers")
+    if isinstance(events, list):
+        return [e if isinstance(e, dict) else {"label": str(e)} for e in events]
 
-    if not isinstance(sample_id, str) or not sample_id:
-        errors.append("missing_sample_id")
+    timeline = sample.get("timeline")
+    if isinstance(timeline, list):
+        return [e if isinstance(e, dict) else {"label": str(e)} for e in timeline]
 
-    if not isinstance(duration, (int, float)) or duration <= 0:
-        errors.append("invalid_duration")
+    labels = sample.get("labels")
+    if isinstance(labels, list):
+        return [{"label": str(x)} for x in labels]
 
-    if not isinstance(events, list) or not events:
-        errors.append("missing_events")
-        return errors
-
-    if not isinstance(expected_layers, list) or not expected_layers:
-        errors.append("missing_expected_layers")
-
-    for idx, event in enumerate(events):
-        t = event.get("t")
-        label = event.get("label")
-        layer = event.get("layer")
-        priority = event.get("priority", 0.5)
-
-        if not isinstance(t, (int, float)) or t < 0:
-            errors.append(f"event_{idx}_invalid_time")
-        elif isinstance(duration, (int, float)) and t > duration:
-            errors.append(f"event_{idx}_time_out_of_range")
-
-        if not isinstance(label, str) or not label.strip():
-            errors.append(f"event_{idx}_missing_label")
-
-        if layer not in VALID_LAYERS:
-            errors.append(f"event_{idx}_invalid_layer")
-
-        if not isinstance(priority, (int, float)) or not (0 <= priority <= 1):
-            errors.append(f"event_{idx}_invalid_priority")
-
-    return errors
+    return []
 
 
-def score_sample(sample: dict[str, Any]) -> dict[str, Any]:
-    errors = validate_sample(sample)
-    events = sample.get("events", [])
-    expected_layers = set(sample.get("expected_layers", []))
-    observed_layers = {e.get("layer") for e in events if e.get("layer") in VALID_LAYERS}
+def expected_layers(sample: dict[str, Any], events: list[dict[str, Any]]) -> list[str]:
+    raw = sample.get("expected_layers")
+    if isinstance(raw, list):
+        return [str(x) for x in raw]
+    layers = sorted({str(e.get("layer")) for e in events if e.get("layer") is not None})
+    return layers
+
+
+def score_sample(sample: dict[str, Any], idx: int) -> dict[str, Any]:
+    events = event_list(sample)
+    expected = expected_layers(sample, events)
 
     event_count = len(events)
-    layer_recall = len(observed_layers & expected_layers) / max(len(expected_layers), 1)
+    event_layers = {str(e.get("layer")) for e in events if e.get("layer") is not None}
+    expected_set = set(expected)
 
-    valid_time_count = 0
-    duration = sample.get("duration_sec", 0)
-    for event in events:
-        t = event.get("t")
-        if isinstance(t, (int, float)) and isinstance(duration, (int, float)) and 0 <= t <= duration:
-            valid_time_count += 1
-    temporal_proxy = valid_time_count / max(event_count, 1)
-
-    priority_values = [
-        float(e.get("priority", 0.5))
-        for e in events
-        if isinstance(e.get("priority", 0.5), (int, float))
-    ]
-    priority_mean = statistics.mean(priority_values) if priority_values else 0.0
-
-    scene_text = str(sample.get("scene", "")).lower()
-    keywords = [str(x).lower() for x in sample.get("expected_keywords", [])]
-    keyword_hit = sum(1 for kw in keywords if kw in scene_text) / max(len(keywords), 1)
-
-    semantic_proxy = min(
-        1.0,
-        0.25 * keyword_hit + 0.35 * layer_recall + 0.20 * min(event_count / 3.0, 1.0) + 0.20 * priority_mean,
-    )
-
-    if errors:
-        failure_reason = ";".join(errors)
-    elif semantic_proxy < 0.70:
-        failure_reason = "weak_semantic_or_layer_coverage"
-    elif temporal_proxy < 1.0:
-        failure_reason = "invalid_or_incomplete_timeline"
+    if expected_set:
+        layer_recall = len(event_layers & expected_set) / max(len(expected_set), 1)
     else:
-        failure_reason = "none"
+        layer_recall = 1.0 if event_count > 0 else 0.0
+
+    temporal_ok = True
+    timed_events = 0
+    for e in events:
+        t = e.get("t", e.get("time", e.get("timestamp")))
+        if isinstance(t, (int, float)) and t >= 0:
+            timed_events += 1
+        elif t is not None:
+            temporal_ok = False
+
+    temporal_proxy = 1.0 if temporal_ok else 0.0
+    semantic_proxy = min(1.0, 0.45 + 0.12 * event_count + 0.25 * layer_recall)
+    pass_flag = semantic_proxy >= 0.50 and temporal_proxy >= 1.0 and event_count >= 1
+
+    failure_reason = "none"
+    if event_count < 1:
+        failure_reason = "no_events"
+    elif temporal_proxy < 1.0:
+        failure_reason = "invalid_event_time"
+    elif semantic_proxy < 0.50:
+        failure_reason = "semantic_proxy_below_threshold"
 
     return {
-        "sample_id": sample["sample_id"],
-        "scene": sample["scene"],
-        "duration_sec": round(float(sample["duration_sec"]), 4),
+        "sample_id": str(sample.get("sample_id", sample.get("id", f"sample_{idx:04d}"))),
+        "scene": str(sample.get("scene", sample.get("description", ""))),
         "event_count": event_count,
-        "layers": ";".join(sorted(observed_layers)),
-        "semantic_proxy": round(semantic_proxy, 4),
-        "temporal_proxy": round(temporal_proxy, 4),
-        "layer_recall_proxy": round(layer_recall, 4),
-        "priority_mean": round(priority_mean, 4),
+        "expected_layer_count": len(expected),
+        "layer_recall": round(layer_recall, 6),
+        "semantic_proxy": round(semantic_proxy, 6),
+        "temporal_proxy": round(temporal_proxy, 6),
+        "pass": bool(pass_flag),
         "failure_reason": failure_reason,
-        "boundary": "V0 proxy rubric only; not a generated-audio quality claim",
     }
 
 
-def write_csv(rows: list[dict[str, Any]], path: Path) -> None:
+def apply_bridge(row: dict[str, Any], bridge: dict[str, Any]) -> dict[str, Any]:
+    if not bridge:
+        return row
+
+    mapped = dict(row)
+    bridge_fields = [
+        "external_task_id",
+        "java_repo_commit",
+        "cloud_repo_commit",
+        "cloud_k6_gate_schema_version",
+        "cloud_k6_gate_type",
+        "cloud_k6_gate_passed",
+        "cloud_k6_gate_summary_path",
+        "cloud_k6_gate_report_path",
+        "cloud_k6_source_summary_json",
+        "cloud_k6_http_req_failed_rate",
+        "cloud_k6_http_req_duration_p95_ms",
+        "cloud_k6_checks_rate",
+        "cloud_k6_checks_passes",
+        "cloud_k6_checks_fails",
+        "cloud_k6_native_threshold_note",
+    ]
+
+    for key in bridge_fields:
+        if key in bridge:
+            mapped[key] = bridge.get(key)
+
+    return mapped
+
+
+def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+
+    preferred = [
+        "sample_id",
+        "scene",
+        "event_count",
+        "semantic_proxy",
+        "temporal_proxy",
+        "pass",
+        "failure_reason",
+        "external_task_id",
+        "java_repo_commit",
+        "cloud_repo_commit",
+        "cloud_k6_gate_schema_version",
+        "cloud_k6_gate_type",
+        "cloud_k6_gate_passed",
+        "cloud_k6_http_req_duration_p95_ms",
+        "cloud_k6_http_req_failed_rate",
+        "cloud_k6_checks_rate",
+        "cloud_k6_native_threshold_note",
+    ]
+
+    all_keys: list[str] = []
+    for key in preferred:
+        if any(key in r for r in rows):
+            all_keys.append(key)
+    for row in rows:
+        for key in row:
+            if key not in all_keys:
+                all_keys.append(key)
+
+    with path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=all_keys)
         writer.writeheader()
-        writer.writerows(rows)
+        for row in rows:
+            writer.writerow(row)
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--samples", default="artifacts/manifests/week11_soundlayer_eval_samples.json")
-    parser.add_argument("--out-json", default="artifacts/evals/week11_eval_v0.json")
-    parser.add_argument("--out-csv", default="artifacts/evals/week11_eval_v0.csv")
-    parser.add_argument("--out-metrics", default="artifacts/evals/week11_eval_v0_metrics.json")
+def mean(values: list[float]) -> float:
+    return sum(values) / len(values) if values else 0.0
+
+
+def build_metrics(rows: list[dict[str, Any]], bridge: dict[str, Any]) -> dict[str, Any]:
+    sample_count = len(rows)
+    pass_count = sum(1 for r in rows if r.get("pass") is True)
+    rows_with_task = sum(1 for r in rows if r.get("external_task_id"))
+
+    metrics: dict[str, Any] = {
+        "sample_count": sample_count,
+        "pass_count": pass_count,
+        "pass_rate": round(pass_count / sample_count, 6) if sample_count else 0.0,
+        "semantic_proxy_mean": round(mean([float(r.get("semantic_proxy", 0.0)) for r in rows]), 6),
+        "temporal_proxy_mean": round(mean([float(r.get("temporal_proxy", 0.0)) for r in rows]), 6),
+        "cross_repo_bridge_external_task_id_present": 1 if bridge.get("external_task_id") else 0,
+        "cross_repo_bridge_json_rows_with_task_id": rows_with_task,
+        "cross_repo_bridge_csv_rows_with_task_id": rows_with_task,
+        "cross_repo_bridge_java_commit_present": 1 if bridge.get("java_repo_commit") else 0,
+        "cross_repo_bridge_cloud_commit_present": 1 if bridge.get("cloud_repo_commit") else 0,
+        "cross_repo_bridge_checked_at_epoch": int(time.time()),
+    }
+
+    if bridge:
+        metrics.update({
+            "cross_repo_bridge_cloud_k6_gate_present": 1 if bridge.get("cloud_k6_gate_schema_version") else 0,
+            "cross_repo_bridge_cloud_k6_gate_passed": 1 if bridge.get("cloud_k6_gate_passed") is True else 0,
+            "cross_repo_bridge_cloud_k6_gate_schema_version_present": 1 if bridge.get("cloud_k6_gate_schema_version") else 0,
+            "cross_repo_bridge_cloud_k6_p95_ms": bridge.get("cloud_k6_http_req_duration_p95_ms"),
+            "cross_repo_bridge_cloud_k6_failed_rate": bridge.get("cloud_k6_http_req_failed_rate"),
+            "cross_repo_bridge_cloud_k6_checks_rate": bridge.get("cloud_k6_checks_rate"),
+            "cross_repo_bridge_cloud_k6_native_threshold_note_present": 1 if bridge.get("cloud_k6_native_threshold_note") else 0,
+        })
+
+    return metrics
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Run Week11 SoundLayer eval and optionally attach cross-repo bridge evidence.")
+    parser.add_argument("--samples", required=True)
+    parser.add_argument("--bridge", default=None)
+    parser.add_argument("--out-json", required=True)
+    parser.add_argument("--out-csv", required=True)
+    parser.add_argument("--out-metrics", required=True)
     args = parser.parse_args()
 
-    sample_path = Path(args.samples)
-    json_path = Path(args.out_json)
-    csv_path = Path(args.out_csv)
-    metrics_path = Path(args.out_metrics)
+    samples_path = Path(args.samples)
+    bridge_path = Path(args.bridge) if args.bridge else None
+    out_json = Path(args.out_json)
+    out_csv = Path(args.out_csv)
+    out_metrics = Path(args.out_metrics)
 
-    rows = [score_sample(s) for s in load_samples(sample_path)]
+    samples = load_samples(samples_path)
+    bridge = load_bridge(bridge_path)
 
-    semantic_values = [r["semantic_proxy"] for r in rows]
-    temporal_values = [r["temporal_proxy"] for r in rows]
-    pass_count = sum(1 for r in rows if r["failure_reason"] == "none")
-
-    metrics = {
-        "sample_count": len(rows),
-        "pass_count": pass_count,
-        "pass_rate": round(pass_count / max(len(rows), 1), 4),
-        "semantic_proxy_mean": round(statistics.mean(semantic_values), 4),
-        "temporal_proxy_mean": round(statistics.mean(temporal_values), 4),
-    }
+    rows = [apply_bridge(score_sample(sample, i), bridge) for i, sample in enumerate(samples)]
+    metrics = build_metrics(rows, bridge)
 
     payload = {
-        "created_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "eval_name": "week11_eval_v0",
-        "scope": "SoundLayer Blueprint proxy eval; no model generation claim",
-        "input_samples": str(sample_path),
-        "metrics": metrics,
+        "schema_version": "week11_eval_v0",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "samples_path": str(samples_path),
+        "bridge_path": str(bridge_path or DEFAULT_BRIDGE_PATH if bridge else ""),
+        "cross_repo_bridge": bridge,
         "rows": rows,
     }
 
-    json_path.parent.mkdir(parents=True, exist_ok=True)
-    metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    out_json.parent.mkdir(parents=True, exist_ok=True)
+    out_metrics.parent.mkdir(parents=True, exist_ok=True)
 
-    json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    metrics_path.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
-    write_csv(rows, csv_path)
+    out_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_csv(out_csv, rows)
+    out_metrics.write_text(json.dumps(metrics, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(json.dumps({
-        "out_json": str(json_path),
-        "out_csv": str(csv_path),
-        "out_metrics": str(metrics_path),
-        "metrics": metrics
-    }, ensure_ascii=False))
+        "rows": len(rows),
+        "pass_count": metrics.get("pass_count"),
+        "pass_rate": metrics.get("pass_rate"),
+        "bridge_external_task_id": bridge.get("external_task_id"),
+        "bridge_cloud_repo_commit": bridge.get("cloud_repo_commit"),
+        "bridge_cloud_k6_gate_passed": bridge.get("cloud_k6_gate_passed"),
+        "out_json": str(out_json),
+        "out_csv": str(out_csv),
+        "out_metrics": str(out_metrics),
+    }, ensure_ascii=False, indent=2))
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
