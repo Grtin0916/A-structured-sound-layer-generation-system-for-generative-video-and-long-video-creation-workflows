@@ -1,0 +1,16 @@
+gate_status,check_name,passed,sample_count,pass_rate,semantic_proxy_mean,temporal_proxy_mean,cloud_k6_p95_ms,cloud_k6_failed_rate,cloud_k6_checks_rate
+PASS,eval_rows_present,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,eval_pass_rate_ok,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,semantic_proxy_ok,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,temporal_proxy_ok,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,failure_reason_taxonomy_present,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,external_task_id_present,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,json_rows_bound_to_task,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,csv_rows_bound_to_task,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,java_commit_present,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,cloud_commit_present,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,cloud_k6_gate_present,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,cloud_k6_gate_passed,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,cloud_k6_p95_under_200ms,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,cloud_k6_failed_rate_zero,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0
+PASS,cloud_k6_checks_rate_one,1,5,1.0,0.916,1.0,133.39465279999993,0.0,1.0

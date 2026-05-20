@@ -1,0 +1,62 @@
+{
+  "schema_version": "week11_quality_gate_v0",
+  "created_at": "2026-05-20T15:27:08+0800",
+  "gate_status": "PASS",
+  "scope": "Mainbase quality gate over Week11 eval proxy, cross-repo bridge, and Cloud k6 gate. This is not a generated-audio quality claim.",
+  "inputs": {
+    "eval_json": "artifacts/evals/week11_eval_v0.json",
+    "eval_csv": "artifacts/evals/week11_eval_v0.csv",
+    "eval_metrics": "artifacts/evals/week11_eval_v0_metrics.json",
+    "bridge_manifest": "artifacts/manifests/week11_crossrepo_task_bridge.json"
+  },
+  "eval_summary": {
+    "eval_rows": 5,
+    "csv_rows": 5,
+    "sample_count": 5,
+    "pass_count": 5,
+    "pass_rate": 1.0,
+    "semantic_proxy_mean": 0.916,
+    "temporal_proxy_mean": 1.0,
+    "failure_reason_counts": {
+      "none": 5
+    }
+  },
+  "bridge_summary": {
+    "external_task_ids": [
+      "week11-k6-seed-created-001"
+    ],
+    "external_task_id_rule": "exact task-id keys only; state tokens such as CREATED/RUNNING are rejected",
+    "external_task_id_present": true,
+    "json_rows_with_task_id": 5,
+    "csv_rows_with_task_id": 5,
+    "java_commit_present": true,
+    "cloud_commit_present": true
+  },
+  "cloud_k6_summary": {
+    "gate_present": true,
+    "gate_passed": true,
+    "p95_ms": 133.39465279999993,
+    "failed_rate": 0.0,
+    "checks_rate": 1.0,
+    "threshold_interpretation": "V0 local smoke gate: failed_rate==0, checks_rate>=1, p95<200ms. Not a production SLO."
+  },
+  "checks": {
+    "eval_rows_present": true,
+    "eval_pass_rate_ok": true,
+    "semantic_proxy_ok": true,
+    "temporal_proxy_ok": true,
+    "failure_reason_taxonomy_present": true,
+    "external_task_id_present": true,
+    "json_rows_bound_to_task": true,
+    "csv_rows_bound_to_task": true,
+    "java_commit_present": true,
+    "cloud_commit_present": true,
+    "cloud_k6_gate_present": true,
+    "cloud_k6_gate_passed": true,
+    "cloud_k6_p95_under_200ms": true,
+    "cloud_k6_failed_rate_zero": true,
+    "cloud_k6_checks_rate_one": true
+  },
+  "failed_checks": [],
+  "next_recommendation": "Proceed to Cloud k6 SLO summary if PASS; if WARN/FAIL, inspect failed_checks before adding more features."
+}
