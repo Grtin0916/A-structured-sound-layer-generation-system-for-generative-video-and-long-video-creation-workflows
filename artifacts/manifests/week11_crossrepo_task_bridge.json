@@ -22,5 +22,52 @@
   "cloud_k6_native_threshold_note": "not detected in source summary JSON",
   "cloud_k6_native_threshold_overall": null,
   "bridge_updated_at_utc": "2026-05-19T03:21:44.960884+00:00",
-  "bridge_update_reason": "Bind Mainbase Week11 eval bridge to Cloud k6 benchmark gate commit fa14d49."
+  "bridge_update_reason": "Bind Mainbase Week11 eval bridge to Cloud k6 benchmark gate commit fa14d49.",
+  "cloud_week11_k6_slo_summary_gate": {
+    "schema_version": "week11_k6_slo_summary_v0",
+    "cloud_commit": "65c838e",
+    "summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
+    "summary_doc": "/home/GRT/work/ai-job-platform-cloud/docs/benchmarks/cloud_k6_week11.md",
+    "bound_at": "2026-05-20T15:53:54+0800",
+    "scope": "Cloud Week11 local k6 SLO summary. Local smoke gate only; not production SLO.",
+    "aggregate": {
+      "report_count": 2,
+      "report_kinds": {
+        "boundary_smoke": 1,
+        "business_smoke": 1
+      },
+      "all_reports_passed_local_smoke_gate": true,
+      "max_p95_ms": 133.39465279999993,
+      "max_http_req_failed_rate": 0.0,
+      "min_checks_rate": 1.0
+    },
+    "reports": [
+      {
+        "file": "loadtest/reports/week11_k6_query_boundary_2026-05-19T08-10-03-514Z.json",
+        "kind": "boundary_smoke",
+        "related_log": "artifacts/logs/week11_k6_query_boundary_20260519_161002.log",
+        "http_req_failed_rate": 0.0,
+        "http_req_duration_p95_ms": 131.9524367,
+        "checks_rate": 1.0,
+        "missing_metrics": [],
+        "passed_local_smoke_gate": true,
+        "failed_reasons": []
+      },
+      {
+        "file": "loadtest/reports/week11_k6_smoke_summary_docker_seeded_authenticated_20260518_205831.json",
+        "kind": "business_smoke",
+        "related_log": "artifacts/logs/week11_cloud_k6_smoke_docker_run_seeded_authenticated_20260518_205831.log",
+        "http_req_failed_rate": 0.0,
+        "http_req_duration_p95_ms": 133.39465279999993,
+        "checks_rate": 1.0,
+        "missing_metrics": [],
+        "passed_local_smoke_gate": true,
+        "failed_reasons": []
+      }
+    ]
+  },
+  "cloud_commit": "65c838e",
+  "cloud_week11_k6_slo_summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
+  "cloud_week11_k6_slo_summary_passed": true,
+  "cloud_week11_k6_slo_summary_bound_at_epoch": 1779263634
 }

@@ -1,0 +1,8 @@
+[OK] bound Cloud SLO summary into Mainbase bridge
+cloud_commit= 65c838e
+summary_json= /home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json
+report_count= 2
+all_reports_passed_local_smoke_gate= True
+max_p95_ms= 133.39465279999993
+max_http_req_failed_rate= 0.0
+min_checks_rate= 1.0
