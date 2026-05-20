@@ -1,0 +1,6 @@
+[OK] bound Cloud eval artifact link consumer evidence into Mainbase
+cloud_commit= 08e075c
+checks_rate= 1.0
+http_req_failed_rate= 0.0
+http_req_duration_p95_ms= 118.71
+required_fields= ['artifactUri', 'evalSummaryUri', 'qualityGateStatus']

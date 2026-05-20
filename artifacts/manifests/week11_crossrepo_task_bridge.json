@@ -69,5 +69,31 @@
   "cloud_commit": "65c838e",
   "cloud_week11_k6_slo_summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
   "cloud_week11_k6_slo_summary_passed": true,
-  "cloud_week11_k6_slo_summary_bound_at_epoch": 1779263634
+  "cloud_week11_k6_slo_summary_bound_at_epoch": 1779263634,
+  "cloud_week11_eval_artifact_link_consumer_gate": {
+    "schema_version": "week11_k6_eval_artifact_link_summary_v0",
+    "cloud_commit": "08e075c",
+    "summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_eval_artifact_link_summary.json",
+    "k6_script": "/home/GRT/work/ai-job-platform-cloud/loadtest/k6_eval_artifact_link.js",
+    "bound_at": "2026-05-20T16:56:55+0800",
+    "scope": "Cloud k6 external consumer smoke verifying Java MediaTask eval artifact link fields.",
+    "passed": true,
+    "checks_rate": 1.0,
+    "http_req_failed_rate": 0.0,
+    "http_req_duration_p95_ms": 118.71,
+    "required_fields": [
+      "artifactUri",
+      "evalSummaryUri",
+      "qualityGateStatus"
+    ],
+    "expected_task_id": "week11-k6-seed-created-001",
+    "expected_artifact_uri": "mainbase://artifacts/manifests/week11_crossrepo_task_bridge.json",
+    "expected_eval_summary_uri": "mainbase://artifacts/evals/week11_eval_quality_gate_v0.json",
+    "expected_quality_gate_status": "PASS",
+    "source_report": "loadtest/reports/week11_k6_eval_artifact_link_20260520_164610.json",
+    "source_log": "artifacts/logs/week11_k6_eval_artifact_link_20260520_164610.log"
+  },
+  "cloud_week11_eval_artifact_link_consumer_passed": true,
+  "cloud_week11_eval_artifact_link_consumer_commit": "08e075c",
+  "cloud_week11_eval_artifact_link_consumer_bound_at_epoch": 1779267415
 }
