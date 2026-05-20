@@ -42,8 +42,8 @@ stages:
     deps:
     - path: artifacts/manifests/week11_crossrepo_task_bridge.json
       hash: md5
-      md5: fbc181da02e83d9937c3148737141789
-      size: 1475
+      md5: 31154eef258709c23779e58bbcb24a3d
+      size: 3456
     - path: artifacts/manifests/week11_soundlayer_eval_samples.json
       hash: md5
       md5: 3cda385b50c49afcc3cc29a6a929fa79
@@ -69,5 +69,5 @@ stages:
       size: 8405
     - path: artifacts/evals/week11_eval_v0_metrics.json
       hash: md5
-      md5: 9eb49b075c88af6e8fc5f99c71ae4e40
-      size: 798
+      md5: 0031f9342aab6e5f15fd196752128e8a
+      size: 1482
