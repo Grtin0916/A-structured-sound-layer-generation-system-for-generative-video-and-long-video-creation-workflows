@@ -1,0 +1,152 @@
+{
+  "created_at": "2026-05-21T10:21:24",
+  "index_name": "week11_e2e_demo_index",
+  "purpose": "Machine-readable Week11 E2E demo index: media task -> SoundLayer eval -> Java artifact link API -> Cloud k6 consumer gate -> DVC accepted state.",
+  "boundary": "V0 evidence product only. Not a production artifact registry, not a production SLO, not generated-audio quality benchmark, not real cloud load testing.",
+  "repo": {
+    "name": "audio_engineering_repo_skeleton_v1",
+    "role": "Mainbase: SoundLayer eval and evidence root",
+    "commit": "7813e0d",
+    "tracked_git_status": "## main...origin/main",
+    "full_git_status_at_build": "## main...origin/main\n?? artifacts/logs/week11_e2e_demo_index_20260521_100319.log\n?? artifacts/logs/week11_e2e_demo_index_20260521_102124.log\n?? artifacts/manifests/week11_e2e_demo_index.json\n?? docs/evals/eval_runner.md\n?? scripts/build_week11_e2e_demo_index.py",
+    "dvc_status": "Data and pipelines are up to date.",
+    "status_interpretation": "tracked_git_status ignores untracked generated outputs; generated outputs are listed explicitly below and must be git-added before commit."
+  },
+  "week11_known_commits": {
+    "mainbase": [
+      "7813e0d",
+      "8050479",
+      "327cd7a"
+    ],
+    "java": [
+      "cee70e7",
+      "1fc9b80",
+      "c9debb1"
+    ],
+    "cloud": [
+      "08e075c",
+      "65c838e",
+      "6eb961f"
+    ]
+  },
+  "generated_outputs": [
+    {
+      "path": "scripts/build_week11_e2e_demo_index.py",
+      "exists": true,
+      "size_bytes": 7990,
+      "modified_at_epoch": 1779330075
+    },
+    {
+      "path": "docs/evals/eval_runner.md",
+      "exists": true,
+      "size_bytes": 793,
+      "modified_at_epoch": 1779329000
+    },
+    {
+      "path": "artifacts/manifests/week11_e2e_demo_index.json",
+      "exists": true,
+      "size_bytes": 4229,
+      "modified_at_epoch": 1779329000
+    }
+  ],
+  "business_chain": {
+    "external_task_id": "week11-k6-seed-created-001",
+    "mainbase_eval": {
+      "eval_json": {
+        "path": "artifacts/evals/week11_eval_v0.json",
+        "exists": true,
+        "size_bytes": 8405,
+        "modified_at_epoch": 1779160905
+      },
+      "eval_csv": {
+        "path": "artifacts/evals/week11_eval_v0.csv",
+        "exists": true,
+        "size_bytes": 3044,
+        "modified_at_epoch": 1779160905
+      },
+      "sample_count": 5,
+      "gate_status": "PASS",
+      "scope": "manual SoundLayer Blueprint proxy eval"
+    },
+    "java_api_contract": {
+      "expected_fields": [
+        "artifactUri",
+        "evalSummaryUri",
+        "qualityGateStatus"
+      ],
+      "meaning": "V0 evidence-link fields consumed by Cloud k6; not a complete artifact registry.",
+      "known_commits": [
+        "cee70e7",
+        "1fc9b80",
+        "c9debb1"
+      ]
+    },
+    "cloud_consumer_gate": {
+      "expected_fields": [
+        "artifactUri",
+        "evalSummaryUri",
+        "qualityGateStatus"
+      ],
+      "expected_report_roles": [
+        "query_slo_smoke",
+        "eval_artifact_link_consumer"
+      ],
+      "known_commits": [
+        "08e075c",
+        "65c838e",
+        "6eb961f"
+      ]
+    }
+  },
+  "evidence_files": {
+    "self": {
+      "path": "artifacts/manifests/week11_e2e_demo_index.json",
+      "exists": true,
+      "size_bytes": 4229,
+      "modified_at_epoch": 1779329000
+    },
+    "bridge_manifest": {
+      "path": "artifacts/manifests/week11_crossrepo_task_bridge.json",
+      "exists": true,
+      "size_bytes": 4847,
+      "modified_at_epoch": 1779267415
+    },
+    "metrics_candidates": [
+      "artifacts/evals/week11_eval_v0_metrics.json"
+    ],
+    "manifest_candidates": [
+      "artifacts/manifests/week11_crossrepo_task_bridge.json",
+      "artifacts/manifests/week11_e2e_demo_index.json",
+      "artifacts/manifests/week11_soundlayer_eval_samples.json"
+    ],
+    "log_candidates": [
+      "artifacts/logs/week11_bind_cloud_eval_artifact_link_20260520_165655.log",
+      "artifacts/logs/week11_bind_cloud_slo_summary_20260520_155154.log",
+      "artifacts/logs/week11_bind_cloud_slo_summary_20260520_155354.log",
+      "artifacts/logs/week11_e2e_demo_index_20260521_100319.log",
+      "artifacts/logs/week11_e2e_demo_index_20260521_102124.log",
+      "artifacts/logs/week11_mainbase_crossrepo_bridge_20260518_220539.log",
+      "artifacts/logs/week11_quality_gate_20260520_152708.log",
+      "artifacts/logs/week11_quality_gate_after_cloud_slo_20260520_155154.log",
+      "artifacts/logs/week11_quality_gate_after_cloud_slo_20260520_155400.log",
+      "artifacts/logs/week11_quality_gate_after_eval_artifact_link_20260520_165655.log"
+    ]
+  },
+  "quality_notes": [
+    "DVC status must remain clean after index generation.",
+    "Do not run dvc repro here; existing manual bridge evidence has already been accepted.",
+    "Proxy eval scores are schema and evidence-chain checks, not generated audio perceptual quality claims.",
+    "Cloud k6 evidence should be interpreted through thresholds/pass-fail semantics, not as production SLO proof.",
+    "The index separates tracked_git_status from generated_outputs to avoid self-polluting the evidence root."
+  ],
+  "next_recommended_edges": [
+    {
+      "repo": "media-task-platform-java",
+      "action": "Add minimal evidence-link contract boundary for artifactUri/evalSummaryUri/qualityGateStatus if absent."
+    },
+    {
+      "repo": "ai-job-platform-cloud",
+      "action": "Generate week11_k6_evidence_index.json by merging query/SLO and artifact-link consumer reports."
+    }
+  ]
+}
