@@ -1,0 +1,8 @@
+===== Week12 Blueprint Seed Manifest =====
+status=PASS
+output_json=artifacts/manifests/week12_blueprint_seed_manifest.json
+output_csv=artifacts/manifests/week12_blueprint_seed_manifest.csv
+seed_count=5
+layers=['ambience', 'foley']
+handoff_status=PASS
+warnings=[]

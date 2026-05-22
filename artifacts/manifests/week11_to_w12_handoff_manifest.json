@@ -1,0 +1,120 @@
+{
+  "schema_version": "week11_to_w12_handoff_v0",
+  "generated_at_local": "2026-05-22T10:35:01",
+  "repo": {
+    "role": "Mainbase: SoundLayer eval root and W12 blueprint handoff producer",
+    "git_status": "## main...origin/main\n?? scripts/build_week11_w12_handoff_manifest.py",
+    "head": "1defdc4",
+    "branch": "main"
+  },
+  "input_files": {
+    "e2e_demo_index": {
+      "path": "artifacts/manifests/week11_e2e_demo_index.json",
+      "exists": true,
+      "size_bytes": 5500
+    },
+    "eval_payload": {
+      "path": "artifacts/evals/week11_eval_v0.json",
+      "exists": true,
+      "size_bytes": 8405
+    },
+    "eval_metrics": {
+      "path": "artifacts/evals/week11_eval_v0_metrics.json",
+      "exists": true,
+      "size_bytes": 2042
+    },
+    "crossrepo_bridge": {
+      "path": "artifacts/manifests/week11_crossrepo_task_bridge.json",
+      "exists": true,
+      "size_bytes": 4847
+    }
+  },
+  "week11_summary": {
+    "present_inputs": [
+      "e2e_demo_index",
+      "eval_payload",
+      "eval_metrics",
+      "crossrepo_bridge"
+    ],
+    "missing_inputs": [],
+    "sample_count": 5,
+    "gate_status": {
+      "detected_values": [
+        "## main...origin/main",
+        "## main...origin/main\n?? artifacts/logs/week11_e2e_demo_index_20260521_100319.log\n?? artifacts/logs/week11_e2e_demo_index_20260521_102124.log\n?? artifacts/manifests/week11_e2e_demo_index.json\n?? docs/evals/eval_runner.md\n?? scripts/build_week11_e2e_demo_index.py",
+        "Data and pipelines are up to date.",
+        "tracked_git_status ignores untracked generated outputs; generated outputs are listed explicitly below and must be git-added before commit.",
+        "PASS",
+        "CREATED",
+        true,
+        true,
+        "CREATED",
+        true,
+        "CREATED",
+        true,
+        "CREATED",
+        true,
+        "CREATED",
+        true,
+        "CREATED",
+        "CREATED",
+        true,
+        "PASS"
+      ],
+      "passed_detected": true
+    },
+    "required_crossrepo_terms": {
+      "artifactUri": true,
+      "evalSummaryUri": true,
+      "qualityGateStatus": true,
+      "cloud_k6": true,
+      "non_production_boundary": true,
+      "local_boundary": true
+    }
+  },
+  "w12_entry": {
+    "main_problem": "Turn Week11 eval evidence into SoundLayer Blueprint schema v0 and task-state-consumable artifacts.",
+    "entry_items": [
+      {
+        "id": "w12_mainbase_blueprint_schema_v0",
+        "owner_repo": "mainbase",
+        "objective": "Define minimal SoundLayer Blueprint schema v0 from Week11 eval samples.",
+        "expected_output": "docs/design/soundlayer_blueprint_schema_v0.md and artifacts/manifests/week12_blueprint_seed_manifest.json",
+        "depends_on": [
+          "week11_eval_v0",
+          "week11_e2e_demo_index"
+        ]
+      },
+      {
+        "id": "w12_java_task_state_machine",
+        "owner_repo": "java",
+        "objective": "Consume evidence-link semantics as task lifecycle states instead of static response fields.",
+        "expected_output": "minimal create -> queued/running/succeeded/failed transition tests",
+        "depends_on": [
+          "artifactUri",
+          "evalSummaryUri",
+          "qualityGateStatus"
+        ]
+      },
+      {
+        "id": "w12_cloud_dashboard_or_gate",
+        "owner_repo": "cloud",
+        "objective": "Use Cloud k6 evidence as local reliability gate input, not production SLO.",
+        "expected_output": "dashboard JSON or local gate summary from existing k6 reports",
+        "depends_on": [
+          "week11_k6_evidence_index",
+          "local_non_production_boundary"
+        ]
+      }
+    ],
+    "non_goals": [
+      "No production SLO claim.",
+      "No real cloud-provider deployment claim.",
+      "No generated-audio perceptual-quality claim from proxy eval alone.",
+      "No full artifact registry or signed URL lifecycle claim."
+    ]
+  },
+  "handoff_status": "PASS",
+  "hard_failures": [],
+  "warnings": []
+}

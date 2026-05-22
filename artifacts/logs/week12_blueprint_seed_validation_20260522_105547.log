@@ -1,0 +1,10 @@
+===== Week12 Blueprint Seed Validation =====
+status=PASS_WITH_WARNINGS
+schema=schemas/soundlayer_blueprint_seed_v0.schema.json
+manifest=artifacts/manifests/week12_blueprint_seed_manifest.json
+report=artifacts/manifests/week12_blueprint_seed_validation_report.json
+seed_count=5
+failure_count=0
+warning_count=5
+quality_proxy_min=0.892
+quality_proxy_max=0.964

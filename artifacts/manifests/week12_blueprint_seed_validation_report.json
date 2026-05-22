@@ -1,0 +1,56 @@
+{
+  "schema_version": "week12_blueprint_seed_validation_report_v0",
+  "generated_at_local": "2026-05-22T11:00:37",
+  "repo": {
+    "git_status": "## main...origin/main\n?? artifacts/logs/week11_to_w12_handoff_manifest_20260522_103501.log\n?? artifacts/logs/week12_blueprint_seed_enrichment_20260522_104302.log\n?? artifacts/logs/week12_blueprint_seed_manifest_20260522_103706.log\n?? artifacts/logs/week12_blueprint_seed_validation_20260522_105547.log\n?? artifacts/manifests/week11_to_w12_handoff_manifest.json\n?? artifacts/manifests/week12_blueprint_seed_manifest.csv\n?? artifacts/manifests/week12_blueprint_seed_manifest.json\n?? artifacts/manifests/week12_blueprint_seed_validation_report.json\n?? schemas/\n?? scripts/build_week11_w12_handoff_manifest.py\n?? scripts/build_week12_blueprint_seed_manifest.py\n?? scripts/enrich_week12_blueprint_seed_manifest.py\n?? scripts/validate_week12_blueprint_seed_manifest.py",
+    "head": "1defdc4",
+    "branch": "main"
+  },
+  "inputs": {
+    "schema": "schemas/soundlayer_blueprint_seed_v0.schema.json",
+    "manifest": "artifacts/manifests/week12_blueprint_seed_manifest.json"
+  },
+  "summary": {
+    "status": "PASS_WITH_WARNINGS",
+    "seed_count": 5,
+    "failure_count": 0,
+    "warning_count": 5,
+    "quality_proxy_min": 0.892,
+    "quality_proxy_max": 0.964,
+    "layers_observed": [
+      "ambience",
+      "foley"
+    ]
+  },
+  "hard_failures": [],
+  "seed_failures": [],
+  "warnings": [],
+  "seed_warnings": [
+    {
+      "seed_id": "bp_week11_city_walk_001",
+      "message": "qualityGateStatus is CREATED; interpret as task/evidence state, not perceptual quality"
+    },
+    {
+      "seed_id": "bp_week11_door_close_002",
+      "message": "qualityGateStatus is CREATED; interpret as task/evidence state, not perceptual quality"
+    },
+    {
+      "seed_id": "bp_week11_rain_window_003",
+      "message": "qualityGateStatus is CREATED; interpret as task/evidence state, not perceptual quality"
+    },
+    {
+      "seed_id": "bp_week11_keyboard_typing_004",
+      "message": "qualityGateStatus is CREATED; interpret as task/evidence state, not perceptual quality"
+    },
+    {
+      "seed_id": "bp_week11_bike_pass_005",
+      "message": "qualityGateStatus is CREATED; interpret as task/evidence state, not perceptual quality"
+    }
+  ],
+  "boundary": [
+    "This validates W12 blueprint seed structure and local Mainbase artifact pointers.",
+    "It does not validate generated audio perceptual quality.",
+    "It does not claim production artifact registry or production SLO.",
+    "cloudGateSummaryUri is treated as local Cloud evidence pointer, not as a required Mainbase local file."
+  ]
+}

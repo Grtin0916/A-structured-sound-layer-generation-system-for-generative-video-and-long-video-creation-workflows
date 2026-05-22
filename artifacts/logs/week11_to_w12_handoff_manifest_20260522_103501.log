@@ -1,0 +1,8 @@
+===== Week11 -> Week12 handoff manifest =====
+status=PASS
+output=artifacts/manifests/week11_to_w12_handoff_manifest.json
+sample_count=5
+hard_failures=[]
+warnings=[]
+present_inputs=['e2e_demo_index', 'eval_payload', 'eval_metrics', 'crossrepo_bridge']
+missing_inputs=[]

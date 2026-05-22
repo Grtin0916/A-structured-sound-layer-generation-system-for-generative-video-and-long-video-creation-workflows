@@ -1,0 +1,379 @@
+{
+  "schema_version": "week12_blueprint_seed_manifest_v0",
+  "generated_at_local": "2026-05-22T10:37:06",
+  "repo": {
+    "role": "Mainbase: SoundLayer Blueprint seed producer",
+    "git_status": "## main...origin/main\n?? artifacts/logs/week11_to_w12_handoff_manifest_20260522_103501.log\n?? artifacts/manifests/week11_to_w12_handoff_manifest.json\n?? scripts/build_week11_w12_handoff_manifest.py\n?? scripts/build_week12_blueprint_seed_manifest.py",
+    "head": "1defdc4",
+    "branch": "main"
+  },
+  "inputs": {
+    "week11_eval_v0_json": "artifacts/evals/week11_eval_v0.json",
+    "week11_eval_v0_csv": "artifacts/evals/week11_eval_v0.csv",
+    "week11_to_w12_handoff": "artifacts/manifests/week11_to_w12_handoff_manifest.json"
+  },
+  "summary": {
+    "seed_count": 5,
+    "layers_observed": [
+      "ambience",
+      "foley"
+    ],
+    "has_artifact_links": true,
+    "has_eval_summary_links": true,
+    "handoff_status": "PASS",
+    "has_mainbase_eval_summary_links": true,
+    "has_cloud_gate_summary_links": true,
+    "quality_proxy_min": 0.892,
+    "quality_proxy_max": 0.964
+  },
+  "blueprint_seeds": [
+    {
+      "blueprint_id": "bp_week11_city_walk_001",
+      "source_case_id": "week11_city_walk_001",
+      "schema_version": "soundlayer_blueprint_seed_v0",
+      "source": {
+        "from": "week11_eval_v0",
+        "scene_hint": "silent urban walking shot",
+        "artifactUri": "artifacts/evals/week11_eval_v0.json",
+        "evalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "qualityGateStatus": "CREATED",
+        "mainbaseEvalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "mainbaseE2EIndexUri": "artifacts/manifests/week11_e2e_demo_index.json",
+        "handoffManifestUri": "artifacts/manifests/week11_to_w12_handoff_manifest.json",
+        "cloudGateSummaryUri": "artifacts/benchmarks/week11_k6_gate_summary.json"
+      },
+      "scores_proxy": {
+        "semantic": 0.94,
+        "temporal": 1.0,
+        "quality": 0.964,
+        "note": "Proxy scores are W11 eval evidence only; not human perceptual audio quality.",
+        "quality_formula": "if missing: 0.6 * semantic + 0.4 * temporal",
+        "quality_boundary": "V0 proxy quality for W12 sorting only; not human perceptual audio quality."
+      },
+      "events": [
+        {
+          "event_id": "week11_city_walk_001_event_001",
+          "layer": "ambience",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "background_scene_context",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 0.94
+        },
+        {
+          "event_id": "week11_city_walk_001_event_002",
+          "layer": "foley",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "visible_or_implied_action",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 1.0
+        }
+      ],
+      "layers_required": [
+        "ambience",
+        "foley"
+      ],
+      "failure_reason": "none",
+      "w12_action": "Use as seed input for SoundLayer Blueprint schema v0 and candidate-generation planning.",
+      "non_goals": [
+        "No generated audio is claimed by this seed.",
+        "No perceptual quality claim is made from proxy score alone.",
+        "No production artifact registry or signed URL lifecycle is claimed."
+      ],
+      "w12_consumption_contract": {
+        "artifact_pointer_ready": true,
+        "eval_summary_ready": true,
+        "cloud_gate_summary_ready": true,
+        "quality_proxy_ready": true,
+        "expected_consumer": [
+          "Mainbase SoundLayer Blueprint schema v0",
+          "Java task state machine / evidence-link API",
+          "Cloud local dashboard or gate summary"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "bp_week11_door_close_002",
+      "source_case_id": "week11_door_close_002",
+      "schema_version": "soundlayer_blueprint_seed_v0",
+      "source": {
+        "from": "week11_eval_v0",
+        "scene_hint": "person closes a wooden door",
+        "artifactUri": "artifacts/evals/week11_eval_v0.json",
+        "evalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "qualityGateStatus": "CREATED",
+        "mainbaseEvalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "mainbaseE2EIndexUri": "artifacts/manifests/week11_e2e_demo_index.json",
+        "handoffManifestUri": "artifacts/manifests/week11_to_w12_handoff_manifest.json",
+        "cloudGateSummaryUri": "artifacts/benchmarks/week11_k6_gate_summary.json"
+      },
+      "scores_proxy": {
+        "semantic": 0.82,
+        "temporal": 1.0,
+        "quality": 0.892,
+        "note": "Proxy scores are W11 eval evidence only; not human perceptual audio quality.",
+        "quality_formula": "if missing: 0.6 * semantic + 0.4 * temporal",
+        "quality_boundary": "V0 proxy quality for W12 sorting only; not human perceptual audio quality."
+      },
+      "events": [
+        {
+          "event_id": "week11_door_close_002_event_001",
+          "layer": "ambience",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "background_scene_context",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 0.82
+        },
+        {
+          "event_id": "week11_door_close_002_event_002",
+          "layer": "foley",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "visible_or_implied_action",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 1.0
+        }
+      ],
+      "layers_required": [
+        "ambience",
+        "foley"
+      ],
+      "failure_reason": "none",
+      "w12_action": "Use as seed input for SoundLayer Blueprint schema v0 and candidate-generation planning.",
+      "non_goals": [
+        "No generated audio is claimed by this seed.",
+        "No perceptual quality claim is made from proxy score alone.",
+        "No production artifact registry or signed URL lifecycle is claimed."
+      ],
+      "w12_consumption_contract": {
+        "artifact_pointer_ready": true,
+        "eval_summary_ready": true,
+        "cloud_gate_summary_ready": true,
+        "quality_proxy_ready": true,
+        "expected_consumer": [
+          "Mainbase SoundLayer Blueprint schema v0",
+          "Java task state machine / evidence-link API",
+          "Cloud local dashboard or gate summary"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "bp_week11_rain_window_003",
+      "source_case_id": "week11_rain_window_003",
+      "schema_version": "soundlayer_blueprint_seed_v0",
+      "source": {
+        "from": "week11_eval_v0",
+        "scene_hint": "rain outside a window with quiet interior",
+        "artifactUri": "artifacts/evals/week11_eval_v0.json",
+        "evalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "qualityGateStatus": "CREATED",
+        "mainbaseEvalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "mainbaseE2EIndexUri": "artifacts/manifests/week11_e2e_demo_index.json",
+        "handoffManifestUri": "artifacts/manifests/week11_to_w12_handoff_manifest.json",
+        "cloudGateSummaryUri": "artifacts/benchmarks/week11_k6_gate_summary.json"
+      },
+      "scores_proxy": {
+        "semantic": 0.94,
+        "temporal": 1.0,
+        "quality": 0.964,
+        "note": "Proxy scores are W11 eval evidence only; not human perceptual audio quality.",
+        "quality_formula": "if missing: 0.6 * semantic + 0.4 * temporal",
+        "quality_boundary": "V0 proxy quality for W12 sorting only; not human perceptual audio quality."
+      },
+      "events": [
+        {
+          "event_id": "week11_rain_window_003_event_001",
+          "layer": "ambience",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "background_scene_context",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 0.94
+        },
+        {
+          "event_id": "week11_rain_window_003_event_002",
+          "layer": "foley",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "visible_or_implied_action",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 1.0
+        }
+      ],
+      "layers_required": [
+        "ambience",
+        "foley"
+      ],
+      "failure_reason": "none",
+      "w12_action": "Use as seed input for SoundLayer Blueprint schema v0 and candidate-generation planning.",
+      "non_goals": [
+        "No generated audio is claimed by this seed.",
+        "No perceptual quality claim is made from proxy score alone.",
+        "No production artifact registry or signed URL lifecycle is claimed."
+      ],
+      "w12_consumption_contract": {
+        "artifact_pointer_ready": true,
+        "eval_summary_ready": true,
+        "cloud_gate_summary_ready": true,
+        "quality_proxy_ready": true,
+        "expected_consumer": [
+          "Mainbase SoundLayer Blueprint schema v0",
+          "Java task state machine / evidence-link API",
+          "Cloud local dashboard or gate summary"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "bp_week11_keyboard_typing_004",
+      "source_case_id": "week11_keyboard_typing_004",
+      "schema_version": "soundlayer_blueprint_seed_v0",
+      "source": {
+        "from": "week11_eval_v0",
+        "scene_hint": "close-up hands typing on laptop in quiet room",
+        "artifactUri": "artifacts/evals/week11_eval_v0.json",
+        "evalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "qualityGateStatus": "CREATED",
+        "mainbaseEvalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "mainbaseE2EIndexUri": "artifacts/manifests/week11_e2e_demo_index.json",
+        "handoffManifestUri": "artifacts/manifests/week11_to_w12_handoff_manifest.json",
+        "cloudGateSummaryUri": "artifacts/benchmarks/week11_k6_gate_summary.json"
+      },
+      "scores_proxy": {
+        "semantic": 0.94,
+        "temporal": 1.0,
+        "quality": 0.964,
+        "note": "Proxy scores are W11 eval evidence only; not human perceptual audio quality.",
+        "quality_formula": "if missing: 0.6 * semantic + 0.4 * temporal",
+        "quality_boundary": "V0 proxy quality for W12 sorting only; not human perceptual audio quality."
+      },
+      "events": [
+        {
+          "event_id": "week11_keyboard_typing_004_event_001",
+          "layer": "ambience",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "background_scene_context",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 0.94
+        },
+        {
+          "event_id": "week11_keyboard_typing_004_event_002",
+          "layer": "foley",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "visible_or_implied_action",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 1.0
+        }
+      ],
+      "layers_required": [
+        "ambience",
+        "foley"
+      ],
+      "failure_reason": "none",
+      "w12_action": "Use as seed input for SoundLayer Blueprint schema v0 and candidate-generation planning.",
+      "non_goals": [
+        "No generated audio is claimed by this seed.",
+        "No perceptual quality claim is made from proxy score alone.",
+        "No production artifact registry or signed URL lifecycle is claimed."
+      ],
+      "w12_consumption_contract": {
+        "artifact_pointer_ready": true,
+        "eval_summary_ready": true,
+        "cloud_gate_summary_ready": true,
+        "quality_proxy_ready": true,
+        "expected_consumer": [
+          "Mainbase SoundLayer Blueprint schema v0",
+          "Java task state machine / evidence-link API",
+          "Cloud local dashboard or gate summary"
+        ]
+      }
+    },
+    {
+      "blueprint_id": "bp_week11_bike_pass_005",
+      "source_case_id": "week11_bike_pass_005",
+      "schema_version": "soundlayer_blueprint_seed_v0",
+      "source": {
+        "from": "week11_eval_v0",
+        "scene_hint": "bicycle passes camera on a street",
+        "artifactUri": "artifacts/evals/week11_eval_v0.json",
+        "evalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "qualityGateStatus": "CREATED",
+        "mainbaseEvalSummaryUri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "mainbaseE2EIndexUri": "artifacts/manifests/week11_e2e_demo_index.json",
+        "handoffManifestUri": "artifacts/manifests/week11_to_w12_handoff_manifest.json",
+        "cloudGateSummaryUri": "artifacts/benchmarks/week11_k6_gate_summary.json"
+      },
+      "scores_proxy": {
+        "semantic": 0.94,
+        "temporal": 1.0,
+        "quality": 0.964,
+        "note": "Proxy scores are W11 eval evidence only; not human perceptual audio quality.",
+        "quality_formula": "if missing: 0.6 * semantic + 0.4 * temporal",
+        "quality_boundary": "V0 proxy quality for W12 sorting only; not human perceptual audio quality."
+      },
+      "events": [
+        {
+          "event_id": "week11_bike_pass_005_event_001",
+          "layer": "ambience",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "background_scene_context",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 0.94
+        },
+        {
+          "event_id": "week11_bike_pass_005_event_002",
+          "layer": "foley",
+          "time_start_sec": 0.0,
+          "time_end_sec": 3.0,
+          "sound_intent": "visible_or_implied_action",
+          "control_source": "week11_eval_seed",
+          "confidence_proxy": 1.0
+        }
+      ],
+      "layers_required": [
+        "ambience",
+        "foley"
+      ],
+      "failure_reason": "none",
+      "w12_action": "Use as seed input for SoundLayer Blueprint schema v0 and candidate-generation planning.",
+      "non_goals": [
+        "No generated audio is claimed by this seed.",
+        "No perceptual quality claim is made from proxy score alone.",
+        "No production artifact registry or signed URL lifecycle is claimed."
+      ],
+      "w12_consumption_contract": {
+        "artifact_pointer_ready": true,
+        "eval_summary_ready": true,
+        "cloud_gate_summary_ready": true,
+        "quality_proxy_ready": true,
+        "expected_consumer": [
+          "Mainbase SoundLayer Blueprint schema v0",
+          "Java task state machine / evidence-link API",
+          "Cloud local dashboard or gate summary"
+        ]
+      }
+    }
+  ],
+  "hard_failures": [],
+  "warnings": [],
+  "boundary": [
+    "This is a W12 seed manifest derived from Week11 eval evidence.",
+    "It is not generated audio.",
+    "It is not a perceptual quality benchmark.",
+    "It is not a production artifact registry."
+  ],
+  "enrichment": {
+    "schema_version": "week12_blueprint_seed_enrichment_v1",
+    "generated_at_local": "2026-05-22T10:43:02",
+    "purpose": "Fill W12-consumable artifact/eval pointers and nonzero proxy quality from Week11 evidence.",
+    "boundary": [
+      "artifactUri points to local Mainbase eval artifact, not durable object storage.",
+      "quality is a proxy score for W12 ordering, not human perceptual audio quality.",
+      "cloudGateSummaryUri is kept separate from mainbaseEvalSummaryUri."
+    ]
+  }
+}

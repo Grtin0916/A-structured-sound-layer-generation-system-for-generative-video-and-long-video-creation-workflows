@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.mainbase/schemas/soundlayer_blueprint_seed_v0.schema.json",
+  "title": "SoundLayer Blueprint Seed Manifest V0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "summary",
+    "blueprint_seeds",
+    "boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "week12_blueprint_seed_manifest_v0"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "seed_count",
+        "layers_observed",
+        "has_artifact_links",
+        "has_mainbase_eval_summary_links",
+        "has_cloud_gate_summary_links",
+        "quality_proxy_min",
+        "quality_proxy_max"
+      ],
+      "properties": {
+        "seed_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "layers_observed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "has_artifact_links": {
+          "type": "boolean"
+        },
+        "has_mainbase_eval_summary_links": {
+          "type": "boolean"
+        },
+        "has_cloud_gate_summary_links": {
+          "type": "boolean"
+        },
+        "quality_proxy_min": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quality_proxy_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "blueprint_seeds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "blueprint_id",
+          "source_case_id",
+          "schema_version",
+          "source",
+          "scores_proxy",
+          "events",
+          "layers_required",
+          "w12_consumption_contract",
+          "non_goals"
+        ],
+        "properties": {
+          "blueprint_id": {
+            "type": "string",
+            "pattern": "^bp_"
+          },
+          "source_case_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "schema_version": {
+            "const": "soundlayer_blueprint_seed_v0"
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "artifactUri",
+              "evalSummaryUri",
+              "mainbaseEvalSummaryUri",
+              "cloudGateSummaryUri",
+              "qualityGateStatus"
+            ],
+            "properties": {
+              "artifactUri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evalSummaryUri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mainbaseEvalSummaryUri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cloudGateSummaryUri": {
+                "type": "string",
+                "minLength": 1
+              },
+              "qualityGateStatus": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "scores_proxy": {
+            "type": "object",
+            "required": [
+              "semantic",
+              "temporal",
+              "quality",
+              "quality_boundary"
+            ],
+            "properties": {
+              "semantic": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "temporal": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "quality": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              },
+              "quality_formula": {
+                "type": "string"
+              },
+              "quality_boundary": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "events": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "event_id",
+                "layer",
+                "time_start_sec",
+                "time_end_sec",
+                "sound_intent",
+                "control_source"
+              ],
+              "properties": {
+                "event_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "layer": {
+                  "type": "string",
+                  "enum": [
+                    "ambience",
+                    "foley",
+                    "music",
+                    "dialogue",
+                    "effect"
+                  ]
+                },
+                "time_start_sec": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "time_end_sec": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "sound_intent": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "control_source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "confidence_proxy": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            }
+          },
+          "layers_required": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "w12_consumption_contract": {
+            "type": "object",
+            "required": [
+              "artifact_pointer_ready",
+              "eval_summary_ready",
+              "cloud_gate_summary_ready",
+              "quality_proxy_ready",
+              "expected_consumer"
+            ],
+            "properties": {
+              "artifact_pointer_ready": {
+                "const": true
+              },
+              "eval_summary_ready": {
+                "const": true
+              },
+              "cloud_gate_summary_ready": {
+                "const": true
+              },
+              "quality_proxy_ready": {
+                "const": true
+              },
+              "expected_consumer": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            }
+          },
+          "non_goals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "boundary": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    }
+  }
+}

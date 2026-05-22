@@ -1,0 +1,6 @@
+blueprint_id,source_case_id,semantic,temporal,quality,layers_required,qualityGateStatus,artifactUri,mainbaseEvalSummaryUri,cloudGateSummaryUri,failure_reason
+bp_week11_city_walk_001,week11_city_walk_001,0.94,1.0,0.964,ambience|foley,CREATED,artifacts/evals/week11_eval_v0.json,artifacts/evals/week11_eval_v0_metrics.json,artifacts/benchmarks/week11_k6_gate_summary.json,none
+bp_week11_door_close_002,week11_door_close_002,0.82,1.0,0.892,ambience|foley,CREATED,artifacts/evals/week11_eval_v0.json,artifacts/evals/week11_eval_v0_metrics.json,artifacts/benchmarks/week11_k6_gate_summary.json,none
+bp_week11_rain_window_003,week11_rain_window_003,0.94,1.0,0.964,ambience|foley,CREATED,artifacts/evals/week11_eval_v0.json,artifacts/evals/week11_eval_v0_metrics.json,artifacts/benchmarks/week11_k6_gate_summary.json,none
+bp_week11_keyboard_typing_004,week11_keyboard_typing_004,0.94,1.0,0.964,ambience|foley,CREATED,artifacts/evals/week11_eval_v0.json,artifacts/evals/week11_eval_v0_metrics.json,artifacts/benchmarks/week11_k6_gate_summary.json,none
+bp_week11_bike_pass_005,week11_bike_pass_005,0.94,1.0,0.964,ambience|foley,CREATED,artifacts/evals/week11_eval_v0.json,artifacts/evals/week11_eval_v0_metrics.json,artifacts/benchmarks/week11_k6_gate_summary.json,none
