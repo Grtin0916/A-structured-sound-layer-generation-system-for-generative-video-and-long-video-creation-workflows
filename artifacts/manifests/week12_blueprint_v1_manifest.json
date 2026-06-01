@@ -1,0 +1,495 @@
+{
+  "schema_version": "week12_blueprint_v1_manifest",
+  "created_at": "2026-06-01T08:37:59+00:00",
+  "source_seed_manifest": "artifacts/manifests/week12_blueprint_seed_manifest.json",
+  "summary": {
+    "seed_count_in_source": 5,
+    "blueprint_count": 5,
+    "event_count": 10,
+    "status": "PASS",
+    "warning_count": 0,
+    "semantic_refined": true,
+    "semantic_refined_at": "2026-06-01T08:45:11+00:00",
+    "finalized": true,
+    "finalized_at": "2026-06-01T08:50:21+00:00",
+    "finalized_by": "scripts/finalize_week12_blueprint_v1_pack.py"
+  },
+  "artifacts": {
+    "schema": "schemas/soundlayer_blueprint_v1.schema.json",
+    "manifest": "artifacts/manifests/week12_blueprint_v1_manifest.json",
+    "timeline_jsonl": "artifacts/manifests/week12_event_timeline.jsonl",
+    "timeline_csv": "artifacts/manifests/week12_event_timeline.csv",
+    "contact_sheet_svg": "artifacts/visuals/week12_event_timeline_contact_sheet.svg",
+    "contact_sheet_png": "artifacts/visuals/week12_event_timeline_contact_sheet.png",
+    "validation_report": "artifacts/manifests/week12_blueprint_v1_validation_report.json"
+  },
+  "blueprints": [
+    {
+      "schema_version": "soundlayer_blueprint_v1",
+      "blueprint_id": "blueprint_v1_66d315251e",
+      "source_seed_id": "seed_0001_case_48b11c",
+      "scene": {
+        "description": "Urban walking scene with visible pedestrian motion, continuous street ambience, and time-aligned footsteps.",
+        "duration_seconds": 8.0,
+        "source_type": "week12_seed_manifest",
+        "semantic_tags": [
+          "urban",
+          "walking",
+          "footsteps",
+          "street_ambience"
+        ],
+        "semantic_source": {
+          "method": "heuristic_from_seed_identifier",
+          "raw_scene_description": "bp_week11_city_walk_001 | week11_city_walk_001 | soundlayer_blueprint_seed_v0",
+          "normalized_phrase": "city walk 001"
+        }
+      },
+      "layers": [
+        {
+          "layer_id": "ambience",
+          "layer_type": "ambience",
+          "role": "continuous contextual sound bed",
+          "priority": "medium",
+          "generation_hint": "Low-level city street ambience with distant traffic and outdoor environmental noise."
+        },
+        {
+          "layer_id": "foley",
+          "layer_type": "foley",
+          "role": "time-aligned foreground event",
+          "priority": "high",
+          "generation_hint": "Footsteps synchronized to the walking action, with subtle cloth movement and ground contact."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "seed_0001_case_48b11c_evt_001",
+          "label": "contextual ambience bed",
+          "layer_type": "ambience",
+          "start_seconds": 0.0,
+          "end_seconds": 8.0,
+          "priority": "medium",
+          "intensity": 0.35,
+          "prompt": "Low-level city street ambience with distant traffic and outdoor environmental noise.",
+          "alignment_rule": "span_full_clip_as_context"
+        },
+        {
+          "event_id": "seed_0001_case_48b11c_evt_002",
+          "label": "time-aligned footsteps",
+          "layer_type": "foley",
+          "start_seconds": 1.44,
+          "end_seconds": 5.76,
+          "priority": "high",
+          "intensity": 0.78,
+          "prompt": "Footsteps synchronized to the walking action, with subtle cloth movement and ground contact.",
+          "alignment_rule": "align_to_main_visible_action"
+        }
+      ],
+      "artifacts": {
+        "source_artifact_uri": "artifacts/evals/week11_eval_v0.json",
+        "eval_summary_uri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "blueprint_artifact_uri": "artifacts/manifests/week12_blueprint_v1_manifest.json#blueprint_v1_66d315251e",
+        "timeline_jsonl_uri": "artifacts/manifests/week12_event_timeline.jsonl",
+        "timeline_csv_uri": "artifacts/manifests/week12_event_timeline.csv"
+      },
+      "metadata": {
+        "created_at": "2026-06-01T08:37:59+00:00",
+        "builder": "scripts/build_week12_blueprint_v1.py",
+        "boundary": "Blueprint V1 is a structured intermediate representation; it is not generated audio quality evidence.",
+        "source_seed_raw_keys": [
+          "blueprint_id",
+          "events",
+          "failure_reason",
+          "layers_required",
+          "non_goals",
+          "schema_version",
+          "scores_proxy",
+          "source",
+          "source_case_id",
+          "w12_action",
+          "w12_consumption_contract"
+        ],
+        "semantic_refinement": {
+          "created_at": "2026-06-01T08:45:11+00:00",
+          "script": "scripts/refine_week12_blueprint_v1_semantics.py",
+          "boundary": "Heuristic semantic repair for Blueprint V1 control fields; not audio generation evidence."
+        }
+      }
+    },
+    {
+      "schema_version": "soundlayer_blueprint_v1",
+      "blueprint_id": "blueprint_v1_a221f75cba",
+      "source_seed_id": "seed_0002_case_adc34a",
+      "scene": {
+        "description": "Indoor door-closing scene with a short foreground door impact and quiet room tone.",
+        "duration_seconds": 8.0,
+        "source_type": "week12_seed_manifest",
+        "semantic_tags": [
+          "indoor",
+          "door_close",
+          "impact",
+          "room_tone"
+        ],
+        "semantic_source": {
+          "method": "heuristic_from_seed_identifier",
+          "raw_scene_description": "bp_week11_door_close_002 | week11_door_close_002 | soundlayer_blueprint_seed_v0",
+          "normalized_phrase": "door close 002"
+        }
+      },
+      "layers": [
+        {
+          "layer_id": "ambience",
+          "layer_type": "ambience",
+          "role": "continuous contextual sound bed",
+          "priority": "medium",
+          "generation_hint": "Quiet indoor room tone before and after the door action."
+        },
+        {
+          "layer_id": "foley",
+          "layer_type": "foley",
+          "role": "time-aligned foreground event",
+          "priority": "high",
+          "generation_hint": "Door closing thud with latch detail aligned to the visible closing moment."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "seed_0002_case_adc34a_evt_001",
+          "label": "contextual ambience bed",
+          "layer_type": "ambience",
+          "start_seconds": 0.0,
+          "end_seconds": 8.0,
+          "priority": "medium",
+          "intensity": 0.35,
+          "prompt": "Quiet indoor room tone before and after the door action.",
+          "alignment_rule": "span_full_clip_as_context"
+        },
+        {
+          "event_id": "seed_0002_case_adc34a_evt_002",
+          "label": "door close impact",
+          "layer_type": "foley",
+          "start_seconds": 1.44,
+          "end_seconds": 5.76,
+          "priority": "high",
+          "intensity": 0.78,
+          "prompt": "Door closing thud with latch detail aligned to the visible closing moment.",
+          "alignment_rule": "align_to_main_visible_action"
+        }
+      ],
+      "artifacts": {
+        "source_artifact_uri": "artifacts/evals/week11_eval_v0.json",
+        "eval_summary_uri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "blueprint_artifact_uri": "artifacts/manifests/week12_blueprint_v1_manifest.json#blueprint_v1_a221f75cba",
+        "timeline_jsonl_uri": "artifacts/manifests/week12_event_timeline.jsonl",
+        "timeline_csv_uri": "artifacts/manifests/week12_event_timeline.csv"
+      },
+      "metadata": {
+        "created_at": "2026-06-01T08:37:59+00:00",
+        "builder": "scripts/build_week12_blueprint_v1.py",
+        "boundary": "Blueprint V1 is a structured intermediate representation; it is not generated audio quality evidence.",
+        "source_seed_raw_keys": [
+          "blueprint_id",
+          "events",
+          "failure_reason",
+          "layers_required",
+          "non_goals",
+          "schema_version",
+          "scores_proxy",
+          "source",
+          "source_case_id",
+          "w12_action",
+          "w12_consumption_contract"
+        ],
+        "semantic_refinement": {
+          "created_at": "2026-06-01T08:45:11+00:00",
+          "script": "scripts/refine_week12_blueprint_v1_semantics.py",
+          "boundary": "Heuristic semantic repair for Blueprint V1 control fields; not audio generation evidence."
+        }
+      }
+    },
+    {
+      "schema_version": "soundlayer_blueprint_v1",
+      "blueprint_id": "blueprint_v1_276cc4a44c",
+      "source_seed_id": "seed_0003_case_9eb26a",
+      "scene": {
+        "description": "Rain-at-window scene with continuous rainfall ambience and localized water impact texture.",
+        "duration_seconds": 8.0,
+        "source_type": "week12_seed_manifest",
+        "semantic_tags": [
+          "rain",
+          "window",
+          "weather",
+          "water_impact"
+        ],
+        "semantic_source": {
+          "method": "heuristic_from_seed_identifier",
+          "raw_scene_description": "bp_week11_rain_window_003 | week11_rain_window_003 | soundlayer_blueprint_seed_v0",
+          "normalized_phrase": "rain window 003"
+        }
+      },
+      "layers": [
+        {
+          "layer_id": "ambience",
+          "layer_type": "ambience",
+          "role": "continuous contextual sound bed",
+          "priority": "medium",
+          "generation_hint": "Continuous rainfall bed with soft outdoor weather texture."
+        },
+        {
+          "layer_id": "foley",
+          "layer_type": "foley",
+          "role": "time-aligned foreground event",
+          "priority": "high",
+          "generation_hint": "Raindrop impacts against glass aligned with visible window/rain cues."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "seed_0003_case_9eb26a_evt_001",
+          "label": "contextual ambience bed",
+          "layer_type": "ambience",
+          "start_seconds": 0.0,
+          "end_seconds": 8.0,
+          "priority": "medium",
+          "intensity": 0.35,
+          "prompt": "Continuous rainfall bed with soft outdoor weather texture.",
+          "alignment_rule": "span_full_clip_as_context"
+        },
+        {
+          "event_id": "seed_0003_case_9eb26a_evt_002",
+          "label": "raindrop impacts on window",
+          "layer_type": "foley",
+          "start_seconds": 1.44,
+          "end_seconds": 5.76,
+          "priority": "high",
+          "intensity": 0.78,
+          "prompt": "Raindrop impacts against glass aligned with visible window/rain cues.",
+          "alignment_rule": "align_to_main_visible_action"
+        }
+      ],
+      "artifacts": {
+        "source_artifact_uri": "artifacts/evals/week11_eval_v0.json",
+        "eval_summary_uri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "blueprint_artifact_uri": "artifacts/manifests/week12_blueprint_v1_manifest.json#blueprint_v1_276cc4a44c",
+        "timeline_jsonl_uri": "artifacts/manifests/week12_event_timeline.jsonl",
+        "timeline_csv_uri": "artifacts/manifests/week12_event_timeline.csv"
+      },
+      "metadata": {
+        "created_at": "2026-06-01T08:37:59+00:00",
+        "builder": "scripts/build_week12_blueprint_v1.py",
+        "boundary": "Blueprint V1 is a structured intermediate representation; it is not generated audio quality evidence.",
+        "source_seed_raw_keys": [
+          "blueprint_id",
+          "events",
+          "failure_reason",
+          "layers_required",
+          "non_goals",
+          "schema_version",
+          "scores_proxy",
+          "source",
+          "source_case_id",
+          "w12_action",
+          "w12_consumption_contract"
+        ],
+        "semantic_refinement": {
+          "created_at": "2026-06-01T08:45:11+00:00",
+          "script": "scripts/refine_week12_blueprint_v1_semantics.py",
+          "boundary": "Heuristic semantic repair for Blueprint V1 control fields; not audio generation evidence."
+        }
+      }
+    },
+    {
+      "schema_version": "soundlayer_blueprint_v1",
+      "blueprint_id": "blueprint_v1_2b95ab765d",
+      "source_seed_id": "seed_0004_case_f9f0fb",
+      "scene": {
+        "description": "Desk typing scene with close foreground keystrokes and low indoor ambience.",
+        "duration_seconds": 8.0,
+        "source_type": "week12_seed_manifest",
+        "semantic_tags": [
+          "typing",
+          "keyboard",
+          "desk",
+          "indoor"
+        ],
+        "semantic_source": {
+          "method": "heuristic_from_seed_identifier",
+          "raw_scene_description": "bp_week11_keyboard_typing_004 | week11_keyboard_typing_004 | soundlayer_blueprint_seed_v0",
+          "normalized_phrase": "keyboard typing 004"
+        }
+      },
+      "layers": [
+        {
+          "layer_id": "ambience",
+          "layer_type": "ambience",
+          "role": "continuous contextual sound bed",
+          "priority": "medium",
+          "generation_hint": "Quiet indoor desk ambience with minimal background noise."
+        },
+        {
+          "layer_id": "foley",
+          "layer_type": "foley",
+          "role": "time-aligned foreground event",
+          "priority": "high",
+          "generation_hint": "Short keyboard taps aligned to visible typing motion."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "seed_0004_case_f9f0fb_evt_001",
+          "label": "contextual ambience bed",
+          "layer_type": "ambience",
+          "start_seconds": 0.0,
+          "end_seconds": 8.0,
+          "priority": "medium",
+          "intensity": 0.35,
+          "prompt": "Quiet indoor desk ambience with minimal background noise.",
+          "alignment_rule": "span_full_clip_as_context"
+        },
+        {
+          "event_id": "seed_0004_case_f9f0fb_evt_002",
+          "label": "keyboard typing taps",
+          "layer_type": "foley",
+          "start_seconds": 1.44,
+          "end_seconds": 5.76,
+          "priority": "high",
+          "intensity": 0.78,
+          "prompt": "Short keyboard taps aligned to visible typing motion.",
+          "alignment_rule": "align_to_main_visible_action"
+        }
+      ],
+      "artifacts": {
+        "source_artifact_uri": "artifacts/evals/week11_eval_v0.json",
+        "eval_summary_uri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "blueprint_artifact_uri": "artifacts/manifests/week12_blueprint_v1_manifest.json#blueprint_v1_2b95ab765d",
+        "timeline_jsonl_uri": "artifacts/manifests/week12_event_timeline.jsonl",
+        "timeline_csv_uri": "artifacts/manifests/week12_event_timeline.csv"
+      },
+      "metadata": {
+        "created_at": "2026-06-01T08:37:59+00:00",
+        "builder": "scripts/build_week12_blueprint_v1.py",
+        "boundary": "Blueprint V1 is a structured intermediate representation; it is not generated audio quality evidence.",
+        "source_seed_raw_keys": [
+          "blueprint_id",
+          "events",
+          "failure_reason",
+          "layers_required",
+          "non_goals",
+          "schema_version",
+          "scores_proxy",
+          "source",
+          "source_case_id",
+          "w12_action",
+          "w12_consumption_contract"
+        ],
+        "semantic_refinement": {
+          "created_at": "2026-06-01T08:45:11+00:00",
+          "script": "scripts/refine_week12_blueprint_v1_semantics.py",
+          "boundary": "Heuristic semantic repair for Blueprint V1 control fields; not audio generation evidence."
+        }
+      }
+    },
+    {
+      "schema_version": "soundlayer_blueprint_v1",
+      "blueprint_id": "blueprint_v1_5e6fcc8a2a",
+      "source_seed_id": "seed_0005_case_06f366",
+      "scene": {
+        "description": "Bicycle pass-by scene with continuous outdoor ambience and a foreground bicycle motion cue aligned to the visible pass.",
+        "duration_seconds": 8.0,
+        "source_type": "week12_seed_manifest",
+        "semantic_tags": [
+          "bike",
+          "pass_by",
+          "motion",
+          "outdoor_ambience",
+          "foreground_foley"
+        ],
+        "semantic_source": {
+          "method": "heuristic_from_seed_identifier",
+          "raw_scene_description": "bp_week11_bike_pass_005 | week11_bike_pass_005 | soundlayer_blueprint_seed_v0",
+          "normalized_phrase": "bike pass 005",
+          "final_patch": {
+            "script": "scripts/finalize_week12_blueprint_v1_pack.py",
+            "reason": "Replace fallback bike-pass wording with candidate-audio-ready control semantics.",
+            "created_at": "2026-06-01T08:50:21+00:00"
+          }
+        }
+      },
+      "layers": [
+        {
+          "layer_id": "ambience",
+          "layer_type": "ambience",
+          "role": "continuous outdoor context bed",
+          "priority": "medium",
+          "generation_hint": "Outdoor ambience with light street or path noise, kept below the foreground bicycle cue."
+        },
+        {
+          "layer_id": "foley",
+          "layer_type": "foley",
+          "role": "time-aligned bicycle pass-by cue",
+          "priority": "high",
+          "generation_hint": "Bicycle wheel rotation, chain/gear texture, and close pass-by motion aligned to the visible bike movement."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "seed_0005_case_06f366_evt_001",
+          "label": "outdoor bike-pass ambience",
+          "layer_type": "ambience",
+          "start_seconds": 0.0,
+          "end_seconds": 8.0,
+          "priority": "medium",
+          "intensity": 0.34,
+          "prompt": "Outdoor ambience with subtle street/path noise under a bicycle pass-by foreground event.",
+          "alignment_rule": "span_full_clip_as_context"
+        },
+        {
+          "event_id": "seed_0005_case_06f366_evt_002",
+          "label": "bicycle pass-by motion cue",
+          "layer_type": "foley",
+          "start_seconds": 1.2,
+          "end_seconds": 5.44,
+          "priority": "high",
+          "intensity": 0.8,
+          "prompt": "Bicycle wheel, chain, and close pass-by motion cue synchronized to the visible bike movement.",
+          "alignment_rule": "align_to_visible_bike_pass_by"
+        }
+      ],
+      "artifacts": {
+        "source_artifact_uri": "artifacts/evals/week11_eval_v0.json",
+        "eval_summary_uri": "artifacts/evals/week11_eval_v0_metrics.json",
+        "blueprint_artifact_uri": "artifacts/manifests/week12_blueprint_v1_manifest.json#blueprint_v1_5e6fcc8a2a",
+        "timeline_jsonl_uri": "artifacts/manifests/week12_event_timeline.jsonl",
+        "timeline_csv_uri": "artifacts/manifests/week12_event_timeline.csv"
+      },
+      "metadata": {
+        "created_at": "2026-06-01T08:37:59+00:00",
+        "builder": "scripts/build_week12_blueprint_v1.py",
+        "boundary": "Blueprint V1 is a structured intermediate representation; it is not generated audio quality evidence.",
+        "source_seed_raw_keys": [
+          "blueprint_id",
+          "events",
+          "failure_reason",
+          "layers_required",
+          "non_goals",
+          "schema_version",
+          "scores_proxy",
+          "source",
+          "source_case_id",
+          "w12_action",
+          "w12_consumption_contract"
+        ],
+        "semantic_refinement": {
+          "created_at": "2026-06-01T08:45:11+00:00",
+          "script": "scripts/refine_week12_blueprint_v1_semantics.py",
+          "boundary": "Heuristic semantic repair for Blueprint V1 control fields; not audio generation evidence."
+        }
+      }
+    }
+  ],
+  "boundary": {
+    "not_audio_generation": true,
+    "not_subjective_audio_quality": true,
+    "purpose": "Convert seed cases into a structured scene/event/layer/timing contract for downstream Java/Cloud consumption.",
+    "semantic_refinement": "Scene/event prompts are heuristically repaired from seed identifiers. This improves control fields but does not claim generated audio quality."
+  }
+}
