@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="590" viewBox="0 0 1680 590">
+<rect width="100%" height="100%" fill="white"/>
+<text x="24" y="34" font-family="Arial" font-size="24" font-weight="700">Week12 Blueprint V1 Final Semantic Event Timeline</text>
+<text x="24" y="60" font-family="Arial" font-size="14">Two lanes per scene: ambience spans the clip; foley is aligned to the foreground event. This is a structured control artifact, not audio quality evidence.</text>
+<rect x="24" y="78" width="16" height="10" fill="#7a7a7a"/><text x="48" y="88" font-family="Arial" font-size="12">ambience</text>
+<rect x="130" y="78" width="16" height="10" fill="#1f77b4"/><text x="154" y="88" font-family="Arial" font-size="12">foley</text>
+<text x="24" y="128" font-family="Arial" font-size="13" font-weight="700">blueprint_v1_66d315251e</text>
+<text x="24" y="149" font-family="Arial" font-size="12">Urban walking scene with visible pedestrian motion, continuous street ambience, and time-aligned footsteps.</text>
+<text x="24" y="169" font-family="Arial" font-size="11">tags: urban|walking|footsteps|street_ambience</text>
+<line x1="500" y1="152" x2="1560" y2="152" stroke="#222" stroke-width="1"/>
+<text x="500" y="184" font-family="Arial" font-size="10">0s</text>
+<text x="1532" y="184" font-family="Arial" font-size="10">8s</text>
+<rect x="500.0" y="135" width="1060.0" height="13" rx="2" fill="#7a7a7a"/>
+<text x="504.0" y="132" font-family="Arial" font-size="10">ambience: contextual ambience bed</text>
+<rect x="690.8" y="157" width="572.4" height="13" rx="2" fill="#1f77b4"/>
+<text x="694.8" y="154" font-family="Arial" font-size="10">foley: time-aligned footsteps</text>
+<text x="24" y="223" font-family="Arial" font-size="13" font-weight="700">blueprint_v1_a221f75cba</text>
+<text x="24" y="244" font-family="Arial" font-size="12">Indoor door-closing scene with a short foreground door impact and quiet room tone.</text>
+<text x="24" y="264" font-family="Arial" font-size="11">tags: indoor|door_close|impact|room_tone</text>
+<line x1="500" y1="247" x2="1560" y2="247" stroke="#222" stroke-width="1"/>
+<text x="500" y="279" font-family="Arial" font-size="10">0s</text>
+<text x="1532" y="279" font-family="Arial" font-size="10">8s</text>
+<rect x="500.0" y="230" width="1060.0" height="13" rx="2" fill="#7a7a7a"/>
+<text x="504.0" y="227" font-family="Arial" font-size="10">ambience: contextual ambience bed</text>
+<rect x="690.8" y="252" width="572.4" height="13" rx="2" fill="#1f77b4"/>
+<text x="694.8" y="249" font-family="Arial" font-size="10">foley: door close impact</text>
+<text x="24" y="318" font-family="Arial" font-size="13" font-weight="700">blueprint_v1_276cc4a44c</text>
+<text x="24" y="339" font-family="Arial" font-size="12">Rain-at-window scene with continuous rainfall ambience and localized water impact texture.</text>
+<text x="24" y="359" font-family="Arial" font-size="11">tags: rain|window|weather|water_impact</text>
+<line x1="500" y1="342" x2="1560" y2="342" stroke="#222" stroke-width="1"/>
+<text x="500" y="374" font-family="Arial" font-size="10">0s</text>
+<text x="1532" y="374" font-family="Arial" font-size="10">8s</text>
+<rect x="500.0" y="325" width="1060.0" height="13" rx="2" fill="#7a7a7a"/>
+<text x="504.0" y="322" font-family="Arial" font-size="10">ambience: contextual ambience bed</text>
+<rect x="690.8" y="347" width="572.4" height="13" rx="2" fill="#1f77b4"/>
+<text x="694.8" y="344" font-family="Arial" font-size="10">foley: raindrop impacts on window</text>
+<text x="24" y="413" font-family="Arial" font-size="13" font-weight="700">blueprint_v1_2b95ab765d</text>
+<text x="24" y="434" font-family="Arial" font-size="12">Desk typing scene with close foreground keystrokes and low indoor ambience.</text>
+<text x="24" y="454" font-family="Arial" font-size="11">tags: typing|keyboard|desk|indoor</text>
+<line x1="500" y1="437" x2="1560" y2="437" stroke="#222" stroke-width="1"/>
+<text x="500" y="469" font-family="Arial" font-size="10">0s</text>
+<text x="1532" y="469" font-family="Arial" font-size="10">8s</text>
+<rect x="500.0" y="420" width="1060.0" height="13" rx="2" fill="#7a7a7a"/>
+<text x="504.0" y="417" font-family="Arial" font-size="10">ambience: contextual ambience bed</text>
+<rect x="690.8" y="442" width="572.4" height="13" rx="2" fill="#1f77b4"/>
+<text x="694.8" y="439" font-family="Arial" font-size="10">foley: keyboard typing taps</text>
+<text x="24" y="508" font-family="Arial" font-size="13" font-weight="700">blueprint_v1_5e6fcc8a2a</text>
+<text x="24" y="529" font-family="Arial" font-size="12">Bicycle pass-by scene with continuous outdoor ambience and a foreground bicycle motion cue aligned to the visi</text>
+<text x="24" y="549" font-family="Arial" font-size="11">tags: bike|pass_by|motion|outdoor_ambience|foreground_foley</text>
+<line x1="500" y1="532" x2="1560" y2="532" stroke="#222" stroke-width="1"/>
+<text x="500" y="564" font-family="Arial" font-size="10">0s</text>
+<text x="1532" y="564" font-family="Arial" font-size="10">8s</text>
+<rect x="500.0" y="515" width="1060.0" height="13" rx="2" fill="#7a7a7a"/>
+<text x="504.0" y="512" font-family="Arial" font-size="10">ambience: outdoor bike-pass ambience</text>
+<rect x="659.0" y="537" width="561.8" height="13" rx="2" fill="#1f77b4"/>
+<text x="663.0" y="534" font-family="Arial" font-size="10">foley: bicycle pass-by motion cue</text>
+</svg>

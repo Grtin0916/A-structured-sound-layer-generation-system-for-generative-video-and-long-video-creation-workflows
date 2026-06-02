@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/soundlayer_blueprint_v1.schema.json",
+  "title": "SoundLayer Blueprint V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "blueprint_id",
+    "source_seed_id",
+    "scene",
+    "layers",
+    "events",
+    "artifacts",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "soundlayer_blueprint_v1"
+    },
+    "blueprint_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_seed_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "description",
+        "duration_seconds",
+        "source_type"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "duration_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "source_type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "layer_id",
+          "layer_type",
+          "role",
+          "priority",
+          "generation_hint"
+        ],
+        "properties": {
+          "layer_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "layer_type": {
+            "enum": [
+              "ambience",
+              "foley",
+              "music",
+              "speech",
+              "effect"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "priority": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "generation_hint": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "label",
+          "layer_type",
+          "start_seconds",
+          "end_seconds",
+          "priority",
+          "intensity",
+          "prompt",
+          "alignment_rule"
+        ],
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "layer_type": {
+            "enum": [
+              "ambience",
+              "foley",
+              "music",
+              "speech",
+              "effect"
+            ]
+          },
+          "start_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end_seconds": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "priority": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "intensity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alignment_rule": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "source_artifact_uri",
+        "eval_summary_uri",
+        "blueprint_artifact_uri",
+        "timeline_jsonl_uri",
+        "timeline_csv_uri"
+      ],
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

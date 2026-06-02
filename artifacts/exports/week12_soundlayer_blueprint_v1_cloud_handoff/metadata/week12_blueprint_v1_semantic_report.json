@@ -1,0 +1,86 @@
+{
+  "schema_version": "week12_blueprint_v1_semantic_report",
+  "created_at": "2026-06-01T08:45:11+00:00",
+  "status": "PASS",
+  "blueprint_count": 5,
+  "event_count": 10,
+  "error_count": 0,
+  "warning_count": 0,
+  "errors": [],
+  "warnings": [],
+  "per_blueprint": [
+    {
+      "blueprint_id": "blueprint_v1_66d315251e",
+      "scene_description": "Urban walking scene with visible pedestrian motion, continuous street ambience, and time-aligned footsteps.",
+      "semantic_tags": [
+        "urban",
+        "walking",
+        "footsteps",
+        "street_ambience"
+      ],
+      "event_labels": [
+        "contextual ambience bed",
+        "time-aligned footsteps"
+      ]
+    },
+    {
+      "blueprint_id": "blueprint_v1_a221f75cba",
+      "scene_description": "Indoor door-closing scene with a short foreground door impact and quiet room tone.",
+      "semantic_tags": [
+        "indoor",
+        "door_close",
+        "impact",
+        "room_tone"
+      ],
+      "event_labels": [
+        "contextual ambience bed",
+        "door close impact"
+      ]
+    },
+    {
+      "blueprint_id": "blueprint_v1_276cc4a44c",
+      "scene_description": "Rain-at-window scene with continuous rainfall ambience and localized water impact texture.",
+      "semantic_tags": [
+        "rain",
+        "window",
+        "weather",
+        "water_impact"
+      ],
+      "event_labels": [
+        "contextual ambience bed",
+        "raindrop impacts on window"
+      ]
+    },
+    {
+      "blueprint_id": "blueprint_v1_2b95ab765d",
+      "scene_description": "Desk typing scene with close foreground keystrokes and low indoor ambience.",
+      "semantic_tags": [
+        "typing",
+        "keyboard",
+        "desk",
+        "indoor"
+      ],
+      "event_labels": [
+        "contextual ambience bed",
+        "keyboard typing taps"
+      ]
+    },
+    {
+      "blueprint_id": "blueprint_v1_5e6fcc8a2a",
+      "scene_description": "Bicycle pass-by scene with continuous outdoor ambience and a foreground bicycle motion cue aligned to the visible pass.",
+      "semantic_tags": [
+        "bike",
+        "pass_by",
+        "motion",
+        "outdoor_ambience",
+        "foreground_foley"
+      ],
+      "event_labels": [
+        "outdoor bike-pass ambience",
+        "bicycle pass-by motion cue"
+      ]
+    }
+  ],
+  "finalized": true,
+  "finalized_at": "2026-06-01T08:50:22+00:00"
+}

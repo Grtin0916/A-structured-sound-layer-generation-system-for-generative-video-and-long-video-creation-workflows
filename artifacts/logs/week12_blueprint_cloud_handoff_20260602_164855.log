@@ -1,0 +1,8 @@
+status=PASS
+bundle_dir=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/exports/week12_soundlayer_blueprint_v1_cloud_handoff
+tar_path=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/exports/week12_soundlayer_blueprint_v1_cloud_handoff.tar.gz
+tar_sha256=cd247df784dbf5947df77b7b6cb1f63e56757796be7421c1fb03e202cf63edc0
+blueprint_count=5
+event_count=10
+timeline_jsonl_rows=10
+timeline_csv_rows=10
