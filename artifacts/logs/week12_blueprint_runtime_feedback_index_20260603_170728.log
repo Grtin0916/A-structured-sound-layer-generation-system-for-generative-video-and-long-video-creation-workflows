@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "week12.blueprint-runtime-feedback-index.v1",
+  "generatedAt": "2026-06-03T09:07:28.391641+00:00",
+  "status": "PASS",
+  "businessChain": [
+    "mainbase.blueprint_v1_handoff",
+    "java.asset_blueprint_runtime_endpoint",
+    "cloud.asset_blueprint_runtime_index",
+    "mainbase.runtime_feedback"
+  ],
+  "mainbaseEvidence": {
+    "repo": "git@github.com:Grtin0916/A-structured-sound-layer-generation-system-for-generative-video-and-long-video-creation-workflows.git",
+    "commit": "8bf1e25",
+    "blueprintManifestPath": "artifacts/manifests/week12_blueprint_v1_manifest.json",
+    "blueprintManifestSha256": "605bcc846874c4e43700e72fc795b1ce68de761fa328a43e055dfb846b4f2307",
+    "timelineJsonlPath": "artifacts/manifests/week12_event_timeline.jsonl",
+    "timelineJsonlSha256": "8c1edcd1872feaab8413eb14803d2d01e5226c9a097efedc956d05c595e6bdc4",
+    "timelineCsvPath": "artifacts/manifests/week12_event_timeline.csv",
+    "timelineCsvSha256": "51b4df6882a3b72010623840f7a84fdc38bc1b93217c42c8e1908add1548a153",
+    "contactSheetPath": "artifacts/visuals/week12_event_timeline_contact_sheet.png",
+    "contactSheetSha256": "03def29062892ea7c2352ce015971a6e7d64019863d96afaa08ee8ab04871ede"
+  },
+  "javaRuntimeEvidence": {
+    "repo": "git@github.com:Grtin0916/media-task-platform-java.git",
+    "commit": "a8dc59a",
+    "summaryPath": "artifacts/logs/week12_asset_blueprint_http_runtime_smoke_summary.json",
+    "summarySha256": "7c22f9fe82ea5c9d63af8381d1e21fc4658cc1d69b72e7b287549cce2fc3350e",
+    "status": "PASS",
+    "httpCode": "200",
+    "selectedEndpoint": "/api/media-tasks/task-week12-001/asset-blueprint",
+    "redisHealthDisabledForSmoke": true
+  },
+  "cloudRuntimeEvidence": {
+    "repo": "git@github.com:Grtin0916/ai-job-platform-cloud.git",
+    "commit": "6dbcb5a",
+    "runtimeIndexPath": "loadtest/reports/week12_asset_blueprint_runtime_index.json",
+    "runtimeIndexSha256": "617a728ddd4455b3887eb048cf36d5c216769b598c2b4ac8ed4a4d0e1d0567c0",
+    "status": "PASS",
+    "javaRuntimeStatus": "PASS",
+    "javaRuntimeHttpCode": "200",
+    "blockers": []
+  },
+  "consumedAssetBlueprint": {
+    "taskId": "task-week12-001",
+    "inputAssetUri": "file://samples/week12/city_walk.mp4",
+    "blueprintArtifactUri": "artifacts/manifests/week12_blueprint_v1_manifest.json#blueprint_v1_66d315251e",
+    "blueprintId": "blueprint_v1_66d315251e",
+    "timelineArtifactUri": "artifacts/manifests/week12_event_timeline.jsonl",
+    "qualityGateStatus": "PASS",
+    "qualityGatePassed": true,
+    "blueprintManifestLinked": true,
+    "timelineArtifactLinked": true
+  },
+  "checks": {
+    "cloudRuntimePass": true,
+    "cloudBlockersEmpty": true,
+    "javaRuntimePass": true,
+    "javaHttp200": true,
+    "cloudJavaEvidenceCommitMatchesJavaHead": true,
+    "blueprintArtifactLinked": true,
+    "timelineArtifactLinked": true,
+    "qualityGatePassed": true,
+    "blueprintUriPointsToMainbaseManifest": true,
+    "timelineUriPointsToMainbaseTimeline": true,
+    "javaAndCloudTaskIdMatch": true,
+    "noLocalAbsolutePathInCloudIndex": true
+  },
+  "blockers": [],
+  "doesNotClaim": [
+    "audio waveform generation",
+    "candidate audio bank",
+    "production deployment",
+    "production SLO",
+    "full Redis-backed readiness",
+    "durable object storage"
+  ]
+}
