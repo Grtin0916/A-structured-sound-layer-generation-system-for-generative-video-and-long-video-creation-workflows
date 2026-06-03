@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "week12.audio-candidate-bank-slots-manifest.v0",
+  "generatedAt": "2026-06-03T09:40:10.507583+00:00",
+  "status": "PASS",
+  "requestManifestStatus": "WARN",
+  "requestTimingWarningAccepted": true,
+  "requestTimingWarningInterpretation": "duration_seconds is treated as clip/scene duration when start_seconds and end_seconds exist; event timing uses end_seconds - start_seconds.",
+  "requestCount": 10,
+  "slotCount": 20,
+  "retrievalSlotCount": 10,
+  "generationFallbackSlotCount": 10,
+  "mainbase": {
+    "repo": "git@github.com:Grtin0916/A-structured-sound-layer-generation-system-for-generative-video-and-long-video-creation-workflows.git",
+    "commit": "c8dfe08",
+    "requestManifestPath": "artifacts/manifests/week12_candidate_audio_request_manifest_v1.json",
+    "requestManifestSha256": "ff88162949209c834e1afd9d7637f91d225ca8e83049ba371759ccec8b120f5a",
+    "requestJsonlPath": "artifacts/manifests/week12_candidate_audio_requests_v1.jsonl",
+    "requestJsonlSha256": "a6ddc2f816137935e3caa7fe19cede489a03b99325e4931e6eb2fb9248e78eb1"
+  },
+  "outputs": {
+    "jsonl": "artifacts/manifests/week12_audio_candidate_bank_slots_v0.jsonl",
+    "jsonlSha256": "64b39fd99b8178a9f8dd0228fafbde19c6cd173c4b771cbd542caf1d57f161ce",
+    "csv": "artifacts/manifests/week12_audio_candidate_bank_slots_v0.csv",
+    "csvSha256": "f084dd10fcf0f1fcb0bd458c44fbaba2531d4a0fa1b2a25ef881b606430a4685"
+  },
+  "slotStatusSemantics": {
+    "SLOT_OPEN": "A slot is created and ready for retrieval or generation, but no candidate waveform has been attached yet."
+  },
+  "doesNotClaim": [
+    "audio waveform generation",
+    "candidate waveform exists",
+    "retrieval index has been queried",
+    "model inference has run",
+    "human audition has completed",
+    "production asset storage"
+  ]
+}
