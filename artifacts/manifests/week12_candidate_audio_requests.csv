@@ -1,0 +1,11 @@
+requestId,eventId,sceneId,layer,eventLabel,startSec,endSec,durationSec,status
+car_v0_0001_seed_0001_case_48b11c_evt_001,seed_0001_case_48b11c_evt_001,week12_scene,ambience,contextual ambience bed,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0002_seed_0001_case_48b11c_evt_002,seed_0001_case_48b11c_evt_002,week12_scene,foley,time-aligned footsteps,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0003_seed_0002_case_adc34a_evt_001,seed_0002_case_adc34a_evt_001,week12_scene,ambience,contextual ambience bed,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0004_seed_0002_case_adc34a_evt_002,seed_0002_case_adc34a_evt_002,week12_scene,foley,door close impact,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0005_seed_0003_case_9eb26a_evt_001,seed_0003_case_9eb26a_evt_001,week12_scene,ambience,contextual ambience bed,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0006_seed_0003_case_9eb26a_evt_002,seed_0003_case_9eb26a_evt_002,week12_scene,ambience,raindrop impacts on window,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0007_seed_0004_case_f9f0fb_evt_001,seed_0004_case_f9f0fb_evt_001,week12_scene,ambience,contextual ambience bed,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0008_seed_0004_case_f9f0fb_evt_002,seed_0004_case_f9f0fb_evt_002,week12_scene,foley,keyboard typing taps,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0009_seed_0005_case_06f366_evt_001,seed_0005_case_06f366_evt_001,week12_scene,ambience,outdoor bike-pass ambience,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
+car_v0_0010_seed_0005_case_06f366_evt_002,seed_0005_case_06f366_evt_002,week12_scene,foley,bicycle pass-by motion cue,0.0,1.0,1.0,REQUESTED_NOT_GENERATED
