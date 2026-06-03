@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "week12.candidate-audio-request-manifest.v1",
+  "generatedAt": "2026-06-03T09:34:43.047391+00:00",
+  "status": "WARN",
+  "requestCount": 10,
+  "timingPreservation": {
+    "usesRawStartEndSeconds": true,
+    "zeroToOneFallbackCount": 0,
+    "timingMismatchCount": 5,
+    "timingMismatches": [
+      {
+        "eventId": "seed_0001_case_48b11c_evt_002",
+        "reason": "duration_field_differs_from_end_minus_start",
+        "durationField": 8.0,
+        "computedDuration": 4.32
+      },
+      {
+        "eventId": "seed_0002_case_adc34a_evt_002",
+        "reason": "duration_field_differs_from_end_minus_start",
+        "durationField": 8.0,
+        "computedDuration": 4.32
+      },
+      {
+        "eventId": "seed_0003_case_9eb26a_evt_002",
+        "reason": "duration_field_differs_from_end_minus_start",
+        "durationField": 8.0,
+        "computedDuration": 4.32
+      },
+      {
+        "eventId": "seed_0004_case_f9f0fb_evt_002",
+        "reason": "duration_field_differs_from_end_minus_start",
+        "durationField": 8.0,
+        "computedDuration": 4.32
+      },
+      {
+        "eventId": "seed_0005_case_06f366_evt_002",
+        "reason": "duration_field_differs_from_end_minus_start",
+        "durationField": 8.0,
+        "computedDuration": 4.24
+      }
+    ]
+  },
+  "mainbase": {
+    "repo": "git@github.com:Grtin0916/A-structured-sound-layer-generation-system-for-generative-video-and-long-video-creation-workflows.git",
+    "runtimeFeedbackCommit": "a25d424",
+    "runtimeFeedbackPath": "artifacts/manifests/week12_blueprint_runtime_feedback_index.json",
+    "runtimeFeedbackSha256": "80fb6973e9bac33640f997e68a07f81d844645a054e8245b22493b9402fb6c64",
+    "eventTimelinePath": "artifacts/manifests/week12_event_timeline.jsonl",
+    "eventTimelineSha256": "8c1edcd1872feaab8413eb14803d2d01e5226c9a097efedc956d05c595e6bdc4"
+  },
+  "upstreamRuntimeClosure": {
+    "javaCommit": "a8dc59a",
+    "cloudCommit": "6dbcb5a",
+    "javaRuntimeHttpCode": "200",
+    "cloudRuntimeStatus": "PASS",
+    "feedbackStatus": "PASS",
+    "feedbackBlockers": []
+  },
+  "outputs": {
+    "jsonl": "artifacts/manifests/week12_candidate_audio_requests_v1.jsonl",
+    "jsonlSha256": "a6ddc2f816137935e3caa7fe19cede489a03b99325e4931e6eb2fb9248e78eb1",
+    "csv": "artifacts/manifests/week12_candidate_audio_requests_v1.csv",
+    "csvSha256": "540cb3f170a3347169fa8cac1a61667ab41d94d88546574b1ebf290cda485791"
+  },
+  "requestStatusSemantics": {
+    "REQUESTED_NOT_GENERATED": "Candidate request is ready, but no waveform or retrieved candidate has been produced yet."
+  },
+  "doesNotClaim": [
+    "audio waveform generation",
+    "candidate audio bank exists",
+    "model inference has run",
+    "human audition has completed",
+    "production asset storage"
+  ]
+}
