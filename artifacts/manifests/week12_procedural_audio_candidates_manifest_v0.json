@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "week12.procedural-audio-candidates-manifest.v0",
+  "generatedAt": "2026-06-03T09:48:06.506065+00:00",
+  "status": "PASS",
+  "candidateCount": 10,
+  "sourceGenerationFallbackSlotCount": 10,
+  "allCandidatesAttached": true,
+  "mainbase": {
+    "repo": "git@github.com:Grtin0916/A-structured-sound-layer-generation-system-for-generative-video-and-long-video-creation-workflows.git",
+    "commit": "9f9f0c0",
+    "slotsManifestPath": "artifacts/manifests/week12_audio_candidate_bank_slots_manifest_v0.json",
+    "slotsManifestSha256": "2b2698b88c639b3c75126a59133ce34d5acc6b00e6a1c122f6ef972e5192c754",
+    "slotsJsonlPath": "artifacts/manifests/week12_audio_candidate_bank_slots_v0.jsonl",
+    "slotsJsonlSha256": "64b39fd99b8178a9f8dd0228fafbde19c6cd173c4b771cbd542caf1d57f161ce"
+  },
+  "outputs": {
+    "candidateDir": "artifacts/audio_candidates/week12_procedural_baseline_v0",
+    "jsonl": "artifacts/manifests/week12_procedural_audio_candidates_v0.jsonl",
+    "jsonlSha256": "d81949e7b9084ebebf0d6b0057752e84ca62c34386910964aecfd0419a79f757",
+    "csv": "artifacts/manifests/week12_procedural_audio_candidates_v0.csv",
+    "csvSha256": "69a7d978ce477943dac4bd61dbfe033174c6da5c68204cf9fb5a7f42e5d3086f"
+  },
+  "audioFormat": {
+    "container": "wav",
+    "encoding": "pcm_s16le",
+    "sampleRate": 16000,
+    "channels": 1
+  },
+  "methodBoundary": {
+    "type": "deterministic_procedural_baseline",
+    "randomSeedBase": 20260603,
+    "usesModelInference": false,
+    "usesExternalNetwork": false,
+    "semanticFidelityClaimed": false,
+    "mixReadyClaimed": false
+  },
+  "doesNotClaim": [
+    "text-to-audio model inference",
+    "retrieval index has been queried",
+    "semantic audio quality",
+    "human audition has completed",
+    "production asset storage",
+    "final mix readiness"
+  ]
+}
