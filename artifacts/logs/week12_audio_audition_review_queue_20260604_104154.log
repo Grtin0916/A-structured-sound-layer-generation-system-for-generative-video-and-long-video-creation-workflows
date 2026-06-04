@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "candidateCount": 10,
+  "humanAuditionRequiredCount": 10,
+  "semanticFidelityClaimedAny": false,
+  "mixReadyClaimedAny": false,
+  "blockers": [],
+  "json": "artifacts/evals/week12_audio_audition_review_queue_v0.json",
+  "csv": "artifacts/evals/week12_audio_audition_review_queue_v0.csv",
+  "importantVisual": "artifacts/audition/week12_procedural_baseline_v0/waveform_contact_sheet.svg",
+  "auditionHtml": "artifacts/audition/week12_procedural_baseline_v0/index.html"
+}
