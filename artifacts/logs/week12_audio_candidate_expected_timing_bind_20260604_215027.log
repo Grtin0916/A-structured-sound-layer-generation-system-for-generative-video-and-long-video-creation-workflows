@@ -1,0 +1,16 @@
+{
+  "status": "FAIL",
+  "candidateCount": 10,
+  "timingBoundCount": 0,
+  "timingUnmatchedCount": 10,
+  "durationMatchesExpectedTrueCount": 0,
+  "durationMatchesExpectedFalseCount": 0,
+  "durationMatchesExpectedUnknownCount": 10,
+  "blockers": [
+    "NO_TIMING_BINDINGS",
+    "TIMING_BINDING_INCOMPLETE"
+  ],
+  "json": "artifacts/evals/week12_audio_candidate_timing_bound_queue_v0.json",
+  "csv": "artifacts/evals/week12_audio_candidate_timing_bound_queue_v0.csv",
+  "report": "artifacts/manifests/week12_audio_candidate_timing_binding_report_v0.json"
+}
