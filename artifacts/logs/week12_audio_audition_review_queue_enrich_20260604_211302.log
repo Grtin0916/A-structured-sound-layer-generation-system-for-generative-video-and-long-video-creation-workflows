@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "candidateCount": 10,
+  "audioProbeOkCount": 10,
+  "audioProbeFailedCount": 0,
+  "durationMissingCount": 0,
+  "sampleRateMissingCount": 0,
+  "eventIdMissingCount": 0,
+  "formatFailedCount": 0,
+  "blockers": [],
+  "json": "artifacts/evals/week12_audio_audition_review_queue_v0.json",
+  "csv": "artifacts/evals/week12_audio_audition_review_queue_v0.csv"
+}
