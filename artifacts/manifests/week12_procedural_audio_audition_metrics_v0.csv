@@ -1,0 +1,11 @@
+candidateId,layer,eventLabel,durationSec,sampleRate,channels,rmsDbfs,peakDbfs,silenceFrameRatio,clippingFrameRatio,formatOk,durationMatchesExpected,candidateUri
+procedural_v0_0001,ambience,contextual ambience bed,8.0,16000,1,-36.419,-26.684,0.177437,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav
+procedural_v0_0002,foley,time-aligned footsteps,4.32,16000,1,-41.214,-15.546,0.960663,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav
+procedural_v0_0003,ambience,contextual ambience bed,8.0,16000,1,-43.421,-33.659,0.342445,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav
+procedural_v0_0004,foley,door close impact,4.32,16000,1,-44.099,-15.477,0.979485,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav
+procedural_v0_0005,ambience,contextual ambience bed,8.0,16000,1,-43.419,-26.363,0.465852,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav
+procedural_v0_0006,foley,raindrop impacts on window,4.32,16000,1,-36.527,-12.305,0.892419,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav
+procedural_v0_0007,ambience,contextual ambience bed,8.0,16000,1,-43.326,-34.118,0.346125,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav
+procedural_v0_0008,foley,keyboard typing taps,4.32,16000,1,-35.729,-15.283,0.866667,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav
+procedural_v0_0009,ambience,outdoor bike-pass ambience,8.0,16000,1,-36.376,-26.822,0.176828,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav
+procedural_v0_0010,foley,bicycle pass-by motion cue,4.24,16000,1,-44.779,-15.533,0.982709,0.0,True,True,artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav
