@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "week12.mainbase.audio_candidate_platform_feedback_index.v0",
+  "generatedAt": "2026-06-04T13:48:09+00:00",
+  "status": "PASS",
+  "closedLoop": {
+    "mainbaseProducedEnrichedReviewQueue": true,
+    "javaImportedReviewQueue": true,
+    "javaExposedAudioCandidateApi": true,
+    "javaVerifiedByRandomPortHttpIT": true,
+    "cloudConsumedJavaApiEvidence": true,
+    "cloudBuiltRuntimeIndex": true,
+    "cloudBuiltDashboardStub": true
+  },
+  "evidence": {
+    "mainbaseReviewQueueUri": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week12_audio_audition_review_queue_v0.json",
+    "javaImportSummaryUri": "/home/GRT/work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_import_summary.json",
+    "javaHttpSummaryUri": "/home/GRT/work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_http_it_summary.json",
+    "javaHttpBodyUri": "/home/GRT/work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_http_it_body.json",
+    "cloudRuntimeIndexUri": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week12_audio_candidate_runtime_index.json",
+    "cloudDashboardUri": "/home/GRT/work/ai-job-platform-cloud/observability/grafana/dashboards/week12_audio_candidate_dashboard.json"
+  },
+  "counts": {
+    "candidateCount": 10,
+    "audioProbeOkCount": 10,
+    "audioProbeFailedCount": 0,
+    "durationMissingCount": 0,
+    "sampleRateMissingCount": 0,
+    "eventIdMissingCount": 0,
+    "formatFailedCount": 0,
+    "dashboardPanelCount": 6
+  },
+  "platformGate": {
+    "qualityGateStatus": "HUMAN_AUDITION_REQUIRED",
+    "semanticFidelityClaimedAny": false,
+    "mixReadyClaimedAny": false,
+    "cloudBlockers": [],
+    "mainbaseBlockers": []
+  },
+  "cloudStats": {
+    "layerCounts": {
+      "ambience": 5,
+      "foley": 5
+    },
+    "durationSec": {
+      "min": 4.24,
+      "max": 8.0,
+      "mean": 6.152
+    },
+    "rmsDbfs": {
+      "min": -44.779,
+      "max": -35.729,
+      "mean": -40.5309
+    },
+    "peakDbfs": {
+      "min": -34.118,
+      "max": -12.305,
+      "mean": -22.179
+    }
+  },
+  "firstCandidateRoundTrip": {
+    "candidateId": "procedural_v0_0001",
+    "caseId": "seed_0001_case_48b11c",
+    "sceneId": "seed_0001_case_48b11c",
+    "eventId": "evt_001",
+    "eventLabel": "contextual ambience bed",
+    "layer": "ambience",
+    "candidateUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav",
+    "durationSec": 8.0,
+    "sampleRateHz": 16000,
+    "channels": 1,
+    "sampleWidthBytes": 2,
+    "rmsDbfs": -36.419,
+    "peakDbfs": -26.684,
+    "formatOk": true,
+    "reviewStatus": "HUMAN_AUDITION_REQUIRED",
+    "failureTags": "human_audition_required|semantic_unverified|expected_timing_unverified"
+  },
+  "remainingGaps": [
+    "human_audition_not_performed",
+    "semantic_audio_quality_not_verified",
+    "expected_event_timing_window_not_bound",
+    "final_mix_not_ready",
+    "production_object_storage_not_verified",
+    "real_prometheus_datasource_panel_not_verified"
+  ],
+  "nextAction": {
+    "preferred": "build human audition decision artifact or bind expected event timing windows before claiming alignment",
+    "avoid": [
+      "do not claim semantic pass from procedural fallback",
+      "do not claim final mix readiness",
+      "do not keep adding API wrappers without resolving expected timing windows"
+    ]
+  },
+  "doesNotClaim": [
+    "semantic_audio_quality_passed",
+    "human_audition_passed",
+    "final_mix_readiness",
+    "production_asset_storage",
+    "production_slo_or_alerting"
+  ],
+  "missingRecords": [],
+  "blockers": []
+}
