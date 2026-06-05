@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "candidateCount": 10,
+  "expandedEventCount": 10,
+  "eventWithTimingCount": 10,
+  "timingBoundCount": 10,
+  "timingUnmatchedCount": 0,
+  "durationMatchesExpectedUnknownCount": 0,
+  "bindingMethodCounts": {
+    "scene_event_id": 10
+  },
+  "bindingConfidenceCounts": {
+    "HIGH": 10
+  },
+  "blockers": [],
+  "warnings": [],
+  "outputs": {
+    "schemaProbe": "artifacts/manifests/week12_event_timeline_schema_probe_v2.json",
+    "boundQueueJson": "artifacts/evals/week12_audio_candidate_timing_bound_queue_v2.json",
+    "boundQueueCsv": "artifacts/evals/week12_audio_candidate_timing_bound_queue_v2.csv",
+    "bindingReport": "artifacts/manifests/week12_audio_candidate_timing_binding_report_v2.json"
+  },
+  "boundaryStatement": "PASS only means expected timing windows are bound to audio candidates. It does not mean temporal alignment, onset alignment, semantic quality, human audition, mix readiness, or production readiness."
+}

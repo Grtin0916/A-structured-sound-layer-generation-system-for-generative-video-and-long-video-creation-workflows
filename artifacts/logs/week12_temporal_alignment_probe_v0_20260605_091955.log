@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "candidateCount": 10,
+  "audioReadableCount": 10,
+  "alignmentPassCount": 5,
+  "alignmentPartialCount": 0,
+  "alignmentFailCount": 5,
+  "peakInsideWindowCount": 9,
+  "firstActiveInsideWindowCount": 6,
+  "foleyCount": 5,
+  "foleyPassCount": 0,
+  "foleyPartialCount": 0,
+  "ambienceCount": 5,
+  "ambiencePassCount": 5,
+  "blockers": [
+    "FOLEY_EVENTS_NOT_ALIGNED"
+  ],
+  "warnings": [
+    "EXPECTED_CLIP_DURATION_DIFFERS_FROM_EVENT_WINDOW_DURATION"
+  ],
+  "outputs": {
+    "alignmentCsv": "artifacts/evals/week12_temporal_alignment_probe_v0.csv",
+    "alignmentJson": "artifacts/evals/week12_temporal_alignment_probe_v0.json",
+    "alignmentReport": "artifacts/manifests/week12_temporal_alignment_probe_report_v0.json"
+  },
+  "boundaryStatement": "This probe checks simple RMS energy timing against expected windows. It is not semantic quality, human audition, final mix readiness, or production readiness."
+}

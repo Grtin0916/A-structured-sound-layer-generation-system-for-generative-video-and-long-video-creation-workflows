@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "candidateCount": 10,
+  "audioReadableCount": 10,
+  "alignmentPassCount": 10,
+  "alignmentPartialCount": 0,
+  "alignmentFailCount": 0,
+  "foleyCount": 5,
+  "foleyPassCount": 5,
+  "foleyPartialCount": 0,
+  "foleyFailCount": 0,
+  "ambienceCount": 5,
+  "ambiencePassCount": 5,
+  "ambiencePartialCount": 0,
+  "ambienceFailCount": 0,
+  "assetTimeModeCounts": {
+    "full_clip": 5,
+    "event_local": 5
+  },
+  "alignmentDecisionCounts": {
+    "PASS": 10
+  },
+  "alignmentReasonCounts": {
+    "FULL_CLIP_AMBIENCE_ACTIVITY_INSIDE_SCENE_WINDOW": 5,
+    "EVENT_LOCAL_FOLEY_PEAK_ALIGNED_AFTER_WINDOW_OFFSET": 5
+  },
+  "layerDecisionCounts": {
+    "ambience:PASS": 5,
+    "foley:PASS": 5
+  },
+  "blockers": [],
+  "warnings": [
+    "EVENT_LOCAL_ASSETS_REQUIRE_PLACEMENT_OFFSET_IN_MIXER"
+  ],
+  "outputs": {
+    "alignmentCsv": "artifacts/evals/week12_temporal_alignment_probe_v1.csv",
+    "alignmentJson": "artifacts/evals/week12_temporal_alignment_probe_v1.json",
+    "alignmentReport": "artifacts/manifests/week12_temporal_alignment_probe_report_v1.json"
+  },
+  "boundaryStatement": "This report repairs coordinate-frame interpretation for full-clip ambience and event-local foley assets. PASS means RMS/onset proxy is compatible with expected timing placement. It does not mean semantic quality, human audition, mix readiness, or production readiness."
+}

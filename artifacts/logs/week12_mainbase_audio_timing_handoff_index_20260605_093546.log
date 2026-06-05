@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "scope": "week12_mainbase_audio_candidate_timing_and_temporal_alignment",
+  "candidateCount": 10,
+  "audioReadableCount": 10,
+  "timingBoundCount": 10,
+  "timingBindingMethodCounts": {
+    "scene_event_id": 10
+  },
+  "alignmentPassCount": 10,
+  "alignmentFailCount": 0,
+  "assetTimeModeCounts": {
+    "full_clip": 5,
+    "event_local": 5
+  },
+  "layerCounts": {
+    "ambience": 5,
+    "foley": 5
+  },
+  "layerDecisionCounts": {
+    "ambience:PASS": 5,
+    "foley:PASS": 5
+  },
+  "mainFindings": [
+    "Timing binding v2 resolves the event timeline adapter issue using source_seed_id, compact event_id, layer_type, and *_seconds timing fields.",
+    "Temporal alignment v0 exposed a coordinate-frame false negative for foley assets.",
+    "Temporal alignment v1 distinguishes full_clip ambience from event_local foley and achieves 10/10 RMS/onset-proxy timing compatibility.",
+    "Event-local foley assets require expectedStartSec placement offset in the later mixer or runtime consumer."
+  ],
+  "warnings": [
+    "EVENT_LOCAL_ASSETS_REQUIRE_PLACEMENT_OFFSET_IN_MIXER"
+  ],
+  "blockers": [],
+  "eventLocalPlacementOffsets": [
+    {
+      "candidateId": "procedural_v0_0002",
+      "sceneId": "seed_0001_case_48b11c",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "time-aligned footsteps",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+      "expectedStartSec": "1.44",
+      "expectedEndSec": "5.76",
+      "expectedWindowDurationSec": "4.32",
+      "peakLocalSec": "2.75",
+      "peakGlobalSec": "4.19",
+      "placementRequired": true
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "sceneId": "seed_0002_case_adc34a",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "door close impact",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "expectedStartSec": "1.44",
+      "expectedEndSec": "5.76",
+      "expectedWindowDurationSec": "4.32",
+      "peakLocalSec": "2.35",
+      "peakGlobalSec": "3.79",
+      "placementRequired": true
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "sceneId": "seed_0003_case_9eb26a",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "raindrop impacts on window",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav",
+      "expectedStartSec": "1.44",
+      "expectedEndSec": "5.76",
+      "expectedWindowDurationSec": "4.32",
+      "peakLocalSec": "3.85",
+      "peakGlobalSec": "5.29",
+      "placementRequired": true
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "sceneId": "seed_0004_case_f9f0fb",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "keyboard typing taps",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav",
+      "expectedStartSec": "1.44",
+      "expectedEndSec": "5.76",
+      "expectedWindowDurationSec": "4.32",
+      "peakLocalSec": "2.15",
+      "peakGlobalSec": "3.59",
+      "placementRequired": true
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "sceneId": "seed_0005_case_06f366",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "bicycle pass-by motion cue",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "expectedStartSec": "1.2",
+      "expectedEndSec": "5.44",
+      "expectedWindowDurationSec": "4.24",
+      "peakLocalSec": "1.05",
+      "peakGlobalSec": "2.25",
+      "placementRequired": true
+    }
+  ],
+  "inputs": {
+    "bindingReport": "artifacts/manifests/week12_audio_candidate_timing_binding_report_v2.json",
+    "temporalV0Report": "artifacts/manifests/week12_temporal_alignment_probe_report_v0.json",
+    "temporalV1Report": "artifacts/manifests/week12_temporal_alignment_probe_report_v1.json",
+    "temporalV1Csv": "artifacts/evals/week12_temporal_alignment_probe_v1.csv"
+  },
+  "handoffForNextStep": {
+    "cloudShouldConsume": "artifacts/manifests/week12_mainbase_audio_timing_handoff_index.json",
+    "requiredRuntimeSemantics": [
+      "full_clip assets are interpreted on the scene timeline",
+      "event_local assets are placed at expectedStartSec before mix/runtime visualization",
+      "PASS does not mean semantic quality or human audition"
+    ]
+  },
+  "boundaryStatement": "PASS means candidates are bound to expected event windows and RMS/onset-proxy timing is compatible after coordinate-frame repair. It does not mean semantic quality, human audition, final mix readiness, or production readiness."
+}

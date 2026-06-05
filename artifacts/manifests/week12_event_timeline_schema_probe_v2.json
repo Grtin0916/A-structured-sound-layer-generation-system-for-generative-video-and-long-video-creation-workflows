@@ -1,0 +1,306 @@
+{
+  "inputs": {
+    "eventJsonl": "artifacts/manifests/week12_event_timeline.jsonl",
+    "eventJsonlExists": true,
+    "eventCsv": "artifacts/manifests/week12_event_timeline.csv",
+    "eventCsvExists": true,
+    "v0Queue": "artifacts/evals/week12_audio_candidate_timing_bound_queue_v0.json",
+    "v0QueueExists": true,
+    "v0Report": "artifacts/manifests/week12_audio_candidate_timing_binding_report_v0.json",
+    "v0ReportExists": true
+  },
+  "expandedEventCount": 10,
+  "eventWithTimingCount": 10,
+  "candidateExtractedCount": 10,
+  "eventRawKeyTop30": [
+    [
+      "alignment_rule",
+      10
+    ],
+    [
+      "blueprint_artifact_uri",
+      10
+    ],
+    [
+      "blueprint_id",
+      10
+    ],
+    [
+      "duration_seconds",
+      10
+    ],
+    [
+      "end_seconds",
+      10
+    ],
+    [
+      "event_id",
+      10
+    ],
+    [
+      "intensity",
+      10
+    ],
+    [
+      "label",
+      10
+    ],
+    [
+      "layer_type",
+      10
+    ],
+    [
+      "priority",
+      10
+    ],
+    [
+      "prompt",
+      10
+    ],
+    [
+      "scene_description",
+      10
+    ],
+    [
+      "semantic_tags",
+      10
+    ],
+    [
+      "source_seed_id",
+      10
+    ],
+    [
+      "start_seconds",
+      10
+    ]
+  ],
+  "eventSamples": [
+    {
+      "eventRowId": "event_0000",
+      "source": "artifacts/manifests/week12_event_timeline.jsonl",
+      "sceneId": "seed_0001_case_48b11c",
+      "caseId": "seed_0001_case_48b11c",
+      "eventId": "evt_001",
+      "eventIndex": null,
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "normalizedLabel": "contextual_ambience_bed",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": 8.0,
+      "expectedDurationSec": 8.0,
+      "hasTiming": true,
+      "rawKeys": [
+        "alignment_rule",
+        "blueprint_artifact_uri",
+        "blueprint_id",
+        "duration_seconds",
+        "end_seconds",
+        "event_id",
+        "intensity",
+        "label",
+        "layer_type",
+        "priority",
+        "prompt",
+        "scene_description",
+        "semantic_tags",
+        "source_seed_id",
+        "start_seconds"
+      ]
+    },
+    {
+      "eventRowId": "event_0001",
+      "source": "artifacts/manifests/week12_event_timeline.jsonl",
+      "sceneId": "seed_0001_case_48b11c",
+      "caseId": "seed_0001_case_48b11c",
+      "eventId": "evt_002",
+      "eventIndex": null,
+      "layer": "foley",
+      "label": "time-aligned footsteps",
+      "normalizedLabel": "time_aligned_footsteps",
+      "expectedStartSec": 1.44,
+      "expectedEndSec": 5.76,
+      "expectedDurationSec": 8.0,
+      "hasTiming": true,
+      "rawKeys": [
+        "alignment_rule",
+        "blueprint_artifact_uri",
+        "blueprint_id",
+        "duration_seconds",
+        "end_seconds",
+        "event_id",
+        "intensity",
+        "label",
+        "layer_type",
+        "priority",
+        "prompt",
+        "scene_description",
+        "semantic_tags",
+        "source_seed_id",
+        "start_seconds"
+      ]
+    },
+    {
+      "eventRowId": "event_0002",
+      "source": "artifacts/manifests/week12_event_timeline.jsonl",
+      "sceneId": "seed_0002_case_adc34a",
+      "caseId": "seed_0002_case_adc34a",
+      "eventId": "evt_001",
+      "eventIndex": null,
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "normalizedLabel": "contextual_ambience_bed",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": 8.0,
+      "expectedDurationSec": 8.0,
+      "hasTiming": true,
+      "rawKeys": [
+        "alignment_rule",
+        "blueprint_artifact_uri",
+        "blueprint_id",
+        "duration_seconds",
+        "end_seconds",
+        "event_id",
+        "intensity",
+        "label",
+        "layer_type",
+        "priority",
+        "prompt",
+        "scene_description",
+        "semantic_tags",
+        "source_seed_id",
+        "start_seconds"
+      ]
+    },
+    {
+      "eventRowId": "event_0003",
+      "source": "artifacts/manifests/week12_event_timeline.jsonl",
+      "sceneId": "seed_0002_case_adc34a",
+      "caseId": "seed_0002_case_adc34a",
+      "eventId": "evt_002",
+      "eventIndex": null,
+      "layer": "foley",
+      "label": "door close impact",
+      "normalizedLabel": "door_close_impact",
+      "expectedStartSec": 1.44,
+      "expectedEndSec": 5.76,
+      "expectedDurationSec": 8.0,
+      "hasTiming": true,
+      "rawKeys": [
+        "alignment_rule",
+        "blueprint_artifact_uri",
+        "blueprint_id",
+        "duration_seconds",
+        "end_seconds",
+        "event_id",
+        "intensity",
+        "label",
+        "layer_type",
+        "priority",
+        "prompt",
+        "scene_description",
+        "semantic_tags",
+        "source_seed_id",
+        "start_seconds"
+      ]
+    },
+    {
+      "eventRowId": "event_0004",
+      "source": "artifacts/manifests/week12_event_timeline.jsonl",
+      "sceneId": "seed_0003_case_9eb26a",
+      "caseId": "seed_0003_case_9eb26a",
+      "eventId": "evt_001",
+      "eventIndex": null,
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "normalizedLabel": "contextual_ambience_bed",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": 8.0,
+      "expectedDurationSec": 8.0,
+      "hasTiming": true,
+      "rawKeys": [
+        "alignment_rule",
+        "blueprint_artifact_uri",
+        "blueprint_id",
+        "duration_seconds",
+        "end_seconds",
+        "event_id",
+        "intensity",
+        "label",
+        "layer_type",
+        "priority",
+        "prompt",
+        "scene_description",
+        "semantic_tags",
+        "source_seed_id",
+        "start_seconds"
+      ]
+    }
+  ],
+  "candidateSamples": [
+    {
+      "candidateRowId": "candidate_0000",
+      "candidateId": "procedural_v0_0001",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav",
+      "sceneId": "seed_0001_case_48b11c",
+      "caseId": "seed_0001_case_48b11c",
+      "eventId": "evt_001",
+      "eventIndex": null,
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "normalizedLabel": "contextual_ambience_bed",
+      "candidateDurationSec": null
+    },
+    {
+      "candidateRowId": "candidate_0001",
+      "candidateId": "procedural_v0_0002",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+      "sceneId": "seed_0001_case_48b11c",
+      "caseId": "seed_0001_case_48b11c",
+      "eventId": "evt_002",
+      "eventIndex": null,
+      "layer": "foley",
+      "label": "time-aligned footsteps",
+      "normalizedLabel": "time_aligned_footsteps",
+      "candidateDurationSec": null
+    },
+    {
+      "candidateRowId": "candidate_0002",
+      "candidateId": "procedural_v0_0003",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+      "sceneId": "seed_0002_case_adc34a",
+      "caseId": "seed_0002_case_adc34a",
+      "eventId": "evt_001",
+      "eventIndex": null,
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "normalizedLabel": "contextual_ambience_bed",
+      "candidateDurationSec": null
+    },
+    {
+      "candidateRowId": "candidate_0003",
+      "candidateId": "procedural_v0_0004",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "sceneId": "seed_0002_case_adc34a",
+      "caseId": "seed_0002_case_adc34a",
+      "eventId": "evt_002",
+      "eventIndex": null,
+      "layer": "foley",
+      "label": "door close impact",
+      "normalizedLabel": "door_close_impact",
+      "candidateDurationSec": null
+    },
+    {
+      "candidateRowId": "candidate_0004",
+      "candidateId": "procedural_v0_0005",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav",
+      "sceneId": "seed_0003_case_9eb26a",
+      "caseId": "seed_0003_case_9eb26a",
+      "eventId": "evt_001",
+      "eventIndex": null,
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "normalizedLabel": "contextual_ambience_bed",
+      "candidateDurationSec": null
+    }
+  ]
+}
