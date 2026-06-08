@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "week13_mix_placement_manifest_v0",
+  "generatedAtUtc": "2026-06-08T08:16:03.136221+00:00",
+  "sourceRepo": {
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1",
+    "head": "28e79ff"
+  },
+  "inputs": {
+    "timingBindingReport": "artifacts/manifests/week12_audio_candidate_timing_binding_report_v2.json",
+    "temporalAlignmentReport": "artifacts/manifests/week12_temporal_alignment_probe_report_v1.json",
+    "boundQueueJson": "artifacts/evals/week12_audio_candidate_timing_bound_queue_v2.json"
+  },
+  "outputs": {
+    "manifest": "artifacts/manifests/week13_mix_placement_manifest.json",
+    "globalPlacementTableJson": "artifacts/evals/week13_mix_global_placement_table.json",
+    "globalPlacementTableCsv": "artifacts/evals/week13_mix_global_placement_table.csv",
+    "log": "artifacts/logs/week13_mix_placement_manifest_20260608_161603.log"
+  },
+  "candidateCount": 10,
+  "placementCount": 10,
+  "assetTimeModeCounts": {
+    "full_clip": 5,
+    "event_local": 5
+  },
+  "eventLocalPlacementRequiredCount": 5,
+  "misplacedFromZeroCount": 0,
+  "naiveZeroWouldMisplaceCount": 5,
+  "boundaryStatement": "PASS only means candidates have a deterministic global placement plan. It does not claim semantic audio quality, human audition, final mix readiness, production mixer behavior, durable registry, or real cloud storage.",
+  "placementRule": {
+    "full_clip": "globalStartSec=0; audio is interpreted in the global scene coordinate frame.",
+    "event_local": "globalStartSec=expectedStartSec; local audio coordinates are offset into the global timeline."
+  },
+  "blockers": []
+}

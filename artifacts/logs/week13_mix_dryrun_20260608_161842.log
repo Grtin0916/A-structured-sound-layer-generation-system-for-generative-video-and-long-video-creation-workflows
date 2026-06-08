@@ -1,0 +1,11 @@
+status=PASS
+candidateCount=10
+fullClipCount=5
+eventLocalCount=5
+timelineDurationSec=8.0
+fixedPlacementMisplacedCount=0
+naiveZeroWouldMisplaceCount=5
+blockers=[]
+previewManifest=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_mix/week13_mix_preview_manifest.json
+timelineDryrunCsv=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_timeline_dryrun.csv
+naiveZeroRegressionCsv=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_naive_zero_regression_table.csv

@@ -1,0 +1,420 @@
+{
+  "status": "PASS",
+  "scope": "week13_mix_dryrun_preview_v0",
+  "generatedAtUtc": "2026-06-08T08:18:42.435028+00:00",
+  "sourceRepo": {
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1",
+    "head": "28e79ff"
+  },
+  "dryRunOnly": true,
+  "inputs": {
+    "placementManifest": "artifacts/manifests/week13_mix_placement_manifest.json",
+    "placementTableCsv": "artifacts/evals/week13_mix_global_placement_table.csv"
+  },
+  "outputs": {
+    "previewManifest": "artifacts/audio_mix/week13_mix_preview_manifest.json",
+    "timelineDryrunCsv": "artifacts/evals/week13_mix_timeline_dryrun.csv",
+    "naiveZeroRegressionCsv": "artifacts/evals/week13_mix_naive_zero_regression_table.csv",
+    "log": "artifacts/logs/week13_mix_dryrun_20260608_161842.log"
+  },
+  "candidateCount": 10,
+  "assetTimeModeCounts": {
+    "full_clip": 5,
+    "event_local": 5
+  },
+  "timelineDurationSec": 8.0,
+  "fixedPlacementMisplacedCount": 0,
+  "naiveZeroWouldMisplaceCount": 5,
+  "regressionGuard": {
+    "purpose": "Prevent event_local foley assets from being accidentally consumed as t=0 global audio.",
+    "passCondition": "fixedPlacementMisplacedCount == 0 and naiveZeroWouldMisplaceCount == 5",
+    "fixedPlacementRule": "event_local.globalStartSec = expectedStartSec",
+    "negativeControl": "naive_zero places event_local at 0 and should misplace all 5 event_local assets in the current fixture."
+  },
+  "caseSummaries": [
+    {
+      "caseId": "seed_0001_case_48b11c",
+      "candidateCount": 2,
+      "fullClipCount": 1,
+      "eventLocalCount": 1,
+      "layerCounts": {
+        "ambience": 1,
+        "foley": 1
+      },
+      "overlapCount": 1,
+      "overlaps": [
+        {
+          "a": "procedural_v0_0001",
+          "b": "procedural_v0_0002",
+          "overlapSec": 4.32,
+          "layers": [
+            "ambience",
+            "foley"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "seed_0002_case_adc34a",
+      "candidateCount": 2,
+      "fullClipCount": 1,
+      "eventLocalCount": 1,
+      "layerCounts": {
+        "ambience": 1,
+        "foley": 1
+      },
+      "overlapCount": 1,
+      "overlaps": [
+        {
+          "a": "procedural_v0_0003",
+          "b": "procedural_v0_0004",
+          "overlapSec": 4.32,
+          "layers": [
+            "ambience",
+            "foley"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "seed_0003_case_9eb26a",
+      "candidateCount": 2,
+      "fullClipCount": 1,
+      "eventLocalCount": 1,
+      "layerCounts": {
+        "ambience": 1,
+        "foley": 1
+      },
+      "overlapCount": 1,
+      "overlaps": [
+        {
+          "a": "procedural_v0_0005",
+          "b": "procedural_v0_0006",
+          "overlapSec": 4.32,
+          "layers": [
+            "ambience",
+            "foley"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "seed_0004_case_f9f0fb",
+      "candidateCount": 2,
+      "fullClipCount": 1,
+      "eventLocalCount": 1,
+      "layerCounts": {
+        "ambience": 1,
+        "foley": 1
+      },
+      "overlapCount": 1,
+      "overlaps": [
+        {
+          "a": "procedural_v0_0007",
+          "b": "procedural_v0_0008",
+          "overlapSec": 4.32,
+          "layers": [
+            "ambience",
+            "foley"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "seed_0005_case_06f366",
+      "candidateCount": 2,
+      "fullClipCount": 1,
+      "eventLocalCount": 1,
+      "layerCounts": {
+        "ambience": 1,
+        "foley": 1
+      },
+      "overlapCount": 1,
+      "overlaps": [
+        {
+          "a": "procedural_v0_0009",
+          "b": "procedural_v0_0010",
+          "overlapSec": 4.24,
+          "layers": [
+            "ambience",
+            "foley"
+          ]
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "dryRunOrder": 1,
+      "candidateId": "procedural_v0_0001",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0001_case_48b11c",
+      "sceneId": "seed_0001_case_48b11c",
+      "eventId": "evt_001",
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "assetTimeMode": "full_clip",
+      "placementRequired": "False",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": "8.0",
+      "correctGlobalStartSec": 0.0,
+      "correctGlobalEndSec": 8.0,
+      "placementOffsetSec": 0.0,
+      "dryRunAction": "place_full_clip_on_global_timeline",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav",
+        "globalStartSec": 0.0,
+        "globalEndSec": 8.0,
+        "layer": "ambience",
+        "assetTimeMode": "full_clip",
+        "placementOffsetSec": 0.0
+      }
+    },
+    {
+      "dryRunOrder": 2,
+      "candidateId": "procedural_v0_0002",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0001_case_48b11c",
+      "sceneId": "seed_0001_case_48b11c",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "time-aligned footsteps",
+      "assetTimeMode": "event_local",
+      "placementRequired": "True",
+      "expectedStartSec": 1.44,
+      "expectedEndSec": "5.76",
+      "correctGlobalStartSec": 1.44,
+      "correctGlobalEndSec": 5.76,
+      "placementOffsetSec": 1.44,
+      "dryRunAction": "place_local_audio_at_expectedStartSec",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+        "globalStartSec": 1.44,
+        "globalEndSec": 5.76,
+        "layer": "foley",
+        "assetTimeMode": "event_local",
+        "placementOffsetSec": 1.44
+      }
+    },
+    {
+      "dryRunOrder": 3,
+      "candidateId": "procedural_v0_0003",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0002_case_adc34a",
+      "sceneId": "seed_0002_case_adc34a",
+      "eventId": "evt_001",
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "assetTimeMode": "full_clip",
+      "placementRequired": "False",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": "8.0",
+      "correctGlobalStartSec": 0.0,
+      "correctGlobalEndSec": 8.0,
+      "placementOffsetSec": 0.0,
+      "dryRunAction": "place_full_clip_on_global_timeline",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+        "globalStartSec": 0.0,
+        "globalEndSec": 8.0,
+        "layer": "ambience",
+        "assetTimeMode": "full_clip",
+        "placementOffsetSec": 0.0
+      }
+    },
+    {
+      "dryRunOrder": 4,
+      "candidateId": "procedural_v0_0004",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0002_case_adc34a",
+      "sceneId": "seed_0002_case_adc34a",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "door close impact",
+      "assetTimeMode": "event_local",
+      "placementRequired": "True",
+      "expectedStartSec": 1.44,
+      "expectedEndSec": "5.76",
+      "correctGlobalStartSec": 1.44,
+      "correctGlobalEndSec": 5.76,
+      "placementOffsetSec": 1.44,
+      "dryRunAction": "place_local_audio_at_expectedStartSec",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+        "globalStartSec": 1.44,
+        "globalEndSec": 5.76,
+        "layer": "foley",
+        "assetTimeMode": "event_local",
+        "placementOffsetSec": 1.44
+      }
+    },
+    {
+      "dryRunOrder": 5,
+      "candidateId": "procedural_v0_0005",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0003_case_9eb26a",
+      "sceneId": "seed_0003_case_9eb26a",
+      "eventId": "evt_001",
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "assetTimeMode": "full_clip",
+      "placementRequired": "False",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": "8.0",
+      "correctGlobalStartSec": 0.0,
+      "correctGlobalEndSec": 8.0,
+      "placementOffsetSec": 0.0,
+      "dryRunAction": "place_full_clip_on_global_timeline",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav",
+        "globalStartSec": 0.0,
+        "globalEndSec": 8.0,
+        "layer": "ambience",
+        "assetTimeMode": "full_clip",
+        "placementOffsetSec": 0.0
+      }
+    },
+    {
+      "dryRunOrder": 6,
+      "candidateId": "procedural_v0_0006",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0003_case_9eb26a",
+      "sceneId": "seed_0003_case_9eb26a",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "raindrop impacts on window",
+      "assetTimeMode": "event_local",
+      "placementRequired": "True",
+      "expectedStartSec": 1.44,
+      "expectedEndSec": "5.76",
+      "correctGlobalStartSec": 1.44,
+      "correctGlobalEndSec": 5.76,
+      "placementOffsetSec": 1.44,
+      "dryRunAction": "place_local_audio_at_expectedStartSec",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav",
+        "globalStartSec": 1.44,
+        "globalEndSec": 5.76,
+        "layer": "foley",
+        "assetTimeMode": "event_local",
+        "placementOffsetSec": 1.44
+      }
+    },
+    {
+      "dryRunOrder": 7,
+      "candidateId": "procedural_v0_0007",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0004_case_f9f0fb",
+      "sceneId": "seed_0004_case_f9f0fb",
+      "eventId": "evt_001",
+      "layer": "ambience",
+      "label": "contextual ambience bed",
+      "assetTimeMode": "full_clip",
+      "placementRequired": "False",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": "8.0",
+      "correctGlobalStartSec": 0.0,
+      "correctGlobalEndSec": 8.0,
+      "placementOffsetSec": 0.0,
+      "dryRunAction": "place_full_clip_on_global_timeline",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav",
+        "globalStartSec": 0.0,
+        "globalEndSec": 8.0,
+        "layer": "ambience",
+        "assetTimeMode": "full_clip",
+        "placementOffsetSec": 0.0
+      }
+    },
+    {
+      "dryRunOrder": 8,
+      "candidateId": "procedural_v0_0008",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0004_case_f9f0fb",
+      "sceneId": "seed_0004_case_f9f0fb",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "keyboard typing taps",
+      "assetTimeMode": "event_local",
+      "placementRequired": "True",
+      "expectedStartSec": 1.44,
+      "expectedEndSec": "5.76",
+      "correctGlobalStartSec": 1.44,
+      "correctGlobalEndSec": 5.76,
+      "placementOffsetSec": 1.44,
+      "dryRunAction": "place_local_audio_at_expectedStartSec",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav",
+        "globalStartSec": 1.44,
+        "globalEndSec": 5.76,
+        "layer": "foley",
+        "assetTimeMode": "event_local",
+        "placementOffsetSec": 1.44
+      }
+    },
+    {
+      "dryRunOrder": 9,
+      "candidateId": "procedural_v0_0009",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0005_case_06f366",
+      "sceneId": "seed_0005_case_06f366",
+      "eventId": "evt_001",
+      "layer": "ambience",
+      "label": "outdoor bike-pass ambience",
+      "assetTimeMode": "full_clip",
+      "placementRequired": "False",
+      "expectedStartSec": 0.0,
+      "expectedEndSec": "8.0",
+      "correctGlobalStartSec": 0.0,
+      "correctGlobalEndSec": 8.0,
+      "placementOffsetSec": 0.0,
+      "dryRunAction": "place_full_clip_on_global_timeline",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav",
+        "globalStartSec": 0.0,
+        "globalEndSec": 8.0,
+        "layer": "ambience",
+        "assetTimeMode": "full_clip",
+        "placementOffsetSec": 0.0
+      }
+    },
+    {
+      "dryRunOrder": 10,
+      "candidateId": "procedural_v0_0010",
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "caseId": "seed_0005_case_06f366",
+      "sceneId": "seed_0005_case_06f366",
+      "eventId": "evt_002",
+      "layer": "foley",
+      "label": "bicycle pass-by motion cue",
+      "assetTimeMode": "event_local",
+      "placementRequired": "True",
+      "expectedStartSec": 1.2,
+      "expectedEndSec": "5.44",
+      "correctGlobalStartSec": 1.2,
+      "correctGlobalEndSec": 5.44,
+      "placementOffsetSec": 1.2,
+      "dryRunAction": "place_local_audio_at_expectedStartSec",
+      "runtimeMixerInput": {
+        "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+        "globalStartSec": 1.2,
+        "globalEndSec": 5.44,
+        "layer": "foley",
+        "assetTimeMode": "event_local",
+        "placementOffsetSec": 1.2
+      }
+    }
+  ],
+  "boundaryStatement": "This is a mixer/runtime dry-run manifest. It validates placement semantics and regression risk only. It does not generate a final audio mix, does not claim semantic audio quality, human audition, durable registry, real object storage, or production readiness.",
+  "blockers": []
+}

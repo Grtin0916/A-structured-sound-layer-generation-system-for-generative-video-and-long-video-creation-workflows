@@ -1,0 +1,11 @@
+status=PASS
+candidateCount=10
+placementCount=10
+assetTimeModeCounts={'full_clip': 5, 'event_local': 5}
+eventLocalPlacementRequiredCount=5
+misplacedFromZeroCount=0
+naiveZeroWouldMisplaceCount=5
+blockers=[]
+manifest=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_mix_placement_manifest.json
+tableJson=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.json
+tableCsv=/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.csv

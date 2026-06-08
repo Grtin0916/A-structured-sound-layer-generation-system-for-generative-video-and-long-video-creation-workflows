@@ -1,0 +1,11 @@
+candidateId,eventId,label,assetTimeMode,expectedStartSec,fixedGlobalStartSec,naiveZeroGlobalStartSec,fixedStartErrorSec,naiveZeroStartErrorSec,naiveZeroWouldMisplace,fixedIsMisplaced
+procedural_v0_0001,evt_001,contextual ambience bed,full_clip,0.0,0.0,0.0,0.0,0.0,False,False
+procedural_v0_0002,evt_002,time-aligned footsteps,event_local,1.44,1.44,0.0,0.0,1.44,True,False
+procedural_v0_0003,evt_001,contextual ambience bed,full_clip,0.0,0.0,0.0,0.0,0.0,False,False
+procedural_v0_0004,evt_002,door close impact,event_local,1.44,1.44,0.0,0.0,1.44,True,False
+procedural_v0_0005,evt_001,contextual ambience bed,full_clip,0.0,0.0,0.0,0.0,0.0,False,False
+procedural_v0_0006,evt_002,raindrop impacts on window,event_local,1.44,1.44,0.0,0.0,1.44,True,False
+procedural_v0_0007,evt_001,contextual ambience bed,full_clip,0.0,0.0,0.0,0.0,0.0,False,False
+procedural_v0_0008,evt_002,keyboard typing taps,event_local,1.44,1.44,0.0,0.0,1.44,True,False
+procedural_v0_0009,evt_001,outdoor bike-pass ambience,full_clip,0.0,0.0,0.0,0.0,0.0,False,False
+procedural_v0_0010,evt_002,bicycle pass-by motion cue,event_local,1.2,1.2,0.0,0.0,1.2,True,False
