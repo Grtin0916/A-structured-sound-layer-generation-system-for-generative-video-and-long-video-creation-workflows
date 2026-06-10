@@ -1,0 +1,12 @@
+{
+  "report": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_cloud_materialization_feedback_index.json",
+  "status": "PASS",
+  "candidateCount": 10,
+  "readyForPlatformConsumptionCount": 10,
+  "assetTimeModeCounts": {
+    "full_clip": 5,
+    "event_local": 5
+  },
+  "javaApiEndpoint": "/api/week13/audio-artifact-registry/materialized-readiness",
+  "blockers": []
+}
