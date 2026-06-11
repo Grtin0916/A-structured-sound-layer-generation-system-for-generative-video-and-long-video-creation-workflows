@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "week13.candidate_bank_demo_index.v1",
+  "generatedAt": "2026-06-11T16:01:44",
+  "status": "PASS",
+  "demoName": "Week13 Candidate Audio Bank worker-consumable demo",
+  "scope": "local-demo-index-only",
+  "boundary": [
+    "does_not_claim_semantic_audio_quality",
+    "does_not_claim_human_audition_pass",
+    "does_not_claim_final_mix_readiness",
+    "does_not_claim_production_kubernetes_job",
+    "does_not_claim_s3_minio_csi_or_cloud_object_storage",
+    "does_not_claim_durable_java_registry"
+  ],
+  "counts": {
+    "candidateCount": 10,
+    "placementTableRows": 10,
+    "materializedCount": 10,
+    "mountReadableCount": 10,
+    "workerReadyCount": 10,
+    "workerSuccessCount": 10,
+    "feedbackReadyForPlatformConsumptionCount": 10
+  },
+  "statuses": {
+    "mainbasePlacement": "PASS",
+    "mainbaseCloudFeedback": "PASS",
+    "javaRegistryContract": "PASS",
+    "javaMaterializedReadiness": "PASS",
+    "javaReadinessApiContract": "PASS",
+    "cloudMaterializedArtifacts": "PASS",
+    "cloudMountReadContract": "PASS",
+    "cloudWorkerInput": "PASS",
+    "cloudWorkerSmoke": "PASS"
+  },
+  "hardChecks": {
+    "placementStatusPass": true,
+    "feedbackStatusPass": true,
+    "javaRegistryStatusPass": true,
+    "cloudMaterializedStatusPass": true,
+    "cloudMountStatusPass": true,
+    "cloudWorkerInputStatusPass": true,
+    "cloudWorkerSmokeStatusPass": true,
+    "candidateCountIsTen": true,
+    "workerSuccessCountIsTen": true,
+    "noBlockers": true
+  },
+  "blockers": [],
+  "chain": [
+    {
+      "step": "mainbase_mix_placement",
+      "evidence": "artifacts/manifests/week13_mix_placement_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "step": "mainbase_global_placement_table",
+      "evidence": "artifacts/evals/week13_mix_global_placement_table.csv",
+      "rowCount": 10
+    },
+    {
+      "step": "cloud_materialized_audio",
+      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_materialized_audio_artifact_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "step": "cloud_mount_read_contract",
+      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_mount_read_contract.json",
+      "status": "PASS"
+    },
+    {
+      "step": "java_artifact_registry_contract",
+      "evidence": "/home/GRT/work/media-task-platform-java/artifacts/manifests/week13_java_audio_artifact_registry_contract_report.json",
+      "status": "PASS"
+    },
+    {
+      "step": "cloud_worker_input",
+      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_ready_candidate_worker_input_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "step": "cloud_worker_smoke",
+      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_local_audio_worker_smoke_result.json",
+      "status": "PASS"
+    },
+    {
+      "step": "mainbase_cloud_materialization_feedback",
+      "evidence": "artifacts/manifests/week13_cloud_materialization_feedback_index.json",
+      "status": "PASS"
+    }
+  ],
+  "humanReadableConclusion": "PASS: 10 candidate audio artifacts have placement evidence, local materialization evidence, mount-read evidence, Java registry contract evidence, worker input evidence, and local worker smoke evidence.",
+  "nextRecommendedStep": "Expose or consume this demo index from Java/Cloud dashboard only after keeping the boundary local-demo-index-only."
+}
