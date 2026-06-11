@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "week13.mainbase_platform_promotion_feedback_index.v1",
+  "generatedAt": "2026-06-11T17:57:47",
+  "status": "PASS",
+  "scope": "mainbase-platform-promotion-feedback-only",
+  "sourceMainbaseDemoIndex": "artifacts/manifests/week13_candidate_bank_demo_index.json",
+  "sourceCloudPromotionGate": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_candidate_bank_platform_promotion_gate.json",
+  "sourceCloudCiCheckLog": "/home/GRT/work/ai-job-platform-cloud/artifacts/logs/week13_candidate_bank_platform_promotion_gate_check_20260611_174717.log",
+  "sourceCloudCiCheckLogExists": true,
+  "platformPromotionDecision": "PROMOTE_TO_WEEK13_DEMO_READY",
+  "positivePath": {
+    "candidateCount": 10,
+    "workerSuccessCount": 10,
+    "testsRun": 1,
+    "failures": 0,
+    "errors": 0,
+    "drilldownReadyCount": 10,
+    "fullClipLikeCount": 5,
+    "eventLocalLikeCount": 5
+  },
+  "negativePath": {
+    "targetCandidate": "procedural_v0_0002",
+    "originalStatus": "SUCCESS",
+    "failedValue": "FAILED",
+    "builderReturnCode": 2,
+    "failureSummaryStatus": "FAIL",
+    "failureSummaryBlockers": [
+      "procedural_v0_0002:worker_smoke_not_success:FAILED"
+    ]
+  },
+  "checks": {
+    "mainbaseDemoIndexPass": true,
+    "cloudPromotionGatePass": true,
+    "cloudPromotionDecisionReady": true,
+    "candidateCountIsTen": true,
+    "workerSuccessCountIsTen": true,
+    "drilldownReadyCountIsTen": true,
+    "fullClipLikeCountIsFive": true,
+    "eventLocalLikeCountIsFive": true,
+    "negativeRegressionTargetExpected": true,
+    "negativeRegressionDetectedFail": true,
+    "negativeRegressionLocatedBlocker": true,
+    "cloudGateNoBlockers": true,
+    "allCloudHardChecksTrue": true
+  },
+  "blockers": [],
+  "boundary": [
+    "does_not_claim_semantic_audio_quality",
+    "does_not_claim_human_audition_pass",
+    "does_not_claim_final_mix_readiness",
+    "does_not_claim_live_grafana_import",
+    "does_not_claim_production_slo",
+    "does_not_claim_production_kubernetes_job",
+    "does_not_claim_s3_minio_csi_or_cloud_object_storage"
+  ],
+  "feedbackDecision": "PASS: Mainbase Candidate Audio Bank V1 has platform promotion feedback for Week13 local demo readiness.",
+  "nextRecommendedStep": "Use this feedback index as the source-side anchor for Friday stage gate or engineering closure."
+}

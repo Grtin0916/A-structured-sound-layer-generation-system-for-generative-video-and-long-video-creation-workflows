@@ -1,0 +1,27 @@
+{
+  "out": "artifacts/manifests/week13_platform_promotion_feedback_index.json",
+  "status": "PASS",
+  "platformPromotionDecision": "PROMOTE_TO_WEEK13_DEMO_READY",
+  "positivePath": {
+    "candidateCount": 10,
+    "workerSuccessCount": 10,
+    "testsRun": 1,
+    "failures": 0,
+    "errors": 0,
+    "drilldownReadyCount": 10,
+    "fullClipLikeCount": 5,
+    "eventLocalLikeCount": 5
+  },
+  "negativePath": {
+    "targetCandidate": "procedural_v0_0002",
+    "originalStatus": "SUCCESS",
+    "failedValue": "FAILED",
+    "builderReturnCode": 2,
+    "failureSummaryStatus": "FAIL",
+    "failureSummaryBlockers": [
+      "procedural_v0_0002:worker_smoke_not_success:FAILED"
+    ]
+  },
+  "failedChecks": [],
+  "sourceCloudCiCheckLogExists": true
+}
