@@ -1,0 +1,12 @@
+{
+  "output": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_input_index.json",
+  "status": "PASS",
+  "summary": {
+    "candidateCount": 10,
+    "timingEvalInputReadyCount": 10,
+    "eventLocalCount": 5,
+    "eventLocalExpectedStartMatchCount": 5,
+    "blockerCount": 0
+  },
+  "blockers": []
+}
