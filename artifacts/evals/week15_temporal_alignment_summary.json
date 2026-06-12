@@ -1,6 +1,6 @@
 {
   "schemaVersion": "week15.temporal_alignment_score.v1",
-  "generatedAtUtc": "2026-06-12T08:32:53.075592+00:00",
+  "generatedAtUtc": "2026-06-12T08:33:08.785437+00:00",
   "status": "FAIL",
   "inputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_input_index.json",
   "csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment.csv",
