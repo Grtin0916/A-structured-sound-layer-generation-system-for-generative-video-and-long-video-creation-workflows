@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "week15.temporal_alignment_regression_gate.v1",
+  "generatedAtUtc": "2026-06-12T08:44:29.134573+00:00",
+  "status": "PASS",
+  "gateDecision": "TEMPORAL_ALIGNMENT_REMEDIATION_REGRESSION_GUARDED",
+  "inputs": {
+    "originalSummary": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json",
+    "remediationPlan": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+    "remediatedSummary": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+  },
+  "checks": {
+    "originalStatusFail": true,
+    "originalCandidateCountTen": true,
+    "originalFailCountTwo": true,
+    "originalEventLocalPassCountThree": true,
+    "planStatusPass": true,
+    "planHasTwoActions": true,
+    "planTargetsExpectedCandidates": true,
+    "remediatedStatusPass": true,
+    "remediatedCandidateCountTen": true,
+    "remediatedFailCountZero": true,
+    "remediatedEventLocalPassCountFive": true,
+    "remediatedImprovesEventLocalPassCount": true,
+    "remediatedDoesNotIncreaseFailCount": true
+  },
+  "failedChecks": [],
+  "summary": {
+    "original": {
+      "candidateCount": 10,
+      "passCount": 7,
+      "warnNearMissCount": 1,
+      "failCount": 2,
+      "eventLocalCount": 5,
+      "eventLocalPassCount": 3,
+      "toleranceSec": 0.25,
+      "frameMs": 50.0,
+      "hopMs": 10.0,
+      "thresholdRatio": 0.2,
+      "minAbsRms": 0.0001
+    },
+    "remediated": {
+      "candidateCount": 10,
+      "passCount": 9,
+      "warnNearMissCount": 1,
+      "failCount": 0,
+      "eventLocalCount": 5,
+      "eventLocalPassCount": 5,
+      "toleranceSec": 0.25,
+      "frameMs": 50.0,
+      "hopMs": 10.0,
+      "thresholdRatio": 0.2,
+      "minAbsRms": 0.0001
+    },
+    "remediatedCandidateIds": [
+      "procedural_v0_0004",
+      "procedural_v0_0010"
+    ],
+    "eventLocalPassDelta": 2,
+    "failCountDelta": -2
+  },
+  "blockers": [],
+  "boundary": [
+    "regression_gate_only",
+    "preserves_original_failure_as_baseline",
+    "does_not_claim_semantic_audio_quality",
+    "does_not_claim_human_audition_passed",
+    "does_not_claim_final_mix_readiness"
+  ],
+  "nextSystemStep": {
+    "java": "Expose temporal alignment remediation status and artifact links through a focused API contract.",
+    "cloud": "Consume the regression gate as platform readiness input without claiming production SLO."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "output": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_regression_gate.json",
+  "status": "PASS",
+  "gateDecision": "TEMPORAL_ALIGNMENT_REMEDIATION_REGRESSION_GUARDED",
+  "failedChecks": [],
+  "blockers": [],
+  "summary": {
+    "original": {
+      "candidateCount": 10,
+      "passCount": 7,
+      "warnNearMissCount": 1,
+      "failCount": 2,
+      "eventLocalCount": 5,
+      "eventLocalPassCount": 3,
+      "toleranceSec": 0.25,
+      "frameMs": 50.0,
+      "hopMs": 10.0,
+      "thresholdRatio": 0.2,
+      "minAbsRms": 0.0001
+    },
+    "remediated": {
+      "candidateCount": 10,
+      "passCount": 9,
+      "warnNearMissCount": 1,
+      "failCount": 0,
+      "eventLocalCount": 5,
+      "eventLocalPassCount": 5,
+      "toleranceSec": 0.25,
+      "frameMs": 50.0,
+      "hopMs": 10.0,
+      "thresholdRatio": 0.2,
+      "minAbsRms": 0.0001
+    },
+    "remediatedCandidateIds": [
+      "procedural_v0_0004",
+      "procedural_v0_0010"
+    ],
+    "eventLocalPassDelta": 2,
+    "failCountDelta": -2
+  }
+}
