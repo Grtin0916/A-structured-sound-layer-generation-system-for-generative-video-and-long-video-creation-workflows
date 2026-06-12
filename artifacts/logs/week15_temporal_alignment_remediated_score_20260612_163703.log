@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated.csv",
+  "json": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_summary.json",
+  "summary": {
+    "candidateCount": 10,
+    "passCount": 9,
+    "warnNearMissCount": 1,
+    "failCount": 0,
+    "eventLocalCount": 5,
+    "eventLocalPassCount": 5,
+    "toleranceSec": 0.25,
+    "frameMs": 50.0,
+    "hopMs": 10.0,
+    "thresholdRatio": 0.2,
+    "minAbsRms": 0.0001
+  },
+  "blockers": []
+}

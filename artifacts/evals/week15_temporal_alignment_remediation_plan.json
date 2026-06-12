@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "week15.temporal_alignment_remediation_plan.v1",
+  "generatedAtUtc": "2026-06-12T08:37:03.711573+00:00",
+  "status": "PASS",
+  "reason": "Original placement is correct, but some event_local candidate assets have late local onset. Trim leading low-energy prefix and rescore without modifying originals.",
+  "sourceScoreStatus": "FAIL",
+  "sourceScoreSummary": {
+    "candidateCount": 10,
+    "passCount": 7,
+    "warnNearMissCount": 1,
+    "failCount": 2,
+    "eventLocalCount": 5,
+    "eventLocalPassCount": 3,
+    "toleranceSec": 0.25,
+    "frameMs": 50.0,
+    "hopMs": 10.0,
+    "thresholdRatio": 0.2,
+    "minAbsRms": 0.0001
+  },
+  "actions": [
+    {
+      "candidateId": "procedural_v0_0004",
+      "action": "trimmed",
+      "sourceAlignmentStatus": "FAIL_DRIFT",
+      "sourceOnsetDeltaSec": 2.055000066757202,
+      "sourceLocalOnsetSec": 2.055000066757202,
+      "sourceAudioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "remediatedAudioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+      "trimSec": 2.035
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "action": "trimmed",
+      "sourceAlignmentStatus": "FAIL_DRIFT",
+      "sourceOnsetDeltaSec": 1.044999957084656,
+      "sourceLocalOnsetSec": 1.0449999570846558,
+      "sourceAudioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "remediatedAudioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+      "trimSec": 1.025
+    }
+  ],
+  "outputs": {
+    "remediatedInputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_input_index.json",
+    "audioOutDir": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_candidates/week15_temporal_alignment_remediated"
+  },
+  "blockers": []
+}

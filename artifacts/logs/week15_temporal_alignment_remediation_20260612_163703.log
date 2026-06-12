@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "remediatedCandidateCount": 2,
+  "outputs": {
+    "remediatedInputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_input_index.json",
+    "audioOutDir": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_candidates/week15_temporal_alignment_remediated"
+  },
+  "blockers": [],
+  "actions": [
+    {
+      "candidateId": "procedural_v0_0004",
+      "action": "trimmed",
+      "sourceAlignmentStatus": "FAIL_DRIFT",
+      "sourceOnsetDeltaSec": 2.055000066757202,
+      "sourceLocalOnsetSec": 2.055000066757202,
+      "sourceAudioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "remediatedAudioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+      "trimSec": 2.035
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "action": "trimmed",
+      "sourceAlignmentStatus": "FAIL_DRIFT",
+      "sourceOnsetDeltaSec": 1.044999957084656,
+      "sourceLocalOnsetSec": 1.0449999570846558,
+      "sourceAudioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "remediatedAudioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+      "trimSec": 1.025
+    }
+  ]
+}

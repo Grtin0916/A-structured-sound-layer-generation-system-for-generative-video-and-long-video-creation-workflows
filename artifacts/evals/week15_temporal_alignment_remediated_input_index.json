@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "week15.temporal_alignment_remediated_input_index.v1",
+  "generatedAtUtc": "2026-06-12T08:37:03.711554+00:00",
+  "status": "PASS",
+  "purpose": "Remediated temporal alignment input index with trimmed event_local candidates for onset/energy proxy rescoring.",
+  "inputs": {
+    "stageGateFeedback": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
+    "candidateBankDemoIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_demo_index.json",
+    "mixPlacementManifest": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_mix_placement_manifest.json",
+    "mixGlobalPlacementTableCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.csv",
+    "mixPreviewManifest": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_mix/week13_mix_preview_manifest.json"
+  },
+  "summary": {
+    "candidateCount": 10,
+    "remediatedCandidateCount": 2,
+    "blockerCount": 0,
+    "preRollSec": 0.02
+  },
+  "evalInputs": [
+    {
+      "candidateId": "procedural_v0_0001",
+      "assetTimeMode": "full_clip",
+      "expectedStartSec": 0.0,
+      "globalStartSec": 0.0,
+      "globalEndSec": 8.0,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "False",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": null,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0002",
+      "assetTimeMode": "event_local",
+      "expectedStartSec": 1.44,
+      "globalStartSec": 1.44,
+      "globalEndSec": 5.76,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "True",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": true,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "assetTimeMode": "full_clip",
+      "expectedStartSec": 0.0,
+      "globalStartSec": 0.0,
+      "globalEndSec": 8.0,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "False",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": null,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "assetTimeMode": "event_local",
+      "expectedStartSec": 1.44,
+      "globalStartSec": 1.44,
+      "globalEndSec": 5.76,
+      "audioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "True",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": true,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "TRIM_LEADING_LOW_ENERGY_PREFIX",
+        "sourceAudioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+        "remediatedAudioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+        "sourceAlignmentStatus": "FAIL_DRIFT",
+        "sourceLocalOnsetSec": 2.055000066757202,
+        "preRollSec": 0.02,
+        "trimMeta": {
+          "srcFrames": 69120,
+          "dstFrames": 36560,
+          "sampleRate": 16000,
+          "channels": 1,
+          "sampleWidthBytes": 2,
+          "trimSec": 2.035,
+          "srcDurationSec": 4.32,
+          "dstDurationSec": 2.285
+        }
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0005",
+      "assetTimeMode": "full_clip",
+      "expectedStartSec": 0.0,
+      "globalStartSec": 0.0,
+      "globalEndSec": 8.0,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "False",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": null,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "assetTimeMode": "event_local",
+      "expectedStartSec": 1.44,
+      "globalStartSec": 1.44,
+      "globalEndSec": 5.76,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "True",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": true,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "assetTimeMode": "full_clip",
+      "expectedStartSec": 0.0,
+      "globalStartSec": 0.0,
+      "globalEndSec": 8.0,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "False",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": null,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "WARN_NEAR_MISS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "assetTimeMode": "event_local",
+      "expectedStartSec": 1.44,
+      "globalStartSec": 1.44,
+      "globalEndSec": 5.76,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "True",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": true,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0009",
+      "assetTimeMode": "full_clip",
+      "expectedStartSec": 0.0,
+      "globalStartSec": 0.0,
+      "globalEndSec": 8.0,
+      "audioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "False",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": null,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "UNCHANGED",
+        "sourceAlignmentStatus": "PASS"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "assetTimeMode": "event_local",
+      "expectedStartSec": 1.2,
+      "globalStartSec": 1.2,
+      "globalEndSec": 5.44,
+      "audioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+      "sourceType": "procedural_baseline_v0",
+      "placementRequired": "True",
+      "timingEvalInputReady": true,
+      "eventLocalExpectedStartMatch": true,
+      "evidenceSources": [
+        "week13_mix_preview_manifest",
+        "week13_mix_global_placement_table_csv"
+      ],
+      "nextMetricPlaceholders": {
+        "onsetPeakSec": null,
+        "onsetDeltaSec": null,
+        "energyWindowMean": null,
+        "alignmentStatus": "PENDING_WEEK15_SCORING"
+      },
+      "remediation": {
+        "type": "TRIM_LEADING_LOW_ENERGY_PREFIX",
+        "sourceAudioUri": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+        "remediatedAudioUri": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+        "sourceAlignmentStatus": "FAIL_DRIFT",
+        "sourceLocalOnsetSec": 1.0449999570846558,
+        "preRollSec": 0.02,
+        "trimMeta": {
+          "srcFrames": 67840,
+          "dstFrames": 51440,
+          "sampleRate": 16000,
+          "channels": 1,
+          "sampleWidthBytes": 2,
+          "trimSec": 1.025,
+          "srcDurationSec": 4.24,
+          "dstDurationSec": 3.215
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "boundary": [
+    "candidate_asset_timeline_remediation_only",
+    "does_not_modify_original_audio",
+    "does_not_score_semantic_audio_quality",
+    "does_not_claim_human_audition_passed",
+    "does_not_claim_final_mix_readiness"
+  ],
+  "sourceInputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_input_index.json",
+  "sourceScoreSummary": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json"
+}
