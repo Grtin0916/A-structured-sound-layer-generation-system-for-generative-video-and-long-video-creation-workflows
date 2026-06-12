@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "week13.candidate_bank_v1_stage_gate_feedback.v1",
+  "generatedAtUtc": "2026-06-12T08:22:55.832708+00:00",
+  "status": "PASS",
+  "transitionDecision": "ENTER_WEEK15_TEMPORAL_ALIGNMENT_EVAL_INPUT",
+  "sourceInputs": {
+    "mainbasePlatformPromotionFeedbackIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_platform_promotion_feedback_index.json",
+    "cloudFridayStageGateInput": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_friday_stage_gate_input.json"
+  },
+  "verifiedScope": {
+    "completedStage": "Week13 Candidate Audio Bank V1 local demo-ready input",
+    "nextStage": "Week15 Temporal Alignment Eval",
+    "allowedClaims": [
+      "10 candidate audio records have local demo-ready gate evidence.",
+      "Java readiness API contract and Cloud promotion gate evidence are aggregated.",
+      "Negative regression target procedural_v0_0002 is represented.",
+      "This is a transition input for temporal alignment evaluation."
+    ],
+    "forbiddenClaims": [
+      "semantic audio quality is solved",
+      "human audition passed",
+      "final mix readiness",
+      "production Kubernetes Job",
+      "live Grafana import",
+      "cloud object storage readiness",
+      "production SLO"
+    ]
+  },
+  "stageGateSummary": {
+    "mainbaseStatus": "PASS",
+    "mainbasePromotionDecision": "PROMOTE_TO_WEEK13_DEMO_READY",
+    "javaStatus": "PASS",
+    "javaApiTestsRun": 1,
+    "javaFailures": 0,
+    "javaErrors": 0,
+    "cloudStatus": "PASS",
+    "cloudPromotionDecision": "PROMOTE_TO_WEEK13_DEMO_READY",
+    "candidateCount": 10,
+    "workerSuccessCount": 10,
+    "drilldownReadyCount": 10,
+    "negativeTarget": "procedural_v0_0002"
+  },
+  "blockers": [],
+  "nextActions": [
+    {
+      "name": "Week15 temporal alignment eval input",
+      "goal": "use existing candidate placement and mix evidence to score event timestamp vs audio energy/onset alignment",
+      "expectedArtifacts": [
+        "artifacts/evals/week15_temporal_alignment_input_index.json",
+        "artifacts/evals/week15_temporal_alignment.csv"
+      ]
+    },
+    {
+      "name": "human audition rubric draft",
+      "goal": "separate timing correctness from semantic/audio-quality judgment",
+      "expectedArtifacts": [
+        "docs/evals/week15_human_audition_rubric.md"
+      ]
+    }
+  ]
+}
