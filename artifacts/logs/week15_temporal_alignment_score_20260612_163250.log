@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment.csv",
+  "json": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json",
+  "summary": {
+    "candidateCount": 10,
+    "passCount": 7,
+    "warnNearMissCount": 1,
+    "failCount": 2,
+    "eventLocalCount": 5,
+    "eventLocalPassCount": 3,
+    "toleranceSec": 0.25,
+    "frameMs": 50.0,
+    "hopMs": 10.0,
+    "thresholdRatio": 0.2,
+    "minAbsRms": 0.0001
+  },
+  "blockers": [
+    "alignment scoring has 2 failed rows"
+  ]
+}
