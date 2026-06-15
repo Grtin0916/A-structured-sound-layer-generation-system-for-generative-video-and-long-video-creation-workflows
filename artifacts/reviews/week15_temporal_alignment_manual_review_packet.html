@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Week15 Temporal Alignment Manual Review Packet</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.45; }
+    .claim { padding: 12px; border: 1px solid #aaa; margin-bottom: 16px; }
+    .candidate { border-top: 2px solid #333; padding-top: 16px; margin-top: 24px; }
+    img { max-width: 100%; border: 1px solid #ccc; }
+    .audio-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    audio { width: 100%; }
+    code { background: #eee; padding: 2px 4px; }
+  </style>
+</head>
+<body>
+  <h1>Week15 Temporal Alignment Manual Review Packet</h1>
+  <div class="claim">
+    <h2>Allowed claim</h2>
+    <p>Remediation for procedural_v0_0004 and procedural_v0_0010 is supported by duration-trimming evidence while preserving the local RMS onset proxy.</p>
+    <h2>Blocked claims</h2>
+    <ul><li>Do not claim semantic audio quality is solved.</li><li>Do not claim human audition passed.</li><li>Do not claim final mix readiness.</li><li>Do not claim live Grafana import.</li><li>Do not claim production SLO.</li><li>Do not describe the current evidence as onset-proxy shift evidence.</li></ul>
+    <p><b>Review status:</b> REVIEW_READY. Human visual inspection and audition are not yet performed.</p>
+  </div>
+  
+            <section class="candidate">
+              <h2>procedural_v0_0004</h2>
+              <p><b>Duration trim:</b> 2.035 s |
+                 <b>Onset proxy delta:</b> 0.0 s</p>
+              <img src="../figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png" alt="procedural_v0_0004 waveform RMS original vs remediated" />
+              <div class="audio-row">
+                <div>
+                  <h3>Original audio</h3>
+                  <p>artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav</p>
+                  <audio controls src="../audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav"></audio>
+                </div>
+                <div>
+                  <h3>Remediated audio</h3>
+                  <p>artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav</p>
+                  <audio controls src="../audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav"></audio>
+                </div>
+              </div>
+              <ul>
+                <li>Inspect whether the remediated waveform removes redundant leading/trailing low-value duration without cutting the salient event.</li><li>Listen to original and remediated audio before any human-audition claim.</li><li>Do not treat unchanged RMS onset proxy as onset-shift evidence.</li><li>Do not claim semantic quality or final mix readiness from this packet alone.</li>
+              </ul>
+            </section>
+            
+            <section class="candidate">
+              <h2>procedural_v0_0010</h2>
+              <p><b>Duration trim:</b> 1.025 s |
+                 <b>Onset proxy delta:</b> 0.0 s</p>
+              <img src="../figures/week15_temporal_alignment/procedural_v0_0010_waveform_rms_original_vs_remediated.png" alt="procedural_v0_0010 waveform RMS original vs remediated" />
+              <div class="audio-row">
+                <div>
+                  <h3>Original audio</h3>
+                  <p>artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav</p>
+                  <audio controls src="../audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav"></audio>
+                </div>
+                <div>
+                  <h3>Remediated audio</h3>
+                  <p>artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav</p>
+                  <audio controls src="../audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav"></audio>
+                </div>
+              </div>
+              <ul>
+                <li>Inspect whether the remediated waveform removes redundant leading/trailing low-value duration without cutting the salient event.</li><li>Listen to original and remediated audio before any human-audition claim.</li><li>Do not treat unchanged RMS onset proxy as onset-shift evidence.</li><li>Do not claim semantic quality or final mix readiness from this packet alone.</li>
+              </ul>
+            </section>
+            
+</body>
+</html>

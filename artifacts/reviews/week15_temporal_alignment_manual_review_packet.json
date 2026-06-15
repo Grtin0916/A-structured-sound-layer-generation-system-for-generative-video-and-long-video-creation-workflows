@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "week15.temporal_alignment_manual_review_packet.v1",
+  "generatedAt": "2026-06-15T13:10:33.301426+00:00",
+  "status": "REVIEW_READY",
+  "purpose": "Provide a human-facing packet for visual and audio inspection of Week15 temporal alignment remediation evidence.",
+  "inputs": {
+    "mainbaseWaveformRmsIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+    "cloudEvidenceGate": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week15_temporal_alignment_evidence_gate.json"
+  },
+  "sourceHeads": {
+    "mainbaseWaveformRmsCommitHead": "3a5b12a",
+    "cloudEvidenceGateCommitHead": "e7fd36b"
+  },
+  "allowedClaim": "Remediation for procedural_v0_0004 and procedural_v0_0010 is supported by duration-trimming evidence while preserving the local RMS onset proxy.",
+  "blockedClaims": [
+    "Do not claim semantic audio quality is solved.",
+    "Do not claim human audition passed.",
+    "Do not claim final mix readiness.",
+    "Do not claim live Grafana import.",
+    "Do not claim production SLO.",
+    "Do not describe the current evidence as onset-proxy shift evidence."
+  ],
+  "records": [
+    {
+      "candidateId": "procedural_v0_0004",
+      "figure": "artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png",
+      "figureRelFromReviewHtml": "../figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png",
+      "originalAudio": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "originalAudioRelFromReviewHtml": "../audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "remediatedAudio": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+      "remediatedAudioRelFromReviewHtml": "../audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+      "originalDurationSec": 4.32,
+      "remediatedDurationSec": 2.285,
+      "durationTrimSec": 2.035,
+      "originalOnsetProxySec": 0.0325,
+      "remediatedOnsetProxySec": 0.0325,
+      "onsetProxyDeltaSec": 0.0,
+      "reviewChecklist": [
+        "Inspect whether the remediated waveform removes redundant leading/trailing low-value duration without cutting the salient event.",
+        "Listen to original and remediated audio before any human-audition claim.",
+        "Do not treat unchanged RMS onset proxy as onset-shift evidence.",
+        "Do not claim semantic quality or final mix readiness from this packet alone."
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "figure": "artifacts/figures/week15_temporal_alignment/procedural_v0_0010_waveform_rms_original_vs_remediated.png",
+      "figureRelFromReviewHtml": "../figures/week15_temporal_alignment/procedural_v0_0010_waveform_rms_original_vs_remediated.png",
+      "originalAudio": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "originalAudioRelFromReviewHtml": "../audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "remediatedAudio": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+      "remediatedAudioRelFromReviewHtml": "../audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+      "originalDurationSec": 4.24,
+      "remediatedDurationSec": 3.215,
+      "durationTrimSec": 1.025,
+      "originalOnsetProxySec": 0.0325,
+      "remediatedOnsetProxySec": 0.0325,
+      "onsetProxyDeltaSec": 0.0,
+      "reviewChecklist": [
+        "Inspect whether the remediated waveform removes redundant leading/trailing low-value duration without cutting the salient event.",
+        "Listen to original and remediated audio before any human-audition claim.",
+        "Do not treat unchanged RMS onset proxy as onset-shift evidence.",
+        "Do not claim semantic quality or final mix readiness from this packet alone."
+      ]
+    }
+  ],
+  "reviewDecision": {
+    "humanVisualInspection": "NOT_PERFORMED",
+    "humanAudition": "NOT_PERFORMED",
+    "semanticQualityReview": "NOT_PERFORMED",
+    "finalMixReadiness": "NOT_CLAIMED"
+  },
+  "boundary": [
+    "manual_review_packet_only",
+    "does_not_claim_human_audition_passed",
+    "does_not_claim_semantic_audio_quality",
+    "does_not_claim_final_mix_readiness"
+  ]
+}
