@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import csv
 import json
 import math
 from pathlib import Path
@@ -11,23 +12,150 @@ import numpy as np
 try:
     import soundfile as sf
 except Exception as exc:
-    raise SystemExit(
-        "Missing dependency: soundfile. Use the existing project environment, or install python-soundfile."
-    ) from exc
+    raise SystemExit("Missing dependency: soundfile") from exc
 
 try:
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 except Exception as exc:
-    raise SystemExit(
-        "Missing dependency: matplotlib. This script needs matplotlib to save waveform/RMS PNG files."
-    ) from exc
+    raise SystemExit("Missing dependency: matplotlib") from exc
 
 
 CANDIDATES = ["procedural_v0_0004", "procedural_v0_0010"]
 OUT_DIR = Path("artifacts/figures/week15_temporal_alignment")
 INDEX_PATH = Path("artifacts/evals/week15_temporal_alignment_waveform_rms_index.json")
+
+
+def path_exists_from_string(value: str) -> Path | None:
+    if not isinstance(value, str):
+        return None
+    if ".wav" not in value.lower():
+        return None
+
+    candidates = []
+    raw = Path(value)
+    candidates.append(raw)
+    candidates.append(Path.cwd() / raw)
+
+    # 如果 JSON 里只存 basename，则全仓按 basename 找一次。
+    candidates.extend(Path(".").rglob(raw.name))
+
+    for p in candidates:
+        if p.exists() and p.is_file():
+            return p
+    return None
+
+
+def walk_json(obj: Any, candidate_id: str, context: str = "") -> list[tuple[str, Path]]:
+    hits: list[tuple[str, Path]] = []
+
+    if isinstance(obj, dict):
+        joined = json.dumps(obj, ensure_ascii=False)
+        record_related = candidate_id in joined
+        for k, v in obj.items():
+            key_context = f"{context}.{k}" if context else str(k)
+            if isinstance(v, str):
+                p = path_exists_from_string(v)
+                if p is not None and (record_related or candidate_id in v or candidate_id in key_context):
+                    hits.append((key_context, p))
+            else:
+                hits.extend(walk_json(v, candidate_id, key_context))
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            hits.extend(walk_json(v, candidate_id, f"{context}[{i}]"))
+
+    return hits
+
+
+def collect_from_json_files(candidate_id: str) -> list[tuple[str, Path]]:
+    hits: list[tuple[str, Path]] = []
+    for jf in sorted(Path("artifacts").rglob("*.json")):
+        if "waveform_rms_index" in jf.name:
+            continue
+        try:
+            data = json.loads(jf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for ctx, p in walk_json(data, candidate_id):
+            hits.append((f"{jf}:{ctx}", p))
+    return hits
+
+
+def collect_from_csv_files(candidate_id: str) -> list[tuple[str, Path]]:
+    hits: list[tuple[str, Path]] = []
+    for cf in sorted(Path("artifacts").rglob("*.csv")):
+        try:
+            with cf.open("r", encoding="utf-8", errors="replace", newline="") as f:
+                reader = csv.DictReader(f)
+                for row_idx, row in enumerate(reader):
+                    row_blob = json.dumps(row, ensure_ascii=False)
+                    if candidate_id not in row_blob:
+                        continue
+                    for k, v in row.items():
+                        if isinstance(v, str):
+                            p = path_exists_from_string(v)
+                            if p is not None:
+                                hits.append((f"{cf}:row{row_idx}:{k}", p))
+        except Exception:
+            continue
+    return hits
+
+
+def collect_from_filesystem(candidate_id: str) -> list[tuple[str, Path]]:
+    hits: list[tuple[str, Path]] = []
+    for p in sorted(Path("artifacts").rglob("*.wav")):
+        if candidate_id in str(p):
+            hits.append(("filesystem", p))
+    return hits
+
+
+def classify_paths(hits: list[tuple[str, Path]]) -> dict[str, Path]:
+    unique: list[tuple[str, Path]] = []
+    seen = set()
+    for ctx, p in hits:
+        rp = p.resolve()
+        if rp in seen:
+            continue
+        seen.add(rp)
+        unique.append((ctx, p))
+
+    original_candidates = []
+    remediated_candidates = []
+
+    for ctx, p in unique:
+        s = f"{ctx} {p}".lower()
+        if "remediated" in s or "trimmed" in s or "preroll" in s:
+            remediated_candidates.append((ctx, p))
+        else:
+            original_candidates.append((ctx, p))
+
+    if not remediated_candidates:
+        # 兜底：如果只有一个包含 trimmed 的文件没有被分类到，按路径再判断一次。
+        for ctx, p in unique:
+            if "trim" in p.name.lower():
+                remediated_candidates.append((ctx, p))
+
+    if not original_candidates or not remediated_candidates:
+        detail = {
+            "allHits": [(ctx, str(p)) for ctx, p in unique],
+            "originalCandidates": [(ctx, str(p)) for ctx, p in original_candidates],
+            "remediatedCandidates": [(ctx, str(p)) for ctx, p in remediated_candidates],
+        }
+        raise FileNotFoundError(json.dumps(detail, ensure_ascii=False, indent=2))
+
+    return {
+        "original": original_candidates[0][1],
+        "remediated": remediated_candidates[0][1],
+    }
+
+
+def find_candidate_wavs(candidate_id: str) -> dict[str, Path]:
+    hits = []
+    hits.extend(collect_from_json_files(candidate_id))
+    hits.extend(collect_from_csv_files(candidate_id))
+    hits.extend(collect_from_filesystem(candidate_id))
+    return classify_paths(hits)
 
 
 def read_audio(path: Path) -> tuple[np.ndarray, int]:
@@ -45,7 +173,6 @@ def read_audio(path: Path) -> tuple[np.ndarray, int]:
 def frame_rms(y: np.ndarray, sr: int, frame_ms: float = 25.0, hop_ms: float = 10.0) -> tuple[np.ndarray, np.ndarray]:
     frame = max(1, int(sr * frame_ms / 1000.0))
     hop = max(1, int(sr * hop_ms / 1000.0))
-
     if len(y) < frame:
         padded = np.zeros(frame, dtype=np.float32)
         padded[: len(y)] = y
@@ -67,45 +194,13 @@ def frame_rms(y: np.ndarray, sr: int, frame_ms: float = 25.0, hop_ms: float = 10
 def onset_proxy_sec(times: np.ndarray, rms: np.ndarray) -> float | None:
     if rms.size == 0:
         return None
-
     floor = float(np.percentile(rms, 10))
     high = float(np.percentile(rms, 95))
     threshold = floor + 0.20 * max(1e-8, high - floor)
-
     active = np.where(rms >= threshold)[0]
     if active.size == 0:
         return None
     return float(times[int(active[0])])
-
-
-def find_candidate_wavs(candidate_id: str) -> dict[str, Path]:
-    all_wavs = sorted(Path("artifacts").rglob(f"*{candidate_id}*.wav"))
-
-    remediated = [
-        p for p in all_wavs
-        if "remediated" in str(p).lower() or "trimmed" in p.name.lower()
-    ]
-    original = [
-        p for p in all_wavs
-        if p not in remediated
-        and "remediated" not in str(p).lower()
-        and "trimmed" not in p.name.lower()
-    ]
-
-    if not original:
-        # 兜底：如果仓库只保留了 remediated 文件，也不能伪造 original。
-        raise FileNotFoundError(
-            f"missing original wav for {candidate_id}; found wavs={list(map(str, all_wavs))}"
-        )
-    if not remediated:
-        raise FileNotFoundError(
-            f"missing remediated wav for {candidate_id}; found wavs={list(map(str, all_wavs))}"
-        )
-
-    return {
-        "original": original[0],
-        "remediated": remediated[0],
-    }
 
 
 def plot_pair(candidate_id: str, original_path: Path, remediated_path: Path) -> dict[str, Any]:
@@ -147,9 +242,6 @@ def plot_pair(candidate_id: str, original_path: Path, remediated_path: Path) -> 
     fig.savefig(out_png, dpi=180)
     plt.close(fig)
 
-    duration0 = len(y0) / sr0
-    duration1 = len(y1) / sr1
-
     return {
         "candidateId": candidate_id,
         "originalAudio": str(original_path),
@@ -157,9 +249,9 @@ def plot_pair(candidate_id: str, original_path: Path, remediated_path: Path) -> 
         "figure": str(out_png),
         "originalSampleRate": sr0,
         "remediatedSampleRate": sr1,
-        "originalDurationSec": round(duration0, 6),
-        "remediatedDurationSec": round(duration1, 6),
-        "durationDeltaSec": round(duration1 - duration0, 6),
+        "originalDurationSec": round(len(y0) / sr0, 6),
+        "remediatedDurationSec": round(len(y1) / sr1, 6),
+        "durationDeltaSec": round(len(y1) / sr1 - len(y0) / sr0, 6),
         "originalOnsetProxySec": None if onset0 is None else round(onset0, 6),
         "remediatedOnsetProxySec": None if onset1 is None else round(onset1, 6),
         "onsetProxyDeltaSec": None if onset0 is None or onset1 is None else round(onset1 - onset0, 6),
@@ -180,8 +272,8 @@ def main() -> int:
             errors.append({"candidateId": candidate_id, "error": str(exc)})
 
     index = {
-        "schemaVersion": "week15.temporal_alignment_waveform_rms_index.v1",
-        "status": "PASS" if records and not errors else "PARTIAL" if records else "FAIL",
+        "schemaVersion": "week15.temporal_alignment_waveform_rms_index.v2",
+        "status": "PASS" if len(records) == len(CANDIDATES) and not errors else "FAIL",
         "purpose": "Explain original FAIL_DRIFT and remediated PASS using waveform and frame-level RMS evidence.",
         "candidates": records,
         "errors": errors,
@@ -201,9 +293,7 @@ def main() -> int:
     for r in records:
         print(f"WROTE_FIGURE={r['figure']}")
 
-    if index["status"] == "FAIL":
-        return 2
-    return 0
+    return 0 if index["status"] == "PASS" else 2
 
 
 if __name__ == "__main__":

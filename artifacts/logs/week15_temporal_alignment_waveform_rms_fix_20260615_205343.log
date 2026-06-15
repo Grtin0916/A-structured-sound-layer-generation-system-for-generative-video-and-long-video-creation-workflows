@@ -40,3 +40,6 @@
     "does_not_claim_final_mix_readiness"
   ]
 }
+WROTE_INDEX=artifacts/evals/week15_temporal_alignment_waveform_rms_index.json
+WROTE_FIGURE=artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png
+WROTE_FIGURE=artifacts/figures/week15_temporal_alignment/procedural_v0_0010_waveform_rms_original_vs_remediated.png
