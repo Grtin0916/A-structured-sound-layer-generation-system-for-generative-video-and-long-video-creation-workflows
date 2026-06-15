@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "week15.temporal_alignment_manual_review_decision.v1",
+  "generatedAt": "2026-06-15T13:28:22.495414+00:00",
+  "status": "HUMAN_REVIEW_PARTIAL",
+  "inputPacket": "artifacts/reviews/week15_temporal_alignment_manual_review_packet.json",
+  "allowedClaim": "Remediation for procedural_v0_0004 and procedural_v0_0010 is supported by duration-trimming evidence while preserving the local RMS onset proxy.",
+  "blockedClaims": [
+    "Do not claim semantic audio quality is solved.",
+    "Do not claim human audition passed.",
+    "Do not claim final mix readiness.",
+    "Do not claim live Grafana import.",
+    "Do not claim production SLO.",
+    "Do not describe the current evidence as onset-proxy shift evidence."
+  ],
+  "decisions": [
+    {
+      "candidateId": "procedural_v0_0004",
+      "visualInspection": "PASS",
+      "audition": "NOT_PERFORMED",
+      "note": "Assistant signal audit: remediated audio is an exact suffix of original starting at 2.035s; duration trimming is supported; human audition not performed by user yet.",
+      "figure": "artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png",
+      "originalAudio": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+      "remediatedAudio": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+      "durationTrimSec": 2.035,
+      "onsetProxyDeltaSec": 0.0
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "visualInspection": "PASS",
+      "audition": "NOT_PERFORMED",
+      "note": "Assistant signal audit: remediated audio is an exact suffix of original starting at 1.025s; duration trimming is supported; human audition not performed by user yet.",
+      "figure": "artifacts/figures/week15_temporal_alignment/procedural_v0_0010_waveform_rms_original_vs_remediated.png",
+      "originalAudio": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+      "remediatedAudio": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+      "durationTrimSec": 1.025,
+      "onsetProxyDeltaSec": 0.0
+    }
+  ],
+  "reviewDecision": {
+    "humanVisualInspection": "PASS",
+    "humanAudition": "PARTIAL",
+    "semanticQualityReview": "NOT_PERFORMED",
+    "finalMixReadiness": "NOT_CLAIMED"
+  },
+  "boundary": [
+    "manual_review_decision_only",
+    "visual_signal_review_supported_by_uploaded_audio_analysis",
+    "semantic_quality_review_not_performed",
+    "final_mix_readiness_not_claimed",
+    "does_not_claim_live_grafana_import",
+    "does_not_claim_production_slo"
+  ]
+}
+WROTE_DECISION=artifacts/reviews/week15_temporal_alignment_manual_review_decision.json
