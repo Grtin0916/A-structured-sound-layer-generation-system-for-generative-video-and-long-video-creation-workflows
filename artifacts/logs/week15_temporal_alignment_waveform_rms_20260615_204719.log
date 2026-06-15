@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "week15.temporal_alignment_waveform_rms_index.v1",
+  "status": "FAIL",
+  "purpose": "Explain original FAIL_DRIFT and remediated PASS using waveform and frame-level RMS evidence.",
+  "candidates": [],
+  "errors": [
+    {
+      "candidateId": "procedural_v0_0004",
+      "error": "missing original wav for procedural_v0_0004; found wavs=['artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav']"
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "error": "missing original wav for procedural_v0_0010; found wavs=['artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav']"
+    }
+  ],
+  "boundary": [
+    "visual_explainability_only",
+    "does_not_claim_semantic_audio_quality",
+    "does_not_claim_human_audition_passed",
+    "does_not_claim_final_mix_readiness"
+  ]
+}
+WROTE_INDEX=artifacts/evals/week15_temporal_alignment_waveform_rms_index.json
