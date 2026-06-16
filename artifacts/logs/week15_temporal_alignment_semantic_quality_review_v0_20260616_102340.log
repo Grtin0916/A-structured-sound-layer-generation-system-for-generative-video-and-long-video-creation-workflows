@@ -1,0 +1,10 @@
+{
+  "qualityGateLiteStatus": "SEMANTIC_REVIEW_READY",
+  "humanReviewStatus": "HUMAN_REVIEW_PARTIAL",
+  "auditionStatus": "NOT_PERFORMED",
+  "semanticQualityReviewStatus": "NOT_PERFORMED",
+  "candidateCount": 10,
+  "missingInputs": [],
+  "json": "artifacts/reviews/week15_temporal_alignment_semantic_quality_review_v0.json",
+  "html": "artifacts/reviews/week15_temporal_alignment_semantic_quality_review_v0.html"
+}

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Week15 Temporal Alignment Semantic Quality Review V0</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; line-height: 1.45; }
+table { border-collapse: collapse; width: 100%; }
+td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+pre { white-space: pre-wrap; margin: 0; }
+.status { font-weight: bold; }
+.blocked { color: #8a0000; }
+</style>
+</head>
+<body>
+<h1>Week15 Temporal Alignment Semantic Quality Review V0</h1>
+<p class="status">qualityGateLiteStatus: SEMANTIC_REVIEW_READY</p>
+<p>humanReviewStatus: HUMAN_REVIEW_PARTIAL</p>
+<p>auditionStatus: NOT_PERFORMED</p>
+<p>semanticQualityReviewStatus: NOT_PERFORMED</p>
+<p class="blocked">finalMixReadiness: NOT_CLAIMED</p>
+<h2>Blocked claims</h2>
+<ul><li>Do not claim HUMAN_REVIEW_PASS before real audition is performed.</li><li>Do not claim semantic audio quality PASS from RMS/ZCR/visual evidence alone.</li><li>Do not claim final mix readiness.</li><li>Do not claim production/live dashboard/SLO from this local artifact.</li></ul>
+<h2>Candidates</h2>
+<table>
+<thead><tr><th>candidateId</th><th>audio paths</th><th>lightweight metrics</th><th>semantic match</th></tr></thead>
+<tbody><tr><td>procedural_v0_0001</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 8.0,
+    &quot;globalRms&quot;: 0.01510237,
+    &quot;peakAbs&quot;: 0.04632568,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.0,
+    &quot;zeroCrossingRate&quot;: 0.02351581,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0002</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 4.32,
+    &quot;globalRms&quot;: 0.0086961,
+    &quot;peakAbs&quot;: 0.16699219,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.60606061,
+    &quot;zeroCrossingRate&quot;: 0.06530766,
+    &quot;riskFlags&quot;: [
+      &quot;HIGH_LOW_ENERGY_RATIO_REVIEW_EVENT_PRESENCE&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0003</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 8.0,
+    &quot;globalRms&quot;: 0.00674433,
+    &quot;peakAbs&quot;: 0.02075195,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.0,
+    &quot;zeroCrossingRate&quot;: 0.01267197,
+    &quot;riskFlags&quot;: [
+      &quot;LOW_PEAK_AMPLITUDE&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0004</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav&quot;, &quot;remediated&quot;: &quot;artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 4.32,
+    &quot;globalRms&quot;: 0.00623815,
+    &quot;peakAbs&quot;: 0.16833496,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.28030303,
+    &quot;zeroCrossingRate&quot;: 0.04522635,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  },
+  &quot;remediated&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 2.285,
+    &quot;globalRms&quot;: 0.00855517,
+    &quot;peakAbs&quot;: 0.16833496,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.69117647,
+    &quot;zeroCrossingRate&quot;: 0.05213491,
+    &quot;riskFlags&quot;: [
+      &quot;HIGH_LOW_ENERGY_RATIO_REVIEW_EVENT_PRESENCE&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0005</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 8.0,
+    &quot;globalRms&quot;: 0.00674572,
+    &quot;peakAbs&quot;: 0.04806519,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.0,
+    &quot;zeroCrossingRate&quot;: 0.07081305,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0006</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 4.32,
+    &quot;globalRms&quot;: 0.01491668,
+    &quot;peakAbs&quot;: 0.24252319,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.43939394,
+    &quot;zeroCrossingRate&quot;: 0.11970659,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0007</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 8.0,
+    &quot;globalRms&quot;: 0.00681864,
+    &quot;peakAbs&quot;: 0.01968384,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.0,
+    &quot;zeroCrossingRate&quot;: 0.01368761,
+    &quot;riskFlags&quot;: [
+      &quot;LOW_PEAK_AMPLITUDE&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0008</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 4.32,
+    &quot;globalRms&quot;: 0.01635068,
+    &quot;peakAbs&quot;: 0.17211914,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.40151515,
+    &quot;zeroCrossingRate&quot;: 0.1312519,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0009</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 8.0,
+    &quot;globalRms&quot;: 0.01517822,
+    &quot;peakAbs&quot;: 0.04559326,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.0,
+    &quot;zeroCrossingRate&quot;: 0.02392206,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr><tr><td>procedural_v0_0010</td><td>{&quot;original&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav&quot;, &quot;remediated&quot;: &quot;artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav&quot;}</td><td><pre>{
+  &quot;original&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 4.24,
+    &quot;globalRms&quot;: 0.00576842,
+    &quot;peakAbs&quot;: 0.16723633,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.17829457,
+    &quot;zeroCrossingRate&quot;: 0.04719999,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  },
+  &quot;remediated&quot;: {
+    &quot;status&quot;: &quot;OK&quot;,
+    &quot;path&quot;: &quot;artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav&quot;,
+    &quot;sampleRate&quot;: 16000,
+    &quot;durationSec&quot;: 3.215,
+    &quot;globalRms&quot;: 0.00661154,
+    &quot;peakAbs&quot;: 0.16723633,
+    &quot;clipRatioAbsGe0_999&quot;: 0.0,
+    &quot;lowEnergyFrameRatio&quot;: 0.34020619,
+    &quot;zeroCrossingRate&quot;: 0.05278096,
+    &quot;riskFlags&quot;: [
+      &quot;NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED&quot;
+    ]
+  }
+}</pre></td><td>UNREVIEWED</td></tr></tbody>
+</table>
+</body>
+</html>

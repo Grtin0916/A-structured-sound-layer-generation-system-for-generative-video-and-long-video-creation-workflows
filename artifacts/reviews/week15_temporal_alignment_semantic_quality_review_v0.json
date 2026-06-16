@@ -1,0 +1,496 @@
+{
+  "schemaVersion": "week15.semantic-quality-review.v0",
+  "generatedAtUtc": "2026-06-16T02:29:28.824984+00:00",
+  "sourceScope": "local Mainbase artifacts only",
+  "qualityGateLiteStatus": "SEMANTIC_REVIEW_READY",
+  "humanReviewStatus": "HUMAN_REVIEW_PARTIAL",
+  "auditionStatus": "NOT_PERFORMED",
+  "semanticQualityReviewStatus": "NOT_PERFORMED",
+  "finalMixReadiness": "NOT_CLAIMED",
+  "temporalRegressionGateStatus": "PASS_OR_REPORTED_PASS",
+  "inputs": {
+    "manualReviewDecision": {
+      "path": "artifacts/reviews/week15_temporal_alignment_manual_review_decision.json",
+      "exists": true
+    },
+    "manualReviewPacket": {
+      "path": "artifacts/reviews/week15_temporal_alignment_manual_review_packet.json",
+      "exists": true
+    },
+    "waveformRmsIndex": {
+      "path": "artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+      "exists": true
+    },
+    "alignmentSummary": {
+      "path": "artifacts/evals/week15_temporal_alignment_summary.json",
+      "exists": true
+    },
+    "remediatedSummary": {
+      "path": "artifacts/evals/week15_temporal_alignment_remediated_summary.json",
+      "exists": true
+    },
+    "regressionGate": {
+      "path": "artifacts/evals/week15_temporal_alignment_regression_gate.json",
+      "exists": true
+    }
+  },
+  "missingInputs": [],
+  "candidates": [
+    {
+      "candidateId": "procedural_v0_0001",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0001_slot_v0_0001_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "globalRms": 0.01510237,
+          "peakAbs": 0.04632568,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.0,
+          "zeroCrossingRate": 0.02351581,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        }
+      },
+      "riskFlags": [
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0002",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 4.32,
+          "globalRms": 0.0086961,
+          "peakAbs": 0.16699219,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.60606061,
+          "zeroCrossingRate": 0.06530766,
+          "riskFlags": [
+            "HIGH_LOW_ENERGY_RATIO_REVIEW_EVENT_PRESENCE"
+          ]
+        }
+      },
+      "riskFlags": [
+        "HIGH_LOW_ENERGY_RATIO_REVIEW_EVENT_PRESENCE"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "globalRms": 0.00674433,
+          "peakAbs": 0.02075195,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.0,
+          "zeroCrossingRate": 0.01267197,
+          "riskFlags": [
+            "LOW_PEAK_AMPLITUDE"
+          ]
+        }
+      },
+      "riskFlags": [
+        "LOW_PEAK_AMPLITUDE"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+        "remediated": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 4.32,
+          "globalRms": 0.00623815,
+          "peakAbs": 0.16833496,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.28030303,
+          "zeroCrossingRate": 0.04522635,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        },
+        "remediated": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+          "sampleRate": 16000,
+          "durationSec": 2.285,
+          "globalRms": 0.00855517,
+          "peakAbs": 0.16833496,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.69117647,
+          "zeroCrossingRate": 0.05213491,
+          "riskFlags": [
+            "HIGH_LOW_ENERGY_RATIO_REVIEW_EVENT_PRESENCE"
+          ]
+        }
+      },
+      "riskFlags": [
+        "HIGH_LOW_ENERGY_RATIO_REVIEW_EVENT_PRESENCE",
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0005",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0005_slot_v0_0005_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "globalRms": 0.00674572,
+          "peakAbs": 0.04806519,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.0,
+          "zeroCrossingRate": 0.07081305,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        }
+      },
+      "riskFlags": [
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0006_slot_v0_0006_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 4.32,
+          "globalRms": 0.01491668,
+          "peakAbs": 0.24252319,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.43939394,
+          "zeroCrossingRate": 0.11970659,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        }
+      },
+      "riskFlags": [
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "globalRms": 0.00681864,
+          "peakAbs": 0.01968384,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.0,
+          "zeroCrossingRate": 0.01368761,
+          "riskFlags": [
+            "LOW_PEAK_AMPLITUDE"
+          ]
+        }
+      },
+      "riskFlags": [
+        "LOW_PEAK_AMPLITUDE"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0008_slot_v0_0008_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 4.32,
+          "globalRms": 0.01635068,
+          "peakAbs": 0.17211914,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.40151515,
+          "zeroCrossingRate": 0.1312519,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        }
+      },
+      "riskFlags": [
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0009",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0009_slot_v0_0009_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "globalRms": 0.01517822,
+          "peakAbs": 0.04559326,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.0,
+          "zeroCrossingRate": 0.02392206,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        }
+      },
+      "riskFlags": [
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "audioPaths": {
+        "original": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+        "remediated": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav"
+      },
+      "lightweightAudioMetrics": {
+        "original": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0010_slot_v0_0010_generation_fallback.wav",
+          "sampleRate": 16000,
+          "durationSec": 4.24,
+          "globalRms": 0.00576842,
+          "peakAbs": 0.16723633,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.17829457,
+          "zeroCrossingRate": 0.04719999,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        },
+        "remediated": {
+          "status": "OK",
+          "path": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0010_trimmed_preroll_20ms.wav",
+          "sampleRate": 16000,
+          "durationSec": 3.215,
+          "globalRms": 0.00661154,
+          "peakAbs": 0.16723633,
+          "clipRatioAbsGe0_999": 0.0,
+          "lowEnergyFrameRatio": 0.34020619,
+          "zeroCrossingRate": 0.05278096,
+          "riskFlags": [
+            "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+          ]
+        }
+      },
+      "riskFlags": [
+        "NO_LIGHTWEIGHT_SIGNAL_RISK_DETECTED"
+      ],
+      "reviewChecklist": {
+        "auditionPerformed": false,
+        "keyEventPreservedAfterRemediation": "UNREVIEWED",
+        "semanticMatchToEvent": "UNREVIEWED",
+        "obviousNoiseOrArtifact": "UNREVIEWED",
+        "obviousClipping": "UNREVIEWED",
+        "longSilenceOrMissingEvent": "UNREVIEWED",
+        "acceptableForNextFailureTaxonomy": "UNREVIEWED"
+      },
+      "reviewQuestions": [
+        "修复版是否仍保留关键事件听感？",
+        "裁剪是否误删事件主体或攻击段？",
+        "声音语义是否与对应 event/layer 匹配？",
+        "是否存在明显静音、削波、爆音、噪声或尾部截断？",
+        "是否可以进入下一阶段 failure taxonomy，而不是直接声明 final mix ready？"
+      ]
+    }
+  ],
+  "allowedClaims": [
+    "Temporal alignment signal/visual evidence can be used as review input if the upstream artifacts exist.",
+    "This packet is ready for human audition and semantic-quality checklist filling."
+  ],
+  "blockedClaims": [
+    "Do not claim HUMAN_REVIEW_PASS before real audition is performed.",
+    "Do not claim semantic audio quality PASS from RMS/ZCR/visual evidence alone.",
+    "Do not claim final mix readiness.",
+    "Do not claim production/live dashboard/SLO from this local artifact."
+  ],
+  "nextConsumerHint": {
+    "mainbaseNext": "Fill audition and semantic checklist after listening to original/remediated samples.",
+    "cloudNext": "Consume this JSON into semantic-quality platform index and Prometheus text metrics.",
+    "javaNext": "Expose review-state contract only after Mainbase JSON is stable enough."
+  }
+}
