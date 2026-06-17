@@ -1,0 +1,74 @@
+{
+  "json": "artifacts/reviews/week15_temporal_alignment_registry_backed_audition_queue_strict.json",
+  "csv": "artifacts/reviews/week15_temporal_alignment_registry_backed_audition_queue_strict.csv",
+  "html": "artifacts/reviews/week15_temporal_alignment_registry_backed_audition_queue_strict.html",
+  "items": [
+    {
+      "candidateId": "procedural_v0_0002",
+      "audioTargets": [
+        {
+          "role": "baseline",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+          "exists": true
+        }
+      ],
+      "imageTargets": [],
+      "allRequiredAudioExists": true,
+      "allRequiredImagesExist": true,
+      "auditionStatus": "STRICT_AUDIO_TARGET_READY_PENDING_HUMAN_AUDITION"
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "audioTargets": [
+        {
+          "role": "baseline",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+          "exists": true
+        }
+      ],
+      "imageTargets": [],
+      "allRequiredAudioExists": true,
+      "allRequiredImagesExist": true,
+      "auditionStatus": "STRICT_AUDIO_TARGET_READY_PENDING_HUMAN_AUDITION"
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "audioTargets": [
+        {
+          "role": "baseline",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+          "exists": true
+        },
+        {
+          "role": "remediated",
+          "path": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+          "exists": true
+        }
+      ],
+      "imageTargets": [
+        {
+          "role": "waveform_rms_original_vs_remediated",
+          "path": "artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png",
+          "exists": true
+        }
+      ],
+      "allRequiredAudioExists": true,
+      "allRequiredImagesExist": true,
+      "auditionStatus": "STRICT_AUDIO_TARGET_READY_PENDING_HUMAN_AUDITION"
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "audioTargets": [
+        {
+          "role": "baseline",
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav",
+          "exists": true
+        }
+      ],
+      "imageTargets": [],
+      "allRequiredAudioExists": true,
+      "allRequiredImagesExist": true,
+      "auditionStatus": "STRICT_AUDIO_TARGET_READY_PENDING_HUMAN_AUDITION"
+    }
+  ]
+}
