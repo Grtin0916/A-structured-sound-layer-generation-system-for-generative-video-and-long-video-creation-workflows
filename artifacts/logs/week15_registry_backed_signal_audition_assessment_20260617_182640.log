@@ -1,0 +1,129 @@
+{
+  "outJson": "artifacts/reviews/week15_temporal_alignment_registry_backed_signal_audition_assessment.json",
+  "outCsv": "artifacts/reviews/week15_temporal_alignment_registry_backed_signal_audition_assessment.csv",
+  "decision": "SIGNAL_ASSESSMENT_PARTIAL_NOT_HUMAN_REVIEW_PASS",
+  "items": [
+    {
+      "candidateId": "procedural_v0_0002",
+      "signalJudgement": "UNCERTAIN",
+      "timingJudgement": "UNCERTAIN",
+      "semanticJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "role": "baseline",
+          "durationSec": 4.32,
+          "burstCount": 7,
+          "burstIntervals": [
+            {
+              "startSec": 0.24,
+              "endSec": 0.28,
+              "maxFrameRms": 0.048057
+            },
+            {
+              "startSec": 0.85,
+              "endSec": 0.9,
+              "maxFrameRms": 0.046402
+            },
+            {
+              "startSec": 1.47,
+              "endSec": 1.51,
+              "maxFrameRms": 0.048067
+            },
+            {
+              "startSec": 2.09,
+              "endSec": 2.13,
+              "maxFrameRms": 0.046773
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "signalJudgement": "UNCERTAIN",
+      "timingJudgement": "UNCERTAIN",
+      "semanticJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "role": "baseline",
+          "durationSec": 8.0,
+          "burstCount": 1,
+          "burstIntervals": [
+            {
+              "startSec": 0.03,
+              "endSec": 7.96,
+              "maxFrameRms": 0.010551
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "signalJudgement": "PASS_SIGNAL_SUPPORTED",
+      "timingJudgement": "PASS_SIGNAL_SUPPORTED",
+      "semanticJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "role": "baseline",
+          "durationSec": 4.32,
+          "burstCount": 2,
+          "burstIntervals": [
+            {
+              "startSec": 2.06,
+              "endSec": 2.11,
+              "maxFrameRms": 0.061029
+            },
+            {
+              "startSec": 2.32,
+              "endSec": 2.37,
+              "maxFrameRms": 0.060684
+            }
+          ]
+        },
+        {
+          "role": "remediated",
+          "durationSec": 2.285,
+          "burstCount": 2,
+          "burstIntervals": [
+            {
+              "startSec": 0.02,
+              "endSec": 0.08,
+              "maxFrameRms": 0.056879
+            },
+            {
+              "startSec": 0.28,
+              "endSec": 0.34,
+              "maxFrameRms": 0.057044
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "signalJudgement": "UNCERTAIN",
+      "timingJudgement": "UNCERTAIN",
+      "semanticJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "role": "baseline",
+          "durationSec": 8.0,
+          "burstCount": 1,
+          "burstIntervals": [
+            {
+              "startSec": 0.02,
+              "endSec": 7.97,
+              "maxFrameRms": 0.010218
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "importantVisualPath": "artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png"
+}

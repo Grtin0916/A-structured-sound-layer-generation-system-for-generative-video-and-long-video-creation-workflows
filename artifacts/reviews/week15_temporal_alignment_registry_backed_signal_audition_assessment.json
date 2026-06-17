@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "week15.mainbase.temporal-alignment.registry-backed-signal-audition-assessment.v1",
+  "generatedAtUtc": "2026-06-17T10:26:40.420223+00:00",
+  "sourceQueue": "artifacts/reviews/week15_temporal_alignment_registry_backed_audition_queue_strict.json",
+  "decision": "SIGNAL_ASSESSMENT_PARTIAL_NOT_HUMAN_REVIEW_PASS",
+  "claimBoundary": "Non-interactive signal assessment only. HUMAN_REVIEW_PASS is not claimed.",
+  "visualAssessment": {
+    "importantVisualPath": "artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png",
+    "subjectiveRead": "The visual suggests remediation moved 0004's main energy bursts from late in the clip to near the start, but the original panel's onset-proxy annotation near 0.032s conflicts with the visible waveform energy around 2s.",
+    "risk": "POSSIBLE_ONSET_PROXY_ANNOTATION_BUG_OR_OVER_SENSITIVE_THRESHOLD"
+  },
+  "items": [
+    {
+      "candidateId": "procedural_v0_0002",
+      "signalJudgement": "UNCERTAIN",
+      "semanticJudgement": "UNCERTAIN",
+      "timingJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0002_slot_v0_0002_generation_fallback.wav",
+          "exists": true,
+          "sampleRate": 16000,
+          "durationSec": 4.32,
+          "peakAbs": 0.166992,
+          "rms": 0.008696,
+          "frameRmsMax": 0.048215,
+          "burstThreshold": 0.009643,
+          "burstIntervals": [
+            {
+              "startSec": 0.24,
+              "endSec": 0.28,
+              "maxFrameRms": 0.048057
+            },
+            {
+              "startSec": 0.85,
+              "endSec": 0.9,
+              "maxFrameRms": 0.046402
+            },
+            {
+              "startSec": 1.47,
+              "endSec": 1.51,
+              "maxFrameRms": 0.048067
+            },
+            {
+              "startSec": 2.09,
+              "endSec": 2.13,
+              "maxFrameRms": 0.046773
+            },
+            {
+              "startSec": 2.7,
+              "endSec": 2.75,
+              "maxFrameRms": 0.048215
+            },
+            {
+              "startSec": 3.32,
+              "endSec": 3.36,
+              "maxFrameRms": 0.046992
+            },
+            {
+              "startSec": 3.94,
+              "endSec": 3.98,
+              "maxFrameRms": 0.047515
+            }
+          ],
+          "burstCount": 7,
+          "role": "baseline"
+        }
+      ],
+      "imageReports": [],
+      "notes": "Baseline audio exists and is measurable. No remediated pair is available for this candidate; semantic/timing usability cannot be promoted without human listening and event context."
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "signalJudgement": "UNCERTAIN",
+      "semanticJudgement": "UNCERTAIN",
+      "timingJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0003_slot_v0_0003_generation_fallback.wav",
+          "exists": true,
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "peakAbs": 0.020752,
+          "rms": 0.006744,
+          "frameRmsMax": 0.010551,
+          "burstThreshold": 0.003,
+          "burstIntervals": [
+            {
+              "startSec": 0.03,
+              "endSec": 7.96,
+              "maxFrameRms": 0.010551
+            }
+          ],
+          "burstCount": 1,
+          "role": "baseline"
+        }
+      ],
+      "imageReports": [],
+      "notes": "Baseline audio exists and is measurable. No remediated pair is available for this candidate; semantic/timing usability cannot be promoted without human listening and event context."
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "signalJudgement": "PASS_SIGNAL_SUPPORTED",
+      "semanticJudgement": "UNCERTAIN",
+      "timingJudgement": "PASS_SIGNAL_SUPPORTED",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0004_slot_v0_0004_generation_fallback.wav",
+          "exists": true,
+          "sampleRate": 16000,
+          "durationSec": 4.32,
+          "peakAbs": 0.168335,
+          "rms": 0.006238,
+          "frameRmsMax": 0.061029,
+          "burstThreshold": 0.012206,
+          "burstIntervals": [
+            {
+              "startSec": 2.06,
+              "endSec": 2.11,
+              "maxFrameRms": 0.061029
+            },
+            {
+              "startSec": 2.32,
+              "endSec": 2.37,
+              "maxFrameRms": 0.060684
+            }
+          ],
+          "burstCount": 2,
+          "role": "baseline"
+        },
+        {
+          "path": "artifacts/audio_candidates/week15_temporal_alignment_remediated/procedural_v0_0004_trimmed_preroll_20ms.wav",
+          "exists": true,
+          "sampleRate": 16000,
+          "durationSec": 2.285,
+          "peakAbs": 0.168335,
+          "rms": 0.008555,
+          "frameRmsMax": 0.057044,
+          "burstThreshold": 0.011409,
+          "burstIntervals": [
+            {
+              "startSec": 0.02,
+              "endSec": 0.08,
+              "maxFrameRms": 0.056879
+            },
+            {
+              "startSec": 0.28,
+              "endSec": 0.34,
+              "maxFrameRms": 0.057044
+            }
+          ],
+          "burstCount": 2,
+          "role": "remediated"
+        }
+      ],
+      "imageReports": [
+        {
+          "role": "waveform_rms_original_vs_remediated",
+          "path": "artifacts/figures/week15_temporal_alignment/procedural_v0_0004_waveform_rms_original_vs_remediated.png",
+          "exists": true,
+          "sizeBytes": 156840
+        }
+      ],
+      "notes": "0004 remediated preserves the main two-burst structure and moves first strong burst from ~2.06s to ~0.02s. However, semantic judgement still requires human listening. Existing waveform figure appears to show an original onset-proxy annotation near 0.032s despite visible high-energy bursts around 2s, so the figure annotation should be treated with caution."
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "signalJudgement": "UNCERTAIN",
+      "semanticJudgement": "UNCERTAIN",
+      "timingJudgement": "UNCERTAIN",
+      "humanReviewStatus": "NOT_PERFORMED",
+      "audioReports": [
+        {
+          "path": "artifacts/audio_candidates/week12_procedural_baseline_v0/0007_slot_v0_0007_generation_fallback.wav",
+          "exists": true,
+          "sampleRate": 16000,
+          "durationSec": 8.0,
+          "peakAbs": 0.019684,
+          "rms": 0.006819,
+          "frameRmsMax": 0.010218,
+          "burstThreshold": 0.003,
+          "burstIntervals": [
+            {
+              "startSec": 0.02,
+              "endSec": 7.97,
+              "maxFrameRms": 0.010218
+            }
+          ],
+          "burstCount": 1,
+          "role": "baseline"
+        }
+      ],
+      "imageReports": [],
+      "notes": "Baseline audio exists and is measurable. No remediated pair is available for this candidate; semantic/timing usability cannot be promoted without human listening and event context."
+    }
+  ]
+}
