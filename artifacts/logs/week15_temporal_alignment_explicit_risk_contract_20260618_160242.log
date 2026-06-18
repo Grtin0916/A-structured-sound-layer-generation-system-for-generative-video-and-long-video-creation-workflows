@@ -1,0 +1,21 @@
+{
+  "decision": "PASS",
+  "failures": [],
+  "candidateTotal": 10,
+  "actionableRiskCandidateIds": [
+    "procedural_v0_0004",
+    "procedural_v0_0010"
+  ],
+  "nonActionableCandidateIds": [
+    "procedural_v0_0001",
+    "procedural_v0_0002",
+    "procedural_v0_0003",
+    "procedural_v0_0005",
+    "procedural_v0_0006",
+    "procedural_v0_0007",
+    "procedural_v0_0008",
+    "procedural_v0_0009"
+  ],
+  "outJson": "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+  "outCsv": "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv"
+}

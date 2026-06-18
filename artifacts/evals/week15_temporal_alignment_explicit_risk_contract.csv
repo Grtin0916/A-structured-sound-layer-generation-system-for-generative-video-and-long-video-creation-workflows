@@ -1,0 +1,11 @@
+candidateId,riskClass,actionability,evidenceType,alertEligible,requiresHumanReview,sourceCount,reason
+procedural_v0_0001,mentioned_only,non_actionable_context,context_mention,False,False,4,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0002,mentioned_only,non_actionable_context,context_mention,False,False,5,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0003,mentioned_only,non_actionable_context,context_mention,False,False,5,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0004,remediation_or_drift,actionable,temporal_alignment_drift_remediation,True,False,6,Candidate belongs to the Week15 original drift/remediation pair and has remediation evidence.
+procedural_v0_0005,mentioned_only,non_actionable_context,context_mention,False,False,4,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0006,mentioned_only,non_actionable_context,context_mention,False,False,4,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0007,mentioned_only,non_actionable_context,context_mention,False,False,5,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0008,mentioned_only,non_actionable_context,context_mention,False,False,4,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0009,mentioned_only,non_actionable_context,context_mention,False,False,4,Candidate is mentioned in Week15 evidence but is not part of the explicit drift/remediation action set.
+procedural_v0_0010,remediation_or_drift,actionable,temporal_alignment_drift_remediation,True,False,6,Candidate belongs to the Week15 original drift/remediation pair and has remediation evidence.
