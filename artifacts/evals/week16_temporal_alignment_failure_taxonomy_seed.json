@@ -1,0 +1,388 @@
+{
+  "schemaVersion": "week16.temporal_alignment.failure_taxonomy_seed.v3",
+  "generatedAtUtc": "2026-06-22T14:33:33.612498+00:00",
+  "decision": "PASS_WEEK16_TEMPORAL_ALIGNMENT_FAILURE_TAXONOMY_SEED_V3_SOURCE_CLEAN",
+  "decisionErrors": [],
+  "allowedSourceFiles": [
+    "artifacts/evals/week15_temporal_alignment.csv",
+    "artifacts/evals/week15_temporal_alignment_summary.json",
+    "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+    "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+    "artifacts/evals/week15_temporal_alignment_regression_gate.json",
+    "artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+    "artifacts/evals/week15_temporal_alignment_remediated.csv",
+    "artifacts/evals/week15_temporal_alignment_remediated_summary.json",
+    "artifacts/evals/week15_temporal_alignment_waveform_rms_index.json"
+  ],
+  "git": {
+    "head": "2689658",
+    "originMain": "2689658",
+    "aheadBehind": "0\t0"
+  },
+  "summary": {
+    "candidateTotal": 10,
+    "actionableTimingDriftCount": 2,
+    "primaryActionableCandidateIds": [
+      "procedural_v0_0004",
+      "procedural_v0_0010"
+    ],
+    "bucketCounts": {
+      "pass_low_risk_with_numeric_margin": 7,
+      "timing_drift_actionable_remediated": 2,
+      "warn_near_miss_threshold_margin": 1
+    },
+    "statusKnownCount": 10,
+    "deltaKnownCount": 10,
+    "remediatedEvidenceKnownCount": 10,
+    "waveformEvidenceKnownCount": 2,
+    "nearMissCandidateIds": [
+      "procedural_v0_0007"
+    ],
+    "interpretation": "Source-clean W16 taxonomy seed: original alignment, remediation, actionability and waveform evidence are kept separate."
+  },
+  "taxonomyRows": [
+    {
+      "candidateId": "procedural_v0_0001",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.20499999821186066,
+      "originalAbsOnsetDeltaSec": 0.20499999821186066,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.20499999821186066,
+      "remediatedAbsOnsetDeltaSec": 0.20499999821186066,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0002",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.23499999940395355,
+      "originalAbsOnsetDeltaSec": 0.23499999940395355,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.23499999940395355,
+      "remediatedAbsOnsetDeltaSec": 0.23499999940395355,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.10499999672174454,
+      "originalAbsOnsetDeltaSec": 0.10499999672174454,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.10499999672174454,
+      "remediatedAbsOnsetDeltaSec": 0.10499999672174454,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "originalStatus": "FAIL_DRIFT",
+      "originalOnsetDeltaSec": 2.055000066757202,
+      "originalAbsOnsetDeltaSec": 2.055000066757202,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.02500000037252903,
+      "remediatedAbsOnsetDeltaSec": 0.02500000037252903,
+      "actionable": true,
+      "alertEligible": true,
+      "remediationAction": "trimmed",
+      "hasWaveformEvidence": true,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_regression_gate.json",
+        "artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json",
+        "artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+        "week15_explicit_actionable_ids"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "alertEligible": "week15_explicit_actionable_ids",
+        "remediationAction": "artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "hasWaveformEvidence": "artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+        "actionable": "week15_explicit_actionable_ids"
+      },
+      "w16FailureBucket": "timing_drift_actionable_remediated",
+      "severity": "P1",
+      "recommendedNextAction": "Keep original FAIL and remediated PASS as paired regression fixture; preserve waveform/RMS evidence."
+    },
+    {
+      "candidateId": "procedural_v0_0005",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.0949999988079071,
+      "originalAbsOnsetDeltaSec": 0.0949999988079071,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.0949999988079071,
+      "remediatedAbsOnsetDeltaSec": 0.0949999988079071,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.13500000536441803,
+      "originalAbsOnsetDeltaSec": 0.13500000536441803,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.13500000536441803,
+      "remediatedAbsOnsetDeltaSec": 0.13500000536441803,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "originalStatus": "WARN_NEAR_MISS",
+      "originalOnsetDeltaSec": 0.3050000071525574,
+      "originalAbsOnsetDeltaSec": 0.3050000071525574,
+      "remediatedStatus": "WARN_NEAR_MISS",
+      "remediatedOnsetDeltaSec": 0.3050000071525574,
+      "remediatedAbsOnsetDeltaSec": 0.3050000071525574,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "warn_near_miss_threshold_margin",
+      "severity": "P2",
+      "recommendedNextAction": "Use as threshold-margin fixture; test sensitivity before changing alert thresholds."
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.22499999403953552,
+      "originalAbsOnsetDeltaSec": 0.22499999403953552,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.22499999403953552,
+      "remediatedAbsOnsetDeltaSec": 0.22499999403953552,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0009",
+      "originalStatus": "PASS",
+      "originalOnsetDeltaSec": 0.125,
+      "originalAbsOnsetDeltaSec": 0.125,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.125,
+      "remediatedAbsOnsetDeltaSec": 0.125,
+      "actionable": false,
+      "alertEligible": false,
+      "remediationAction": "",
+      "hasWaveformEvidence": false,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv"
+      },
+      "w16FailureBucket": "pass_low_risk_with_numeric_margin",
+      "severity": "P4",
+      "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution."
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "originalStatus": "FAIL_DRIFT",
+      "originalOnsetDeltaSec": 1.044999957084656,
+      "originalAbsOnsetDeltaSec": 1.044999957084656,
+      "remediatedStatus": "PASS",
+      "remediatedOnsetDeltaSec": 0.02500000037252903,
+      "remediatedAbsOnsetDeltaSec": 0.02500000037252903,
+      "actionable": true,
+      "alertEligible": true,
+      "remediationAction": "trimmed",
+      "hasWaveformEvidence": true,
+      "sourceFiles": [
+        "artifacts/evals/week15_temporal_alignment.csv",
+        "artifacts/evals/week15_temporal_alignment_summary.json",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv",
+        "artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json",
+        "artifacts/evals/week15_temporal_alignment_regression_gate.json",
+        "artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+        "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "artifacts/evals/week15_temporal_alignment_remediated_summary.json",
+        "artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+        "week15_explicit_actionable_ids"
+      ],
+      "fieldSources": {
+        "originalStatus": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "originalAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment.csv",
+        "alertEligible": "week15_explicit_actionable_ids",
+        "remediationAction": "artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+        "remediatedStatus": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "remediatedAbsOnsetDeltaSec": "artifacts/evals/week15_temporal_alignment_remediated.csv",
+        "hasWaveformEvidence": "artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+        "actionable": "week15_explicit_actionable_ids"
+      },
+      "w16FailureBucket": "timing_drift_actionable_remediated",
+      "severity": "P1",
+      "recommendedNextAction": "Keep original FAIL and remediated PASS as paired regression fixture; preserve waveform/RMS evidence."
+    }
+  ],
+  "boundary": [
+    "Generated only from Week15 temporal alignment evidence, not Week16 self outputs.",
+    "Week12 probes are excluded from decision evidence.",
+    "Does not claim semantic audio quality pass.",
+    "Does not claim human review pass.",
+    "Does not claim final mix readiness."
+  ]
+}

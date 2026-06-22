@@ -1,0 +1,27 @@
+{
+  "decision": "PASS_WEEK16_TEMPORAL_ALIGNMENT_FAILURE_TAXONOMY_SEED_V3_SOURCE_CLEAN",
+  "decisionErrors": [],
+  "summary": {
+    "candidateTotal": 10,
+    "actionableTimingDriftCount": 2,
+    "primaryActionableCandidateIds": [
+      "procedural_v0_0004",
+      "procedural_v0_0010"
+    ],
+    "bucketCounts": {
+      "pass_low_risk_with_numeric_margin": 7,
+      "timing_drift_actionable_remediated": 2,
+      "warn_near_miss_threshold_margin": 1
+    },
+    "statusKnownCount": 10,
+    "deltaKnownCount": 10,
+    "remediatedEvidenceKnownCount": 10,
+    "waveformEvidenceKnownCount": 2,
+    "nearMissCandidateIds": [
+      "procedural_v0_0007"
+    ],
+    "interpretation": "Source-clean W16 taxonomy seed: original alignment, remediation, actionability and waveform evidence are kept separate."
+  },
+  "outJson": "artifacts/evals/week16_temporal_alignment_failure_taxonomy_seed.json",
+  "outCsv": "artifacts/evals/week16_temporal_alignment_failure_taxonomy_seed.csv"
+}
