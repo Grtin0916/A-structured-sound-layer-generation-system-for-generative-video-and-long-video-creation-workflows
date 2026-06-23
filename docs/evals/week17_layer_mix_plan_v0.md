@@ -9,9 +9,11 @@ Convert the S3-to-W17 readiness gate into a concrete layer-mix input plan.
 - Selected control inputs: 7
 - Blocked regression fixtures: 2
 - Monitor-only threshold fixtures: 1
-- Audio artifact available inputs: 0
-- Audio artifact missing inputs: 10
-- Mix execution readiness: BLOCKED_WEEK17_LAYER_MIX_EXECUTION_AUDIO_ARTIFACTS_MISSING
+- Audio artifact available inputs: 7
+- Audio artifact missing inputs: 3
+- Selected control artifact available inputs: 7
+- Selected control artifact missing inputs: 0
+- Mix execution readiness: READY_WEEK17_LAYER_MIX_EXECUTION_SELECTED_CONTROL_INPUTS_AVAILABLE
 
 ## Boundary
 

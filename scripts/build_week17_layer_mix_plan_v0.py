@@ -111,10 +111,17 @@ def main() -> int:
     )
     audio_artifact_missing_total = len(all_plan_items) - audio_artifact_available_total
 
+    selected_control_artifact_available_total = sum(
+        1 for item in selected_controls if item.get("artifactPathStatus") == "FOUND"
+    )
+    selected_control_artifact_missing_total = (
+        len(selected_controls) - selected_control_artifact_available_total
+    )
+
     mix_execution_readiness_decision = (
-        "READY_WEEK17_LAYER_MIX_EXECUTION_INPUT_ARTIFACTS_AVAILABLE"
-        if audio_artifact_missing_total == 0
-        else "BLOCKED_WEEK17_LAYER_MIX_EXECUTION_AUDIO_ARTIFACTS_MISSING"
+        "READY_WEEK17_LAYER_MIX_EXECUTION_SELECTED_CONTROL_INPUTS_AVAILABLE"
+        if selected_control_artifact_missing_total == 0
+        else "BLOCKED_WEEK17_LAYER_MIX_EXECUTION_SELECTED_CONTROL_AUDIO_ARTIFACTS_MISSING"
     )
 
     plan = {
@@ -122,6 +129,8 @@ def main() -> int:
         "mixExecutionReadinessDecision": mix_execution_readiness_decision,
         "audioArtifactAvailableTotal": audio_artifact_available_total,
         "audioArtifactMissingTotal": audio_artifact_missing_total,
+        "selectedControlArtifactAvailableTotal": selected_control_artifact_available_total,
+        "selectedControlArtifactMissingTotal": selected_control_artifact_missing_total,
         "generatedAtUtc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "schemaVersion": "week17.layer_mix_plan.v0",
         "sourceReadinessArtifact": str(READINESS_JSON),
@@ -131,7 +140,7 @@ def main() -> int:
         "blockedRegressionFixtureTotal": len(blocked_regression),
         "monitorOnlyFixtureTotal": len(monitor_only),
         "realMixerExecuted": False,
-        "realMixerExecutionAllowed": audio_artifact_missing_total == 0,
+        "realMixerExecutionAllowed": selected_control_artifact_missing_total == 0,
         "wavExported": False,
         "finalMixReadinessClaimed": False,
         "semanticAudioQualityClaimed": False,
@@ -187,6 +196,8 @@ def main() -> int:
         f"- Monitor-only threshold fixtures: {len(monitor_only)}\n"
         f"- Audio artifact available inputs: {audio_artifact_available_total}\n"
         f"- Audio artifact missing inputs: {audio_artifact_missing_total}\n"
+        f"- Selected control artifact available inputs: {selected_control_artifact_available_total}\n"
+        f"- Selected control artifact missing inputs: {selected_control_artifact_missing_total}\n"
         f"- Mix execution readiness: {mix_execution_readiness_decision}\n\n"
         "## Boundary\n\n"
         "- This plan does not execute a real layer mixer.\n"
@@ -205,6 +216,8 @@ def main() -> int:
         "mixExecutionReadinessDecision": plan["mixExecutionReadinessDecision"],
         "audioArtifactAvailableTotal": plan["audioArtifactAvailableTotal"],
         "audioArtifactMissingTotal": plan["audioArtifactMissingTotal"],
+        "selectedControlArtifactAvailableTotal": plan["selectedControlArtifactAvailableTotal"],
+        "selectedControlArtifactMissingTotal": plan["selectedControlArtifactMissingTotal"],
         "realMixerExecuted": plan["realMixerExecuted"],
         "realMixerExecutionAllowed": plan["realMixerExecutionAllowed"],
         "wavExported": plan["wavExported"],
