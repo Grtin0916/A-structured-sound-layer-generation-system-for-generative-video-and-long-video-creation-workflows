@@ -1,0 +1,10 @@
+decision=PASS_WEEK16_FAILURE_REGRESSION_REPORT_V0_EVIDENCE_DRIVEN
+decisionErrors=[]
+classificationMode=evidence_driven_with_expected_fixture_consistency_guard
+sourceMode=json
+candidateTotal=10
+p1RegressionFixtureIds=['procedural_v0_0004', 'procedural_v0_0010']
+thresholdFixtureIds=['procedural_v0_0007']
+passControlTotal=7
+evidenceGapFixtureTotal=0
+blockedClaimTotal=6

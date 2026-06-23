@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "week16.failure_regression_report.v0",
+  "classificationMode": "evidence_driven_with_expected_fixture_consistency_guard",
+  "generatedAt": "2026-06-23T07:57:22.904234+00:00",
+  "decision": "PASS_WEEK16_FAILURE_REGRESSION_REPORT_V0_EVIDENCE_DRIVEN",
+  "decisionErrors": [],
+  "sourceMode": "json",
+  "sourceFiles": [
+    "artifacts/evals/week16_temporal_alignment_failure_taxonomy_seed.json",
+    "artifacts/evals/week16_temporal_alignment_failure_taxonomy_seed.csv"
+  ],
+  "summary": {
+    "candidateTotal": 10,
+    "p1RegressionFixtureTotal": 2,
+    "thresholdFixtureTotal": 1,
+    "passControlTotal": 7,
+    "evidenceGapFixtureTotal": 0,
+    "p1RegressionFixtureIds": [
+      "procedural_v0_0004",
+      "procedural_v0_0010"
+    ],
+    "thresholdFixtureIds": [
+      "procedural_v0_0007"
+    ],
+    "passControlIds": [
+      "procedural_v0_0001",
+      "procedural_v0_0002",
+      "procedural_v0_0003",
+      "procedural_v0_0005",
+      "procedural_v0_0006",
+      "procedural_v0_0008",
+      "procedural_v0_0009"
+    ],
+    "evidenceGapFixtureIds": [],
+    "blockedClaimTotal": 6,
+    "blockedClaims": [
+      "semantic_audio_quality_pass_not_verified",
+      "human_review_pass_not_verified",
+      "final_mix_readiness_not_verified",
+      "live_java_service_availability_not_verified",
+      "live_prometheus_or_grafana_import_not_verified",
+      "production_slo_or_real_cloud_deployment_not_verified"
+    ]
+  },
+  "records": [
+    {
+      "candidateId": "procedural_v0_0001",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0001",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.20499999821186066,
+        "originalAbsOnsetDeltaSec": 0.20499999821186066,
+        "remediatedOnsetDeltaSec": 0.20499999821186066,
+        "remediatedAbsOnsetDeltaSec": 0.20499999821186066,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0002",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0002",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.23499999940395355,
+        "originalAbsOnsetDeltaSec": 0.23499999940395355,
+        "remediatedOnsetDeltaSec": 0.23499999940395355,
+        "remediatedAbsOnsetDeltaSec": 0.23499999940395355,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0003",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.10499999672174454,
+        "originalAbsOnsetDeltaSec": 0.10499999672174454,
+        "remediatedOnsetDeltaSec": 0.10499999672174454,
+        "remediatedAbsOnsetDeltaSec": 0.10499999672174454,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "failureBucket": "P1_ACTIONABLE_REMEDIATED_TIMING_DRIFT",
+      "severity": "P1",
+      "fixtureRole": "paired_regression_fixture",
+      "eligibleForRerun": true,
+      "rerunReason": "evidence shows actionable timing drift that was remediated; preserve original/remediated pair",
+      "nextAction": "Use as paired fixture for rerun-plan and future regression checks.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P1 OR timing_drift_actionable_remediated OR FAIL->PASS actionable+alertEligible",
+        "originalStatus": "FAIL_DRIFT",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "timing_drift_actionable_remediated",
+        "seedSeverity": "P1",
+        "actionable": true,
+        "alertEligible": true
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0004",
+        "originalStatus": "FAIL_DRIFT",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 2.055000066757202,
+        "originalAbsOnsetDeltaSec": 2.055000066757202,
+        "remediatedOnsetDeltaSec": 0.02500000037252903,
+        "remediatedAbsOnsetDeltaSec": 0.02500000037252903,
+        "actionable": true,
+        "alertEligible": true,
+        "hasWaveformEvidence": true,
+        "seedFailureBucket": "timing_drift_actionable_remediated",
+        "seedSeverity": "P1",
+        "recommendedNextAction": "Keep original FAIL and remediated PASS as paired regression fixture; preserve waveform/RMS evidence.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_regression_gate.json', 'artifacts/evals/week15_temporal_alignment_remediation_plan.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json', 'artifacts/evals/week15_temporal_alignment_waveform_rms_index.json', 'week15_explicit_actionable_ids']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0005",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0005",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.0949999988079071,
+        "originalAbsOnsetDeltaSec": 0.0949999988079071,
+        "remediatedOnsetDeltaSec": 0.0949999988079071,
+        "remediatedAbsOnsetDeltaSec": 0.0949999988079071,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0006",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.13500000536441803,
+        "originalAbsOnsetDeltaSec": 0.13500000536441803,
+        "remediatedOnsetDeltaSec": 0.13500000536441803,
+        "remediatedAbsOnsetDeltaSec": 0.13500000536441803,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "failureBucket": "P2_WARN_NEAR_MISS_THRESHOLD_MARGIN",
+      "severity": "P2",
+      "fixtureRole": "threshold_margin_fixture",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows near-threshold margin; monitor boundary instead of triggering actionable rerun",
+      "nextAction": "Use as threshold boundary guard; do not alert as actionable failure.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P2 OR warn_near_miss bucket/status",
+        "originalStatus": "WARN_NEAR_MISS",
+        "remediatedStatus": "WARN_NEAR_MISS",
+        "seedFailureBucket": "warn_near_miss_threshold_margin",
+        "seedSeverity": "P2",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0007",
+        "originalStatus": "WARN_NEAR_MISS",
+        "remediatedStatus": "WARN_NEAR_MISS",
+        "originalOnsetDeltaSec": 0.3050000071525574,
+        "originalAbsOnsetDeltaSec": 0.3050000071525574,
+        "remediatedOnsetDeltaSec": 0.3050000071525574,
+        "remediatedAbsOnsetDeltaSec": 0.3050000071525574,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "warn_near_miss_threshold_margin",
+        "seedSeverity": "P2",
+        "recommendedNextAction": "Use as threshold-margin fixture; test sensitivity before changing alert thresholds.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0008",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.22499999403953552,
+        "originalAbsOnsetDeltaSec": 0.22499999403953552,
+        "remediatedOnsetDeltaSec": 0.22499999403953552,
+        "remediatedAbsOnsetDeltaSec": 0.22499999403953552,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0009",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0009",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 0.125,
+        "originalAbsOnsetDeltaSec": 0.125,
+        "remediatedOnsetDeltaSec": 0.125,
+        "remediatedAbsOnsetDeltaSec": 0.125,
+        "actionable": false,
+        "alertEligible": false,
+        "hasWaveformEvidence": false,
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "recommendedNextAction": "Use as control sample; retain numeric margin for regression distribution.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json']"
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "failureBucket": "P1_ACTIONABLE_REMEDIATED_TIMING_DRIFT",
+      "severity": "P1",
+      "fixtureRole": "paired_regression_fixture",
+      "eligibleForRerun": true,
+      "rerunReason": "evidence shows actionable timing drift that was remediated; preserve original/remediated pair",
+      "nextAction": "Use as paired fixture for rerun-plan and future regression checks.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P1 OR timing_drift_actionable_remediated OR FAIL->PASS actionable+alertEligible",
+        "originalStatus": "FAIL_DRIFT",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "timing_drift_actionable_remediated",
+        "seedSeverity": "P1",
+        "actionable": true,
+        "alertEligible": true
+      },
+      "seedEvidence": {
+        "candidateId": "procedural_v0_0010",
+        "originalStatus": "FAIL_DRIFT",
+        "remediatedStatus": "PASS",
+        "originalOnsetDeltaSec": 1.044999957084656,
+        "originalAbsOnsetDeltaSec": 1.044999957084656,
+        "remediatedOnsetDeltaSec": 0.02500000037252903,
+        "remediatedAbsOnsetDeltaSec": 0.02500000037252903,
+        "actionable": true,
+        "alertEligible": true,
+        "hasWaveformEvidence": true,
+        "seedFailureBucket": "timing_drift_actionable_remediated",
+        "seedSeverity": "P1",
+        "recommendedNextAction": "Keep original FAIL and remediated PASS as paired regression fixture; preserve waveform/RMS evidence.",
+        "sourceFiles": "['artifacts/evals/week15_temporal_alignment.csv', 'artifacts/evals/week15_temporal_alignment_summary.json', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.csv', 'artifacts/evals/week15_temporal_alignment_explicit_risk_contract.json', 'artifacts/evals/week15_temporal_alignment_regression_gate.json', 'artifacts/evals/week15_temporal_alignment_remediation_plan.json', 'artifacts/evals/week15_temporal_alignment_remediated.csv', 'artifacts/evals/week15_temporal_alignment_remediated_summary.json', 'artifacts/evals/week15_temporal_alignment_waveform_rms_index.json', 'week15_explicit_actionable_ids']"
+      }
+    }
+  ],
+  "downstreamContract": {
+    "javaRerunPlanRequiredFields": [
+      "candidateId",
+      "failureBucket",
+      "eligibleForRerun",
+      "rerunReason",
+      "idempotencyKeyPolicy",
+      "previousAttemptPreserved"
+    ],
+    "cloudFaultDrillInputs": [
+      "failureBucket",
+      "severity",
+      "fixtureRole",
+      "blockedClaims",
+      "classificationEvidence"
+    ],
+    "blockedClaimsBoundary": "Do not claim semantic quality pass, human review pass, final mix readiness, live Java availability, live Grafana/Prometheus import, production SLO, or real cloud deployment."
+  }
+}

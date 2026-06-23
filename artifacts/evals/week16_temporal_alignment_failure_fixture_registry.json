@@ -1,0 +1,269 @@
+{
+  "schemaVersion": "week16.failure_fixture_registry.v0",
+  "classificationMode": "evidence_driven_with_expected_fixture_consistency_guard",
+  "generatedAt": "2026-06-23T07:57:22.904234+00:00",
+  "decision": "PASS_WEEK16_FAILURE_REGRESSION_REPORT_V0_EVIDENCE_DRIVEN",
+  "decisionErrors": [],
+  "fixtures": [
+    {
+      "candidateId": "procedural_v0_0001",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0002",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0004",
+      "failureBucket": "P1_ACTIONABLE_REMEDIATED_TIMING_DRIFT",
+      "severity": "P1",
+      "fixtureRole": "paired_regression_fixture",
+      "eligibleForRerun": true,
+      "rerunReason": "evidence shows actionable timing drift that was remediated; preserve original/remediated pair",
+      "nextAction": "Use as paired fixture for rerun-plan and future regression checks.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P1 OR timing_drift_actionable_remediated OR FAIL->PASS actionable+alertEligible",
+        "originalStatus": "FAIL_DRIFT",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "timing_drift_actionable_remediated",
+        "seedSeverity": "P1",
+        "actionable": true,
+        "alertEligible": true
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0005",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0007",
+      "failureBucket": "P2_WARN_NEAR_MISS_THRESHOLD_MARGIN",
+      "severity": "P2",
+      "fixtureRole": "threshold_margin_fixture",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows near-threshold margin; monitor boundary instead of triggering actionable rerun",
+      "nextAction": "Use as threshold boundary guard; do not alert as actionable failure.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P2 OR warn_near_miss bucket/status",
+        "originalStatus": "WARN_NEAR_MISS",
+        "remediatedStatus": "WARN_NEAR_MISS",
+        "seedFailureBucket": "warn_near_miss_threshold_margin",
+        "seedSeverity": "P2",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0009",
+      "failureBucket": "P4_PASS_NUMERIC_MARGIN_CONTROL",
+      "severity": "P4",
+      "fixtureRole": "numeric_margin_control",
+      "eligibleForRerun": false,
+      "rerunReason": "evidence shows pass control; no rerun unless future regression flips decision",
+      "nextAction": "Keep as numeric margin baseline and suppress false positive alerting.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P4 OR pass_low_risk bucket OR PASS->PASS",
+        "originalStatus": "PASS",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "pass_low_risk_with_numeric_margin",
+        "seedSeverity": "P4",
+        "actionable": false,
+        "alertEligible": false
+      }
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "failureBucket": "P1_ACTIONABLE_REMEDIATED_TIMING_DRIFT",
+      "severity": "P1",
+      "fixtureRole": "paired_regression_fixture",
+      "eligibleForRerun": true,
+      "rerunReason": "evidence shows actionable timing drift that was remediated; preserve original/remediated pair",
+      "nextAction": "Use as paired fixture for rerun-plan and future regression checks.",
+      "blockedClaims": [
+        "semantic_audio_quality_pass_not_verified",
+        "human_review_pass_not_verified",
+        "final_mix_readiness_not_verified",
+        "live_java_service_availability_not_verified",
+        "live_prometheus_or_grafana_import_not_verified",
+        "production_slo_or_real_cloud_deployment_not_verified"
+      ],
+      "classificationEvidence": {
+        "rule": "severity=P1 OR timing_drift_actionable_remediated OR FAIL->PASS actionable+alertEligible",
+        "originalStatus": "FAIL_DRIFT",
+        "remediatedStatus": "PASS",
+        "seedFailureBucket": "timing_drift_actionable_remediated",
+        "seedSeverity": "P1",
+        "actionable": true,
+        "alertEligible": true
+      }
+    }
+  ]
+}
