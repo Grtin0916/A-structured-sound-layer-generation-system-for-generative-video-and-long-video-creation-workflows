@@ -1,0 +1,16 @@
+{
+  "decision": "PASS_WEEK17_LAYER_MIX_PLAN_V0",
+  "candidateTotal": 10,
+  "selectedControlInputTotal": 7,
+  "blockedRegressionFixtureTotal": 2,
+  "monitorOnlyFixtureTotal": 1,
+  "mixExecutionReadinessDecision": "BLOCKED_WEEK17_LAYER_MIX_EXECUTION_AUDIO_ARTIFACTS_MISSING",
+  "audioArtifactAvailableTotal": 0,
+  "audioArtifactMissingTotal": 10,
+  "realMixerExecuted": false,
+  "realMixerExecutionAllowed": false,
+  "wavExported": false,
+  "outJson": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.json",
+  "outCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.csv",
+  "outDoc": "/home/GRT/work/audio_engineering_repo_skeleton_v1/docs/evals/week17_layer_mix_plan_v0.md"
+}

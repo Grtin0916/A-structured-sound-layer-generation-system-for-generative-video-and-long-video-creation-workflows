@@ -1,0 +1,123 @@
+{
+  "decision": "PASS_WEEK17_LAYER_MIX_PLAN_V0",
+  "mixExecutionReadinessDecision": "BLOCKED_WEEK17_LAYER_MIX_EXECUTION_AUDIO_ARTIFACTS_MISSING",
+  "audioArtifactAvailableTotal": 0,
+  "audioArtifactMissingTotal": 10,
+  "generatedAtUtc": "2026-06-23T10:00:52.765506+00:00",
+  "schemaVersion": "week17.layer_mix_plan.v0",
+  "sourceReadinessArtifact": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week16_s3_to_w17_layer_mix_input.json",
+  "sourceReadinessSha256": "4b32368e05a4c3519ab50ed11ee74ac546b728d85559af4d4a85dc766e7f4a5a",
+  "candidateTotal": 10,
+  "selectedControlInputTotal": 7,
+  "blockedRegressionFixtureTotal": 2,
+  "monitorOnlyFixtureTotal": 1,
+  "realMixerExecuted": false,
+  "realMixerExecutionAllowed": false,
+  "wavExported": false,
+  "finalMixReadinessClaimed": false,
+  "semanticAudioQualityClaimed": false,
+  "selectedControlInputs": [
+    {
+      "candidateId": "procedural_v0_0001",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0002",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0003",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0005",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0006",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0008",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0009",
+      "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+      "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+      "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+      "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    }
+  ],
+  "blockedRegressionFixtures": [
+    {
+      "candidateId": "procedural_v0_0004",
+      "fixtureRole": "P1_PAIRED_REGRESSION_FIXTURE",
+      "mixEligibility": "BLOCK_AUTOMIX_REGRESSION_ONLY",
+      "nextAction": "exclude_from_automatic_mix_and_keep_for_regression_gate",
+      "requiredSafeguard": "preserve_original_fail_and_remediated_pass_pair_before_layer_mix",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    },
+    {
+      "candidateId": "procedural_v0_0010",
+      "fixtureRole": "P1_PAIRED_REGRESSION_FIXTURE",
+      "mixEligibility": "BLOCK_AUTOMIX_REGRESSION_ONLY",
+      "nextAction": "exclude_from_automatic_mix_and_keep_for_regression_gate",
+      "requiredSafeguard": "preserve_original_fail_and_remediated_pass_pair_before_layer_mix",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    }
+  ],
+  "monitorOnlyFixtures": [
+    {
+      "candidateId": "procedural_v0_0007",
+      "fixtureRole": "P2_THRESHOLD_MARGIN_FIXTURE",
+      "mixEligibility": "MONITOR_ONLY_THRESHOLD_MARGIN",
+      "nextAction": "exclude_from_automatic_mix_until_margin_policy_is_explicit",
+      "requiredSafeguard": "require_threshold_margin_monitoring_before_layer_mix",
+      "artifactPathStatus": "NOT_FOUND",
+      "artifactPaths": []
+    }
+  ],
+  "blockedClaims": [
+    "real layer mixer executed",
+    "wav export completed",
+    "final mix readiness",
+    "semantic audio quality pass",
+    "human review pass",
+    "production mixer availability"
+  ]
+}
