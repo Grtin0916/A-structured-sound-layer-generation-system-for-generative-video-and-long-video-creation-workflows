@@ -1,0 +1,17 @@
+{
+  "decision": "PASS_WEEK16_S3_TO_W17_LAYER_MIX_INPUT_READINESS",
+  "candidateTotal": 10,
+  "mixEligibilityCounts": {
+    "BLOCK_AUTOMIX_REGRESSION_ONLY": 2,
+    "ELIGIBLE_CONTROL_ONLY": 7,
+    "MONITOR_ONLY_THRESHOLD_MARGIN": 1
+  },
+  "fixtureRoleCounts": {
+    "P1_PAIRED_REGRESSION_FIXTURE": 2,
+    "P2_THRESHOLD_MARGIN_FIXTURE": 1,
+    "P4_NUMERIC_MARGIN_CONTROL": 7
+  },
+  "outJson": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week16_s3_to_w17_layer_mix_input.json",
+  "outCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week16_s3_to_w17_layer_mix_input.csv",
+  "outDoc": "/home/GRT/work/audio_engineering_repo_skeleton_v1/docs/evals/week16_s3_to_w17_layer_mix_input.md"
+}
