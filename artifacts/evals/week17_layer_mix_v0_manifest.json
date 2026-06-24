@@ -1,0 +1,298 @@
+{
+  "schemaVersion": "week17.layer_mix_v0.placeholder_control.v1",
+  "generatedAtUtc": "2026-06-24T02:08:42.721682+00:00",
+  "decision": "PASS_WEEK17_LAYER_MIX_V0_PLACEHOLDER_CONTROL",
+  "trackTotal": 7,
+  "selectedControlIds": [
+    "0001",
+    "0002",
+    "0003",
+    "0005",
+    "0006",
+    "0008",
+    "0009"
+  ],
+  "blockedInputIds": [
+    "0004",
+    "0007",
+    "0010"
+  ],
+  "sampleRate": 22050,
+  "channels": 1,
+  "sampleWidthBytes": 2,
+  "mixArtifactPath": "artifacts/audio/week17_layer_mix_v0/week17_layer_mix_v0_placeholder_control_mix.wav",
+  "jsonManifestPath": "artifacts/evals/week17_layer_mix_v0_manifest.json",
+  "csvManifestPath": "artifacts/evals/week17_layer_mix_v0_manifest.csv",
+  "preNormalizePeak": 0.1935512125492096,
+  "preNormalizeRms": 0.03399205580353737,
+  "preNormalizeClipRate": 0.0,
+  "normalizeTargetPeak": 0.8912509381337456,
+  "normalizeGain": 4.604729293065776,
+  "finalPeak": 0.8912509083747864,
+  "finalRms": 0.15652422606945038,
+  "finalClipRateBeforeClip": 0.0,
+  "finalDurationSec": 2.0,
+  "placeholderInputOnly": true,
+  "realCandidateAudioClaimed": false,
+  "semanticAudioQualityPassClaimed": false,
+  "humanReviewPassClaimed": false,
+  "finalMixReadinessClaimed": false,
+  "productionMixerAvailabilityClaimed": false,
+  "blockedClaims": [
+    "realCandidateAudioClaimed",
+    "semanticAudioQualityPassClaimed",
+    "humanReviewPassClaimed",
+    "finalMixReadinessClaimed",
+    "productionMixerAvailabilityClaimed"
+  ],
+  "sourceManifest": "artifacts/evals/week17_control_audio_placeholder_manifest.json",
+  "sourcePlan": "artifacts/evals/week17_layer_mix_plan_v0.json",
+  "previousS3EvidencePreserved": true,
+  "realMixerV0DryRunExecuted": true,
+  "tracks": [
+    {
+      "candidateId": "0001",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0001_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.21563720703125,
+      "inputRms": 0.08993800729513168,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.0308053158223629,
+      "contributionRms": 0.01284828782081604
+    },
+    {
+      "candidateId": "0002",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0002_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.215728759765625,
+      "inputRms": 0.08993753790855408,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.0308183953166008,
+      "contributionRms": 0.012848220765590668
+    },
+    {
+      "candidateId": "0003",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0003_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.212188720703125,
+      "inputRms": 0.08993742614984512,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.0303126759827137,
+      "contributionRms": 0.0128482049331069
+    },
+    {
+      "candidateId": "0005",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0005_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.215789794921875,
+      "inputRms": 0.08993760496377945,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.03082711435854435,
+      "contributionRms": 0.012848230078816414
+    },
+    {
+      "candidateId": "0006",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0006_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.21588134765625,
+      "inputRms": 0.08993769437074661,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.03084019385278225,
+      "contributionRms": 0.012848243117332458
+    },
+    {
+      "candidateId": "0008",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0008_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.215789794921875,
+      "inputRms": 0.08993755280971527,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.03082711435854435,
+      "contributionRms": 0.012848222628235817
+    },
+    {
+      "candidateId": "0009",
+      "role": "selected_control_placeholder",
+      "inputPath": "artifacts/audio/week17_control_placeholders/procedural_v0_0009_control_placeholder.wav",
+      "sampleRate": 22050,
+      "channelsOriginal": 1,
+      "sampleWidthBytesOriginal": 2,
+      "frameCount": 44100,
+      "durationSec": 2.0,
+      "inputPeak": 0.2156982421875,
+      "inputRms": 0.08993763476610184,
+      "gain": 0.14285714285714285,
+      "contributionPeak": 0.0308140367269516,
+      "contributionRms": 0.012848234735429287
+    }
+  ],
+  "sourcePlanDigest": {
+    "decision": "PASS_WEEK17_LAYER_MIX_PLAN_V0",
+    "mixExecutionReadinessDecision": "READY_WEEK17_LAYER_MIX_EXECUTION_SELECTED_CONTROL_INPUTS_AVAILABLE",
+    "audioArtifactAvailableTotal": 7,
+    "audioArtifactMissingTotal": 3,
+    "selectedControlArtifactAvailableTotal": 7,
+    "selectedControlArtifactMissingTotal": 0,
+    "generatedAtUtc": "2026-06-23T10:08:24.808192+00:00",
+    "schemaVersion": "week17.layer_mix_plan.v0",
+    "sourceReadinessArtifact": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week16_s3_to_w17_layer_mix_input.json",
+    "sourceReadinessSha256": "4b32368e05a4c3519ab50ed11ee74ac546b728d85559af4d4a85dc766e7f4a5a",
+    "candidateTotal": 10,
+    "selectedControlInputTotal": 7,
+    "blockedRegressionFixtureTotal": 2,
+    "monitorOnlyFixtureTotal": 1,
+    "realMixerExecuted": false,
+    "realMixerExecutionAllowed": true,
+    "wavExported": false,
+    "finalMixReadinessClaimed": false,
+    "semanticAudioQualityClaimed": false,
+    "selectedControlInputs": [
+      {
+        "candidateId": "procedural_v0_0001",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0001_control_placeholder.wav"
+        ]
+      },
+      {
+        "candidateId": "procedural_v0_0002",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0002_control_placeholder.wav"
+        ]
+      },
+      {
+        "candidateId": "procedural_v0_0003",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0003_control_placeholder.wav"
+        ]
+      },
+      {
+        "candidateId": "procedural_v0_0005",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0005_control_placeholder.wav"
+        ]
+      },
+      {
+        "candidateId": "procedural_v0_0006",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0006_control_placeholder.wav"
+        ]
+      },
+      {
+        "candidateId": "procedural_v0_0008",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0008_control_placeholder.wav"
+        ]
+      },
+      {
+        "candidateId": "procedural_v0_0009",
+        "fixtureRole": "P4_NUMERIC_MARGIN_CONTROL",
+        "mixEligibility": "ELIGIBLE_CONTROL_ONLY",
+        "nextAction": "eligible_as_control_input_for_w17_layer_mix_v0",
+        "requiredSafeguard": "allow_as_numeric_margin_control_not_quality_claim",
+        "artifactPathStatus": "FOUND",
+        "artifactPaths": [
+          "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0009_control_placeholder.wav"
+        ]
+      }
+    ],
+    "blockedRegressionFixtures": [
+      {
+        "candidateId": "procedural_v0_0004",
+        "fixtureRole": "P1_PAIRED_REGRESSION_FIXTURE",
+        "mixEligibility": "BLOCK_AUTOMIX_REGRESSION_ONLY",
+        "nextAction": "exclude_from_automatic_mix_and_keep_for_regression_gate",
+        "requiredSafeguard": "preserve_original_fail_and_remediated_pass_pair_before_layer_mix",
+        "artifactPathStatus": "NOT_FOUND",
+        "artifactPaths": []
+      },
+      {
+        "candidateId": "procedural_v0_0010",
+        "fixtureRole": "P1_PAIRED_REGRESSION_FIXTURE",
+        "mixEligibility": "BLOCK_AUTOMIX_REGRESSION_ONLY",
+        "nextAction": "exclude_from_automatic_mix_and_keep_for_regression_gate",
+        "requiredSafeguard": "preserve_original_fail_and_remediated_pass_pair_before_layer_mix",
+        "artifactPathStatus": "NOT_FOUND",
+        "artifactPaths": []
+      }
+    ],
+    "monitorOnlyFixtures": [
+      {
+        "candidateId": "procedural_v0_0007",
+        "fixtureRole": "P2_THRESHOLD_MARGIN_FIXTURE",
+        "mixEligibility": "MONITOR_ONLY_THRESHOLD_MARGIN",
+        "nextAction": "exclude_from_automatic_mix_until_margin_policy_is_explicit",
+        "requiredSafeguard": "require_threshold_margin_monitoring_before_layer_mix",
+        "artifactPathStatus": "NOT_FOUND",
+        "artifactPaths": []
+      }
+    ],
+    "blockedClaims": [
+      "real layer mixer executed",
+      "wav export completed",
+      "final mix readiness",
+      "semantic audio quality pass",
+      "human review pass",
+      "production mixer availability"
+    ]
+  }
+}
