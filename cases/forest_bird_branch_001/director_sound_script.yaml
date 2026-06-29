@@ -1,0 +1,124 @@
+{
+  "schema_version": "dss.v0.1",
+  "case_id": "forest_bird_branch_001",
+  "video": {
+    "duration_s": 8.0,
+    "input_kind": "synthetic_placeholder_video",
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/forest_bird_branch_001/input_video.mp4",
+    "expected_silence": true,
+    "semantic_evidence_level": "pipeline_only_not_real_scene"
+  },
+  "scene": "quiet forest shot with wind, bird movement, and a small branch crack",
+  "events": [
+    {
+      "event_id": "forest_wind",
+      "time_s": 0.0,
+      "duration_s": 8.0,
+      "layer_role": "ambience",
+      "object": "forest",
+      "action": "forest_wind",
+      "sound_intent": "soft wind through leaves",
+      "priority": 2,
+      "tolerance_ms": 500,
+      "avoid": [
+        "speech",
+        "music",
+        "waterfall"
+      ]
+    },
+    {
+      "event_id": "bird_chirp",
+      "time_s": 1.0,
+      "duration_s": 0.8,
+      "layer_role": "foley",
+      "object": "bird",
+      "action": "bird_chirp",
+      "sound_intent": "two short bird chirps",
+      "priority": 3,
+      "tolerance_ms": 150,
+      "avoid": [
+        "speech",
+        "music",
+        "waterfall"
+      ]
+    },
+    {
+      "event_id": "leaf_rustle",
+      "time_s": 3.4,
+      "duration_s": 1.4,
+      "layer_role": "foley",
+      "object": "leaf",
+      "action": "leaf_rustle",
+      "sound_intent": "small animal or bird rustling leaves",
+      "priority": 4,
+      "tolerance_ms": 180,
+      "avoid": [
+        "speech",
+        "music",
+        "waterfall"
+      ]
+    },
+    {
+      "event_id": "branch_crack",
+      "time_s": 5.8,
+      "duration_s": 0.35,
+      "layer_role": "foley",
+      "object": "branch",
+      "action": "branch_crack",
+      "sound_intent": "dry branch crack",
+      "priority": 5,
+      "tolerance_ms": 100,
+      "avoid": [
+        "speech",
+        "music",
+        "waterfall"
+      ]
+    }
+  ],
+  "layers": {
+    "ambience": {
+      "role": "continuous bed",
+      "priority": 1
+    },
+    "foley": {
+      "role": "synchronized event sounds",
+      "priority": 5
+    },
+    "music": {
+      "role": "disabled unless explicitly requested",
+      "priority": 0
+    }
+  },
+  "constraints": {
+    "avoid": [
+      "speech",
+      "music",
+      "waterfall"
+    ],
+    "loudness": {
+      "target_lufs": -18,
+      "peak_ceiling_dbfs": -1.0
+    },
+    "style": "realistic Foley, no speech, no background music"
+  },
+  "evaluation_targets": {
+    "onset_error_ms": 250,
+    "event_coverage_min": 0.75,
+    "clip_rate_max": 0.001,
+    "silence_ratio_max": 0.35
+  },
+  "candidate_policy": {
+    "mmaudio": {
+      "enabled": true,
+      "needs_input_video": true
+    },
+    "text_audio": {
+      "enabled": true,
+      "needs_input_video": false
+    },
+    "control_foley": {
+      "enabled": true,
+      "needs_input_video": false
+    }
+  }
+}

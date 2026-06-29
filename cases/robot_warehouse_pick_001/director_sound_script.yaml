@@ -1,0 +1,124 @@
+{
+  "schema_version": "dss.v0.1",
+  "case_id": "robot_warehouse_pick_001",
+  "video": {
+    "duration_s": 11.0,
+    "input_kind": "synthetic_placeholder_video",
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/robot_warehouse_pick_001/input_video.mp4",
+    "expected_silence": true,
+    "semantic_evidence_level": "pipeline_only_not_real_scene"
+  },
+  "scene": "small warehouse robot arm picking a box from a shelf and confirming the task",
+  "events": [
+    {
+      "event_id": "warehouse_hum",
+      "time_s": 0.0,
+      "duration_s": 11.0,
+      "layer_role": "ambience",
+      "object": "warehouse",
+      "action": "warehouse_hum",
+      "sound_intent": "low warehouse ventilation hum",
+      "priority": 1,
+      "tolerance_ms": 600,
+      "avoid": [
+        "human speech",
+        "alarm",
+        "music"
+      ]
+    },
+    {
+      "event_id": "servo_arm_move",
+      "time_s": 1.5,
+      "duration_s": 2.2,
+      "layer_role": "foley",
+      "object": "servo",
+      "action": "servo_arm_move",
+      "sound_intent": "precise electric servo arm movement",
+      "priority": 4,
+      "tolerance_ms": 180,
+      "avoid": [
+        "human speech",
+        "alarm",
+        "music"
+      ]
+    },
+    {
+      "event_id": "box_lift",
+      "time_s": 4.6,
+      "duration_s": 1.2,
+      "layer_role": "foley",
+      "object": "box",
+      "action": "box_lift",
+      "sound_intent": "cardboard box lifted from shelf",
+      "priority": 5,
+      "tolerance_ms": 150,
+      "avoid": [
+        "human speech",
+        "alarm",
+        "music"
+      ]
+    },
+    {
+      "event_id": "confirm_beep",
+      "time_s": 7.4,
+      "duration_s": 0.25,
+      "layer_role": "fx",
+      "object": "confirm",
+      "action": "confirm_beep",
+      "sound_intent": "short clean robot confirmation beep",
+      "priority": 3,
+      "tolerance_ms": 80,
+      "avoid": [
+        "human speech",
+        "alarm",
+        "music"
+      ]
+    }
+  ],
+  "layers": {
+    "ambience": {
+      "role": "continuous bed",
+      "priority": 1
+    },
+    "foley": {
+      "role": "synchronized event sounds",
+      "priority": 5
+    },
+    "music": {
+      "role": "disabled unless explicitly requested",
+      "priority": 0
+    }
+  },
+  "constraints": {
+    "avoid": [
+      "human speech",
+      "alarm",
+      "music"
+    ],
+    "loudness": {
+      "target_lufs": -18,
+      "peak_ceiling_dbfs": -1.0
+    },
+    "style": "realistic Foley, no speech, no background music"
+  },
+  "evaluation_targets": {
+    "onset_error_ms": 250,
+    "event_coverage_min": 0.75,
+    "clip_rate_max": 0.001,
+    "silence_ratio_max": 0.35
+  },
+  "candidate_policy": {
+    "mmaudio": {
+      "enabled": true,
+      "needs_input_video": true
+    },
+    "text_audio": {
+      "enabled": true,
+      "needs_input_video": false
+    },
+    "control_foley": {
+      "enabled": true,
+      "needs_input_video": false
+    }
+  }
+}

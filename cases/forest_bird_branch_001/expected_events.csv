@@ -1,0 +1,5 @@
+case_id,event_id,time_s,duration_s,layer_role,sound_intent,priority,tolerance_ms
+forest_bird_branch_001,forest_wind,0.0,8.0,ambience,soft wind through leaves,2,500
+forest_bird_branch_001,bird_chirp,1.0,0.8,foley,two short bird chirps,3,150
+forest_bird_branch_001,leaf_rustle,3.4,1.4,foley,small animal or bird rustling leaves,4,180
+forest_bird_branch_001,branch_crack,5.8,0.35,foley,dry branch crack,5,100

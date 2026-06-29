@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-06-29T07:08:36.333368+00:00",
+  "decision": "SOURCE_GAP_PRESENT",
+  "source_gap_count": 5,
+  "gaps": [
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "gap": "missing_input_video_mp4",
+      "impact": "MMAudio/V2A slot is blocked until input_video.mp4 exists; T2A/control slots remain usable."
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "gap": "missing_input_video_mp4",
+      "impact": "MMAudio/V2A slot is blocked until input_video.mp4 exists; T2A/control slots remain usable."
+    },
+    {
+      "case_id": "forest_bird_branch_001",
+      "gap": "missing_input_video_mp4",
+      "impact": "MMAudio/V2A slot is blocked until input_video.mp4 exists; T2A/control slots remain usable."
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "gap": "missing_input_video_mp4",
+      "impact": "MMAudio/V2A slot is blocked until input_video.mp4 exists; T2A/control slots remain usable."
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "gap": "missing_input_video_mp4",
+      "impact": "MMAudio/V2A slot is blocked until input_video.mp4 exists; T2A/control slots remain usable."
+    }
+  ]
+}

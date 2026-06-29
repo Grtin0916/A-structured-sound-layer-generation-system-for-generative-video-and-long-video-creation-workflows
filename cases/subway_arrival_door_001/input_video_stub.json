@@ -1,0 +1,7 @@
+{
+  "case_id": "subway_arrival_door_001",
+  "reason": "No local source video was found in data/assets/examples/artifacts/results.",
+  "expected_duration_s": 12.0,
+  "scene": "subway platform as train arrives, brakes, and doors open",
+  "fallback_policy": "Use T2A/control candidate first; replace with real/synthetic silent mp4 before V2A conclusion."
+}

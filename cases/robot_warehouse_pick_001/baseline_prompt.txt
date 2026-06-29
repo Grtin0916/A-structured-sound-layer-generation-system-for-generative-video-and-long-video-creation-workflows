@@ -1,0 +1,1 @@
+Create mechanical servo movement, soft warehouse ambience, cardboard handling, and a short confirmation beep.

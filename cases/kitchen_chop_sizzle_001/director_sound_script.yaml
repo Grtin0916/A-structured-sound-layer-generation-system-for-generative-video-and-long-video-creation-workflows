@@ -1,0 +1,124 @@
+{
+  "schema_version": "dss.v0.1",
+  "case_id": "kitchen_chop_sizzle_001",
+  "video": {
+    "duration_s": 10.0,
+    "input_kind": "synthetic_placeholder_video",
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/kitchen_chop_sizzle_001/input_video.mp4",
+    "expected_silence": true,
+    "semantic_evidence_level": "pipeline_only_not_real_scene"
+  },
+  "scene": "close-up kitchen preparation with knife chopping, pan heat, and plate movement",
+  "events": [
+    {
+      "event_id": "room_tone",
+      "time_s": 0.0,
+      "duration_s": 10.0,
+      "layer_role": "ambience",
+      "object": "room",
+      "action": "room_tone",
+      "sound_intent": "small indoor kitchen room tone",
+      "priority": 1,
+      "tolerance_ms": 500,
+      "avoid": [
+        "speech",
+        "restaurant crowd",
+        "music"
+      ]
+    },
+    {
+      "event_id": "knife_chops",
+      "time_s": 1.0,
+      "duration_s": 3.2,
+      "layer_role": "foley",
+      "object": "knife",
+      "action": "knife_chops",
+      "sound_intent": "rhythmic vegetable chopping on wooden board",
+      "priority": 5,
+      "tolerance_ms": 100,
+      "avoid": [
+        "speech",
+        "restaurant crowd",
+        "music"
+      ]
+    },
+    {
+      "event_id": "pan_sizzle_rise",
+      "time_s": 4.8,
+      "duration_s": 3.0,
+      "layer_role": "foley",
+      "object": "pan",
+      "action": "pan_sizzle_rise",
+      "sound_intent": "oil and food sizzling in pan",
+      "priority": 4,
+      "tolerance_ms": 250,
+      "avoid": [
+        "speech",
+        "restaurant crowd",
+        "music"
+      ]
+    },
+    {
+      "event_id": "plate_set_down",
+      "time_s": 8.5,
+      "duration_s": 0.4,
+      "layer_role": "foley",
+      "object": "plate",
+      "action": "plate_set_down",
+      "sound_intent": "ceramic plate placed on counter",
+      "priority": 3,
+      "tolerance_ms": 120,
+      "avoid": [
+        "speech",
+        "restaurant crowd",
+        "music"
+      ]
+    }
+  ],
+  "layers": {
+    "ambience": {
+      "role": "continuous bed",
+      "priority": 1
+    },
+    "foley": {
+      "role": "synchronized event sounds",
+      "priority": 5
+    },
+    "music": {
+      "role": "disabled unless explicitly requested",
+      "priority": 0
+    }
+  },
+  "constraints": {
+    "avoid": [
+      "speech",
+      "restaurant crowd",
+      "music"
+    ],
+    "loudness": {
+      "target_lufs": -18,
+      "peak_ceiling_dbfs": -1.0
+    },
+    "style": "realistic Foley, no speech, no background music"
+  },
+  "evaluation_targets": {
+    "onset_error_ms": 250,
+    "event_coverage_min": 0.75,
+    "clip_rate_max": 0.001,
+    "silence_ratio_max": 0.35
+  },
+  "candidate_policy": {
+    "mmaudio": {
+      "enabled": true,
+      "needs_input_video": true
+    },
+    "text_audio": {
+      "enabled": true,
+      "needs_input_video": false
+    },
+    "control_foley": {
+      "enabled": true,
+      "needs_input_video": false
+    }
+  }
+}

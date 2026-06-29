@@ -1,0 +1,7 @@
+{
+  "case_id": "glass_drop_room_001",
+  "reason": "No local source video was found in data/assets/examples/artifacts/results.",
+  "expected_duration_s": 7.0,
+  "scene": "indoor tabletop shot where a glass object drops and breaks",
+  "fallback_policy": "Use T2A/control candidate first; replace with real/synthetic silent mp4 before V2A conclusion."
+}

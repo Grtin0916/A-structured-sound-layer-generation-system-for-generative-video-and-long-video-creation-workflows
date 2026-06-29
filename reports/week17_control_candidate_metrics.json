@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-06-29T07:14:12.798785+00:00",
+  "candidate_count": 6,
+  "metrics": [
+    {
+      "duration_s": 8.0,
+      "rms": 0.094121,
+      "peak": 0.421477,
+      "clip_rate": 0.0,
+      "silence_ratio": 0.055258,
+      "case_id": "forest_bird_branch_001",
+      "candidate_id": "forest_bird_branch_001__control_rule_foley_v0",
+      "candidate_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_baseline/forest_bird_branch_001/forest_bird_branch_001__control_rule_foley_v0.wav",
+      "event_count": 4,
+      "model_family": "control_rule_foley_v0"
+    },
+    {
+      "duration_s": 7.0,
+      "rms": 0.104646,
+      "peak": 0.409921,
+      "clip_rate": 0.0,
+      "silence_ratio": 0.07772,
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__control_rule_foley_v0",
+      "candidate_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_baseline/glass_drop_room_001/glass_drop_room_001__control_rule_foley_v0.wav",
+      "event_count": 4,
+      "model_family": "control_rule_foley_v0"
+    },
+    {
+      "duration_s": 10.0,
+      "rms": 0.110789,
+      "peak": 0.385649,
+      "clip_rate": 0.0,
+      "silence_ratio": 0.064085,
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0",
+      "candidate_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_baseline/kitchen_chop_sizzle_001/kitchen_chop_sizzle_001__control_rule_foley_v0.wav",
+      "event_count": 4,
+      "model_family": "control_rule_foley_v0"
+    },
+    {
+      "duration_s": 11.0,
+      "rms": 0.064428,
+      "peak": 0.340189,
+      "clip_rate": 0.0,
+      "silence_ratio": 0.075102,
+      "case_id": "robot_warehouse_pick_001",
+      "candidate_id": "robot_warehouse_pick_001__control_rule_foley_v0",
+      "candidate_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_baseline/robot_warehouse_pick_001/robot_warehouse_pick_001__control_rule_foley_v0.wav",
+      "event_count": 4,
+      "model_family": "control_rule_foley_v0"
+    },
+    {
+      "duration_s": 9.0,
+      "rms": 0.069073,
+      "peak": 0.421814,
+      "clip_rate": 0.0,
+      "silence_ratio": 0.057109,
+      "case_id": "street_rain_crosswalk_001",
+      "candidate_id": "street_rain_crosswalk_001__control_rule_foley_v0",
+      "candidate_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_baseline/street_rain_crosswalk_001/street_rain_crosswalk_001__control_rule_foley_v0.wav",
+      "event_count": 4,
+      "model_family": "control_rule_foley_v0"
+    },
+    {
+      "duration_s": 12.0,
+      "rms": 0.044136,
+      "peak": 0.316499,
+      "clip_rate": 0.0,
+      "silence_ratio": 0.056524,
+      "case_id": "subway_arrival_door_001",
+      "candidate_id": "subway_arrival_door_001__control_rule_foley_v0",
+      "candidate_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_baseline/subway_arrival_door_001/subway_arrival_door_001__control_rule_foley_v0.wav",
+      "event_count": 4,
+      "model_family": "control_rule_foley_v0"
+    }
+  ]
+}

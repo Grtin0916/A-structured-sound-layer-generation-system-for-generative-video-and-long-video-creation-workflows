@@ -1,0 +1,7 @@
+{
+  "case_id": "robot_warehouse_pick_001",
+  "reason": "No local source video was found in data/assets/examples/artifacts/results.",
+  "expected_duration_s": 11.0,
+  "scene": "small warehouse robot arm picking a box from a shelf and confirming the task",
+  "fallback_policy": "Use T2A/control candidate first; replace with real/synthetic silent mp4 before V2A conclusion."
+}

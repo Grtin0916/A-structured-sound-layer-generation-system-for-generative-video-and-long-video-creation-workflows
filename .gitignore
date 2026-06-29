@@ -59,3 +59,4 @@ build/
 !artifacts/experiments/baseline_v1/
 !artifacts/experiments/baseline_v1/checkpoints/
 !artifacts/experiments/baseline_v1/checkpoints/best.pt
+.local_media/

@@ -1,0 +1,29 @@
+{
+  "schema_version": "repair_seed.v0.1",
+  "generated_at": "2026-06-29T07:25:38.637455+00:00",
+  "source": "mainbase",
+  "decision": "PASS_REPAIR_CLOSED_QUEUE",
+  "summary": {
+    "generated_at": "2026-06-29T07:25:38.636817+00:00",
+    "decision": "PASS_REPAIR_CLOSED_QUEUE",
+    "input_repair_item_count": 1,
+    "repaired_case_count": 1,
+    "repaired_to_winner_count": 1,
+    "still_required_count": 0,
+    "failed_count": 0,
+    "limitation": "Repair is deterministic event-region reinforcement for control baseline only; it is not a generative model quality claim."
+  },
+  "results": [
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "source_candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0",
+      "repaired_candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0_repair_v1",
+      "repaired_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_repaired/kitchen_chop_sizzle_001/kitchen_chop_sizzle_001__control_rule_foley_v0_repair_v1.wav",
+      "repair_status": "repaired_to_winner",
+      "before_score": 0.75,
+      "after_score": 1.0,
+      "score_delta": 0.25,
+      "winner_after_repair": true
+    }
+  ]
+}

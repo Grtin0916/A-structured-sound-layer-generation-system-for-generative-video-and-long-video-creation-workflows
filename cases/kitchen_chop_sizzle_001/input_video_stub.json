@@ -1,0 +1,7 @@
+{
+  "case_id": "kitchen_chop_sizzle_001",
+  "reason": "No local source video was found in data/assets/examples/artifacts/results.",
+  "expected_duration_s": 10.0,
+  "scene": "close-up kitchen preparation with knife chopping, pan heat, and plate movement",
+  "fallback_policy": "Use T2A/control candidate first; replace with real/synthetic silent mp4 before V2A conclusion."
+}

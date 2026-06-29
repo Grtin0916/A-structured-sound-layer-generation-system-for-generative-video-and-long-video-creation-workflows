@@ -1,0 +1,5 @@
+case_id,event_id,time_s,duration_s,layer_role,sound_intent,priority,tolerance_ms
+kitchen_chop_sizzle_001,room_tone,0.0,10.0,ambience,small indoor kitchen room tone,1,500
+kitchen_chop_sizzle_001,knife_chops,1.0,3.2,foley,rhythmic vegetable chopping on wooden board,5,100
+kitchen_chop_sizzle_001,pan_sizzle_rise,4.8,3.0,foley,oil and food sizzling in pan,4,250
+kitchen_chop_sizzle_001,plate_set_down,8.5,0.4,foley,ceramic plate placed on counter,3,120

@@ -1,0 +1,128 @@
+{
+  "schema_version": "dss.v0.1",
+  "case_id": "street_rain_crosswalk_001",
+  "video": {
+    "duration_s": 9.0,
+    "input_kind": "local_video",
+    "path": "cases/street_rain_crosswalk_001/input_video.mp4",
+    "expected_silence": true
+  },
+  "scene": "night street crosswalk with rain, traffic movement, and pedestrian footsteps",
+  "events": [
+    {
+      "event_id": "rain_ambience_start",
+      "time_s": 0.0,
+      "duration_s": 9.0,
+      "layer_role": "ambience",
+      "object": "rain",
+      "action": "rain_ambience_start",
+      "sound_intent": "steady light rain and wet street bed",
+      "priority": 2,
+      "tolerance_ms": 500,
+      "avoid": [
+        "speech",
+        "music",
+        "thunder",
+        "siren"
+      ]
+    },
+    {
+      "event_id": "footsteps_enter",
+      "time_s": 1.2,
+      "duration_s": 2.5,
+      "layer_role": "foley",
+      "object": "footsteps",
+      "action": "footsteps_enter",
+      "sound_intent": "wet shoes stepping through shallow water",
+      "priority": 4,
+      "tolerance_ms": 180,
+      "avoid": [
+        "speech",
+        "music",
+        "thunder",
+        "siren"
+      ]
+    },
+    {
+      "event_id": "car_pass_left_to_right",
+      "time_s": 4.0,
+      "duration_s": 1.8,
+      "layer_role": "foley",
+      "object": "car",
+      "action": "car_pass_left_to_right",
+      "sound_intent": "muffled car pass-by on wet road",
+      "priority": 3,
+      "tolerance_ms": 250,
+      "avoid": [
+        "speech",
+        "music",
+        "thunder",
+        "siren"
+      ]
+    },
+    {
+      "event_id": "puddle_splash",
+      "time_s": 6.7,
+      "duration_s": 0.5,
+      "layer_role": "foley",
+      "object": "puddle",
+      "action": "puddle_splash",
+      "sound_intent": "single sharp puddle splash near camera",
+      "priority": 5,
+      "tolerance_ms": 120,
+      "avoid": [
+        "speech",
+        "music",
+        "thunder",
+        "siren"
+      ]
+    }
+  ],
+  "layers": {
+    "ambience": {
+      "role": "continuous bed",
+      "priority": 1
+    },
+    "foley": {
+      "role": "synchronized event sounds",
+      "priority": 5
+    },
+    "music": {
+      "role": "disabled unless explicitly requested",
+      "priority": 0
+    }
+  },
+  "constraints": {
+    "avoid": [
+      "speech",
+      "music",
+      "thunder",
+      "siren"
+    ],
+    "loudness": {
+      "target_lufs": -18,
+      "peak_ceiling_dbfs": -1.0
+    },
+    "style": "realistic Foley, no speech, no background music"
+  },
+  "evaluation_targets": {
+    "onset_error_ms": 250,
+    "event_coverage_min": 0.75,
+    "clip_rate_max": 0.001,
+    "silence_ratio_max": 0.35
+  },
+  "candidate_policy": {
+    "mmaudio": {
+      "enabled": true,
+      "needs_input_video": true
+    },
+    "text_audio": {
+      "enabled": true,
+      "needs_input_video": false
+    },
+    "control_foley": {
+      "enabled": true,
+      "needs_input_video": false
+    }
+  }
+}

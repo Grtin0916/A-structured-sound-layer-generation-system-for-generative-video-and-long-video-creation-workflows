@@ -1,0 +1,6 @@
+case_id,event_id,level,field,message
+forest_bird_branch_001,,warning,input_video,stub input; V2A quality claim must remain blocked
+glass_drop_room_001,,warning,input_video,stub input; V2A quality claim must remain blocked
+kitchen_chop_sizzle_001,,warning,input_video,stub input; V2A quality claim must remain blocked
+robot_warehouse_pick_001,,warning,input_video,stub input; V2A quality claim must remain blocked
+subway_arrival_door_001,,warning,input_video,stub input; V2A quality claim must remain blocked

@@ -1,0 +1,7 @@
+{
+  "case_id": "forest_bird_branch_001",
+  "reason": "No local source video was found in data/assets/examples/artifacts/results.",
+  "expected_duration_s": 8.0,
+  "scene": "quiet forest shot with wind, bird movement, and a small branch crack",
+  "fallback_policy": "Use T2A/control candidate first; replace with real/synthetic silent mp4 before V2A conclusion."
+}

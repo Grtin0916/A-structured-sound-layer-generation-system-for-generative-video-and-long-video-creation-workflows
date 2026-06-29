@@ -1,0 +1,9 @@
+{
+  "case_id": "street_rain_crosswalk_001",
+  "tracked_input_video": "input_video.mp4",
+  "tracked_input_video_kind": "compressed_proxy_from_local_real_video",
+  "local_original_path": ".local_media/week17_large_inputs/street_rain_crosswalk_001_input_video_original_250mb.mp4",
+  "local_original_git_policy": "ignored_not_committed",
+  "reason": "GitHub rejects files larger than 100 MiB; proxy video keeps pipeline runnable while preserving the real source locally.",
+  "limitation": "Proxy video validates case path and event timing; final V2A semantic demo should replace this with a properly licensed small real clip or LFS-backed asset."
+}

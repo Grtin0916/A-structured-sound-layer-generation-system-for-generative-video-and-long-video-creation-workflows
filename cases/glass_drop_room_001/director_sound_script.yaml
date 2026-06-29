@@ -1,0 +1,124 @@
+{
+  "schema_version": "dss.v0.1",
+  "case_id": "glass_drop_room_001",
+  "video": {
+    "duration_s": 7.0,
+    "input_kind": "synthetic_placeholder_video",
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/glass_drop_room_001/input_video.mp4",
+    "expected_silence": true,
+    "semantic_evidence_level": "pipeline_only_not_real_scene"
+  },
+  "scene": "indoor tabletop shot where a glass object drops and breaks",
+  "events": [
+    {
+      "event_id": "quiet_room_tone",
+      "time_s": 0.0,
+      "duration_s": 7.0,
+      "layer_role": "ambience",
+      "object": "quiet",
+      "action": "quiet_room_tone",
+      "sound_intent": "quiet indoor room tone",
+      "priority": 1,
+      "tolerance_ms": 500,
+      "avoid": [
+        "speech",
+        "music",
+        "cartoon effect"
+      ]
+    },
+    {
+      "event_id": "glass_slip",
+      "time_s": 1.5,
+      "duration_s": 0.7,
+      "layer_role": "foley",
+      "object": "glass",
+      "action": "glass_slip",
+      "sound_intent": "glass sliding off table edge",
+      "priority": 4,
+      "tolerance_ms": 120,
+      "avoid": [
+        "speech",
+        "music",
+        "cartoon effect"
+      ]
+    },
+    {
+      "event_id": "impact",
+      "time_s": 2.5,
+      "duration_s": 0.15,
+      "layer_role": "foley",
+      "object": "impact",
+      "action": "impact",
+      "sound_intent": "sharp glass impact on hard floor",
+      "priority": 5,
+      "tolerance_ms": 70,
+      "avoid": [
+        "speech",
+        "music",
+        "cartoon effect"
+      ]
+    },
+    {
+      "event_id": "shatter_tail",
+      "time_s": 2.65,
+      "duration_s": 1.1,
+      "layer_role": "foley",
+      "object": "shatter",
+      "action": "shatter_tail",
+      "sound_intent": "small glass fragments scattering",
+      "priority": 5,
+      "tolerance_ms": 100,
+      "avoid": [
+        "speech",
+        "music",
+        "cartoon effect"
+      ]
+    }
+  ],
+  "layers": {
+    "ambience": {
+      "role": "continuous bed",
+      "priority": 1
+    },
+    "foley": {
+      "role": "synchronized event sounds",
+      "priority": 5
+    },
+    "music": {
+      "role": "disabled unless explicitly requested",
+      "priority": 0
+    }
+  },
+  "constraints": {
+    "avoid": [
+      "speech",
+      "music",
+      "cartoon effect"
+    ],
+    "loudness": {
+      "target_lufs": -18,
+      "peak_ceiling_dbfs": -1.0
+    },
+    "style": "realistic Foley, no speech, no background music"
+  },
+  "evaluation_targets": {
+    "onset_error_ms": 250,
+    "event_coverage_min": 0.75,
+    "clip_rate_max": 0.001,
+    "silence_ratio_max": 0.35
+  },
+  "candidate_policy": {
+    "mmaudio": {
+      "enabled": true,
+      "needs_input_video": true
+    },
+    "text_audio": {
+      "enabled": true,
+      "needs_input_video": false
+    },
+    "control_foley": {
+      "enabled": true,
+      "needs_input_video": false
+    }
+  }
+}

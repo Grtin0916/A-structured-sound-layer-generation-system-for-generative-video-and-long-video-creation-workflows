@@ -1,0 +1,5 @@
+case_id,event_id,time_s,duration_s,layer_role,sound_intent,priority,tolerance_ms
+robot_warehouse_pick_001,warehouse_hum,0.0,11.0,ambience,low warehouse ventilation hum,1,600
+robot_warehouse_pick_001,servo_arm_move,1.5,2.2,foley,precise electric servo arm movement,4,180
+robot_warehouse_pick_001,box_lift,4.6,1.2,foley,cardboard box lifted from shelf,5,150
+robot_warehouse_pick_001,confirm_beep,7.4,0.25,fx,short clean robot confirmation beep,3,80

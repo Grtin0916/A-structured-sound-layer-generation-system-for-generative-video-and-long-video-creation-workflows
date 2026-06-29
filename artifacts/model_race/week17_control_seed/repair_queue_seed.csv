@@ -1,0 +1,2 @@
+case_id,candidate_id,event_id,repair_bucket,suggested_action,priority,event_rms,threshold
+kitchen_chop_sizzle_001,kitchen_chop_sizzle_001__control_rule_foley_v0,knife_chops,priority_event_weak_or_missing,increase event-region gain or regenerate/replace this event candidate,5,0.062841,0.016

@@ -1,0 +1,5 @@
+case_id,event_id,time_s,duration_s,layer_role,sound_intent,priority,tolerance_ms
+subway_arrival_door_001,platform_bed,0.0,12.0,ambience,underground platform room tone and distant crowd,2,700
+subway_arrival_door_001,train_rumble_approach,1.2,4.5,foley,subway train approaching with low rumble,4,250
+subway_arrival_door_001,brake_squeal,5.7,1.2,foley,metal brake squeal as train stops,5,150
+subway_arrival_door_001,door_open_chime,8.2,0.5,fx,door open chime and sliding door start,3,120

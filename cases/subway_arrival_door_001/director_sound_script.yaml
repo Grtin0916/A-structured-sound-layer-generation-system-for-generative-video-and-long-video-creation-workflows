@@ -1,0 +1,124 @@
+{
+  "schema_version": "dss.v0.1",
+  "case_id": "subway_arrival_door_001",
+  "video": {
+    "duration_s": 12.0,
+    "input_kind": "synthetic_placeholder_video",
+    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/subway_arrival_door_001/input_video.mp4",
+    "expected_silence": true,
+    "semantic_evidence_level": "pipeline_only_not_real_scene"
+  },
+  "scene": "subway platform as train arrives, brakes, and doors open",
+  "events": [
+    {
+      "event_id": "platform_bed",
+      "time_s": 0.0,
+      "duration_s": 12.0,
+      "layer_role": "ambience",
+      "object": "platform",
+      "action": "platform_bed",
+      "sound_intent": "underground platform room tone and distant crowd",
+      "priority": 2,
+      "tolerance_ms": 700,
+      "avoid": [
+        "clear speech",
+        "music",
+        "announcement voice"
+      ]
+    },
+    {
+      "event_id": "train_rumble_approach",
+      "time_s": 1.2,
+      "duration_s": 4.5,
+      "layer_role": "foley",
+      "object": "train",
+      "action": "train_rumble_approach",
+      "sound_intent": "subway train approaching with low rumble",
+      "priority": 4,
+      "tolerance_ms": 250,
+      "avoid": [
+        "clear speech",
+        "music",
+        "announcement voice"
+      ]
+    },
+    {
+      "event_id": "brake_squeal",
+      "time_s": 5.7,
+      "duration_s": 1.2,
+      "layer_role": "foley",
+      "object": "brake",
+      "action": "brake_squeal",
+      "sound_intent": "metal brake squeal as train stops",
+      "priority": 5,
+      "tolerance_ms": 150,
+      "avoid": [
+        "clear speech",
+        "music",
+        "announcement voice"
+      ]
+    },
+    {
+      "event_id": "door_open_chime",
+      "time_s": 8.2,
+      "duration_s": 0.5,
+      "layer_role": "fx",
+      "object": "door",
+      "action": "door_open_chime",
+      "sound_intent": "door open chime and sliding door start",
+      "priority": 3,
+      "tolerance_ms": 120,
+      "avoid": [
+        "clear speech",
+        "music",
+        "announcement voice"
+      ]
+    }
+  ],
+  "layers": {
+    "ambience": {
+      "role": "continuous bed",
+      "priority": 1
+    },
+    "foley": {
+      "role": "synchronized event sounds",
+      "priority": 5
+    },
+    "music": {
+      "role": "disabled unless explicitly requested",
+      "priority": 0
+    }
+  },
+  "constraints": {
+    "avoid": [
+      "clear speech",
+      "music",
+      "announcement voice"
+    ],
+    "loudness": {
+      "target_lufs": -18,
+      "peak_ceiling_dbfs": -1.0
+    },
+    "style": "realistic Foley, no speech, no background music"
+  },
+  "evaluation_targets": {
+    "onset_error_ms": 250,
+    "event_coverage_min": 0.75,
+    "clip_rate_max": 0.001,
+    "silence_ratio_max": 0.35
+  },
+  "candidate_policy": {
+    "mmaudio": {
+      "enabled": true,
+      "needs_input_video": true
+    },
+    "text_audio": {
+      "enabled": true,
+      "needs_input_video": false
+    },
+    "control_foley": {
+      "enabled": true,
+      "needs_input_video": false
+    }
+  }
+}

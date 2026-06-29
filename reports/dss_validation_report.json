@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-06-29T07:08:43.193383+00:00",
+  "decision": "PASS",
+  "case_count": 6,
+  "validCaseCount": 6,
+  "invalidCaseCount": 0,
+  "event_total": 24,
+  "error_count": 0,
+  "warning_count": 5,
+  "case_summaries": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "valid": true,
+      "event_count": 4,
+      "duration_s": 8.0,
+      "has_input_video": false,
+      "has_stub": true,
+      "error_count": 0,
+      "warning_count": 1
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "valid": true,
+      "event_count": 4,
+      "duration_s": 7.0,
+      "has_input_video": false,
+      "has_stub": true,
+      "error_count": 0,
+      "warning_count": 1
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "valid": true,
+      "event_count": 4,
+      "duration_s": 10.0,
+      "has_input_video": false,
+      "has_stub": true,
+      "error_count": 0,
+      "warning_count": 1
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "valid": true,
+      "event_count": 4,
+      "duration_s": 11.0,
+      "has_input_video": false,
+      "has_stub": true,
+      "error_count": 0,
+      "warning_count": 1
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "valid": true,
+      "event_count": 4,
+      "duration_s": 9.0,
+      "has_input_video": true,
+      "has_stub": false,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "valid": true,
+      "event_count": 4,
+      "duration_s": 12.0,
+      "has_input_video": false,
+      "has_stub": true,
+      "error_count": 0,
+      "warning_count": 1
+    }
+  ],
+  "issues": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "level": "warning",
+      "field": "input_video",
+      "message": "stub input; V2A quality claim must remain blocked"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "level": "warning",
+      "field": "input_video",
+      "message": "stub input; V2A quality claim must remain blocked"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "level": "warning",
+      "field": "input_video",
+      "message": "stub input; V2A quality claim must remain blocked"
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "level": "warning",
+      "field": "input_video",
+      "message": "stub input; V2A quality claim must remain blocked"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "level": "warning",
+      "field": "input_video",
+      "message": "stub input; V2A quality claim must remain blocked"
+    }
+  ]
+}
