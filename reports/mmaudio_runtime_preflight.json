@@ -1,0 +1,23 @@
+{
+  "created_at_utc": "2026-06-30T02:16:08.440763+00:00",
+  "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12)  [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+  "ffmpeg": "/home/GRT/anaconda3/envs/audio-mini/bin/ffmpeg",
+  "ffprobe": "/home/GRT/anaconda3/envs/audio-mini/bin/ffprobe",
+  "nvidia_smi": {
+    "ok": true,
+    "returncode": 0,
+    "stdout": "NVIDIA A100-PCIE-40GB, 40960 MiB\nNVIDIA A100-PCIE-40GB, 40960 MiB",
+    "stderr": ""
+  },
+  "torch": {
+    "torch_import": true,
+    "torch_version": "2.1.0+cu118",
+    "cuda_available": true,
+    "cuda_device_count": 2,
+    "cuda_device_name_0": "NVIDIA A100-PCIE-40GB"
+  },
+  "MMAUDIO_REPO": null,
+  "mmaudio_demo_py_exists": false,
+  "execution_lane": "remote_or_fallback_required"
+}

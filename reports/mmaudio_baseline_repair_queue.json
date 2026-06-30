@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "forest_bird_branch_001",
+    "winner_candidate_id": "forest_bird_branch_001__mmaudio__dss_avoid_priority",
+    "repair_reason": "Current winner is fallback control audio; rerun with true local/remote MMAudio when available.",
+    "priority": "high"
+  },
+  {
+    "case_id": "glass_drop_room_001",
+    "winner_candidate_id": "glass_drop_room_001__mmaudio__dss_avoid_priority",
+    "repair_reason": "Current winner is fallback control audio; rerun with true local/remote MMAudio when available.",
+    "priority": "high"
+  },
+  {
+    "case_id": "kitchen_chop_sizzle_001",
+    "winner_candidate_id": "kitchen_chop_sizzle_001__mmaudio__dss_avoid_priority",
+    "repair_reason": "Current winner is fallback control audio; rerun with true local/remote MMAudio when available.",
+    "priority": "high"
+  },
+  {
+    "case_id": "robot_warehouse_pick_001",
+    "winner_candidate_id": "robot_warehouse_pick_001__mmaudio__dss_avoid_priority",
+    "repair_reason": "Current winner is fallback control audio; rerun with true local/remote MMAudio when available.",
+    "priority": "high"
+  },
+  {
+    "case_id": "street_rain_crosswalk_001",
+    "winner_candidate_id": "street_rain_crosswalk_001__mmaudio__dss_avoid_priority",
+    "repair_reason": "Current winner is fallback control audio; rerun with true local/remote MMAudio when available.",
+    "priority": "high"
+  },
+  {
+    "case_id": "subway_arrival_door_001",
+    "winner_candidate_id": "subway_arrival_door_001__mmaudio__dss_avoid_priority",
+    "repair_reason": "Current winner is fallback control audio; rerun with true local/remote MMAudio when available.",
+    "priority": "high"
+  }
+]

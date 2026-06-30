@@ -1,0 +1,243 @@
+{
+  "name": "week17_mmaudio_case_input_manifest",
+  "created_at_utc": "2026-06-30T02:16:10.032175+00:00",
+  "purpose": "Translate Week17 DSS demo cases into executable MMAudio candidate slots.",
+  "case_count": 6,
+  "candidate_slot_count": 12,
+  "cases": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "case_dir": "cases/forest_bird_branch_001",
+      "input_video": "cases/forest_bird_branch_001/input_video.mp4",
+      "input_video_size_mb": 0.025,
+      "duration_sec": 8.0,
+      "duration_for_model_sec": 8.0,
+      "dss_path": "cases/forest_bird_branch_001/director_sound_script.yaml",
+      "expected_events_path": "cases/forest_bird_branch_001/expected_events.csv",
+      "baseline_prompt_path": "cases/forest_bird_branch_001/baseline_prompt.txt",
+      "event_count": 4,
+      "candidate_slots": [
+        {
+          "candidate_id": "forest_bird_branch_001__mmaudio__dss_compact",
+          "case_id": "forest_bird_branch_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_compact",
+          "prompt": "Generate synchronized Foley and ambience for silent video case forest_bird_branch_001. Base scene: Generate soft forest ambience, bird chirps, leaf rustle, and a clear small branch crack synchronized to the visible motion.. Key timed events: E1: sound=soft wind through leaves, priority=2, tolerance=500 | E2: sound=two short bird chirps, priority=3, tolerance=150 | E3: sound=small animal or bird rustling leaves, priority=4, tolerance=180 | E4: sound=dry branch crack, priority=5, tolerance=100. Prioritize accurate onset timing, plausible object sounds, natural room ambience, and no narration.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/forest_bird_branch_001__mmaudio__dss_compact.wav"
+        },
+        {
+          "candidate_id": "forest_bird_branch_001__mmaudio__dss_avoid_priority",
+          "case_id": "forest_bird_branch_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_avoid_priority",
+          "prompt": "Director sound script for case forest_bird_branch_001. Create audio that follows the visual event order and priority. Timed event contract: E1: sound=soft wind through leaves, priority=2, tolerance=500 | E2: sound=two short bird chirps, priority=3, tolerance=150 | E3: sound=small animal or bird rustling leaves, priority=4, tolerance=180 | E4: sound=dry branch crack, priority=5, tolerance=100. Avoid: speech, unrelated music, exaggerated cinematic hits. Keep Foley transients aligned to visible actions, preserve background ambience, and avoid speech leakage.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/forest_bird_branch_001__mmaudio__dss_avoid_priority.wav"
+        }
+      ]
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "case_dir": "cases/glass_drop_room_001",
+      "input_video": "cases/glass_drop_room_001/input_video.mp4",
+      "input_video_size_mb": 0.024,
+      "duration_sec": 7.0,
+      "duration_for_model_sec": 7.0,
+      "dss_path": "cases/glass_drop_room_001/director_sound_script.yaml",
+      "expected_events_path": "cases/glass_drop_room_001/expected_events.csv",
+      "baseline_prompt_path": "cases/glass_drop_room_001/baseline_prompt.txt",
+      "event_count": 4,
+      "candidate_slots": [
+        {
+          "candidate_id": "glass_drop_room_001__mmaudio__dss_compact",
+          "case_id": "glass_drop_room_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_compact",
+          "prompt": "Generate synchronized Foley and ambience for silent video case glass_drop_room_001. Base scene: Generate quiet room tone, a glass slip, sharp impact, glass shatter, and a short reflective tail.. Key timed events: E1: sound=quiet indoor room tone, priority=1, tolerance=500 | E2: sound=glass sliding off table edge, priority=4, tolerance=120 | E3: sound=sharp glass impact on hard floor, priority=5, tolerance=70 | E4: sound=small glass fragments scattering, priority=5, tolerance=100. Prioritize accurate onset timing, plausible object sounds, natural room ambience, and no narration.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/glass_drop_room_001__mmaudio__dss_compact.wav"
+        },
+        {
+          "candidate_id": "glass_drop_room_001__mmaudio__dss_avoid_priority",
+          "case_id": "glass_drop_room_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_avoid_priority",
+          "prompt": "Director sound script for case glass_drop_room_001. Create audio that follows the visual event order and priority. Timed event contract: E1: sound=quiet indoor room tone, priority=1, tolerance=500 | E2: sound=glass sliding off table edge, priority=4, tolerance=120 | E3: sound=sharp glass impact on hard floor, priority=5, tolerance=70 | E4: sound=small glass fragments scattering, priority=5, tolerance=100. Avoid: speech, unrelated music, exaggerated cinematic hits. Keep Foley transients aligned to visible actions, preserve background ambience, and avoid speech leakage.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/glass_drop_room_001__mmaudio__dss_avoid_priority.wav"
+        }
+      ]
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "case_dir": "cases/kitchen_chop_sizzle_001",
+      "input_video": "cases/kitchen_chop_sizzle_001/input_video.mp4",
+      "input_video_size_mb": 0.029,
+      "duration_sec": 10.0,
+      "duration_for_model_sec": 10.0,
+      "dss_path": "cases/kitchen_chop_sizzle_001/director_sound_script.yaml",
+      "expected_events_path": "cases/kitchen_chop_sizzle_001/expected_events.csv",
+      "baseline_prompt_path": "cases/kitchen_chop_sizzle_001/baseline_prompt.txt",
+      "event_count": 4,
+      "candidate_slots": [
+        {
+          "candidate_id": "kitchen_chop_sizzle_001__mmaudio__dss_compact",
+          "case_id": "kitchen_chop_sizzle_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_compact",
+          "prompt": "Generate synchronized Foley and ambience for silent video case kitchen_chop_sizzle_001. Base scene: Generate kitchen Foley with clean knife chops, pan sizzle, light utensil handling, and a plate set-down.. Key timed events: E1: sound=small indoor kitchen room tone, priority=1, tolerance=500 | E2: sound=rhythmic vegetable chopping on wooden board, priority=5, tolerance=100 | E3: sound=oil and food sizzling in pan, priority=4, tolerance=250 | E4: sound=ceramic plate placed on counter, priority=3, tolerance=120. Prioritize accurate onset timing, plausible object sounds, natural room ambience, and no narration.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/kitchen_chop_sizzle_001__mmaudio__dss_compact.wav"
+        },
+        {
+          "candidate_id": "kitchen_chop_sizzle_001__mmaudio__dss_avoid_priority",
+          "case_id": "kitchen_chop_sizzle_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_avoid_priority",
+          "prompt": "Director sound script for case kitchen_chop_sizzle_001. Create audio that follows the visual event order and priority. Timed event contract: E1: sound=small indoor kitchen room tone, priority=1, tolerance=500 | E2: sound=rhythmic vegetable chopping on wooden board, priority=5, tolerance=100 | E3: sound=oil and food sizzling in pan, priority=4, tolerance=250 | E4: sound=ceramic plate placed on counter, priority=3, tolerance=120. Avoid: speech, unrelated music, exaggerated cinematic hits. Keep Foley transients aligned to visible actions, preserve background ambience, and avoid speech leakage.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/kitchen_chop_sizzle_001__mmaudio__dss_avoid_priority.wav"
+        }
+      ]
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "case_dir": "cases/robot_warehouse_pick_001",
+      "input_video": "cases/robot_warehouse_pick_001/input_video.mp4",
+      "input_video_size_mb": 0.04,
+      "duration_sec": 11.0,
+      "duration_for_model_sec": 11.0,
+      "dss_path": "cases/robot_warehouse_pick_001/director_sound_script.yaml",
+      "expected_events_path": "cases/robot_warehouse_pick_001/expected_events.csv",
+      "baseline_prompt_path": "cases/robot_warehouse_pick_001/baseline_prompt.txt",
+      "event_count": 4,
+      "candidate_slots": [
+        {
+          "candidate_id": "robot_warehouse_pick_001__mmaudio__dss_compact",
+          "case_id": "robot_warehouse_pick_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_compact",
+          "prompt": "Generate synchronized Foley and ambience for silent video case robot_warehouse_pick_001. Base scene: Create mechanical servo movement, soft warehouse ambience, cardboard handling, and a short confirmation beep.. Key timed events: E1: sound=low warehouse ventilation hum, priority=1, tolerance=600 | E2: sound=precise electric servo arm movement, priority=4, tolerance=180 | E3: sound=cardboard box lifted from shelf, priority=5, tolerance=150 | E4: sound=short clean robot confirmation beep, priority=3, tolerance=80. Prioritize accurate onset timing, plausible object sounds, natural room ambience, and no narration.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/robot_warehouse_pick_001__mmaudio__dss_compact.wav"
+        },
+        {
+          "candidate_id": "robot_warehouse_pick_001__mmaudio__dss_avoid_priority",
+          "case_id": "robot_warehouse_pick_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_avoid_priority",
+          "prompt": "Director sound script for case robot_warehouse_pick_001. Create audio that follows the visual event order and priority. Timed event contract: E1: sound=low warehouse ventilation hum, priority=1, tolerance=600 | E2: sound=precise electric servo arm movement, priority=4, tolerance=180 | E3: sound=cardboard box lifted from shelf, priority=5, tolerance=150 | E4: sound=short clean robot confirmation beep, priority=3, tolerance=80. Avoid: speech, unrelated music, exaggerated cinematic hits. Keep Foley transients aligned to visible actions, preserve background ambience, and avoid speech leakage.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/robot_warehouse_pick_001__mmaudio__dss_avoid_priority.wav"
+        }
+      ]
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "case_dir": "cases/street_rain_crosswalk_001",
+      "input_video": "cases/street_rain_crosswalk_001/input_video.mp4",
+      "input_video_size_mb": 0.063,
+      "duration_sec": 9.0,
+      "duration_for_model_sec": 9.0,
+      "dss_path": "cases/street_rain_crosswalk_001/director_sound_script.yaml",
+      "expected_events_path": "cases/street_rain_crosswalk_001/expected_events.csv",
+      "baseline_prompt_path": "cases/street_rain_crosswalk_001/baseline_prompt.txt",
+      "event_count": 4,
+      "candidate_slots": [
+        {
+          "candidate_id": "street_rain_crosswalk_001__mmaudio__dss_compact",
+          "case_id": "street_rain_crosswalk_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_compact",
+          "prompt": "Generate synchronized Foley and ambience for silent video case street_rain_crosswalk_001. Base scene: Create synchronized rain ambience, wet footsteps, a passing car, and a short puddle splash for a rainy night crosswalk.. Key timed events: E1: sound=steady light rain and wet street bed, priority=2, tolerance=500 | E2: sound=wet shoes stepping through shallow water, priority=4, tolerance=180 | E3: sound=muffled car pass-by on wet road, priority=3, tolerance=250 | E4: sound=single sharp puddle splash near camera, priority=5, tolerance=120. Prioritize accurate onset timing, plausible object sounds, natural room ambience, and no narration.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/street_rain_crosswalk_001__mmaudio__dss_compact.wav"
+        },
+        {
+          "candidate_id": "street_rain_crosswalk_001__mmaudio__dss_avoid_priority",
+          "case_id": "street_rain_crosswalk_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_avoid_priority",
+          "prompt": "Director sound script for case street_rain_crosswalk_001. Create audio that follows the visual event order and priority. Timed event contract: E1: sound=steady light rain and wet street bed, priority=2, tolerance=500 | E2: sound=wet shoes stepping through shallow water, priority=4, tolerance=180 | E3: sound=muffled car pass-by on wet road, priority=3, tolerance=250 | E4: sound=single sharp puddle splash near camera, priority=5, tolerance=120. Avoid: speech, unrelated music, exaggerated cinematic hits. Keep Foley transients aligned to visible actions, preserve background ambience, and avoid speech leakage.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/street_rain_crosswalk_001__mmaudio__dss_avoid_priority.wav"
+        }
+      ]
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "case_dir": "cases/subway_arrival_door_001",
+      "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+      "input_video_size_mb": 0.042,
+      "duration_sec": 12.0,
+      "duration_for_model_sec": 12.0,
+      "dss_path": "cases/subway_arrival_door_001/director_sound_script.yaml",
+      "expected_events_path": "cases/subway_arrival_door_001/expected_events.csv",
+      "baseline_prompt_path": "cases/subway_arrival_door_001/baseline_prompt.txt",
+      "event_count": 4,
+      "candidate_slots": [
+        {
+          "candidate_id": "subway_arrival_door_001__mmaudio__dss_compact",
+          "case_id": "subway_arrival_door_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_compact",
+          "prompt": "Generate synchronized Foley and ambience for silent video case subway_arrival_door_001. Base scene: Create subway platform ambience, train rumble, brake squeal, door opening chime, and light crowd bed without dialogue.. Key timed events: E1: sound=underground platform room tone and distant crowd, priority=2, tolerance=700 | E2: sound=subway train approaching with low rumble, priority=4, tolerance=250 | E3: sound=metal brake squeal as train stops, priority=5, tolerance=150 | E4: sound=door open chime and sliding door start, priority=3, tolerance=120. Prioritize accurate onset timing, plausible object sounds, natural room ambience, and no narration.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/subway_arrival_door_001__mmaudio__dss_compact.wav"
+        },
+        {
+          "candidate_id": "subway_arrival_door_001__mmaudio__dss_avoid_priority",
+          "case_id": "subway_arrival_door_001",
+          "model": "MMAudio",
+          "prompt_variant": "dss_avoid_priority",
+          "prompt": "Director sound script for case subway_arrival_door_001. Create audio that follows the visual event order and priority. Timed event contract: E1: sound=underground platform room tone and distant crowd, priority=2, tolerance=700 | E2: sound=subway train approaching with low rumble, priority=4, tolerance=250 | E3: sound=metal brake squeal as train stops, priority=5, tolerance=150 | E4: sound=door open chime and sliding door start, priority=3, tolerance=120. Avoid: speech, unrelated music, exaggerated cinematic hits. Keep Foley transients aligned to visible actions, preserve background ambience, and avoid speech leakage.",
+          "event_count": 4,
+          "video_conditioned": true,
+          "expected_output_wav": "experiments/mmaudio_baseline_2026_06_30/candidates/subway_arrival_door_001__mmaudio__dss_avoid_priority.wav"
+        }
+      ]
+    }
+  ],
+  "runtime_preflight": {
+    "created_at_utc": "2026-06-30T02:16:08.440763+00:00",
+    "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12)  [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+    "ffmpeg": "/home/GRT/anaconda3/envs/audio-mini/bin/ffmpeg",
+    "ffprobe": "/home/GRT/anaconda3/envs/audio-mini/bin/ffprobe",
+    "nvidia_smi": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "NVIDIA A100-PCIE-40GB, 40960 MiB\nNVIDIA A100-PCIE-40GB, 40960 MiB",
+      "stderr": ""
+    },
+    "torch": {
+      "torch_import": true,
+      "torch_version": "2.1.0+cu118",
+      "cuda_available": true,
+      "cuda_device_count": 2,
+      "cuda_device_name_0": "NVIDIA A100-PCIE-40GB"
+    },
+    "MMAUDIO_REPO": null,
+    "mmaudio_demo_py_exists": false,
+    "execution_lane": "remote_or_fallback_required"
+  },
+  "failure_count": 0,
+  "readiness_failures": [],
+  "boundary": {
+    "mmaudio_local_ready": false,
+    "fallback_required_if_local_not_ready": true,
+    "do_not_claim_v2a_success_until_audio_files_exist": true
+  }
+}
