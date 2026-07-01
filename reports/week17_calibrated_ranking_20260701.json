@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-07-01T02:51:53.400115+00:00",
+  "status": "GREEN_CALIBRATED_RERANKER_READY",
+  "input_csv": "reports/week17_fallback_aware_ranking_20260701.csv",
+  "candidate_count": 28,
+  "case_count": 6,
+  "winner_count": 6,
+  "score_min": 0.0,
+  "score_max": 0.93,
+  "score_unique_count": 6,
+  "true_mmaudio_success": false,
+  "claim_boundary": {
+    "true_mmaudio_v2a_success": false,
+    "calibrated_reranker_ready": true,
+    "scores_are_relative_not_human_preference": true
+  },
+  "winners": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "candidate_id": "forest_bird_branch_001__mmaudio__dss_avoid_priority",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.93,
+      "artifact_path": "experiments/mmaudio_baseline_2026_06_30/candidates/forest_bird_branch_001__mmaudio__dss_avoid_priority.wav",
+      "why_selected": "source_base=0.66 | dss_avoid_priority_bonus=0.065 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=8.0 | peak_healthy_bonus=0.045,peak=0.350006 | rms_healthy_bonus=0.045,rms=0.016115 | low_silence_bonus=0.035,silence=0.008867"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__mmaudio__dss_avoid_priority",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.93,
+      "artifact_path": "experiments/mmaudio_baseline_2026_06_30/candidates/glass_drop_room_001__mmaudio__dss_avoid_priority.wav",
+      "why_selected": "source_base=0.66 | dss_avoid_priority_bonus=0.065 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=7.0 | peak_healthy_bonus=0.045,peak=0.352753 | rms_healthy_bonus=0.045,rms=0.017162 | low_silence_bonus=0.035,silence=0.008429"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__mmaudio__dss_avoid_priority",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.93,
+      "artifact_path": "experiments/mmaudio_baseline_2026_06_30/candidates/kitchen_chop_sizzle_001__mmaudio__dss_avoid_priority.wav",
+      "why_selected": "source_base=0.66 | dss_avoid_priority_bonus=0.065 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=10.0 | peak_healthy_bonus=0.045,peak=0.377411 | rms_healthy_bonus=0.045,rms=0.015006 | low_silence_bonus=0.035,silence=0.0087"
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "candidate_id": "robot_warehouse_pick_001__mmaudio__dss_avoid_priority",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.93,
+      "artifact_path": "experiments/mmaudio_baseline_2026_06_30/candidates/robot_warehouse_pick_001__mmaudio__dss_avoid_priority.wav",
+      "why_selected": "source_base=0.66 | dss_avoid_priority_bonus=0.065 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=11.0 | peak_healthy_bonus=0.045,peak=0.355835 | rms_healthy_bonus=0.045,rms=0.015222 | low_silence_bonus=0.035,silence=0.0091"
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "candidate_id": "street_rain_crosswalk_001__mmaudio__dss_avoid_priority",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.93,
+      "artifact_path": "experiments/mmaudio_baseline_2026_06_30/candidates/street_rain_crosswalk_001__mmaudio__dss_avoid_priority.wav",
+      "why_selected": "source_base=0.66 | dss_avoid_priority_bonus=0.065 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=9.0 | peak_healthy_bonus=0.045,peak=0.323181 | rms_healthy_bonus=0.045,rms=0.01517 | low_silence_bonus=0.035,silence=0.009056"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "candidate_id": "subway_arrival_door_001__mmaudio__dss_avoid_priority",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.93,
+      "artifact_path": "experiments/mmaudio_baseline_2026_06_30/candidates/subway_arrival_door_001__mmaudio__dss_avoid_priority.wav",
+      "why_selected": "source_base=0.66 | dss_avoid_priority_bonus=0.065 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=12.0 | peak_healthy_bonus=0.045,peak=0.320068 | rms_healthy_bonus=0.045,rms=0.014809 | low_silence_bonus=0.035,silence=0.008756"
+    }
+  ],
+  "outputs": {
+    "ranking_csv": "reports/week17_calibrated_ranking_20260701.csv",
+    "ranking_json": "reports/week17_calibrated_ranking_20260701.json",
+    "winners_json": "reports/week17_calibrated_winners_20260701.json",
+    "rejections_json": "reports/week17_calibrated_rejections_20260701.json",
+    "gallery_md": "artifacts/model_race/week17_calibrated_reranker/calibrated_gallery_20260701.md"
+  }
+}

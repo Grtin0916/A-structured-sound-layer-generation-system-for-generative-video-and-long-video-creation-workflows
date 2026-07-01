@@ -1,0 +1,202 @@
+{
+  "rejections": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "candidate_id": "forest_bird_branch_001__mmaudio__dss_compact",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.915,
+      "rejected_as": "runner_up",
+      "reject_reason": "lower_calibrated_score_than_winner",
+      "candidate_reason": "source_base=0.66 | dss_compact_bonus=0.035 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=8.0 | peak_healthy_bonus=0.045,peak=0.353699 | rms_healthy_bonus=0.045,rms=0.016216 | low_silence_bonus=0.035,silence=0.008508"
+    },
+    {
+      "case_id": "forest_bird_branch_001",
+      "candidate_id": "forest_bird_branch_001__control_rule_foley_v0",
+      "source": "control_rule_foley",
+      "calibrated_score": 0.78,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.54 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=8.0 | peak_healthy_bonus=0.045,peak=0.421448 | rms_healthy_bonus=0.045,rms=0.09411 | low_silence_bonus=0.035,silence=0.002326"
+    },
+    {
+      "case_id": "forest_bird_branch_001",
+      "candidate_id": "forest_bird_branch_001__control_rule_foley_v0",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=8.0 | peak_healthy_bonus=0.045,peak=0.421448 | rms_healthy_bonus=0.045,rms=0.09411 | low_silence_bonus=0.035,silence=0.002326"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__mmaudio__dss_compact",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.915,
+      "rejected_as": "runner_up",
+      "reject_reason": "lower_calibrated_score_than_winner",
+      "candidate_reason": "source_base=0.66 | dss_compact_bonus=0.035 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=7.0 | peak_healthy_bonus=0.045,peak=0.444458 | rms_healthy_bonus=0.045,rms=0.01683 | low_silence_bonus=0.035,silence=0.008616"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__control_rule_foley_v0",
+      "source": "control_rule_foley",
+      "calibrated_score": 0.78,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.54 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=7.0 | peak_healthy_bonus=0.045,peak=0.409882 | rms_healthy_bonus=0.045,rms=0.104635 | low_silence_bonus=0.035,silence=0.00336"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__control_rule_foley_v0",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=7.0 | peak_healthy_bonus=0.045,peak=0.409882 | rms_healthy_bonus=0.045,rms=0.104635 | low_silence_bonus=0.035,silence=0.00336"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+      "source": "true_mmaudio_blocker",
+      "calibrated_score": 0.0,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "true_mmaudio_blocked_by_torch_torchaudio_abi"
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "true_mmaudio_attempt__blocked__20260701",
+      "source": "true_mmaudio_blocker",
+      "calibrated_score": 0.0,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "true_mmaudio_blocked_by_torch_torchaudio_abi"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__mmaudio__dss_compact",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.915,
+      "rejected_as": "runner_up",
+      "reject_reason": "lower_calibrated_score_than_winner",
+      "candidate_reason": "source_base=0.66 | dss_compact_bonus=0.035 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=10.0 | peak_healthy_bonus=0.045,peak=0.329407 | rms_healthy_bonus=0.045,rms=0.015135 | low_silence_bonus=0.035,silence=0.008675"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0",
+      "source": "control_rule_foley",
+      "calibrated_score": 0.78,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.54 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=10.0 | peak_healthy_bonus=0.045,peak=0.38562 | rms_healthy_bonus=0.045,rms=0.110776 | low_silence_bonus=0.035,silence=0.002673"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=10.0 | peak_healthy_bonus=0.045,peak=0.38562 | rms_healthy_bonus=0.045,rms=0.110776 | low_silence_bonus=0.035,silence=0.002673"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0_repair_v1",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=10.0 | peak_healthy_bonus=0.045,peak=0.813934 | rms_healthy_bonus=0.045,rms=0.122269 | low_silence_bonus=0.035,silence=0.003033"
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__repair_seed__unknown",
+      "source": "repair_candidate",
+      "calibrated_score": 0.05,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "not_readable_or_not_eligible"
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "candidate_id": "robot_warehouse_pick_001__mmaudio__dss_compact",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.915,
+      "rejected_as": "runner_up",
+      "reject_reason": "lower_calibrated_score_than_winner",
+      "candidate_reason": "source_base=0.66 | dss_compact_bonus=0.035 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=11.0 | peak_healthy_bonus=0.045,peak=0.337585 | rms_healthy_bonus=0.045,rms=0.014905 | low_silence_bonus=0.035,silence=0.008462"
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "candidate_id": "robot_warehouse_pick_001__control_rule_foley_v0",
+      "source": "control_rule_foley",
+      "calibrated_score": 0.78,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.54 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=11.0 | peak_healthy_bonus=0.045,peak=0.340149 | rms_healthy_bonus=0.045,rms=0.06734 | low_silence_bonus=0.035,silence=0.002962"
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "candidate_id": "robot_warehouse_pick_001__control_rule_foley_v0",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=11.0 | peak_healthy_bonus=0.045,peak=0.340149 | rms_healthy_bonus=0.045,rms=0.06734 | low_silence_bonus=0.035,silence=0.002962"
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "candidate_id": "street_rain_crosswalk_001__mmaudio__dss_compact",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.915,
+      "rejected_as": "runner_up",
+      "reject_reason": "lower_calibrated_score_than_winner",
+      "candidate_reason": "source_base=0.66 | dss_compact_bonus=0.035 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=9.0 | peak_healthy_bonus=0.045,peak=0.363342 | rms_healthy_bonus=0.045,rms=0.015539 | low_silence_bonus=0.035,silence=0.008924"
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "candidate_id": "street_rain_crosswalk_001__control_rule_foley_v0",
+      "source": "control_rule_foley",
+      "calibrated_score": 0.78,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.54 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=9.0 | peak_healthy_bonus=0.045,peak=0.421783 | rms_healthy_bonus=0.045,rms=0.069062 | low_silence_bonus=0.035,silence=0.002382"
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "candidate_id": "street_rain_crosswalk_001__control_rule_foley_v0",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=9.0 | peak_healthy_bonus=0.045,peak=0.421783 | rms_healthy_bonus=0.045,rms=0.069062 | low_silence_bonus=0.035,silence=0.002382"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "candidate_id": "subway_arrival_door_001__mmaudio__dss_compact",
+      "source": "fallback_mmaudio",
+      "calibrated_score": 0.915,
+      "rejected_as": "runner_up",
+      "reject_reason": "lower_calibrated_score_than_winner",
+      "candidate_reason": "source_base=0.66 | dss_compact_bonus=0.035 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=12.0 | peak_healthy_bonus=0.045,peak=0.373108 | rms_healthy_bonus=0.045,rms=0.015066 | low_silence_bonus=0.035,silence=0.009025"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "candidate_id": "subway_arrival_door_001__control_rule_foley_v0",
+      "source": "control_rule_foley",
+      "calibrated_score": 0.78,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.54 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=12.0 | peak_healthy_bonus=0.045,peak=0.316467 | rms_healthy_bonus=0.045,rms=0.047012 | low_silence_bonus=0.035,silence=0.002138"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "candidate_id": "subway_arrival_door_001__control_rule_foley_v0",
+      "source": "control_or_repair_candidate",
+      "calibrated_score": 0.74,
+      "rejected_as": "rejected",
+      "reject_reason": "lower_source_or_audio_health_score",
+      "candidate_reason": "source_base=0.5 | control_rule_interpretable_bonus=0.020 | artifact_exists_bonus=0.045 | duration_in_demo_range_bonus=0.050,duration=12.0 | peak_healthy_bonus=0.045,peak=0.316467 | rms_healthy_bonus=0.045,rms=0.047012 | low_silence_bonus=0.035,silence=0.002138"
+    }
+  ]
+}
