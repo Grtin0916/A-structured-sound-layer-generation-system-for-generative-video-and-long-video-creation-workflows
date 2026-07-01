@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-07-01T02:15:44.467748+00:00",
+  "decision_status": "YELLOW_FALLBACK_AWARE_RERANKER_READY",
+  "next_action": "use_labeled_fallback_control_candidates_for_temporal_reranker_keep_true_mmaudio_blocker",
+  "true_mmaudio_generated_count": 0,
+  "true_attempt_summary_exists": true,
+  "true_attempt_failures_exists": true,
+  "eligible_candidate_count": 49,
+  "blocked_candidate_count": 3,
+  "case_count": 6,
+  "source_count": 4,
+  "outputs": {
+    "decision_json": "reports/week17_model_race_decision_20260701.json",
+    "reranker_json": "reports/week17_reranker_input_for_0702.json",
+    "reranker_csv": "reports/week17_reranker_input_for_0702.csv",
+    "source_boundary_json": "experiments/model_race_2026_07_01/source_boundary_20260701.json"
+  },
+  "source_boundary": {
+    "true_mmaudio_attempt": "Only rows with readable=true and video_conditioned=true may be called true V2A.",
+    "fallback_mmaudio_baseline": "Fallback/control baseline candidates must not be described as true video-conditioned MMAudio.",
+    "control_seed": "Rule/control candidates are valid system candidates but not model-generated V2A.",
+    "repair_seed": "Repair candidates are valid for repair/reranker testing, not proof of true V2A."
+  }
+}

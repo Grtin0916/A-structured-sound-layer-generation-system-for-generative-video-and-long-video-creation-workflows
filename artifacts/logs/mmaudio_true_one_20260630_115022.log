@@ -1,0 +1,23 @@
+{
+  "decision": "YELLOW_TRUE_MMAUDIO_ONE_REPLACEMENT_BLOCKED",
+  "target_case": "glass_drop_room_001",
+  "candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+  "status": "blocked",
+  "mmaudio_repo": "/home/GRT/work/_external/MMAudio",
+  "demo_py_exists": true,
+  "video": "cases/glass_drop_room_001/input_video.mp4",
+  "output_wav": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.wav",
+  "runtime_sec": 1.773,
+  "readable": false,
+  "blocked_reason": {
+    "reason": "MMAUDIO_DEMO_NONZERO",
+    "returncode": 1,
+    "stderr_tail": "Traceback (most recent call last):\n  File \"/home/GRT/work/_external/MMAudio/demo.py\", line 6, in <module>\n    import torchaudio\n  File \"/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torchaudio/__init__.py\", line 1, in <module>\n    from . import (  # noqa: F401\n  File \"/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torchaudio/_extension/__init__.py\", line 45, in <module>\n    _load_lib(\"libtorchaudio\")\n  File \"/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torchaudio/_extension/utils.py\", line 64, in _load_lib\n    torch.ops.load_library(path)\n  File \"/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torch/_ops.py\", line 1478, in load_library\n    ctypes.CDLL(path)\n  File \"/home/GRT/anaconda3/envs/audio-mini/lib/python3.9/ctypes/__init__.py\", line 374, in __init__\n    self._handle = _dlopen(self._name, mode)\nOSError: /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/torchaudio/lib/libtorchaudio.so: undefined symbol: _ZNK5torch8autograd4Node4nameEv\n",
+    "stdout_tail": ""
+  },
+  "claim_boundary": {
+    "can_claim_true_mmaudio_v2a_success_for_one_case": false,
+    "can_claim_batch_true_mmaudio_success": false,
+    "can_replace_all_fallback_winners": false
+  }
+}

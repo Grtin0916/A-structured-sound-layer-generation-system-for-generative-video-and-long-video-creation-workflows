@@ -1,0 +1,6 @@
+{
+  "true_mmaudio_attempt": "Only rows with readable=true and video_conditioned=true may be called true V2A.",
+  "fallback_mmaudio_baseline": "Fallback/control baseline candidates must not be described as true video-conditioned MMAudio.",
+  "control_seed": "Rule/control candidates are valid system candidates but not model-generated V2A.",
+  "repair_seed": "Repair candidates are valid for repair/reranker testing, not proof of true V2A."
+}

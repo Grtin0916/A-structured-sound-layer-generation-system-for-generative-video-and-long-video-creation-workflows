@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-01T02:18:50.056321+00:00",
+  "status": "GREEN_FALLBACK_AWARE_RERANKER_READY",
+  "raw_row_count": 52,
+  "canonical_candidate_count": 28,
+  "case_count": 6,
+  "winner_count": 6,
+  "repair_queue_count": 0,
+  "outputs": {
+    "ranking_csv": "reports/week17_fallback_aware_ranking_20260701.csv",
+    "ranking_json": "reports/week17_fallback_aware_ranking_20260701.json",
+    "winners_json": "reports/week17_fallback_aware_winners_20260701.json",
+    "repair_csv": "reports/week17_fallback_aware_repair_queue_20260701.csv",
+    "repair_json": "reports/week17_fallback_aware_repair_queue_20260701.json",
+    "java_payload_json": "reports/week17_model_race_java_payload_20260701.json",
+    "gallery_md": "artifacts/model_race/week17_fallback_aware_reranker/fallback_aware_gallery_20260701.md"
+  }
+}
