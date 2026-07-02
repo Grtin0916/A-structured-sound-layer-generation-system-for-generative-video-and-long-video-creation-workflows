@@ -1,0 +1,32 @@
+{
+  "schema_version": "week17.true_aware.demo_handoff_export.v1",
+  "generated_at_utc": "2026-07-02T03:44:52.000305+00:00",
+  "export_status": "ready",
+  "zip_path": "artifacts/demo/week17_true_aware_demo_pack_export_20260702.zip",
+  "zip_exists": true,
+  "zip_size_bytes": 317597,
+  "zip_sha256": "0626923af1856bfa71870bc476c6e7d4c10f7dcd69b09ae8521a231057934b98",
+  "export_dir": "artifacts/demo/week17_true_aware_demo_pack_export_20260702",
+  "export_file_count": 14,
+  "demo_pack_status": "ready_for_friday_packaging",
+  "case_id": "glass_drop_room_001",
+  "safe_true_mmaudio_record_count": 1,
+  "raw_candidate_record_count": 9,
+  "cloud_ready": true,
+  "wav_fallback_included": true,
+  "flac_original_included": true,
+  "gitignore_updated": true,
+  "claim_boundary": {
+    "allowed": [
+      "One true MMAudio video-conditioned candidate is available.",
+      "Java exposes the result through an artifact-backed result-card API.",
+      "Cloud can use the result as a Friday demo gate seed."
+    ],
+    "forbidden": [
+      "No batch true MMAudio success.",
+      "No full candidate ranking claim.",
+      "No production SLO claim.",
+      "No k6 threshold pass claim."
+    ]
+  }
+}

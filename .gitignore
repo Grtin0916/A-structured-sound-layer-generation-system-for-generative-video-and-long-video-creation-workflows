@@ -60,3 +60,17 @@ build/
 !artifacts/experiments/baseline_v1/checkpoints/
 !artifacts/experiments/baseline_v1/checkpoints/best.pt
 .local_media/
+
+# week17 true-aware local runtime leftovers
+artifacts/logs/download_bigvgan_v2_44k_20260701.log
+artifacts/logs/download_bigvgan_v2_44k_curl_20260701.log
+artifacts/logs/download_mmaudio_small_44k_20260701.log
+artifacts/logs/download_mmaudio_synchformer_20260701.log
+artifacts/logs/download_mmaudio_v1_44_20260701.log
+artifacts/logs/download_openclip_dfn5b_20260701.log
+artifacts/logs/download_openclip_dfn5b_curl_20260701.log
+artifacts/logs/mmaudio_manual_small44_probe_20260701.log
+artifacts/logs/mmaudio_true_one_mmaudio_mini_20260701.log
+artifacts/logs/mmaudio_true_one_mmaudio_mini_proxy_20260701.log
+artifacts/logs/week17_true_aware_demo_preview_server_20260702.log
+experiments/mmaudio_true_replacement_2026_06_30/manual_small44_probe/
