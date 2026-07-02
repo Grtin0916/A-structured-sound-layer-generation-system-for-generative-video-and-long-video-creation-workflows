@@ -1,0 +1,33 @@
+{
+  "schema_version": "week17.true_aware.audio_fallback.v1",
+  "generated_at_utc": "2026-07-02T03:36:37.905464+00:00",
+  "case_id": "glass_drop_room_001",
+  "fallback_status": "wav_fallback_ready",
+  "ffmpeg_conversion_success": true,
+  "conversion_note": "ffmpeg_conversion_ok",
+  "flac_audio": "artifacts/demo/week17_true_aware_demo_pack_seed/audio/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+  "flac_exists": true,
+  "flac_size_bytes": 138401,
+  "wav_audio": "artifacts/demo/week17_true_aware_demo_pack_seed/audio/glass_drop_room_001__mmaudio__true_replacement_v0.wav",
+  "wav_exists": true,
+  "wav_size_bytes": 614478,
+  "html_updated": true,
+  "html_audio_sources": [
+    "audio/wav",
+    "audio/flac"
+  ],
+  "browser_boundary": "HTML now offers multiple audio sources when WAV fallback is available; actual playback still depends on browser support.",
+  "claim_boundary": {
+    "allowed": [
+      "One true MMAudio video-conditioned candidate is available.",
+      "Java exposes the result through an artifact-backed result-card API.",
+      "Cloud can use the result as a Friday demo gate seed."
+    ],
+    "forbidden": [
+      "No batch true MMAudio success.",
+      "No full candidate ranking claim.",
+      "No production SLO claim.",
+      "No k6 threshold pass claim."
+    ]
+  }
+}
