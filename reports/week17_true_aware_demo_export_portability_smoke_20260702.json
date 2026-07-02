@@ -1,0 +1,34 @@
+{
+  "schema_version": "week17.true_aware.demo_export_portability_smoke.v1",
+  "generated_at_utc": "2026-07-02T03:49:26.142833+00:00",
+  "smoke_status": "pass",
+  "zip_path": "artifacts/demo/week17_true_aware_demo_pack_export_20260702.zip",
+  "isolated_extract_dir": "/tmp/week17_true_aware_demo_export_smoke",
+  "pack_dir": "/tmp/week17_true_aware_demo_export_smoke/week17_true_aware_demo_pack_export_20260702/week17_true_aware_demo_pack_seed",
+  "required_files_present": true,
+  "missing_files": [],
+  "http_index_ok": true,
+  "http_wav_ok": true,
+  "http_port": 8789,
+  "index_head": [
+    "HTTP/1.0 200 OK",
+    "Server: SimpleHTTP/0.6 Python/3.9.23",
+    "Date: Thu, 02 Jul 2026 03:49:26 GMT",
+    "Content-type: text/html",
+    "Content-Length: 1422",
+    "Last-Modified: Thu, 02 Jul 2026 03:49:24 GMT"
+  ],
+  "wav_head": [
+    "HTTP/1.0 200 OK",
+    "Server: SimpleHTTP/0.6 Python/3.9.23",
+    "Date: Thu, 02 Jul 2026 03:49:26 GMT",
+    "Content-type: audio/x-wav",
+    "Content-Length: 614478",
+    "Last-Modified: Thu, 02 Jul 2026 03:49:24 GMT"
+  ],
+  "case_id": "glass_drop_room_001",
+  "safe_true_mmaudio_record_count": 1,
+  "raw_candidate_record_count": 9,
+  "cloud_ready": true,
+  "claim_boundary_preserved": true
+}
