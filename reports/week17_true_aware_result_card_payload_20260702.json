@@ -1,0 +1,181 @@
+{
+  "schema_version": "week17.true_aware.result_card.v1",
+  "generated_at_utc": "2026-07-02T03:00:49.170536+00:00",
+  "source_repo_role": "mainbase",
+  "boundary": {
+    "true_mmaudio_single_success": true,
+    "batch_true_mmaudio_success": false,
+    "full_28_candidate_ranking_available": false,
+    "production_slo_verified": false,
+    "k6_threshold_pass_verified": false,
+    "hf_cache_or_model_weight_included": false
+  },
+  "result_card": {
+    "title": "Week17 true-aware model race result card",
+    "status": "true_single_available",
+    "headline": "At least one true MMAudio video-conditioned candidate is available for platform consumption.",
+    "case_count_observed": 7,
+    "candidate_record_count": 9,
+    "winner_record_count": 6,
+    "true_mmaudio_record_count": 9,
+    "primary_audio_artifact": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+    "next_consumer": "Java result-card API, then Cloud demo gate seed",
+    "explicit_non_claims": [
+      "No batch true MMAudio success claim.",
+      "No full 28-candidate ranking claim.",
+      "No production SLO claim.",
+      "No k6 threshold pass claim.",
+      "No model weight or HF cache included."
+    ]
+  },
+  "source_artifacts": [
+    {
+      "artifact_type": "true_aware_ranking",
+      "path": "reports/week17_true_aware_ranking_20260701.json",
+      "exists": true,
+      "size_bytes": 8669,
+      "sha256": "25822acfe54fae4da8bc93899b39254c60fb8fabf6ddb4e68885bb03b973da78",
+      "commit_policy": "include_if_small_and_project_evidence"
+    },
+    {
+      "artifact_type": "true_aware_winners",
+      "path": "reports/week17_true_aware_winners_20260701.json",
+      "exists": true,
+      "size_bytes": 8627,
+      "sha256": "5df1620742fbfa7bc9e5dcb08d11ff03067352e127391408e21d5a650992b2b5",
+      "commit_policy": "include_if_small_and_project_evidence"
+    },
+    {
+      "artifact_type": "true_single_evidence_report",
+      "path": "reports/week17_true_mmaudio_single_candidate_evidence_20260701.json",
+      "exists": true,
+      "size_bytes": 892,
+      "sha256": "8eebd70c83d4fc2b0d0521d595afd46788585213ae337c4711890442deb2489a",
+      "commit_policy": "include_if_small_and_project_evidence"
+    },
+    {
+      "artifact_type": "true_single_evidence_artifact",
+      "path": "artifacts/model_race/week17_true_mmaudio_single/true_mmaudio_single_candidate_evidence_20260701.json",
+      "exists": true,
+      "size_bytes": 892,
+      "sha256": "8eebd70c83d4fc2b0d0521d595afd46788585213ae337c4711890442deb2489a",
+      "commit_policy": "include_if_small_and_project_evidence"
+    },
+    {
+      "artifact_type": "true_aware_reranker_summary",
+      "path": "artifacts/model_race/week17_true_aware_reranker/true_aware_reranker_summary_20260701.json",
+      "exists": true,
+      "size_bytes": 1405,
+      "sha256": "9da41803568c1cd03cc4bcb3ba6a477b6bc70c67bab64497ba25a38eecaef97e",
+      "commit_policy": "include_if_small_and_project_evidence"
+    },
+    {
+      "artifact_type": "true_aware_gallery",
+      "path": "artifacts/model_race/week17_true_aware_reranker/true_aware_gallery_20260701.md",
+      "exists": true,
+      "size_bytes": 199,
+      "sha256": "3f5c820f5c05199dbd9a38a4a64943de11fb905923efb34953c8772bf962e83e",
+      "commit_policy": "include_if_small_and_project_evidence"
+    },
+    {
+      "artifact_type": "true_replacement_audio",
+      "path": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+      "exists": true,
+      "size_bytes": 138401,
+      "sha256": "9637fc444bb1c2d2ac9b214711f801b0d2ebb044ce52fe1bd080932b8c28c32e",
+      "commit_policy": "include_if_small_and_project_evidence"
+    }
+  ],
+  "candidate_rows": [
+    {
+      "row_index": 1,
+      "case_id": "unknown_case",
+      "candidate_id": "candidate_001",
+      "model": "unknown_model",
+      "audio_path": "",
+      "score": null,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 2,
+      "case_id": "forest_bird_branch_001",
+      "candidate_id": "forest_bird_branch_001__mmaudio__dss_avoid_priority",
+      "model": "unknown_model",
+      "audio_path": "",
+      "score": 91.0,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 3,
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+      "model": "unknown_model",
+      "audio_path": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+      "score": 1.05,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 4,
+      "case_id": "kitchen_chop_sizzle_001",
+      "candidate_id": "kitchen_chop_sizzle_001__mmaudio__dss_avoid_priority",
+      "model": "unknown_model",
+      "audio_path": "",
+      "score": 91.0,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 5,
+      "case_id": "robot_warehouse_pick_001",
+      "candidate_id": "robot_warehouse_pick_001__mmaudio__dss_avoid_priority",
+      "model": "unknown_model",
+      "audio_path": "",
+      "score": 91.0,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 6,
+      "case_id": "street_rain_crosswalk_001",
+      "candidate_id": "street_rain_crosswalk_001__mmaudio__dss_avoid_priority",
+      "model": "unknown_model",
+      "audio_path": "",
+      "score": 91.0,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 7,
+      "case_id": "subway_arrival_door_001",
+      "candidate_id": "subway_arrival_door_001__mmaudio__dss_avoid_priority",
+      "model": "unknown_model",
+      "audio_path": "",
+      "score": 91.0,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 8,
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+      "model": "unknown_model",
+      "audio_path": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+      "score": null,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    },
+    {
+      "row_index": 9,
+      "case_id": "glass_drop_room_001",
+      "candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+      "model": "unknown_model",
+      "audio_path": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+      "score": null,
+      "selected": false,
+      "contains_true_mmaudio_signal": true
+    }
+  ]
+}

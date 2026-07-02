@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-07-02T02:13:37.346034+00:00",
+  "status": "GREEN_TRUE_AWARE_SINGLE_COMPACT_RERANKER_READY",
+  "ranking_mode": "compact_winner_level_injection",
+  "source_raw_row_count": 52,
+  "source_canonical_candidate_count": 28,
+  "source_case_count": 6,
+  "input_winner_count": 6,
+  "compact_candidate_count": 7,
+  "case_count": 6,
+  "winner_count": 6,
+  "true_mmaudio_single_count": 1,
+  "true_mmaudio_winner_count": 1,
+  "displaced_fallback_winner_count": 1,
+  "true_mmaudio_case": "glass_drop_room_001",
+  "true_mmaudio_candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+  "true_mmaudio_audio_path": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+  "claim_boundary": {
+    "true_mmaudio_single_success": true,
+    "batch_true_mmaudio_success": false,
+    "fallback_aware_reranker_ready": true,
+    "true_aware_compact_reranker_ready": true,
+    "full_candidate_ranking_available": false,
+    "production_slo_claim": false
+  },
+  "outputs": {
+    "ranking_json": "reports/week17_true_aware_ranking_20260701.json",
+    "winners_json": "reports/week17_true_aware_winners_20260701.json",
+    "summary_json": "artifacts/model_race/week17_true_aware_reranker/true_aware_reranker_summary_20260701.json",
+    "gallery_md": "artifacts/model_race/week17_true_aware_reranker/true_aware_gallery_20260701.md"
+  }
+}

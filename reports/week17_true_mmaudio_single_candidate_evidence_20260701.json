@@ -1,0 +1,25 @@
+{
+  "artifact_type": "week17_true_mmaudio_single_candidate_evidence",
+  "status": "GREEN_TRUE_MMAUDIO_SINGLE_CANDIDATE_READY",
+  "case_id": "glass_drop_room_001",
+  "candidate_id": "glass_drop_room_001__mmaudio__true_replacement_v0",
+  "source_label": "true_mmaudio_attempt",
+  "video_conditioned": true,
+  "readable": true,
+  "eligible_for_rerank": true,
+  "audio_path": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+  "sha256": "9637fc444bb1c2d2ac9b214711f801b0d2ebb044ce52fe1bd080932b8c28c32e",
+  "bytes": 138401,
+  "samplerate": 44100,
+  "channels": 1,
+  "frames": 307200,
+  "duration_sec": 6.966,
+  "format": "FLAC",
+  "subtype": "PCM_16",
+  "claim_boundary": {
+    "true_mmaudio_single_success": true,
+    "batch_true_mmaudio_success": false,
+    "fallback_candidate": false,
+    "production_slo_claim": false
+  }
+}

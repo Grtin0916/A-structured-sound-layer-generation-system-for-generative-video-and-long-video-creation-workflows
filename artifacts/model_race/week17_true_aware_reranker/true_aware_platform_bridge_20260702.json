@@ -1,0 +1,16 @@
+{
+  "title": "Week17 true-aware result card bridge",
+  "status": "consumer_ready",
+  "primary_case_id": "glass_drop_room_001",
+  "primary_model": "MMAudio",
+  "primary_audio_artifact": "experiments/mmaudio_true_replacement_2026_06_30/candidates/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+  "primary_audio_exists": true,
+  "primary_audio_size_bytes": 138401,
+  "primary_audio_sha256": "9637fc444bb1c2d2ac9b214711f801b0d2ebb044ce52fe1bd080932b8c28c32e",
+  "raw_candidate_record_count": 9,
+  "raw_winner_record_count": 6,
+  "safe_true_mmaudio_record_count": 1,
+  "raw_payload_path": "reports/week17_true_aware_result_card_payload_20260702.json",
+  "recommended_java_behavior": "Expose this as a result-card endpoint and keep raw fallback-aware counts as context, not as true-MMAudio batch evidence.",
+  "recommended_cloud_behavior": "Use this bridge as a Friday demo gate seed with single=true, batch=false, fullRanking=false, productionSlo=false."
+}
