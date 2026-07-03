@@ -1,0 +1,12 @@
+{
+  "decision": "READY_FOR_W18_DSS_PROMPT_COMPILER",
+  "case_count": 6,
+  "repair_target_count": 6,
+  "safeTrueMmaudioRecordCount": 1,
+  "zip_valid": true,
+  "out_seed": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_seed_from_week17_demo_release_20260703.json",
+  "out_cases": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_seed_cases_20260703.csv",
+  "out_repair": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_seed_repair_targets_20260703.csv",
+  "out_prompt_seed": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_prompt_compiler_seed_20260703.md",
+  "out_interview_compact": "/home/GRT/work/audio_engineering_repo_skeleton_v1/docs/demo/week17_demo_release_interview_compact_20260703.md"
+}

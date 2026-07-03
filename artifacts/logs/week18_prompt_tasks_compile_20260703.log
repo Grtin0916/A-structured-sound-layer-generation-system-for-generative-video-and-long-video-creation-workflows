@@ -1,0 +1,14 @@
+{
+  "decision": "PASS",
+  "task_count": 12,
+  "case_count": 6,
+  "prompt_type_counts": {
+    "naive": 6,
+    "dss": 6
+  },
+  "true_anchor_task_count": 2,
+  "repair_target_count": 6,
+  "out_jsonl": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_prompt_tasks_20260703.jsonl",
+  "out_summary_csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_prompt_task_summary_20260703.csv",
+  "out_verify": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_prompt_task_verify_20260703.json"
+}

@@ -1,0 +1,7 @@
+case_id,week18_role,source_week,has_true_mmaudio,recommended_next_action
+forest_bird_branch_001,dss_prompt_compiler_seed,W17,False,generate DSS prompt variants and evaluate event coverage / forbidden leakage
+glass_drop_room_001,true_anchor,W17,True,preserve as positive anchor; compare DSS prompt vs naive prompt
+kitchen_chop_sizzle_001,dss_prompt_compiler_seed,W17,False,generate DSS prompt variants and evaluate event coverage / forbidden leakage
+robot_warehouse_pick_001,dss_prompt_compiler_seed,W17,False,generate DSS prompt variants and evaluate event coverage / forbidden leakage
+street_rain_crosswalk_001,dss_prompt_compiler_seed,W17,False,generate DSS prompt variants and evaluate event coverage / forbidden leakage
+subway_arrival_door_001,dss_prompt_compiler_seed,W17,False,generate DSS prompt variants and evaluate event coverage / forbidden leakage

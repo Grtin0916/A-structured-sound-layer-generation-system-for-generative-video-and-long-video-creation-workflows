@@ -1,0 +1,7 @@
+case_id,target_type,failure_mode,week18_action,priority
+glass_drop_room_001,positive_anchor,none_for_true_single; use as reference,protect timing and claim boundary while expanding prompt compiler,P0
+forest_bird_branch_001,candidate_or_fallback,needs DSS-aware regeneration or repair inspection,"run naive prompt vs DSS prompt; if onset/coverage fails, add to repair bank",P1
+kitchen_chop_sizzle_001,candidate_or_fallback,needs DSS-aware regeneration or repair inspection,"run naive prompt vs DSS prompt; if onset/coverage fails, add to repair bank",P1
+robot_warehouse_pick_001,candidate_or_fallback,needs DSS-aware regeneration or repair inspection,"run naive prompt vs DSS prompt; if onset/coverage fails, add to repair bank",P1
+street_rain_crosswalk_001,candidate_or_fallback,needs DSS-aware regeneration or repair inspection,"run naive prompt vs DSS prompt; if onset/coverage fails, add to repair bank",P1
+subway_arrival_door_001,candidate_or_fallback,needs DSS-aware regeneration or repair inspection,"run naive prompt vs DSS prompt; if onset/coverage fails, add to repair bank",P1
