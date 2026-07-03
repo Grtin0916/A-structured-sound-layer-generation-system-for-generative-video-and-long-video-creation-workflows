@@ -1,0 +1,50 @@
+{
+  "case_id": "glass_drop_room_001",
+  "demo_status": "single_true_v2a_candidate_available",
+  "primary_model": "MMAudio",
+  "primary_audio_pack_path": "audio/glass_drop_room_001__mmaudio__true_replacement_v0.flac",
+  "primary_audio_sha256": "9637fc444bb1c2d2ac9b214711f801b0d2ebb044ce52fe1bd080932b8c28c32e",
+  "safe_true_mmaudio_record_count": 1,
+  "raw_candidate_record_count": 9,
+  "raw_winner_record_count": 6,
+  "java_endpoints": [
+    "GET /api/week17/true-aware/result-card/health",
+    "GET /api/week17/true-aware/result-card/summary",
+    "GET /api/week17/true-aware/result-card/bridge",
+    "GET /api/week17/true-aware/result-card/claim-guard",
+    "GET /api/week17/true-aware/result-card/artifacts"
+  ],
+  "cloud_decision": {
+    "readyForFridayDemoPack": true,
+    "cloudGateSeedReady": true,
+    "javaResultCardApiReady": true,
+    "singleTrueMmaudioAvailable": true,
+    "safeTrueMmaudioRecordCount": 1,
+    "rawCandidateRecordCount": 9,
+    "trueMmaudioBatchSuccess": false,
+    "fullCandidateRankingAvailable": false,
+    "productionSloVerified": false,
+    "k6ThresholdPassVerified": false
+  },
+  "runtime_boundary": {
+    "dashboardSeedOnly": true,
+    "prometheusMetricsSampleOnly": true,
+    "liveGrafanaImportVerified": false,
+    "promtoolVerifiedInThisRun": false,
+    "k6ThresholdExecutedInThisRun": false,
+    "productionSloClaimAllowed": false
+  },
+  "claim_boundary": {
+    "allowed": [
+      "One true MMAudio video-conditioned candidate is available.",
+      "Java exposes the result through an artifact-backed result-card API.",
+      "Cloud can use the result as a Friday demo gate seed."
+    ],
+    "forbidden": [
+      "No batch true MMAudio success.",
+      "No full candidate ranking claim.",
+      "No production SLO claim.",
+      "No k6 threshold pass claim."
+    ]
+  }
+}

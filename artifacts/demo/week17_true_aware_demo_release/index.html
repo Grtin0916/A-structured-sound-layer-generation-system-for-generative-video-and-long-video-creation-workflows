@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Week17 True-aware Demo Release Candidate</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; margin: 40px; line-height: 1.55; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 16px; margin: 16px 0; }
+    .claim { background: #f8f8f8; padding: 16px; border-radius: 10px; }
+    .path { font-family: monospace; color: #555; }
+    code { background: #f2f2f2; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Week17 True-aware Demo Release Candidate</h1>
+  <p>This is a local, claim-safe demo package for the Director-guided Video-to-Audio SoundLayer System.</p>
+
+  <div class="claim">
+    <h2>Claim boundary</h2>
+    <p><b>Decision:</b> CLAIM_SAFE_RELEASE_CANDIDATE</p>
+    <p><b>safeTrueMmaudioRecordCount:</b> 1</p>
+    <p><b>trueMmaudioBatchSuccess:</b> false</p>
+    <p><b>fullCandidateRankingAvailable:</b> false</p>
+    <p><b>productionSloVerified:</b> false</p>
+    <p><b>k6ThresholdPassVerified:</b> false</p>
+    <p><b>liveGrafanaImportVerified:</b> false</p>
+
+    <h3>Allowed claims</h3>
+    <ul><li>A single true MMAudio replacement candidate is present and traceable.</li><li>A portable demo ZIP is available for local preview.</li><li>The demo keeps WAV fallback playback for browser compatibility.</li><li>Java and Cloud artifacts are trace-linked as offline/demo contracts.</li></ul>
+
+    <h3>Blocked claims</h3>
+    <ul><li>Do not claim true MMAudio batch success.</li><li>Do not claim full 28-candidate ranking availability.</li><li>Do not claim production SLO verification.</li><li>Do not claim k6 threshold pass unless k6 is actually executed.</li><li>Do not claim live Grafana import unless Grafana import is actually verified.</li></ul>
+  </div>
+
+  <h2>Audio preview</h2>
+  
+        <section class="card">
+          <h3>glass_drop_room_001__mmaudio__true_replacement_v0.wav</h3>
+          <audio controls preload="metadata">
+            <source src="audio/glass_drop_room_001__mmaudio__true_replacement_v0.wav" type="audio/wav">
+            <a href="audio/glass_drop_room_001__mmaudio__true_replacement_v0.wav">Download WAV</a>
+          </audio>
+          <p class="path">audio/glass_drop_room_001__mmaudio__true_replacement_v0.wav</p>
+        </section>
+        
+
+  <h2>Trace links</h2>
+  <ul>
+    <li><a href="release_manifest.json">release manifest</a></li>
+    <li><a href="walkthrough.md">walkthrough</a></li>
+  </ul>
+</body>
+</html>

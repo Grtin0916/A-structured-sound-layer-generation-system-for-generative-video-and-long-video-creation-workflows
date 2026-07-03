@@ -1,0 +1,7 @@
+127.0.0.1 - - [03/Jul/2026 10:36:18] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2026 10:36:18] "GET /release_manifest.json HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2026 10:36:18] "GET /claim_boundary_card.json HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2026 10:36:23] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2026 10:36:23] "GET /audio/glass_drop_room_001__mmaudio__true_replacement_v0.wav HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2026 10:36:23] code 404, message File not found
+127.0.0.1 - - [03/Jul/2026 10:36:23] "GET /favicon.ico HTTP/1.1" 404 -

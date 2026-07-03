@@ -1,0 +1,10 @@
+{
+  "decision": "PASS",
+  "release_dir": "artifacts/demo/week17_true_aware_demo_release",
+  "release_zip": "artifacts/demo/week17_true_aware_demo_release_20260703.zip",
+  "manifest": "reports/week17_demo_release_manifest_20260703.json",
+  "claim_card": "reports/week17_demo_claim_boundary_card_20260703.json",
+  "verify_report": "reports/week17_demo_release_verify_20260703.json",
+  "wav_count": 1,
+  "safeTrueMmaudioRecordCount": 1
+}
