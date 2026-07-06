@@ -1,0 +1,57 @@
+{
+  "source_report": "reports/w18_micro_batch_forest_naive_vs_rich_20260706.json",
+  "status": "success",
+  "job_count": 2,
+  "generated_count": 2,
+  "duration_min_sec": 7.9644,
+  "duration_max_sec": 7.9644,
+  "duration_delta_sec": 0.0,
+  "sample_rates": [
+    44100
+  ],
+  "rows": [
+    {
+      "job_id": "w18_001_forest_bird_branch_001_naive",
+      "case_id": "forest_bird_branch_001",
+      "variant": "naive",
+      "audio_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/w18_001_forest_bird_branch_001_naive.wav",
+      "exists": true,
+      "sample_rate": 44100,
+      "channels": 1,
+      "samples": 351232,
+      "duration_sec": 7.9644,
+      "prompt_chars": 240,
+      "peak": 0.18164062,
+      "rms": 0.01936539,
+      "peak_dbfs": -14.8157,
+      "rms_dbfs": -34.2595,
+      "clipped_ratio": 0.0,
+      "active_ratio": 0.99500046,
+      "status": "ok"
+    },
+    {
+      "job_id": "w18_002_forest_bird_branch_001_naive_rich",
+      "case_id": "forest_bird_branch_001",
+      "variant": "naive_rich",
+      "audio_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.wav",
+      "exists": true,
+      "sample_rate": 44100,
+      "channels": 1,
+      "samples": 351232,
+      "duration_sec": 7.9644,
+      "prompt_chars": 528,
+      "peak": 0.21191406,
+      "rms": 0.02936971,
+      "peak_dbfs": -13.4768,
+      "rms_dbfs": -30.642,
+      "clipped_ratio": 0.0,
+      "active_ratio": 0.99664324,
+      "status": "ok"
+    }
+  ],
+  "claim_boundary": [
+    "This is audio sanity checking for a 2-job micro-batch only.",
+    "It checks existence, duration, sample rate, RMS, peak, clipping, and active sample ratio.",
+    "It does not claim semantic quality or DSS superiority."
+  ]
+}

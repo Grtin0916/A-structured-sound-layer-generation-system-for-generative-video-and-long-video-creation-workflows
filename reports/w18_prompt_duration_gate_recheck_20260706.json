@@ -1,0 +1,213 @@
+{
+  "source_queue": "artifacts/model_runs/w18_dss_ablation/generation_queue_duration_prompt_aligned_20260706.jsonl",
+  "checked_dss_jobs": 18,
+  "mismatch_count": 6,
+  "ready_for_micro_batch": false,
+  "mismatches": [
+    {
+      "job_id": "w18_003_forest_bird_branch_001_dss_global",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_global",
+      "duration_sec": 8.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no background music. Keep am"
+    },
+    {
+      "job_id": "w18_004_forest_bird_branch_001_dss_event_timeline",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 8.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=s"
+    },
+    {
+      "job_id": "w18_008_glass_drop_room_001_dss_global",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_global",
+      "duration_sec": 7.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: quiet indoor room, a glass object drops and breaks on a hard floor. Overall style: realistic Foley, no speech, no backg"
+    },
+    {
+      "job_id": "w18_009_glass_drop_room_001_dss_event_timeline",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 7.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. Event timeline: 0.00s: object=quiet; action=q"
+    },
+    {
+      "job_id": "w18_023_street_rain_crosswalk_001_dss_global",
+      "case_id": "street_rain_crosswalk_001",
+      "variant": "dss_global",
+      "duration_sec": 9.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no speech, no background mu"
+    },
+    {
+      "job_id": "w18_024_street_rain_crosswalk_001_dss_event_timeline",
+      "case_id": "street_rain_crosswalk_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 9.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: rainy street crosswalk with passing footsteps and vehicles. Event timeline: 0.00s: object=rain; action=rain_ambie"
+    }
+  ],
+  "checked_head": [
+    {
+      "job_id": "w18_003_forest_bird_branch_001_dss_global",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_global",
+      "duration_sec": 8.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no background music. Keep am"
+    },
+    {
+      "job_id": "w18_004_forest_bird_branch_001_dss_event_timeline",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 8.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=s"
+    },
+    {
+      "job_id": "w18_005_forest_bird_branch_001_dss_layer_avoid",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 8.0,
+      "explicit_video_durations": [
+        8.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate layered video-synchronized audio for a 8.0s video. Scene layer: forest close-up with a bird moving on a branch. Foley layer must emphasize these events: 0.00s: object=fore"
+    },
+    {
+      "job_id": "w18_008_glass_drop_room_001_dss_global",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_global",
+      "duration_sec": 7.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: quiet indoor room, a glass object drops and breaks on a hard floor. Overall style: realistic Foley, no speech, no backg"
+    },
+    {
+      "job_id": "w18_009_glass_drop_room_001_dss_event_timeline",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 7.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": false,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. Event timeline: 0.00s: object=quiet; action=q"
+    },
+    {
+      "job_id": "w18_010_glass_drop_room_001_dss_layer_avoid",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 7.0,
+      "explicit_video_durations": [
+        7.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate layered video-synchronized audio for a 7.0s video. Scene layer: quiet indoor room, a glass object drops and breaks on a hard floor. Foley layer must emphasize these events"
+    },
+    {
+      "job_id": "w18_013_kitchen_chop_sizzle_001_dss_global",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_global",
+      "duration_sec": 10.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: kitchen preparation with chopping and pan sizzle. Overall style: realistic Foley, no speech, no background music. Keep "
+    },
+    {
+      "job_id": "w18_014_kitchen_chop_sizzle_001_dss_event_timeline",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 10.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: kitchen preparation with chopping and pan sizzle. Event timeline: 0.00s: object=room; action=room_tone; sound=sma"
+    },
+    {
+      "job_id": "w18_015_kitchen_chop_sizzle_001_dss_layer_avoid",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 10.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate layered video-synchronized audio for a 10.0s video. Scene layer: kitchen preparation with chopping and pan sizzle. Foley layer must emphasize these events: 0.00s: object=r"
+    },
+    {
+      "job_id": "w18_018_robot_warehouse_pick_001_dss_global",
+      "case_id": "robot_warehouse_pick_001",
+      "variant": "dss_global",
+      "duration_sec": 10.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: robot arm picking an item in a warehouse. Overall style: realistic Foley, no speech, no background music. Keep ambience"
+    },
+    {
+      "job_id": "w18_019_robot_warehouse_pick_001_dss_event_timeline",
+      "case_id": "robot_warehouse_pick_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 10.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: robot arm picking an item in a warehouse. Event timeline: 0.00s: object=warehouse; action=warehouse_hum; sound=lo"
+    },
+    {
+      "job_id": "w18_020_robot_warehouse_pick_001_dss_layer_avoid",
+      "case_id": "robot_warehouse_pick_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 10.0,
+      "explicit_video_durations": [
+        10.0
+      ],
+      "ok": true,
+      "prompt_head": "Generate layered video-synchronized audio for a 10.0s video. Scene layer: robot arm picking an item in a warehouse. Foley layer must emphasize these events: 0.00s: object=warehouse"
+    }
+  ],
+  "policy": [
+    "DSS prompts must include explicit video duration.",
+    "All explicit video duration phrases must match job duration_sec.",
+    "Event timestamps such as 0.00s are ignored because they are not video duration phrases."
+  ]
+}

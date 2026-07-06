@@ -78,5 +78,7 @@
       "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: subway train arriving and doors opening. Foley layer must emphasize these events: 0.00s: object=platform",
       "new_prompt_head": "Generate layered video-synchronized audio for a 10.0s video. Scene layer: subway train arriving and doors opening. Foley layer must emphasize these events: 0.00"
     }
-  ]
+  ],
+  "duration_prompt_not_aligned_count_before_recheck": 6,
+  "gate_rechecked_by": "reports/w18_prompt_duration_gate_recheck_20260706.json"
 }
