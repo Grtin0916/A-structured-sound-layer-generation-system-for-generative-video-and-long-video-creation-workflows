@@ -5,7 +5,7 @@
   "status": "queued",
   "block_reason": "",
   "video_path": "cases/forest_bird_branch_001/input_video.mp4",
-  "duration_sec": 10.0,
+  "duration_sec": 8.0,
   "prompt": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=soft wind through leaves; layer=foley; priority=2; tolerance=500ms | 0.00s: object=bird; action=bird_chirp; sound=two short bird chirps; layer=foley; priority=3; tolerance=150ms | 0.00s: object=leaf; action=leaf_rustle; sound=small animal or bird rustling leaves; layer=foley; priority=4; tolerance=180ms | 0.00s: object=branch; action=branch_crack; sound=dry branch crack; layer=foley; priority=5; tolerance=100ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
   "prompt_hash": "0d084a8b1e",
   "prompt_chars": 754,
@@ -28,5 +28,10 @@
     "StableAudioOpen_or_T2A": "video_conditioned=false fallback baseline only"
   },
   "mmaudio_command_hint": "(\n  set -e\n  : \"${MMAUDIO_ROOT:?set MMAUDIO_ROOT to your local MMAudio checkout}\"\n  mkdir -p '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_event_timeline'\n  cd \"$MMAUDIO_ROOT\"\n  BEFORE_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  python demo.py --duration=10 --video='${MAINBASE:?set MAINBASE}/cases/forest_bird_branch_001/input_video.mp4' --prompt 'Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=soft wind through leaves; layer=foley; priority=2; tolerance=500ms | 0.00s: object=bird; action=bird_chirp; sound=two short bird chirps; layer=foley; priority=3; tolerance=150ms | 0.00s: object=leaf; action=leaf_rustle; sound=small animal or bird rustling leaves; layer=foley; priority=4; tolerance=180ms | 0.00s: object=branch; action=branch_crack; sound=dry branch crack; layer=foley; priority=5; tolerance=100ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.'\n  AFTER_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  if [ -z \"$AFTER_FILE\" ]; then echo \"NO_MMAUDIO_OUTPUT_FOUND\"; exit 2; fi\n  if [ \"$AFTER_FILE\" = \"$BEFORE_FILE\" ]; then echo \"MMAUDIO_OUTPUT_NOT_CHANGED\"; exit 3; fi\n  cp \"$AFTER_FILE\" '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_event_timeline/w18_004_forest_bird_branch_001_dss_event_timeline.flac'\n  if command -v ffmpeg >/dev/null 2>&1; then ffmpeg -y -i '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_event_timeline/w18_004_forest_bird_branch_001_dss_event_timeline.flac' '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_event_timeline/w18_004_forest_bird_branch_001_dss_event_timeline.wav' >/dev/null 2>&1; fi\n)",
-  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_004_forest_bird_branch_001_dss_event_timeline"
+  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_004_forest_bird_branch_001_dss_event_timeline",
+  "requested_duration_sec_original": 10.0,
+  "actual_video_duration_sec": 8.0,
+  "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
+  "duration_alignment_status": "duration_mismatch",
+  "duration_changed": true
 }

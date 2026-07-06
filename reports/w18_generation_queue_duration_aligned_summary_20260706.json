@@ -1,0 +1,152 @@
+{
+  "source_queue": "artifacts/model_runs/w18_dss_ablation/generation_queue_20260706.jsonl",
+  "duration_probe": "reports/w18_case_duration_probe_20260706.json",
+  "total_jobs": 30,
+  "case_count": 6,
+  "variant_count": 5,
+  "duration_changed_jobs": 15,
+  "unchanged_jobs": 15,
+  "ready_for_duration_aligned_batch": true,
+  "policy": [
+    "Generation duration is aligned to min(original requested duration, actual video duration).",
+    "Metrics must not score event windows beyond actual media duration.",
+    "This file updates request.json metadata but does not claim new generated audio."
+  ],
+  "changes_head": [
+    {
+      "job_id": "w18_001_forest_bird_branch_001_naive",
+      "case_id": "forest_bird_branch_001",
+      "variant": "naive",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 8.0,
+      "new_duration_sec": 8.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_002_forest_bird_branch_001_naive_rich",
+      "case_id": "forest_bird_branch_001",
+      "variant": "naive_rich",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 8.0,
+      "new_duration_sec": 8.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_003_forest_bird_branch_001_dss_global",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_global",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 8.0,
+      "new_duration_sec": 8.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_004_forest_bird_branch_001_dss_event_timeline",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_event_timeline",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 8.0,
+      "new_duration_sec": 8.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_005_forest_bird_branch_001_dss_layer_avoid",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_layer_avoid",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 8.0,
+      "new_duration_sec": 8.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_006_glass_drop_room_001_naive",
+      "case_id": "glass_drop_room_001",
+      "variant": "naive",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 7.0,
+      "new_duration_sec": 7.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_007_glass_drop_room_001_naive_rich",
+      "case_id": "glass_drop_room_001",
+      "variant": "naive_rich",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 7.0,
+      "new_duration_sec": 7.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_008_glass_drop_room_001_dss_global",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_global",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 7.0,
+      "new_duration_sec": 7.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_009_glass_drop_room_001_dss_event_timeline",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_event_timeline",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 7.0,
+      "new_duration_sec": 7.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_010_glass_drop_room_001_dss_layer_avoid",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_layer_avoid",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 7.0,
+      "new_duration_sec": 7.0,
+      "changed": true
+    },
+    {
+      "job_id": "w18_011_kitchen_chop_sizzle_001_naive",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "naive",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 10.0,
+      "new_duration_sec": 10.0,
+      "changed": false
+    },
+    {
+      "job_id": "w18_012_kitchen_chop_sizzle_001_naive_rich",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "naive_rich",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 10.0,
+      "new_duration_sec": 10.0,
+      "changed": false
+    },
+    {
+      "job_id": "w18_013_kitchen_chop_sizzle_001_dss_global",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_global",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 10.0,
+      "new_duration_sec": 10.0,
+      "changed": false
+    },
+    {
+      "job_id": "w18_014_kitchen_chop_sizzle_001_dss_event_timeline",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_event_timeline",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 10.0,
+      "new_duration_sec": 10.0,
+      "changed": false
+    },
+    {
+      "job_id": "w18_015_kitchen_chop_sizzle_001_dss_layer_avoid",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_layer_avoid",
+      "old_duration_sec": 10.0,
+      "actual_video_duration_sec": 10.0,
+      "new_duration_sec": 10.0,
+      "changed": false
+    }
+  ]
+}
