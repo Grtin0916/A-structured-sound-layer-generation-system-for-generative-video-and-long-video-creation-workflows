@@ -1,0 +1,7 @@
+case_id,video_path,video_exists,requested_duration_sec,actual_video_duration_sec,recommended_generation_duration_sec,duration_delta_requested_minus_actual_sec,status,probe_error
+forest_bird_branch_001,cases/forest_bird_branch_001/input_video.mp4,True,10.0,8.0,8.0,2.0,duration_mismatch,
+glass_drop_room_001,cases/glass_drop_room_001/input_video.mp4,True,10.0,7.0,7.0,3.0,duration_mismatch,
+kitchen_chop_sizzle_001,cases/kitchen_chop_sizzle_001/input_video.mp4,True,10.0,10.0,10.0,0.0,ok,
+robot_warehouse_pick_001,cases/robot_warehouse_pick_001/input_video.mp4,True,10.0,11.0,10.0,-1.0,duration_mismatch,
+street_rain_crosswalk_001,cases/street_rain_crosswalk_001/input_video.mp4,True,10.0,9.0,9.0,1.0,duration_mismatch,
+subway_arrival_door_001,cases/subway_arrival_door_001/input_video.mp4,True,10.0,12.0,10.0,-2.0,duration_mismatch,

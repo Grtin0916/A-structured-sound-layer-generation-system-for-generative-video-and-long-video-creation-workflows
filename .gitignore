@@ -74,3 +74,9 @@ artifacts/logs/mmaudio_true_one_mmaudio_mini_20260701.log
 artifacts/logs/mmaudio_true_one_mmaudio_mini_proxy_20260701.log
 artifacts/logs/week17_true_aware_demo_preview_server_20260702.log
 experiments/mmaudio_true_replacement_2026_06_30/manual_small44_probe/
+# W18 local generated audio/video outputs; keep reports and request JSON tracked.
+artifacts/model_runs/w18_dss_ablation/**/*.flac
+artifacts/model_runs/w18_dss_ablation/**/*.wav
+artifacts/model_runs/w18_dss_ablation/**/*.mp4
+artifacts/model_runs/w18_dss_ablation/**/mmaudio_*_raw_output/
+artifacts/model_runs/w18_dss_ablation/run_one_canary_20260706.sh

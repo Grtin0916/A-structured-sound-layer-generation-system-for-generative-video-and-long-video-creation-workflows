@@ -1,0 +1,81 @@
+{
+  "queue_jsonl": "artifacts/model_runs/w18_dss_ablation/generation_queue_20260706.jsonl",
+  "case_count": 6,
+  "ok_count": 1,
+  "duration_mismatch_count": 5,
+  "blocked_count": 0,
+  "ready_for_batch_duration_aligned": true,
+  "policy": [
+    "Use actual_video_duration_sec or recommended_generation_duration_sec for generation/evaluation.",
+    "Do not score event windows beyond actual media duration.",
+    "Do not treat MMAudio truncation as generation failure when video is shorter than requested duration."
+  ],
+  "cases": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "video_path": "cases/forest_bird_branch_001/input_video.mp4",
+      "video_exists": true,
+      "requested_duration_sec": 10.0,
+      "actual_video_duration_sec": 8.0,
+      "recommended_generation_duration_sec": 8.0,
+      "duration_delta_requested_minus_actual_sec": 2.0,
+      "status": "duration_mismatch",
+      "probe_error": ""
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "video_path": "cases/glass_drop_room_001/input_video.mp4",
+      "video_exists": true,
+      "requested_duration_sec": 10.0,
+      "actual_video_duration_sec": 7.0,
+      "recommended_generation_duration_sec": 7.0,
+      "duration_delta_requested_minus_actual_sec": 3.0,
+      "status": "duration_mismatch",
+      "probe_error": ""
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "video_path": "cases/kitchen_chop_sizzle_001/input_video.mp4",
+      "video_exists": true,
+      "requested_duration_sec": 10.0,
+      "actual_video_duration_sec": 10.0,
+      "recommended_generation_duration_sec": 10.0,
+      "duration_delta_requested_minus_actual_sec": 0.0,
+      "status": "ok",
+      "probe_error": ""
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "video_path": "cases/robot_warehouse_pick_001/input_video.mp4",
+      "video_exists": true,
+      "requested_duration_sec": 10.0,
+      "actual_video_duration_sec": 11.0,
+      "recommended_generation_duration_sec": 10.0,
+      "duration_delta_requested_minus_actual_sec": -1.0,
+      "status": "duration_mismatch",
+      "probe_error": ""
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "video_path": "cases/street_rain_crosswalk_001/input_video.mp4",
+      "video_exists": true,
+      "requested_duration_sec": 10.0,
+      "actual_video_duration_sec": 9.0,
+      "recommended_generation_duration_sec": 9.0,
+      "duration_delta_requested_minus_actual_sec": 1.0,
+      "status": "duration_mismatch",
+      "probe_error": ""
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "video_path": "cases/subway_arrival_door_001/input_video.mp4",
+      "video_exists": true,
+      "requested_duration_sec": 10.0,
+      "actual_video_duration_sec": 12.0,
+      "recommended_generation_duration_sec": 10.0,
+      "duration_delta_requested_minus_actual_sec": -2.0,
+      "status": "duration_mismatch",
+      "probe_error": ""
+    }
+  ]
+}
