@@ -1,0 +1,34 @@
+{
+  "experiment": "w18_dss_prompt_ablation",
+  "model_day_target": {
+    "minimum_generation_jobs": 24,
+    "minimum_cases": 6,
+    "required_pairing": "naive vs DSS variants per case"
+  },
+  "sources": [
+    {
+      "name": "MMAudio",
+      "role": "primary V2A route",
+      "video_conditioned": true,
+      "claim_rule": "claim success only for real generated WAVs from video input"
+    },
+    {
+      "name": "StableAudioOpen_or_T2A",
+      "role": "fallback candidate baseline",
+      "video_conditioned": false,
+      "claim_rule": "do not claim video synchronization; use as text-controlled candidate baseline"
+    },
+    {
+      "name": "manual_or_rule_control",
+      "role": "control and repair-bank seed",
+      "video_conditioned": false,
+      "claim_rule": "use for ranking sanity check, not model capability claim"
+    }
+  ],
+  "outputs": {
+    "manifest_csv": "reports/w18_ablation_manifest_20260706.csv",
+    "manifest_json": "reports/w18_ablation_manifest_20260706.json",
+    "qa_json": "reports/w18_prompt_qa_20260706.json",
+    "output_root": "artifacts/model_runs/w18_dss_ablation"
+  }
+}

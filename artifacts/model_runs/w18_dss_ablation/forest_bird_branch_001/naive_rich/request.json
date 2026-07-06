@@ -1,0 +1,32 @@
+{
+  "job_id": "w18_002_forest_bird_branch_001_naive_rich",
+  "case_id": "forest_bird_branch_001",
+  "variant": "naive_rich",
+  "status": "queued",
+  "block_reason": "",
+  "video_path": "cases/forest_bird_branch_001/input_video.mp4",
+  "duration_sec": 10.0,
+  "prompt": "Create realistic sound effects for this short video. Scene: forest close-up with a bird moving on a branch. The visible actions include: around 0.00s, forest forest_wind with soft wind through leaves; around 0.00s, bird bird_chirp with two short bird chirps; around 0.00s, leaf leaf_rustle with small animal or bird rustling leaves; around 0.00s, branch branch_crack with dry branch crack. Make the sounds natural, synchronized, and cinematic. Avoid human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
+  "prompt_hash": "50841514f7",
+  "prompt_chars": 528,
+  "event_count": 4,
+  "avoid_count": 7,
+  "primary_source": "MMAudio",
+  "fallback_source": "StableAudioOpen_or_T2A",
+  "video_conditioned_primary": true,
+  "fallback_allowed": true,
+  "claim_boundary": "MMAudio output can be claimed as V2A only if WAV is actually generated from video input; T2A fallback is not video-synchronized evidence.",
+  "job_dir": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich",
+  "request_json": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/request.json",
+  "expected_output_wav": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.wav",
+  "expected_output_flac": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.flac",
+  "expected_metrics_json": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.metrics.json",
+  "expected_failure_json": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.failure.json",
+  "generated_audio_claim": "not_run_yet",
+  "source_boundary": {
+    "MMAudio": "video_conditioned=true only after real generation from video input",
+    "StableAudioOpen_or_T2A": "video_conditioned=false fallback baseline only"
+  },
+  "mmaudio_command_hint": "(\n  set -e\n  : \"${MMAUDIO_ROOT:?set MMAUDIO_ROOT to your local MMAudio checkout}\"\n  mkdir -p '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich'\n  cd \"$MMAUDIO_ROOT\"\n  BEFORE_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  python demo.py --duration=10 --video='${MAINBASE:?set MAINBASE}/cases/forest_bird_branch_001/input_video.mp4' --prompt 'Create realistic sound effects for this short video. Scene: forest close-up with a bird moving on a branch. The visible actions include: around 0.00s, forest forest_wind with soft wind through leaves; around 0.00s, bird bird_chirp with two short bird chirps; around 0.00s, leaf leaf_rustle with small animal or bird rustling leaves; around 0.00s, branch branch_crack with dry branch crack. Make the sounds natural, synchronized, and cinematic. Avoid human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.'\n  AFTER_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  if [ -z \"$AFTER_FILE\" ]; then echo \"NO_MMAUDIO_OUTPUT_FOUND\"; exit 2; fi\n  if [ \"$AFTER_FILE\" = \"$BEFORE_FILE\" ]; then echo \"MMAUDIO_OUTPUT_NOT_CHANGED\"; exit 3; fi\n  cp \"$AFTER_FILE\" '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.flac'\n  if command -v ffmpeg >/dev/null 2>&1; then ffmpeg -y -i '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.flac' '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.wav' >/dev/null 2>&1; fi\n)",
+  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_002_forest_bird_branch_001_naive_rich"
+}

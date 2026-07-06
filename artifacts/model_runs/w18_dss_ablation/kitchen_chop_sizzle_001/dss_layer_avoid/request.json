@@ -1,0 +1,32 @@
+{
+  "job_id": "w18_015_kitchen_chop_sizzle_001_dss_layer_avoid",
+  "case_id": "kitchen_chop_sizzle_001",
+  "variant": "dss_layer_avoid",
+  "status": "queued",
+  "block_reason": "",
+  "video_path": "cases/kitchen_chop_sizzle_001/input_video.mp4",
+  "duration_sec": 10.0,
+  "prompt": "Generate layered video-synchronized audio. Scene layer: kitchen preparation with chopping and pan sizzle. Foley layer must emphasize these events: 0.00s: object=room; action=room_tone; sound=small indoor kitchen room tone; layer=foley; priority=1; tolerance=500ms | 0.00s: object=knife; action=knife_chops; sound=rhythmic vegetable chopping on wooden board; layer=foley; priority=5; tolerance=100ms | 0.00s: object=pan; action=pan_sizzle_rise; sound=oil and food sizzling in pan; layer=foley; priority=4; tolerance=250ms | 0.00s: object=plate; action=plate_set_down; sound=ceramic plate placed on counter; layer=foley; priority=3; tolerance=120ms. Ambience layer should remain low, continuous, and non-dominant. Music layer should be absent unless explicitly required. Forbidden content: speech, restaurant crowd, music, alarm beep, lyrics, voiceover. No speech, no lyrics, no unrelated background music.",
+  "prompt_hash": "70e0eac5c7",
+  "prompt_chars": 904,
+  "event_count": 4,
+  "avoid_count": 6,
+  "primary_source": "MMAudio",
+  "fallback_source": "StableAudioOpen_or_T2A",
+  "video_conditioned_primary": true,
+  "fallback_allowed": true,
+  "claim_boundary": "DSS prompt controls generation input; only true video-conditioned model output can be claimed as V2A.",
+  "job_dir": "artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid",
+  "request_json": "artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/request.json",
+  "expected_output_wav": "artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.wav",
+  "expected_output_flac": "artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.flac",
+  "expected_metrics_json": "artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.metrics.json",
+  "expected_failure_json": "artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.failure.json",
+  "generated_audio_claim": "not_run_yet",
+  "source_boundary": {
+    "MMAudio": "video_conditioned=true only after real generation from video input",
+    "StableAudioOpen_or_T2A": "video_conditioned=false fallback baseline only"
+  },
+  "mmaudio_command_hint": "(\n  set -e\n  : \"${MMAUDIO_ROOT:?set MMAUDIO_ROOT to your local MMAudio checkout}\"\n  mkdir -p '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid'\n  cd \"$MMAUDIO_ROOT\"\n  BEFORE_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  python demo.py --duration=10 --video='${MAINBASE:?set MAINBASE}/cases/kitchen_chop_sizzle_001/input_video.mp4' --prompt 'Generate layered video-synchronized audio. Scene layer: kitchen preparation with chopping and pan sizzle. Foley layer must emphasize these events: 0.00s: object=room; action=room_tone; sound=small indoor kitchen room tone; layer=foley; priority=1; tolerance=500ms | 0.00s: object=knife; action=knife_chops; sound=rhythmic vegetable chopping on wooden board; layer=foley; priority=5; tolerance=100ms | 0.00s: object=pan; action=pan_sizzle_rise; sound=oil and food sizzling in pan; layer=foley; priority=4; tolerance=250ms | 0.00s: object=plate; action=plate_set_down; sound=ceramic plate placed on counter; layer=foley; priority=3; tolerance=120ms. Ambience layer should remain low, continuous, and non-dominant. Music layer should be absent unless explicitly required. Forbidden content: speech, restaurant crowd, music, alarm beep, lyrics, voiceover. No speech, no lyrics, no unrelated background music.'\n  AFTER_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  if [ -z \"$AFTER_FILE\" ]; then echo \"NO_MMAUDIO_OUTPUT_FOUND\"; exit 2; fi\n  if [ \"$AFTER_FILE\" = \"$BEFORE_FILE\" ]; then echo \"MMAUDIO_OUTPUT_NOT_CHANGED\"; exit 3; fi\n  cp \"$AFTER_FILE\" '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.flac'\n  if command -v ffmpeg >/dev/null 2>&1; then ffmpeg -y -i '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.flac' '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.wav' >/dev/null 2>&1; fi\n)",
+  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_015_kitchen_chop_sizzle_001_dss_layer_avoid"
+}

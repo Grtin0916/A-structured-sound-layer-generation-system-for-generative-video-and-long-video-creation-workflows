@@ -1,0 +1,32 @@
+{
+  "job_id": "w18_022_street_rain_crosswalk_001_naive_rich",
+  "case_id": "street_rain_crosswalk_001",
+  "variant": "naive_rich",
+  "status": "queued",
+  "block_reason": "",
+  "video_path": "cases/street_rain_crosswalk_001/input_video.mp4",
+  "duration_sec": 10.0,
+  "prompt": "Create realistic sound effects for this short video. Scene: rainy street crosswalk with passing footsteps and vehicles. The visible actions include: around 0.00s, rain rain_ambience_start with steady light rain and wet street bed; around 0.00s, footsteps footsteps_enter with wet shoes stepping through shallow water; around 0.00s, car car_pass_left_to_right with muffled car pass-by on wet road; around 0.00s, puddle puddle_splash with single sharp puddle splash near camera. Make the sounds natural, synchronized, and cinematic. Avoid clear sunny ambience, music, speech, sirens, lyrics, voiceover.",
+  "prompt_hash": "be3d7a8a82",
+  "prompt_chars": 600,
+  "event_count": 4,
+  "avoid_count": 6,
+  "primary_source": "MMAudio",
+  "fallback_source": "StableAudioOpen_or_T2A",
+  "video_conditioned_primary": true,
+  "fallback_allowed": true,
+  "claim_boundary": "MMAudio output can be claimed as V2A only if WAV is actually generated from video input; T2A fallback is not video-synchronized evidence.",
+  "job_dir": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich",
+  "request_json": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/request.json",
+  "expected_output_wav": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.wav",
+  "expected_output_flac": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.flac",
+  "expected_metrics_json": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.metrics.json",
+  "expected_failure_json": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.failure.json",
+  "generated_audio_claim": "not_run_yet",
+  "source_boundary": {
+    "MMAudio": "video_conditioned=true only after real generation from video input",
+    "StableAudioOpen_or_T2A": "video_conditioned=false fallback baseline only"
+  },
+  "mmaudio_command_hint": "(\n  set -e\n  : \"${MMAUDIO_ROOT:?set MMAUDIO_ROOT to your local MMAudio checkout}\"\n  mkdir -p '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich'\n  cd \"$MMAUDIO_ROOT\"\n  BEFORE_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  python demo.py --duration=10 --video='${MAINBASE:?set MAINBASE}/cases/street_rain_crosswalk_001/input_video.mp4' --prompt 'Create realistic sound effects for this short video. Scene: rainy street crosswalk with passing footsteps and vehicles. The visible actions include: around 0.00s, rain rain_ambience_start with steady light rain and wet street bed; around 0.00s, footsteps footsteps_enter with wet shoes stepping through shallow water; around 0.00s, car car_pass_left_to_right with muffled car pass-by on wet road; around 0.00s, puddle puddle_splash with single sharp puddle splash near camera. Make the sounds natural, synchronized, and cinematic. Avoid clear sunny ambience, music, speech, sirens, lyrics, voiceover.'\n  AFTER_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  if [ -z \"$AFTER_FILE\" ]; then echo \"NO_MMAUDIO_OUTPUT_FOUND\"; exit 2; fi\n  if [ \"$AFTER_FILE\" = \"$BEFORE_FILE\" ]; then echo \"MMAUDIO_OUTPUT_NOT_CHANGED\"; exit 3; fi\n  cp \"$AFTER_FILE\" '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.flac'\n  if command -v ffmpeg >/dev/null 2>&1; then ffmpeg -y -i '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.flac' '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.wav' >/dev/null 2>&1; fi\n)",
+  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_022_street_rain_crosswalk_001_naive_rich"
+}

@@ -1,0 +1,32 @@
+{
+  "job_id": "w18_019_robot_warehouse_pick_001_dss_event_timeline",
+  "case_id": "robot_warehouse_pick_001",
+  "variant": "dss_event_timeline",
+  "status": "queued",
+  "block_reason": "",
+  "video_path": "cases/robot_warehouse_pick_001/input_video.mp4",
+  "duration_sec": 10.0,
+  "prompt": "Generate audio for a 10.0s video using this event timeline. Scene: robot arm picking an item in a warehouse. Event timeline: 0.00s: object=warehouse; action=warehouse_hum; sound=low warehouse ventilation hum; layer=foley; priority=1; tolerance=600ms | 0.00s: object=servo; action=servo_arm_move; sound=precise electric servo arm movement; layer=foley; priority=4; tolerance=180ms | 0.00s: object=box; action=box_lift; sound=cardboard box lifted from shelf; layer=foley; priority=5; tolerance=150ms | 0.00s: object=confirm; action=confirm_beep; sound=short clean robot confirmation beep; layer=foley; priority=3; tolerance=80ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, music, explosion, vehicle horn, speech, lyrics, voiceover.",
+  "prompt_hash": "3bdc3b6ce4",
+  "prompt_chars": 781,
+  "event_count": 4,
+  "avoid_count": 7,
+  "primary_source": "MMAudio",
+  "fallback_source": "StableAudioOpen_or_T2A",
+  "video_conditioned_primary": true,
+  "fallback_allowed": true,
+  "claim_boundary": "DSS prompt controls generation input; only true video-conditioned model output can be claimed as V2A.",
+  "job_dir": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline",
+  "request_json": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/request.json",
+  "expected_output_wav": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.wav",
+  "expected_output_flac": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.flac",
+  "expected_metrics_json": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.metrics.json",
+  "expected_failure_json": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.failure.json",
+  "generated_audio_claim": "not_run_yet",
+  "source_boundary": {
+    "MMAudio": "video_conditioned=true only after real generation from video input",
+    "StableAudioOpen_or_T2A": "video_conditioned=false fallback baseline only"
+  },
+  "mmaudio_command_hint": "(\n  set -e\n  : \"${MMAUDIO_ROOT:?set MMAUDIO_ROOT to your local MMAudio checkout}\"\n  mkdir -p '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline'\n  cd \"$MMAUDIO_ROOT\"\n  BEFORE_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  python demo.py --duration=10 --video='${MAINBASE:?set MAINBASE}/cases/robot_warehouse_pick_001/input_video.mp4' --prompt 'Generate audio for a 10.0s video using this event timeline. Scene: robot arm picking an item in a warehouse. Event timeline: 0.00s: object=warehouse; action=warehouse_hum; sound=low warehouse ventilation hum; layer=foley; priority=1; tolerance=600ms | 0.00s: object=servo; action=servo_arm_move; sound=precise electric servo arm movement; layer=foley; priority=4; tolerance=180ms | 0.00s: object=box; action=box_lift; sound=cardboard box lifted from shelf; layer=foley; priority=5; tolerance=150ms | 0.00s: object=confirm; action=confirm_beep; sound=short clean robot confirmation beep; layer=foley; priority=3; tolerance=80ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, music, explosion, vehicle horn, speech, lyrics, voiceover.'\n  AFTER_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  if [ -z \"$AFTER_FILE\" ]; then echo \"NO_MMAUDIO_OUTPUT_FOUND\"; exit 2; fi\n  if [ \"$AFTER_FILE\" = \"$BEFORE_FILE\" ]; then echo \"MMAUDIO_OUTPUT_NOT_CHANGED\"; exit 3; fi\n  cp \"$AFTER_FILE\" '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.flac'\n  if command -v ffmpeg >/dev/null 2>&1; then ffmpeg -y -i '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.flac' '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.wav' >/dev/null 2>&1; fi\n)",
+  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_019_robot_warehouse_pick_001_dss_event_timeline"
+}

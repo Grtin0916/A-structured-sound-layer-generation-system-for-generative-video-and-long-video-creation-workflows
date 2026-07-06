@@ -1,0 +1,32 @@
+{
+  "job_id": "w18_025_street_rain_crosswalk_001_dss_layer_avoid",
+  "case_id": "street_rain_crosswalk_001",
+  "variant": "dss_layer_avoid",
+  "status": "queued",
+  "block_reason": "",
+  "video_path": "cases/street_rain_crosswalk_001/input_video.mp4",
+  "duration_sec": 10.0,
+  "prompt": "Generate layered video-synchronized audio. Scene layer: rainy street crosswalk with passing footsteps and vehicles. Foley layer must emphasize these events: 0.00s: object=rain; action=rain_ambience_start; sound=steady light rain and wet street bed; layer=foley; priority=2; tolerance=500ms | 0.00s: object=footsteps; action=footsteps_enter; sound=wet shoes stepping through shallow water; layer=foley; priority=4; tolerance=180ms | 0.00s: object=car; action=car_pass_left_to_right; sound=muffled car pass-by on wet road; layer=foley; priority=3; tolerance=250ms | 0.00s: object=puddle; action=puddle_splash; sound=single sharp puddle splash near camera; layer=foley; priority=5; tolerance=120ms. Ambience layer should remain low, continuous, and non-dominant. Music layer should be absent unless explicitly required. Forbidden content: clear sunny ambience, music, speech, sirens, lyrics, voiceover. No speech, no lyrics, no unrelated background music.",
+  "prompt_hash": "55b3601bbb",
+  "prompt_chars": 952,
+  "event_count": 4,
+  "avoid_count": 6,
+  "primary_source": "MMAudio",
+  "fallback_source": "StableAudioOpen_or_T2A",
+  "video_conditioned_primary": true,
+  "fallback_allowed": true,
+  "claim_boundary": "DSS prompt controls generation input; only true video-conditioned model output can be claimed as V2A.",
+  "job_dir": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid",
+  "request_json": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/request.json",
+  "expected_output_wav": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.wav",
+  "expected_output_flac": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.flac",
+  "expected_metrics_json": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.metrics.json",
+  "expected_failure_json": "artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.failure.json",
+  "generated_audio_claim": "not_run_yet",
+  "source_boundary": {
+    "MMAudio": "video_conditioned=true only after real generation from video input",
+    "StableAudioOpen_or_T2A": "video_conditioned=false fallback baseline only"
+  },
+  "mmaudio_command_hint": "(\n  set -e\n  : \"${MMAUDIO_ROOT:?set MMAUDIO_ROOT to your local MMAudio checkout}\"\n  mkdir -p '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid'\n  cd \"$MMAUDIO_ROOT\"\n  BEFORE_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  python demo.py --duration=10 --video='${MAINBASE:?set MAINBASE}/cases/street_rain_crosswalk_001/input_video.mp4' --prompt 'Generate layered video-synchronized audio. Scene layer: rainy street crosswalk with passing footsteps and vehicles. Foley layer must emphasize these events: 0.00s: object=rain; action=rain_ambience_start; sound=steady light rain and wet street bed; layer=foley; priority=2; tolerance=500ms | 0.00s: object=footsteps; action=footsteps_enter; sound=wet shoes stepping through shallow water; layer=foley; priority=4; tolerance=180ms | 0.00s: object=car; action=car_pass_left_to_right; sound=muffled car pass-by on wet road; layer=foley; priority=3; tolerance=250ms | 0.00s: object=puddle; action=puddle_splash; sound=single sharp puddle splash near camera; layer=foley; priority=5; tolerance=120ms. Ambience layer should remain low, continuous, and non-dominant. Music layer should be absent unless explicitly required. Forbidden content: clear sunny ambience, music, speech, sirens, lyrics, voiceover. No speech, no lyrics, no unrelated background music.'\n  AFTER_FILE=$(find output -type f \\( -name '*.flac' -o -name '*.wav' \\) -printf '%T@ %p\\n' 2>/dev/null | sort -n | tail -n 1 | cut -d' ' -f2- || true)\n  if [ -z \"$AFTER_FILE\" ]; then echo \"NO_MMAUDIO_OUTPUT_FOUND\"; exit 2; fi\n  if [ \"$AFTER_FILE\" = \"$BEFORE_FILE\" ]; then echo \"MMAUDIO_OUTPUT_NOT_CHANGED\"; exit 3; fi\n  cp \"$AFTER_FILE\" '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.flac'\n  if command -v ffmpeg >/dev/null 2>&1; then ffmpeg -y -i '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.flac' '${MAINBASE:?set MAINBASE}/artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.wav' >/dev/null 2>&1; fi\n)",
+  "t2a_boundary_hint": "# T2A fallback is intentionally not executed by this queue script. Use a text-to-audio backend only as video_conditioned=false baseline. job_id=w18_025_street_rain_crosswalk_001_dss_layer_avoid"
+}

@@ -1,0 +1,39 @@
+{
+  "manifest_csv": "reports/w18_ablation_manifest_20260706.csv",
+  "output_root": "artifacts/model_runs/w18_dss_ablation",
+  "total_jobs": 30,
+  "queued_jobs": 30,
+  "blocked_jobs": 0,
+  "case_count": 6,
+  "variant_count": 5,
+  "case_ids": [
+    "forest_bird_branch_001",
+    "glass_drop_room_001",
+    "kitchen_chop_sizzle_001",
+    "robot_warehouse_pick_001",
+    "street_rain_crosswalk_001",
+    "subway_arrival_door_001"
+  ],
+  "variants": [
+    "dss_event_timeline",
+    "dss_global",
+    "dss_layer_avoid",
+    "naive",
+    "naive_rich"
+  ],
+  "request_json_count": 30,
+  "ready_for_generation_execution": true,
+  "claim_boundary": [
+    "No generated audio is claimed at queue-build time.",
+    "MMAudio claim requires real generated audio from video input.",
+    "T2A fallback must remain video_conditioned=false.",
+    "If ffmpeg is unavailable, FLAC may exist while WAV conversion remains pending."
+  ],
+  "blocked_examples": [],
+  "outputs": {
+    "queue_jsonl": "artifacts/model_runs/w18_dss_ablation/generation_queue_20260706.jsonl",
+    "queue_csv": "reports/w18_generation_queue_20260706.csv",
+    "summary_json": "reports/w18_generation_queue_summary_20260706.json",
+    "commands_sh": "artifacts/model_runs/w18_dss_ablation/run_mmaudio_jobs_20260706.sh"
+  }
+}
