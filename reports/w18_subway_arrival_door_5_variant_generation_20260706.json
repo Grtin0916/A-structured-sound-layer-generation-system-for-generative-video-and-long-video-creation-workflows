@@ -1,0 +1,143 @@
+{
+  "date": "2026-07-06",
+  "scope": "w18_subway_arrival_door_001_5_variant_generation",
+  "case_id": "subway_arrival_door_001",
+  "status": "success",
+  "variant_count": 5,
+  "generated_count": 5,
+  "model_variant": "small_44k",
+  "duration_values": [
+    10.0078
+  ],
+  "sample_rates": [
+    44100
+  ],
+  "review_flags": [
+    {
+      "variant": "dss_event_timeline",
+      "status": "clipping_review",
+      "rms_dbfs": -9.6374,
+      "peak_dbfs": 0.0,
+      "clipped_ratio": 0.00260341
+    },
+    {
+      "variant": "dss_layer_avoid",
+      "status": "clipping_review",
+      "rms_dbfs": -10.2822,
+      "peak_dbfs": 0.0,
+      "clipped_ratio": 0.00129831
+    }
+  ],
+  "rows": [
+    {
+      "job_id": "w18_026_subway_arrival_door_001_naive",
+      "case_id": "subway_arrival_door_001",
+      "variant": "naive",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 229,
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/naive/w18_026_subway_arrival_door_001_naive.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 418229,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/naive/w18_026_subway_arrival_door_001_naive.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "exists": true,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -22.3956,
+      "peak_dbfs": -4.9374,
+      "clipped_ratio": 0.0,
+      "active_ratio": 0.94106864,
+      "status": "ok"
+    },
+    {
+      "job_id": "w18_027_subway_arrival_door_001_naive_rich",
+      "case_id": "subway_arrival_door_001",
+      "variant": "naive_rich",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 597,
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/naive_rich/w18_027_subway_arrival_door_001_naive_rich.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 453011,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/naive_rich/w18_027_subway_arrival_door_001_naive_rich.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "exists": true,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -15.7839,
+      "peak_dbfs": -0.2758,
+      "clipped_ratio": 0.0,
+      "active_ratio": 0.92633637,
+      "status": "ok"
+    },
+    {
+      "job_id": "w18_028_subway_arrival_door_001_dss_global",
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_global",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 305,
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_global/w18_028_subway_arrival_door_001_dss_global.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 433075,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_global/w18_028_subway_arrival_door_001_dss_global.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "exists": true,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -16.0454,
+      "peak_dbfs": -0.1713,
+      "clipped_ratio": 0.0,
+      "active_ratio": 0.92586962,
+      "status": "ok"
+    },
+    {
+      "job_id": "w18_029_subway_arrival_door_001_dss_event_timeline",
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_event_timeline",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 823,
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 475339,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "exists": true,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -9.6374,
+      "peak_dbfs": 0.0,
+      "clipped_ratio": 0.00260341,
+      "active_ratio": 0.88923833,
+      "status": "clipping_review"
+    },
+    {
+      "job_id": "w18_030_subway_arrival_door_001_dss_layer_avoid",
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_layer_avoid",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 967,
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 467283,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "exists": true,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -10.2822,
+      "peak_dbfs": 0.0,
+      "clipped_ratio": 0.00129831,
+      "active_ratio": 0.89343687,
+      "status": "clipping_review"
+    }
+  ],
+  "claim_boundary": [
+    "This is one case-level five-variant generation report.",
+    "It validates generation coverage and audio sanity, not semantic superiority.",
+    "Audio artifacts remain local and are intentionally ignored by Git."
+  ]
+}
