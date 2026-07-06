@@ -1,0 +1,42 @@
+{
+  "date": "2026-07-06",
+  "scope": "w18_clipping_review_peak_repair",
+  "target_count": 2,
+  "repaired_count": 2,
+  "status": "success",
+  "policy": [
+    "Repair is non-destructive: original generated audio is preserved.",
+    "Peak-normalized repair targets -3 dBFS peak.",
+    "This is an engineering repair candidate, not semantic quality improvement."
+  ],
+  "rows": [
+    {
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_event_timeline",
+      "job_id": "w18_029_subway_arrival_door_001_dss_event_timeline",
+      "source_wav": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline.wav",
+      "repaired_wav": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline_repaired_peak_m3db.wav",
+      "source_peak_dbfs": "0.0",
+      "source_clipped_ratio": "0.00260341",
+      "gain": 0.70794578,
+      "new_peak_dbfs": -3.0,
+      "new_rms_dbfs": -12.6374,
+      "new_clipped_ratio": 0.0,
+      "status": "success"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_layer_avoid",
+      "job_id": "w18_030_subway_arrival_door_001_dss_layer_avoid",
+      "source_wav": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid.wav",
+      "repaired_wav": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid_repaired_peak_m3db.wav",
+      "source_peak_dbfs": "0.0",
+      "source_clipped_ratio": "0.00129831",
+      "gain": 0.70794578,
+      "new_peak_dbfs": -3.0,
+      "new_rms_dbfs": -13.2822,
+      "new_clipped_ratio": 0.0,
+      "status": "success"
+    }
+  ]
+}
