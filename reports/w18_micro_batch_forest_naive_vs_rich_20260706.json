@@ -1,0 +1,64 @@
+{
+  "date": "2026-07-06",
+  "scope": "w18_forest_naive_vs_naive_rich_micro_batch",
+  "status": "success",
+  "case_id": "forest_bird_branch_001",
+  "variants": [
+    "naive",
+    "naive_rich"
+  ],
+  "job_count": 2,
+  "generated_count": 2,
+  "model_variant": "small_44k",
+  "runtime": {
+    "conda_env": "mmaudio-mini",
+    "MMAUDIO_ROOT": "/home/GRT/work/_external/MMAudio",
+    "HF_HUB_OFFLINE": "1"
+  },
+  "claim_boundary": [
+    "This records a 2-job micro-batch only: naive vs naive_rich on one case.",
+    "It does not claim full 30-job batch success.",
+    "It does not claim DSS variants outperform baselines.",
+    "Audio files remain local artifacts and are intentionally not tracked by Git."
+  ],
+  "rows": [
+    {
+      "job_id": "w18_001_forest_bird_branch_001_naive",
+      "case_id": "forest_bird_branch_001",
+      "variant": "naive",
+      "duration_sec": 8.0,
+      "prompt_chars": 240,
+      "video_path": "cases/forest_bird_branch_001/input_video.mp4",
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/w18_001_forest_bird_branch_001_naive.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 425214,
+      "flac_duration_sec": 7.9644,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/w18_001_forest_bird_branch_001_naive.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 702542,
+      "wav_duration_sec": 7.9644,
+      "raw_flac_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/mmaudio_small_44k_raw_output/input_video.flac",
+      "raw_flac_exists": true,
+      "raw_flac_size_bytes": 425214
+    },
+    {
+      "job_id": "w18_002_forest_bird_branch_001_naive_rich",
+      "case_id": "forest_bird_branch_001",
+      "variant": "naive_rich",
+      "duration_sec": 8.0,
+      "prompt_chars": 528,
+      "video_path": "cases/forest_bird_branch_001/input_video.mp4",
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.flac",
+      "flac_exists": true,
+      "flac_size_bytes": 435399,
+      "flac_duration_sec": 7.9644,
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.wav",
+      "wav_exists": true,
+      "wav_size_bytes": 702542,
+      "wav_duration_sec": 7.9644,
+      "raw_flac_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/mmaudio_small_44k_raw_output/input_video.flac",
+      "raw_flac_exists": true,
+      "raw_flac_size_bytes": 435399
+    }
+  ]
+}

@@ -4,7 +4,7 @@
   "case_count": 6,
   "variant_count": 5,
   "prompt_changed_jobs": 6,
-  "duration_prompt_not_aligned_count": 18,
+  "duration_prompt_not_aligned_count": 6,
   "ready_for_micro_batch": false,
   "policy": [
     "Generation command duration and textual prompt duration must agree.",

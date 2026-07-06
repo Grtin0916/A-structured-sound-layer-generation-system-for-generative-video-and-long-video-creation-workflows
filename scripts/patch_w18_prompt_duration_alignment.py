@@ -167,7 +167,7 @@ def main() -> int:
         import re
         explicit = [
             float(x)
-            for x in re.findall(r"(\\d+(?:\\.\\d+)?)s video", prompt)
+            for x in re.findall(r"(\d+(?:\.\d+)?)s video", prompt)
         ]
 
         if not explicit:
