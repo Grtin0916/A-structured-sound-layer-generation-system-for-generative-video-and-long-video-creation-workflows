@@ -13,70 +13,70 @@
   ],
   "changed_examples": [
     {
-      "job_id": "w18_003_forest_bird_branch_001_dss_global",
+      "job_id": "w18_005_forest_bird_branch_001_dss_layer_avoid",
       "case_id": "forest_bird_branch_001",
-      "variant": "dss_global",
+      "variant": "dss_layer_avoid",
       "duration_sec": 8.0,
       "changed": true,
-      "old_prompt_chars": 316,
-      "new_prompt_chars": 315,
-      "old_prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no backg",
-      "new_prompt_head": "Generate synchronized audio for a 8.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no backgr"
+      "old_prompt_chars": 880,
+      "new_prompt_chars": 897,
+      "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: forest close-up with a bird moving on a branch. Foley layer must emphasize these events: 0.00s: object=f",
+      "new_prompt_head": "Generate layered video-synchronized audio for a 8.0s video. Scene layer: forest close-up with a bird moving on a branch. Foley layer must emphasize these events"
     },
     {
-      "job_id": "w18_004_forest_bird_branch_001_dss_event_timeline",
-      "case_id": "forest_bird_branch_001",
-      "variant": "dss_event_timeline",
-      "duration_sec": 8.0,
-      "changed": true,
-      "old_prompt_chars": 754,
-      "new_prompt_chars": 753,
-      "old_prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=",
-      "new_prompt_head": "Generate audio for a 8.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=f"
-    },
-    {
-      "job_id": "w18_008_glass_drop_room_001_dss_global",
+      "job_id": "w18_010_glass_drop_room_001_dss_layer_avoid",
       "case_id": "glass_drop_room_001",
-      "variant": "dss_global",
+      "variant": "dss_layer_avoid",
       "duration_sec": 7.0,
       "changed": true,
-      "old_prompt_chars": 324,
-      "new_prompt_chars": 323,
-      "old_prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: quiet indoor room, a glass object drops and breaks on a hard floor. Overall style: realistic Foley,",
-      "new_prompt_head": "Generate synchronized audio for a 7.0s video. Global scene: quiet indoor room, a glass object drops and breaks on a hard floor. Overall style: realistic Foley, "
+      "old_prompt_chars": 906,
+      "new_prompt_chars": 923,
+      "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: quiet indoor room, a glass object drops and breaks on a hard floor. Foley layer must emphasize these eve",
+      "new_prompt_head": "Generate layered video-synchronized audio for a 7.0s video. Scene layer: quiet indoor room, a glass object drops and breaks on a hard floor. Foley layer must em"
     },
     {
-      "job_id": "w18_009_glass_drop_room_001_dss_event_timeline",
-      "case_id": "glass_drop_room_001",
-      "variant": "dss_event_timeline",
-      "duration_sec": 7.0,
+      "job_id": "w18_015_kitchen_chop_sizzle_001_dss_layer_avoid",
+      "case_id": "kitchen_chop_sizzle_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 10.0,
       "changed": true,
-      "old_prompt_chars": 780,
-      "new_prompt_chars": 779,
-      "old_prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. Event timeline: 0.00s: ob",
-      "new_prompt_head": "Generate audio for a 7.0s video using this event timeline. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. Event timeline: 0.00s: obj"
+      "old_prompt_chars": 904,
+      "new_prompt_chars": 922,
+      "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: kitchen preparation with chopping and pan sizzle. Foley layer must emphasize these events: 0.00s: object",
+      "new_prompt_head": "Generate layered video-synchronized audio for a 10.0s video. Scene layer: kitchen preparation with chopping and pan sizzle. Foley layer must emphasize these eve"
     },
     {
-      "job_id": "w18_023_street_rain_crosswalk_001_dss_global",
+      "job_id": "w18_020_robot_warehouse_pick_001_dss_layer_avoid",
+      "case_id": "robot_warehouse_pick_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 10.0,
+      "changed": true,
+      "old_prompt_chars": 907,
+      "new_prompt_chars": 925,
+      "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: robot arm picking an item in a warehouse. Foley layer must emphasize these events: 0.00s: object=warehou",
+      "new_prompt_head": "Generate layered video-synchronized audio for a 10.0s video. Scene layer: robot arm picking an item in a warehouse. Foley layer must emphasize these events: 0.0"
+    },
+    {
+      "job_id": "w18_025_street_rain_crosswalk_001_dss_layer_avoid",
       "case_id": "street_rain_crosswalk_001",
-      "variant": "dss_global",
+      "variant": "dss_layer_avoid",
       "duration_sec": 9.0,
       "changed": true,
-      "old_prompt_chars": 313,
-      "new_prompt_chars": 312,
-      "old_prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no spee",
-      "new_prompt_head": "Generate synchronized audio for a 9.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no speec"
+      "old_prompt_chars": 952,
+      "new_prompt_chars": 969,
+      "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: rainy street crosswalk with passing footsteps and vehicles. Foley layer must emphasize these events: 0.0",
+      "new_prompt_head": "Generate layered video-synchronized audio for a 9.0s video. Scene layer: rainy street crosswalk with passing footsteps and vehicles. Foley layer must emphasize "
     },
     {
-      "job_id": "w18_024_street_rain_crosswalk_001_dss_event_timeline",
-      "case_id": "street_rain_crosswalk_001",
-      "variant": "dss_event_timeline",
-      "duration_sec": 9.0,
+      "job_id": "w18_030_subway_arrival_door_001_dss_layer_avoid",
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_layer_avoid",
+      "duration_sec": 10.0,
       "changed": true,
-      "old_prompt_chars": 826,
-      "new_prompt_chars": 825,
-      "old_prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: rainy street crosswalk with passing footsteps and vehicles. Event timeline: 0.00s: object=rai",
-      "new_prompt_head": "Generate audio for a 9.0s video using this event timeline. Scene: rainy street crosswalk with passing footsteps and vehicles. Event timeline: 0.00s: object=rain"
+      "old_prompt_chars": 949,
+      "new_prompt_chars": 967,
+      "old_prompt_head": "Generate layered video-synchronized audio. Scene layer: subway train arriving and doors opening. Foley layer must emphasize these events: 0.00s: object=platform",
+      "new_prompt_head": "Generate layered video-synchronized audio for a 10.0s video. Scene layer: subway train arriving and doors opening. Foley layer must emphasize these events: 0.00"
     }
   ]
 }

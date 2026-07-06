@@ -42,30 +42,39 @@ def write_csv(path: Path, rows: List[Dict[str, Any]]) -> None:
 
 
 def patch_prompt_duration(prompt: str, duration: float) -> str:
-    # Replace only explicit duration phrases, not event timestamps.
+    # Replace explicit duration phrases and insert duration into layer/avoid prompts.
+    # Do not modify event timestamps such as 0.00s.
     duration_text = f"{duration:.1f}s"
     patched = prompt
 
     patched = re.sub(
-        r"for a \d+(?:\.\d+)?s video",
+        r"for a \\d+(?:\\.\\d+)?s video",
         f"for a {duration_text} video",
         patched,
     )
     patched = re.sub(
-        r"for this \d+(?:\.\d+)?s video",
+        r"for this \\d+(?:\\.\\d+)?s video",
         f"for this {duration_text} video",
         patched,
     )
     patched = re.sub(
-        r"Generate audio for a \d+(?:\.\d+)?s video",
+        r"Generate audio for a \\d+(?:\\.\\d+)?s video",
         f"Generate audio for a {duration_text} video",
         patched,
     )
     patched = re.sub(
-        r"Generate synchronized audio for a \d+(?:\.\d+)?s video",
+        r"Generate synchronized audio for a \\d+(?:\\.\\d+)?s video",
         f"Generate synchronized audio for a {duration_text} video",
         patched,
     )
+
+    if patched.startswith("Generate layered video-synchronized audio.") and f"{duration_text} video" not in patched:
+        patched = patched.replace(
+            "Generate layered video-synchronized audio.",
+            f"Generate layered video-synchronized audio for a {duration_text} video.",
+            1,
+        )
+
     return patched
 
 
