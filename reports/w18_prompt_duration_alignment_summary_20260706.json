@@ -1,0 +1,82 @@
+{
+  "source_queue": "artifacts/model_runs/w18_dss_ablation/generation_queue_duration_aligned_20260706.jsonl",
+  "total_jobs": 30,
+  "case_count": 6,
+  "variant_count": 5,
+  "prompt_changed_jobs": 6,
+  "duration_prompt_not_aligned_count": 6,
+  "ready_for_micro_batch": false,
+  "policy": [
+    "Generation command duration and textual prompt duration must agree.",
+    "This step patches only explicit duration phrases, not event timestamps.",
+    "No generated audio is claimed by this patch."
+  ],
+  "changed_examples": [
+    {
+      "job_id": "w18_003_forest_bird_branch_001_dss_global",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_global",
+      "duration_sec": 8.0,
+      "changed": true,
+      "old_prompt_chars": 316,
+      "new_prompt_chars": 315,
+      "old_prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no backg",
+      "new_prompt_head": "Generate synchronized audio for a 8.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no backgr"
+    },
+    {
+      "job_id": "w18_004_forest_bird_branch_001_dss_event_timeline",
+      "case_id": "forest_bird_branch_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 8.0,
+      "changed": true,
+      "old_prompt_chars": 754,
+      "new_prompt_chars": 753,
+      "old_prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=",
+      "new_prompt_head": "Generate audio for a 8.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=f"
+    },
+    {
+      "job_id": "w18_008_glass_drop_room_001_dss_global",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_global",
+      "duration_sec": 7.0,
+      "changed": true,
+      "old_prompt_chars": 324,
+      "new_prompt_chars": 323,
+      "old_prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: quiet indoor room, a glass object drops and breaks on a hard floor. Overall style: realistic Foley,",
+      "new_prompt_head": "Generate synchronized audio for a 7.0s video. Global scene: quiet indoor room, a glass object drops and breaks on a hard floor. Overall style: realistic Foley, "
+    },
+    {
+      "job_id": "w18_009_glass_drop_room_001_dss_event_timeline",
+      "case_id": "glass_drop_room_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 7.0,
+      "changed": true,
+      "old_prompt_chars": 780,
+      "new_prompt_chars": 779,
+      "old_prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. Event timeline: 0.00s: ob",
+      "new_prompt_head": "Generate audio for a 7.0s video using this event timeline. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. Event timeline: 0.00s: obj"
+    },
+    {
+      "job_id": "w18_023_street_rain_crosswalk_001_dss_global",
+      "case_id": "street_rain_crosswalk_001",
+      "variant": "dss_global",
+      "duration_sec": 9.0,
+      "changed": true,
+      "old_prompt_chars": 313,
+      "new_prompt_chars": 312,
+      "old_prompt_head": "Generate synchronized audio for a 10.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no spee",
+      "new_prompt_head": "Generate synchronized audio for a 9.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no speec"
+    },
+    {
+      "job_id": "w18_024_street_rain_crosswalk_001_dss_event_timeline",
+      "case_id": "street_rain_crosswalk_001",
+      "variant": "dss_event_timeline",
+      "duration_sec": 9.0,
+      "changed": true,
+      "old_prompt_chars": 826,
+      "new_prompt_chars": 825,
+      "old_prompt_head": "Generate audio for a 10.0s video using this event timeline. Scene: rainy street crosswalk with passing footsteps and vehicles. Event timeline: 0.00s: object=rai",
+      "new_prompt_head": "Generate audio for a 9.0s video using this event timeline. Scene: rainy street crosswalk with passing footsteps and vehicles. Event timeline: 0.00s: object=rain"
+    }
+  ]
+}

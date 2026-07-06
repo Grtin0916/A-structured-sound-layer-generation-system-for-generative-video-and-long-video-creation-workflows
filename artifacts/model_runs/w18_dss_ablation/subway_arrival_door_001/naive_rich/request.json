@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 12.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Create realistic sound effects for this short video. Scene: subway train arriving and doors opening. The visible actions include: around 0.00s, platform platform_bed with underground platform room tone and distant crowd; around 0.00s, train train_rumble_approach with subway train approaching with low rumble; around 0.00s, brake brake_squeal with metal brake squeal as train stops; around 0.00s, door door_open_chime with door open chime and sliding door start. Make the sounds natural, synchronized, and cinematic. Avoid music, speech announcement, car horn, birdsong, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

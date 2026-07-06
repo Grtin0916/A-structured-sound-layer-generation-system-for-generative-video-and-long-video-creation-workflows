@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 10.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "ok",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Create realistic sound effects for this short video. Scene: kitchen preparation with chopping and pan sizzle. Use natural ambience and match visible actions. Avoid speech, restaurant crowd, music, alarm beep, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

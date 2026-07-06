@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 11.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Generate synchronized audio for a 10.0s video. Global scene: robot arm picking an item in a warehouse. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: human speech, music, explosion, vehicle horn, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

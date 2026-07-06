@@ -6,9 +6,9 @@
   "block_reason": "",
   "video_path": "cases/street_rain_crosswalk_001/input_video.mp4",
   "duration_sec": 9.0,
-  "prompt": "Generate synchronized audio for a 10.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: clear sunny ambience, music, speech, sirens, lyrics, voiceover.",
+  "prompt": "Generate synchronized audio for a 9.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: clear sunny ambience, music, speech, sirens, lyrics, voiceover.",
   "prompt_hash": "9673e829a6",
-  "prompt_chars": 313,
+  "prompt_chars": 312,
   "event_count": 4,
   "avoid_count": 6,
   "primary_source": "MMAudio",
@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 9.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": true
+  "duration_changed": true,
+  "prompt_before_duration_patch": "Generate synchronized audio for a 10.0s video. Global scene: rainy street crosswalk with passing footsteps and vehicles. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: clear sunny ambience, music, speech, sirens, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

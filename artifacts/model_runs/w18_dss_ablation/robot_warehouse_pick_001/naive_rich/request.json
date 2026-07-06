@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 11.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Create realistic sound effects for this short video. Scene: robot arm picking an item in a warehouse. The visible actions include: around 0.00s, warehouse warehouse_hum with low warehouse ventilation hum; around 0.00s, servo servo_arm_move with precise electric servo arm movement; around 0.00s, box box_lift with cardboard box lifted from shelf; around 0.00s, confirm confirm_beep with short clean robot confirmation beep. Make the sounds natural, synchronized, and cinematic. Avoid human speech, music, explosion, vehicle horn, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

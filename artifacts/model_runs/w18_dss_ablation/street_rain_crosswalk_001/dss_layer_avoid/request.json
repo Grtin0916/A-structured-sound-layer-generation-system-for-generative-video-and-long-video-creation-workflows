@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 9.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": true
+  "duration_changed": true,
+  "prompt_before_duration_patch": "Generate layered video-synchronized audio. Scene layer: rainy street crosswalk with passing footsteps and vehicles. Foley layer must emphasize these events: 0.00s: object=rain; action=rain_ambience_start; sound=steady light rain and wet street bed; layer=foley; priority=2; tolerance=500ms | 0.00s: object=footsteps; action=footsteps_enter; sound=wet shoes stepping through shallow water; layer=foley; priority=4; tolerance=180ms | 0.00s: object=car; action=car_pass_left_to_right; sound=muffled car pass-by on wet road; layer=foley; priority=3; tolerance=250ms | 0.00s: object=puddle; action=puddle_splash; sound=single sharp puddle splash near camera; layer=foley; priority=5; tolerance=120ms. Ambience layer should remain low, continuous, and non-dominant. Music layer should be absent unless explicitly required. Forbidden content: clear sunny ambience, music, speech, sirens, lyrics, voiceover. No speech, no lyrics, no unrelated background music.",
+  "prompt_duration_aligned": true
 }

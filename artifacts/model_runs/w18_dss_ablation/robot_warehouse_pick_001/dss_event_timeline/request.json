@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 11.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Generate audio for a 10.0s video using this event timeline. Scene: robot arm picking an item in a warehouse. Event timeline: 0.00s: object=warehouse; action=warehouse_hum; sound=low warehouse ventilation hum; layer=foley; priority=1; tolerance=600ms | 0.00s: object=servo; action=servo_arm_move; sound=precise electric servo arm movement; layer=foley; priority=4; tolerance=180ms | 0.00s: object=box; action=box_lift; sound=cardboard box lifted from shelf; layer=foley; priority=5; tolerance=150ms | 0.00s: object=confirm; action=confirm_beep; sound=short clean robot confirmation beep; layer=foley; priority=3; tolerance=80ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, music, explosion, vehicle horn, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

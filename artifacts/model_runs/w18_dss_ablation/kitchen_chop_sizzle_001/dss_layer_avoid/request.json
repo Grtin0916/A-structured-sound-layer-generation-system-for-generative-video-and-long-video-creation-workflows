@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 10.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "ok",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Generate layered video-synchronized audio. Scene layer: kitchen preparation with chopping and pan sizzle. Foley layer must emphasize these events: 0.00s: object=room; action=room_tone; sound=small indoor kitchen room tone; layer=foley; priority=1; tolerance=500ms | 0.00s: object=knife; action=knife_chops; sound=rhythmic vegetable chopping on wooden board; layer=foley; priority=5; tolerance=100ms | 0.00s: object=pan; action=pan_sizzle_rise; sound=oil and food sizzling in pan; layer=foley; priority=4; tolerance=250ms | 0.00s: object=plate; action=plate_set_down; sound=ceramic plate placed on counter; layer=foley; priority=3; tolerance=120ms. Ambience layer should remain low, continuous, and non-dominant. Music layer should be absent unless explicitly required. Forbidden content: speech, restaurant crowd, music, alarm beep, lyrics, voiceover. No speech, no lyrics, no unrelated background music.",
+  "prompt_duration_aligned": true
 }

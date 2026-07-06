@@ -6,9 +6,9 @@
   "block_reason": "",
   "video_path": "cases/forest_bird_branch_001/input_video.mp4",
   "duration_sec": 8.0,
-  "prompt": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=soft wind through leaves; layer=foley; priority=2; tolerance=500ms | 0.00s: object=bird; action=bird_chirp; sound=two short bird chirps; layer=foley; priority=3; tolerance=150ms | 0.00s: object=leaf; action=leaf_rustle; sound=small animal or bird rustling leaves; layer=foley; priority=4; tolerance=180ms | 0.00s: object=branch; action=branch_crack; sound=dry branch crack; layer=foley; priority=5; tolerance=100ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
+  "prompt": "Generate audio for a 8.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=soft wind through leaves; layer=foley; priority=2; tolerance=500ms | 0.00s: object=bird; action=bird_chirp; sound=two short bird chirps; layer=foley; priority=3; tolerance=150ms | 0.00s: object=leaf; action=leaf_rustle; sound=small animal or bird rustling leaves; layer=foley; priority=4; tolerance=180ms | 0.00s: object=branch; action=branch_crack; sound=dry branch crack; layer=foley; priority=5; tolerance=100ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
   "prompt_hash": "0d084a8b1e",
-  "prompt_chars": 754,
+  "prompt_chars": 753,
   "event_count": 4,
   "avoid_count": 7,
   "primary_source": "MMAudio",
@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 8.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": true
+  "duration_changed": true,
+  "prompt_before_duration_patch": "Generate audio for a 10.0s video using this event timeline. Scene: forest close-up with a bird moving on a branch. Event timeline: 0.00s: object=forest; action=forest_wind; sound=soft wind through leaves; layer=foley; priority=2; tolerance=500ms | 0.00s: object=bird; action=bird_chirp; sound=two short bird chirps; layer=foley; priority=3; tolerance=150ms | 0.00s: object=leaf; action=leaf_rustle; sound=small animal or bird rustling leaves; layer=foley; priority=4; tolerance=180ms | 0.00s: object=branch; action=branch_crack; sound=dry branch crack; layer=foley; priority=5; tolerance=100ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

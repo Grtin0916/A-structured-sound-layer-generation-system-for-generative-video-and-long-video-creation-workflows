@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 12.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": false
+  "duration_changed": false,
+  "prompt_before_duration_patch": "Generate audio for a 10.0s video using this event timeline. Scene: subway train arriving and doors opening. Event timeline: 0.00s: object=platform; action=platform_bed; sound=underground platform room tone and distant crowd; layer=foley; priority=2; tolerance=700ms | 0.00s: object=train; action=train_rumble_approach; sound=subway train approaching with low rumble; layer=foley; priority=4; tolerance=250ms | 0.00s: object=brake; action=brake_squeal; sound=metal brake squeal as train stops; layer=foley; priority=5; tolerance=150ms | 0.00s: object=door; action=door_open_chime; sound=door open chime and sliding door start; layer=foley; priority=3; tolerance=120ms. Preserve temporal order. Align transient sounds to event timestamps. Do not add: music, speech announcement, car horn, birdsong, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

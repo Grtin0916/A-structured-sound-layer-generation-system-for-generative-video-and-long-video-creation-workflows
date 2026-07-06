@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 7.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": true
+  "duration_changed": true,
+  "prompt_before_duration_patch": "Create realistic sound effects for this short video. Scene: quiet indoor room, a glass object drops and breaks on a hard floor. The visible actions include: around 0.00s, quiet quiet_room_tone with quiet indoor room tone; around 0.00s, glass glass_slip with glass sliding off table edge; around 0.00s, impact impact with sharp glass impact on hard floor; around 0.00s, shatter shatter_tail with small glass fragments scattering. Make the sounds natural, synchronized, and cinematic. Avoid speech, music, cartoon boing, long reverb tail, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }

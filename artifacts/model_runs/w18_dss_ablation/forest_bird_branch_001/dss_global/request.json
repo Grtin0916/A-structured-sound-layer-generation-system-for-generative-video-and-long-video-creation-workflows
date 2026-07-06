@@ -6,9 +6,9 @@
   "block_reason": "",
   "video_path": "cases/forest_bird_branch_001/input_video.mp4",
   "duration_sec": 8.0,
-  "prompt": "Generate synchronized audio for a 10.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
+  "prompt": "Generate synchronized audio for a 8.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
   "prompt_hash": "08922f73d1",
-  "prompt_chars": 316,
+  "prompt_chars": 315,
   "event_count": 4,
   "avoid_count": 7,
   "primary_source": "MMAudio",
@@ -33,5 +33,7 @@
   "actual_video_duration_sec": 8.0,
   "duration_alignment_policy": "min(requested_duration_sec_original, actual_video_duration_sec)",
   "duration_alignment_status": "duration_mismatch",
-  "duration_changed": true
+  "duration_changed": true,
+  "prompt_before_duration_patch": "Generate synchronized audio for a 10.0s video. Global scene: forest close-up with a bird moving on a branch. Overall style: realistic Foley, no speech, no background music. Keep ambience stable, keep foley clear, avoid forbidden content: human speech, heavy wind, music bed, urban traffic, speech, lyrics, voiceover.",
+  "prompt_duration_aligned": true
 }
