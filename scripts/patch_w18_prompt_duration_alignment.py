@@ -154,12 +154,28 @@ def main() -> int:
         })
 
     changed = [r for r in patch_rows if r["changed"]]
-    not_aligned = [
-        j for j in patched_jobs
-        if str(j["variant"]).startswith("dss_")
-        and f"{float(j['duration_sec']):.1f}s video" not in str(j["prompt"])
-        and "video" in str(j["prompt"])
-    ]
+    def prompt_duration_mismatch(job):
+        prompt = str(job.get("prompt", ""))
+        variant = str(job.get("variant", ""))
+        duration = float(job["duration_sec"])
+
+        # Only DSS prompts are required to carry explicit video duration.
+        # Naive and naive_rich may remain natural short-video prompts.
+        if not variant.startswith("dss_"):
+            return False
+
+        import re
+        explicit = [
+            float(x)
+            for x in re.findall(r"(\\d+(?:\\.\\d+)?)s video", prompt)
+        ]
+
+        if not explicit:
+            return True
+
+        return any(abs(x - duration) > 1e-6 for x in explicit)
+
+    not_aligned = [j for j in patched_jobs if prompt_duration_mismatch(j)]
 
     case_count = len({j["case_id"] for j in patched_jobs})
     variant_count = len({j["variant"] for j in patched_jobs})
