@@ -1,0 +1,37 @@
+{
+  "date": "2026-07-06",
+  "scope": "w18_mmaudio_small44k_canary",
+  "status": "success",
+  "job_id": "w18_001_forest_bird_branch_001_naive",
+  "case_id": "forest_bird_branch_001",
+  "prompt_variant": "naive",
+  "mmaudio_model_variant": "small_44k",
+  "video_path": "cases/forest_bird_branch_001/input_video.mp4",
+  "request_json": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/request.json",
+  "raw_output_dir": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/mmaudio_small_44k_raw_output",
+  "flac_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/w18_001_forest_bird_branch_001_naive.flac",
+  "flac_exists": true,
+  "flac_size_bytes": 425214,
+  "wav_path": "artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/w18_001_forest_bird_branch_001_naive.wav",
+  "wav_exists": true,
+  "wav_size_bytes": 702542,
+  "runtime_observations": {
+    "openclip_offline_load": "success",
+    "memory_usage_from_log": "4.16 GB",
+    "video_duration_warning": "input video appears about 8s while request duration was 10s; MMAudio truncated to about 8s/7.96s"
+  },
+  "env": {
+    "conda_env": "mmaudio-mini",
+    "MMAUDIO_ROOT": "/home/GRT/work/_external/MMAudio",
+    "HF_HOME": "/home/GRT/work/_external/MMAudio/.hf_cache",
+    "HF_HUB_OFFLINE": "1",
+    "torch": "2.5.1+cu118 11.8 True",
+    "torchaudio": "2.5.1+cu118"
+  },
+  "claim_boundary": [
+    "This confirms one real MMAudio small_44k video+prompt canary output.",
+    "This is not 30-job batch success.",
+    "This does not prove DSS improves synchronization or quality.",
+    "Later metrics must use actual media duration, not the requested 10s duration when MMAudio truncates input."
+  ]
+}

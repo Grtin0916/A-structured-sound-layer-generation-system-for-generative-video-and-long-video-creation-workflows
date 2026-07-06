@@ -1,0 +1,103 @@
+{
+  "MMAUDIO_ROOT": "/home/GRT/work/_external/MMAudio",
+  "HUGGINGFACE_HUB_CACHE": "/home/GRT/work/_external/MMAudio/.hf_cache/hub",
+  "snapshot_count": 1,
+  "checks": [
+    {
+      "name": "mmaudio_small_44k",
+      "path": "/home/GRT/work/_external/MMAudio/weights/mmaudio_small_44k.pth",
+      "required": true,
+      "exists": true,
+      "is_symlink": false,
+      "realpath": "/home/GRT/work/_external/MMAudio/weights/mmaudio_small_44k.pth",
+      "real_exists": true,
+      "size_bytes": 629946624,
+      "min_bytes": 500000000,
+      "ok": true
+    },
+    {
+      "name": "synchformer",
+      "path": "/home/GRT/work/_external/MMAudio/ext_weights/synchformer_state_dict.pth",
+      "required": true,
+      "exists": true,
+      "is_symlink": false,
+      "realpath": "/home/GRT/work/_external/MMAudio/ext_weights/synchformer_state_dict.pth",
+      "real_exists": true,
+      "size_bytes": 950058171,
+      "min_bytes": 800000000,
+      "ok": true
+    },
+    {
+      "name": "vae_v1_44",
+      "path": "/home/GRT/work/_external/MMAudio/ext_weights/v1-44.pth",
+      "required": true,
+      "exists": true,
+      "is_symlink": false,
+      "realpath": "/home/GRT/work/_external/MMAudio/ext_weights/v1-44.pth",
+      "real_exists": true,
+      "size_bytes": 1221942998,
+      "min_bytes": 1000000000,
+      "ok": true
+    },
+    {
+      "name": "empty_string_optional_or_later",
+      "path": "/home/GRT/work/_external/MMAudio/ext_weights/empty_string.pth",
+      "required": false,
+      "exists": false,
+      "is_symlink": false,
+      "realpath": null,
+      "real_exists": null,
+      "size_bytes": null,
+      "min_bytes": 1,
+      "ok": false
+    },
+    {
+      "name": "openclip_config@01b771ed0d1395ca5ffdd279897d665ebe00dfd2",
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--apple--DFN5B-CLIP-ViT-H-14-384/snapshots/01b771ed0d1395ca5ffdd279897d665ebe00dfd2/open_clip_config.json",
+      "required": true,
+      "exists": true,
+      "is_symlink": true,
+      "realpath": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--apple--DFN5B-CLIP-ViT-H-14-384/blobs/56abccffc4875142ac955f96cec904a1bd4434d6",
+      "real_exists": true,
+      "size_bytes": 735,
+      "min_bytes": 1,
+      "ok": true
+    },
+    {
+      "name": "openclip_bin@01b771ed0d1395ca5ffdd279897d665ebe00dfd2",
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--apple--DFN5B-CLIP-ViT-H-14-384/snapshots/01b771ed0d1395ca5ffdd279897d665ebe00dfd2/open_clip_pytorch_model.bin",
+      "required": true,
+      "exists": true,
+      "is_symlink": false,
+      "realpath": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--apple--DFN5B-CLIP-ViT-H-14-384/snapshots/01b771ed0d1395ca5ffdd279897d665ebe00dfd2/open_clip_pytorch_model.bin",
+      "real_exists": true,
+      "size_bytes": 3947081637,
+      "min_bytes": 3000000000,
+      "ok": true
+    }
+  ],
+  "incomplete_files": [
+    {
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/.locks/models--nvidia--bigvgan_v2_44khz_128band_512x/d9fe7ec6bd0b44ed9d66973d5012d8181c1570b01e5c72df51973e241dccd357.lock",
+      "size_bytes": 0
+    },
+    {
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/.locks/models--apple--DFN5B-CLIP-ViT-H-14-384/c07a17b547d461c60a3cce5062b26bf8545b13de602c4c59d8490361eb716033.lock",
+      "size_bytes": 0
+    },
+    {
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--nvidia--bigvgan_v2_44khz_128band_512x/blobs/d9fe7ec6bd0b44ed9d66973d5012d8181c1570b01e5c72df51973e241dccd357.a43482ac.incomplete",
+      "size_bytes": 0
+    },
+    {
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--apple--DFN5B-CLIP-ViT-H-14-384/blobs/c07a17b547d461c60a3cce5062b26bf8545b13de602c4c59d8490361eb716033.322c74de.incomplete",
+      "size_bytes": 469506170
+    },
+    {
+      "path": "/home/GRT/work/_external/MMAudio/.hf_cache/hub/models--apple--DFN5B-CLIP-ViT-H-14-384/blobs/c07a17b547d461c60a3cce5062b26bf8545b13de602c4c59d8490361eb716033.904e8b5b.incomplete",
+      "size_bytes": 2548201424
+    }
+  ],
+  "required_ok": true,
+  "has_incomplete_files": true
+}
