@@ -1,0 +1,46 @@
+{
+  "date": "2026-07-06",
+  "scope": "w18_generation_closure",
+  "status": "closed_for_generation_phase",
+  "completed": {
+    "compiled_prompt_jobs": 30,
+    "generated_audio_jobs": 30,
+    "case_count": 6,
+    "variant_counts": {
+      "naive": 6,
+      "naive_rich": 6,
+      "dss_global": 6,
+      "dss_event_timeline": 6,
+      "dss_layer_avoid": 6
+    },
+    "analysis_status": "success",
+    "repair_status": "success",
+    "listening_pack_status": "success",
+    "playlist_item_count": 30
+  },
+  "key_findings": [
+    "MMAudio small_44k offline runtime is usable through conda env mmaudio-mini.",
+    "All 6 cases and 5 prompt variants generated local audio artifacts.",
+    "Subway dss_event_timeline and dss_layer_avoid required peak repair due to clipping review.",
+    "Repair was non-destructive and generated peak-normalized local candidates.",
+    "Current metrics are acoustic sanity metrics only, not semantic/synchrony superiority metrics."
+  ],
+  "do_not_claim": [
+    "DSS variants outperform naive baselines.",
+    "Final production mix is ready.",
+    "Human preference or semantic correctness is proven.",
+    "Large-v2 MMAudio generation is complete."
+  ],
+  "next_phase": [
+    "Human listening review using the repair-aware HTML/M3U pack.",
+    "Event-level timing metrics for high-transient cases such as glass and kitchen.",
+    "Reranking policy using listening score + clipping/sanity gates.",
+    "Java/Cloud handoff of candidate manifest after listening gate is defined."
+  ],
+  "source_reports": {
+    "full_generation": "reports/w18_full_30job_generation_summary_20260706.json",
+    "analysis": "reports/w18_full_30job_ablation_analysis_20260706.json",
+    "repair": "reports/w18_clipping_repair_report_20260706.json",
+    "listening_pack": "reports/w18_repair_aware_listening_pack_20260706.json"
+  }
+}
