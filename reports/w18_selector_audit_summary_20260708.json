@@ -1,0 +1,28 @@
+{
+  "task": "w18_selector_audit_inventory",
+  "inputs": {
+    "metrics_csv": "reports/w18_audio_metrics_eval_20260707.csv",
+    "pairwise_csv": "reports/w18_dss_vs_naive_pairwise_report_20260707.csv",
+    "selector_csv": "reports/w18_dss_aware_selector_eval_20260707.csv",
+    "repair_seed": "reports/w18_repair_aware_selector_seed_20260707.json"
+  },
+  "candidate_count": 60,
+  "case_count": 6,
+  "variant_count": 5,
+  "winner_count_proxy": 0,
+  "repair_seed_count": 0,
+  "all_candidates_have_reason_or_metric": true,
+  "failure_count": 60,
+  "outputs": {
+    "inventory_csv": "reports/w18_selector_audit_inventory_20260708.csv",
+    "summary_json": "reports/w18_selector_audit_summary_20260708.json",
+    "failures_json": "reports/w18_selector_audit_failures_20260708.json"
+  },
+  "dod": {
+    "candidate_count_ge_30": true,
+    "case_count_eq_6": true,
+    "winner_count_ge_6": false,
+    "repair_seed_count_ge_8": false,
+    "all_candidates_have_reason_or_metric": true
+  }
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "candidate_id": "forest_bird_branch_001|dss_event_timeline",
+    "case_id": "forest_bird_branch_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|dss_event_timeline||artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_event_timeline/w18_004_forest_bird_branch_001_dss_event_timeline.wav",
+    "case_id": "forest_bird_branch_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|dss_global",
+    "case_id": "forest_bird_branch_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|dss_global||artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_global/w18_003_forest_bird_branch_001_dss_global.wav",
+    "case_id": "forest_bird_branch_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|dss_layer_avoid",
+    "case_id": "forest_bird_branch_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|dss_layer_avoid||artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/dss_layer_avoid/w18_005_forest_bird_branch_001_dss_layer_avoid.wav",
+    "case_id": "forest_bird_branch_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|naive",
+    "case_id": "forest_bird_branch_001",
+    "variant": "naive",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|naive||artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive/w18_001_forest_bird_branch_001_naive.wav",
+    "case_id": "forest_bird_branch_001",
+    "variant": "naive",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|naive_rich",
+    "case_id": "forest_bird_branch_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "forest_bird_branch_001|naive_rich||artifacts/model_runs/w18_dss_ablation/forest_bird_branch_001/naive_rich/w18_002_forest_bird_branch_001_naive_rich.wav",
+    "case_id": "forest_bird_branch_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|dss_event_timeline",
+    "case_id": "glass_drop_room_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|dss_event_timeline||artifacts/model_runs/w18_dss_ablation/glass_drop_room_001/dss_event_timeline/w18_009_glass_drop_room_001_dss_event_timeline.wav",
+    "case_id": "glass_drop_room_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|dss_global",
+    "case_id": "glass_drop_room_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|dss_global||artifacts/model_runs/w18_dss_ablation/glass_drop_room_001/dss_global/w18_008_glass_drop_room_001_dss_global.wav",
+    "case_id": "glass_drop_room_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|dss_layer_avoid",
+    "case_id": "glass_drop_room_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|dss_layer_avoid||artifacts/model_runs/w18_dss_ablation/glass_drop_room_001/dss_layer_avoid/w18_010_glass_drop_room_001_dss_layer_avoid.wav",
+    "case_id": "glass_drop_room_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|naive",
+    "case_id": "glass_drop_room_001",
+    "variant": "naive",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|naive||artifacts/model_runs/w18_dss_ablation/glass_drop_room_001/naive/w18_006_glass_drop_room_001_naive.wav",
+    "case_id": "glass_drop_room_001",
+    "variant": "naive",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|naive_rich",
+    "case_id": "glass_drop_room_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "glass_drop_room_001|naive_rich||artifacts/model_runs/w18_dss_ablation/glass_drop_room_001/naive_rich/w18_007_glass_drop_room_001_naive_rich.wav",
+    "case_id": "glass_drop_room_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|dss_event_timeline",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|dss_event_timeline||artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_event_timeline/w18_014_kitchen_chop_sizzle_001_dss_event_timeline.wav",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|dss_global",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|dss_global||artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_global/w18_013_kitchen_chop_sizzle_001_dss_global.wav",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|dss_layer_avoid",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|dss_layer_avoid||artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/dss_layer_avoid/w18_015_kitchen_chop_sizzle_001_dss_layer_avoid.wav",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|naive",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "naive",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|naive||artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/naive/w18_011_kitchen_chop_sizzle_001_naive.wav",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "naive",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|naive_rich",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "kitchen_chop_sizzle_001|naive_rich||artifacts/model_runs/w18_dss_ablation/kitchen_chop_sizzle_001/naive_rich/w18_012_kitchen_chop_sizzle_001_naive_rich.wav",
+    "case_id": "kitchen_chop_sizzle_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|dss_event_timeline",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|dss_event_timeline||artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.wav",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|dss_global",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|dss_global||artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_global/w18_018_robot_warehouse_pick_001_dss_global.wav",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|dss_layer_avoid",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|dss_layer_avoid||artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_layer_avoid/w18_020_robot_warehouse_pick_001_dss_layer_avoid.wav",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|naive",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "naive",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|naive||artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/naive/w18_016_robot_warehouse_pick_001_naive.wav",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "naive",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|naive_rich",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "robot_warehouse_pick_001|naive_rich||artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/naive_rich/w18_017_robot_warehouse_pick_001_naive_rich.wav",
+    "case_id": "robot_warehouse_pick_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|dss_event_timeline",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|dss_event_timeline||artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_event_timeline/w18_024_street_rain_crosswalk_001_dss_event_timeline.wav",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|dss_global",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|dss_global||artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_global/w18_023_street_rain_crosswalk_001_dss_global.wav",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|dss_layer_avoid",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|dss_layer_avoid||artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/dss_layer_avoid/w18_025_street_rain_crosswalk_001_dss_layer_avoid.wav",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|naive",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "naive",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|naive||artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive/w18_021_street_rain_crosswalk_001_naive.wav",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "naive",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|naive_rich",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "street_rain_crosswalk_001|naive_rich||artifacts/model_runs/w18_dss_ablation/street_rain_crosswalk_001/naive_rich/w18_022_street_rain_crosswalk_001_naive_rich.wav",
+    "case_id": "street_rain_crosswalk_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|dss_event_timeline",
+    "case_id": "subway_arrival_door_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|dss_event_timeline||artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline_repaired_peak_m3db.wav",
+    "case_id": "subway_arrival_door_001",
+    "variant": "dss_event_timeline",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|dss_global",
+    "case_id": "subway_arrival_door_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|dss_global||artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_global/w18_028_subway_arrival_door_001_dss_global.wav",
+    "case_id": "subway_arrival_door_001",
+    "variant": "dss_global",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|dss_layer_avoid",
+    "case_id": "subway_arrival_door_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|dss_layer_avoid||artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid_repaired_peak_m3db.wav",
+    "case_id": "subway_arrival_door_001",
+    "variant": "dss_layer_avoid",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|naive",
+    "case_id": "subway_arrival_door_001",
+    "variant": "naive",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|naive||artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/naive/w18_026_subway_arrival_door_001_naive.wav",
+    "case_id": "subway_arrival_door_001",
+    "variant": "naive",
+    "missing_evidence": "source,metrics"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|naive_rich",
+    "case_id": "subway_arrival_door_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,selector"
+  },
+  {
+    "candidate_id": "subway_arrival_door_001|naive_rich||artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/naive_rich/w18_027_subway_arrival_door_001_naive_rich.wav",
+    "case_id": "subway_arrival_door_001",
+    "variant": "naive_rich",
+    "missing_evidence": "source,metrics"
+  }
+]
