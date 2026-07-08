@@ -1,0 +1,28 @@
+{
+  "task": "export_w18_repair_handoff_contract",
+  "out_json": "artifacts/contracts/week18/w18_selector_repair_handoff_20260708.json",
+  "winner_count": 6,
+  "failure_count": 12,
+  "repair_probe_count": 6,
+  "proxy_improved_count": 6,
+  "missing_asset_count": 0,
+  "failure_category_counts": {
+    "clipping": 8,
+    "layer_conflict_or_repairable": 1,
+    "naive_less_controllable": 2,
+    "silence": 1
+  },
+  "repair_action_counts": {
+    "silence_trim_or_gain": 1,
+    "event_local_gain": 1,
+    "peak_normalize_only": 1,
+    "clipping_attenuation": 3
+  },
+  "dod": {
+    "winner_count_eq_6": true,
+    "repair_probe_count_eq_6": true,
+    "proxy_improved_count_ge_2": true,
+    "missing_asset_count_eq_0": true,
+    "has_boundary": true
+  }
+}
