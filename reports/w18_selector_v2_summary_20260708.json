@@ -1,0 +1,27 @@
+{
+  "task": "w18_selector_v2_with_human_seed",
+  "input_inventory": "reports/w18_selector_audit_inventory_20260708_v2.csv",
+  "scored": 30,
+  "case_count": 6,
+  "winner_count": 6,
+  "repair_priority_count": 16,
+  "human_pair_count": 12,
+  "cases_with_human_pair": 6,
+  "agreement_rate": 1.0,
+  "cohen_kappa": 1.0,
+  "manual_review_required": true,
+  "dod": {
+    "scored_ge_30": true,
+    "winner_count_eq_6": true,
+    "repair_priority_ge_8": true,
+    "human_pair_count_ge_10": true,
+    "each_case_has_pair": true,
+    "agreement_json_exists": true
+  },
+  "outputs": {
+    "scored_csv": "reports/w18_selector_v2_scores_20260708.csv",
+    "human_seed_csv": "reports/w18_human_preference_seed_20260708.csv",
+    "agreement_json": "reports/w18_selector_v2_human_agreement_20260708.json",
+    "summary_json": "reports/w18_selector_v2_summary_20260708.json"
+  }
+}
