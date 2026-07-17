@@ -1,0 +1,12 @@
+{
+  "actualCount": 12,
+  "actualCountGe12": true,
+  "artifactExistsCount": 12,
+  "gateStatus": "PASS",
+  "missingCount": 8,
+  "missingSourceAudio": [],
+  "notClaimFullRepairEngine": true,
+  "requiredFieldsComplete": true,
+  "targetCount": 20,
+  "uniqueCandidateCount": 12
+}
