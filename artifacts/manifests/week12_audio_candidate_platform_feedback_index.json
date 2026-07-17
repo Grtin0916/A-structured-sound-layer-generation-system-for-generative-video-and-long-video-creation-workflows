@@ -12,12 +12,12 @@
     "cloudBuiltDashboardStub": true
   },
   "evidence": {
-    "mainbaseReviewQueueUri": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week12_audio_audition_review_queue_v0.json",
-    "javaImportSummaryUri": "/home/GRT/work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_import_summary.json",
-    "javaHttpSummaryUri": "/home/GRT/work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_http_it_summary.json",
-    "javaHttpBodyUri": "/home/GRT/work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_http_it_body.json",
-    "cloudRuntimeIndexUri": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week12_audio_candidate_runtime_index.json",
-    "cloudDashboardUri": "/home/GRT/work/ai-job-platform-cloud/observability/grafana/dashboards/week12_audio_candidate_dashboard.json"
+    "mainbaseReviewQueueUri": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week12_audio_audition_review_queue_v0.json",
+    "javaImportSummaryUri": "/home/GRT/work/grt_work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_import_summary.json",
+    "javaHttpSummaryUri": "/home/GRT/work/grt_work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_http_it_summary.json",
+    "javaHttpBodyUri": "/home/GRT/work/grt_work/media-task-platform-java/artifacts/runtime/week12_audio_candidate_api_http_it_body.json",
+    "cloudRuntimeIndexUri": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week12_audio_candidate_runtime_index.json",
+    "cloudDashboardUri": "/home/GRT/work/grt_work/ai-job-platform-cloud/observability/grafana/dashboards/week12_audio_candidate_dashboard.json"
   },
   "counts": {
     "candidateCount": 10,

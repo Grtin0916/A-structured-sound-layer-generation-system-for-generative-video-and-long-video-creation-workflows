@@ -33,7 +33,7 @@ def main() -> int:
     cloud_root = Path(
         os.environ.get(
             "CLOUD_REPO",
-            str(Path.home() / "work" / "ai-job-platform-cloud"),
+            str(Path.home() / "work" / "grt_work" / "ai-job-platform-cloud"),
         )
     )
 

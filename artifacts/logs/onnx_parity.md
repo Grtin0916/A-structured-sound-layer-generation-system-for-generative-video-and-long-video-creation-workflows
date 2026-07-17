@@ -8,7 +8,7 @@
 - Report: `artifacts/logs/onnx_parity.md`
 
 ## Input
-- Sample source: `/home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav`
+- Sample source: `/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav`
 - Sample index: `0`
 - Input shape: `(1, 1, 64, 313)`
 - ONNX input name: `mel`

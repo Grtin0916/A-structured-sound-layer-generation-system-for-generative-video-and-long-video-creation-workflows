@@ -4,8 +4,8 @@
   "status": "PASS",
   "transitionDecision": "ENTER_WEEK15_TEMPORAL_ALIGNMENT_EVAL_INPUT",
   "sourceInputs": {
-    "mainbasePlatformPromotionFeedbackIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_platform_promotion_feedback_index.json",
-    "cloudFridayStageGateInput": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_friday_stage_gate_input.json"
+    "mainbasePlatformPromotionFeedbackIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_platform_promotion_feedback_index.json",
+    "cloudFridayStageGateInput": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week13_friday_stage_gate_input.json"
   },
   "verifiedScope": {
     "completedStage": "Week13 Candidate Audio Bank V1 local demo-ready input",

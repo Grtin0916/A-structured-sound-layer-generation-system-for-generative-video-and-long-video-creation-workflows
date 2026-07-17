@@ -113,7 +113,7 @@ def warning_is_clip_duration_only(manifest: dict[str, Any]) -> bool:
 
 
 def main() -> int:
-    mainbase = Path.home() / "work" / "audio_engineering_repo_skeleton_v1"
+    mainbase = Path.home() / "work" / "grt_work" / "audio_engineering_repo_skeleton_v1"
 
     request_manifest_path = mainbase / "artifacts/manifests/week12_candidate_audio_request_manifest_v1.json"
     request_jsonl_path = mainbase / "artifacts/manifests/week12_candidate_audio_requests_v1.jsonl"

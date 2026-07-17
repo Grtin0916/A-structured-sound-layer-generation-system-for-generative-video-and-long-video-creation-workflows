@@ -1,5 +1,5 @@
 {
-  "output": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_regression_gate.json",
+  "output": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_regression_gate.json",
   "status": "PASS",
   "gateDecision": "TEMPORAL_ALIGNMENT_REMEDIATION_REGRESSION_GUARDED",
   "failedChecks": [],

@@ -140,7 +140,7 @@ Boundary: this update verifies Week09 profiling / CPU / memory evidence only. It
 
 ```bash
 conda activate audio-mini
-cd ~/work/audio_engineering_repo_skeleton_v1
+cd ~/work/grt_work/audio_engineering_repo_skeleton_v1
 ```
 
 仅在需要运行依赖 conda 动态库的 AudioCraft / MusicGen 相关命令时，再按单条命令临时注入库路径：

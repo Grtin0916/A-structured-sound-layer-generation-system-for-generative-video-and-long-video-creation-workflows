@@ -4,11 +4,11 @@
   "status": "PASS",
   "purpose": "Materialize Week15 temporal alignment eval inputs from Week13 Candidate Audio Bank V1 evidence.",
   "inputs": {
-    "stageGateFeedback": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
-    "candidateBankDemoIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_demo_index.json",
-    "mixPlacementManifest": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_mix_placement_manifest.json",
-    "mixGlobalPlacementTableCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.csv",
-    "mixPreviewManifest": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_mix/week13_mix_preview_manifest.json"
+    "stageGateFeedback": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
+    "candidateBankDemoIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_demo_index.json",
+    "mixPlacementManifest": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_mix_placement_manifest.json",
+    "mixGlobalPlacementTableCsv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.csv",
+    "mixPreviewManifest": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio_mix/week13_mix_preview_manifest.json"
   },
   "summary": {
     "candidateCount": 10,

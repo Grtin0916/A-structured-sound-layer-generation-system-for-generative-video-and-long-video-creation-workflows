@@ -2,7 +2,7 @@
 
 ## Seed
 
-`/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_seed_from_week17_demo_release_20260703.json`
+`/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/reports/week18_seed_from_week17_demo_release_20260703.json`
 
 ## Core decision
 

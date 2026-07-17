@@ -2,8 +2,8 @@
   "schemaVersion": "week15.temporal_alignment_score.v1",
   "generatedAtUtc": "2026-06-12T08:37:03.946309+00:00",
   "status": "PASS",
-  "inputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_input_index.json",
-  "csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated.csv",
+  "inputIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_input_index.json",
+  "csv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated.csv",
   "summary": {
     "candidateCount": 10,
     "passCount": 9,

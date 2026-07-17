@@ -2,8 +2,8 @@
   "status": "PASS",
   "remediatedCandidateCount": 2,
   "outputs": {
-    "remediatedInputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_input_index.json",
-    "audioOutDir": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_candidates/week15_temporal_alignment_remediated"
+    "remediatedInputIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_input_index.json",
+    "audioOutDir": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio_candidates/week15_temporal_alignment_remediated"
   },
   "blockers": [],
   "actions": [

@@ -10,8 +10,8 @@ from typing import Any
 
 
 MAINBASE = Path(".").resolve()
-JAVA = Path.home() / "work/media-task-platform-java"
-CLOUD = Path.home() / "work/ai-job-platform-cloud"
+JAVA = Path.home() / "work/grt_work/media-task-platform-java"
+CLOUD = Path.home() / "work/grt_work/ai-job-platform-cloud"
 
 OUT_DIR = MAINBASE / "artifacts/demo/week17_true_aware_demo_pack_seed"
 INPUTS_DIR = OUT_DIR / "inputs"

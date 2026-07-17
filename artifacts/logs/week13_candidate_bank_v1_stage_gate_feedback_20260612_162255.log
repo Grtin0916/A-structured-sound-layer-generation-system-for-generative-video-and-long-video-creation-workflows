@@ -1,5 +1,5 @@
 {
-  "output": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
+  "output": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
   "status": "PASS",
   "transitionDecision": "ENTER_WEEK15_TEMPORAL_ALIGNMENT_EVAL_INPUT",
   "blockerCount": 0,

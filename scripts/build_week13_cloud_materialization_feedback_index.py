@@ -9,8 +9,8 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_CLOUD = os.environ.get("CLOUD", str(Path.home() / "work/ai-job-platform-cloud"))
-DEFAULT_JAVA = os.environ.get("JAVA_REPO", str(Path.home() / "work/media-task-platform-java"))
+DEFAULT_CLOUD = os.environ.get("CLOUD", str(Path.home() / "work/grt_work/ai-job-platform-cloud"))
+DEFAULT_JAVA = os.environ.get("JAVA_REPO", str(Path.home() / "work/grt_work/media-task-platform-java"))
 
 DEFAULT_MAINBASE_PLACEMENT = "artifacts/manifests/week13_mix_placement_manifest.json"
 DEFAULT_MAINBASE_PREVIEW = "artifacts/audio_mix/week13_mix_preview_manifest.json"

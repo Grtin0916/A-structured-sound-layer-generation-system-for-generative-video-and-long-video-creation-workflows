@@ -58,27 +58,27 @@
     },
     {
       "step": "cloud_materialized_audio",
-      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_materialized_audio_artifact_manifest.json",
+      "evidence": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week13_materialized_audio_artifact_manifest.json",
       "status": "PASS"
     },
     {
       "step": "cloud_mount_read_contract",
-      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_mount_read_contract.json",
+      "evidence": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week13_mount_read_contract.json",
       "status": "PASS"
     },
     {
       "step": "java_artifact_registry_contract",
-      "evidence": "/home/GRT/work/media-task-platform-java/artifacts/manifests/week13_java_audio_artifact_registry_contract_report.json",
+      "evidence": "/home/GRT/work/grt_work/media-task-platform-java/artifacts/manifests/week13_java_audio_artifact_registry_contract_report.json",
       "status": "PASS"
     },
     {
       "step": "cloud_worker_input",
-      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_ready_candidate_worker_input_manifest.json",
+      "evidence": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week13_ready_candidate_worker_input_manifest.json",
       "status": "PASS"
     },
     {
       "step": "cloud_worker_smoke",
-      "evidence": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_local_audio_worker_smoke_result.json",
+      "evidence": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week13_local_audio_worker_smoke_result.json",
       "status": "PASS"
     },
     {

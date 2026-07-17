@@ -12,7 +12,7 @@
   "realMixerExecuted": false,
   "realMixerExecutionAllowed": true,
   "wavExported": false,
-  "outJson": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.json",
-  "outCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.csv",
-  "outDoc": "/home/GRT/work/audio_engineering_repo_skeleton_v1/docs/evals/week17_layer_mix_plan_v0.md"
+  "outJson": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.json",
+  "outCsv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.csv",
+  "outDoc": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/docs/evals/week17_layer_mix_plan_v0.md"
 }

@@ -183,7 +183,7 @@ def synth_candidate(slot: dict[str, Any], seed: int) -> list[float]:
 
 
 def main() -> int:
-    mainbase = Path.home() / "work" / "audio_engineering_repo_skeleton_v1"
+    mainbase = Path.home() / "work" / "grt_work" / "audio_engineering_repo_skeleton_v1"
 
     slots_manifest_path = mainbase / "artifacts/manifests/week12_audio_candidate_bank_slots_manifest_v0.json"
     slots_jsonl_path = mainbase / "artifacts/manifests/week12_audio_candidate_bank_slots_v0.jsonl"

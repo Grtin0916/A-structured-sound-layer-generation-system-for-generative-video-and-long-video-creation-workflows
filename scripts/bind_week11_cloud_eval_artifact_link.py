@@ -9,7 +9,7 @@ from typing import Any
 
 
 ROOT = Path(".")
-CLOUD_ROOT = Path.home() / "work/ai-job-platform-cloud"
+CLOUD_ROOT = Path.home() / "work/grt_work/ai-job-platform-cloud"
 
 BRIDGE = ROOT / "artifacts/manifests/week11_crossrepo_task_bridge.json"
 METRICS = ROOT / "artifacts/evals/week11_eval_v0_metrics.json"

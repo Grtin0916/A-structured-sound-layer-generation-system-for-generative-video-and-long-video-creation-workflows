@@ -21,8 +21,8 @@ from typing import Any, Dict, List
 
 
 ROOT = Path(".").resolve()
-JAVA = Path(os.environ.get("JAVA", str(Path.home() / "work" / "media-task-platform-java"))).resolve()
-CLOUD = Path(os.environ.get("CLOUD", str(Path.home() / "work" / "ai-job-platform-cloud"))).resolve()
+JAVA = Path(os.environ.get("JAVA", str(Path.home() / "work" / "grt_work" / "media-task-platform-java"))).resolve()
+CLOUD = Path(os.environ.get("CLOUD", str(Path.home() / "work" / "grt_work" / "ai-job-platform-cloud"))).resolve()
 
 MAINBASE_QUEUE = ROOT / "artifacts/evals/week12_audio_audition_review_queue_v0.json"
 JAVA_IMPORT_SUMMARY = JAVA / "artifacts/runtime/week12_audio_candidate_api_import_summary.json"

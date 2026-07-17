@@ -4,8 +4,8 @@
   "status": "PASS",
   "scope": "mainbase-platform-promotion-feedback-only",
   "sourceMainbaseDemoIndex": "artifacts/manifests/week13_candidate_bank_demo_index.json",
-  "sourceCloudPromotionGate": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week13_candidate_bank_platform_promotion_gate.json",
-  "sourceCloudCiCheckLog": "/home/GRT/work/ai-job-platform-cloud/artifacts/logs/week13_candidate_bank_platform_promotion_gate_check_20260611_174717.log",
+  "sourceCloudPromotionGate": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week13_candidate_bank_platform_promotion_gate.json",
+  "sourceCloudCiCheckLog": "/home/GRT/work/grt_work/ai-job-platform-cloud/artifacts/logs/week13_candidate_bank_platform_promotion_gate_check_20260611_174717.log",
   "sourceCloudCiCheckLogExists": true,
   "platformPromotionDecision": "PROMOTE_TO_WEEK13_DEMO_READY",
   "positivePath": {

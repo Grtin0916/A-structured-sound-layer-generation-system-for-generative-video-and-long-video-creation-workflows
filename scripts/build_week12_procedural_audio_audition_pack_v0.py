@@ -251,7 +251,7 @@ def build_html_index(rows: list[dict[str, Any]], qa_rows: list[dict[str, Any]], 
 
 
 def main() -> int:
-    mainbase = Path.home() / "work" / "audio_engineering_repo_skeleton_v1"
+    mainbase = Path.home() / "work" / "grt_work" / "audio_engineering_repo_skeleton_v1"
 
     candidate_manifest_path = mainbase / "artifacts/manifests/week12_procedural_audio_candidates_manifest_v0.json"
     candidate_jsonl_path = mainbase / "artifacts/manifests/week12_procedural_audio_candidates_v0.jsonl"

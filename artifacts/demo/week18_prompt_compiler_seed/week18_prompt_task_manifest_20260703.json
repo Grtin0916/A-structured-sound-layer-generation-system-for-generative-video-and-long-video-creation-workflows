@@ -1,8 +1,8 @@
 {
   "manifest_id": "week18_prompt_compiler_seed_manifest_20260703",
   "generated_at_utc": "2026-07-03T03:11:59.089464+00:00",
-  "source_seed": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/week18_seed_from_week17_demo_release_20260703.json",
-  "task_queue": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/demo/week18_prompt_compiler_seed/week18_prompt_tasks_20260703.jsonl",
+  "source_seed": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/reports/week18_seed_from_week17_demo_release_20260703.json",
+  "task_queue": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/demo/week18_prompt_compiler_seed/week18_prompt_tasks_20260703.jsonl",
   "task_count": 12,
   "case_count": 6,
   "prompt_type_counts": {

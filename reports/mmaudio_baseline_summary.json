@@ -5,8 +5,8 @@
   "generated_count": 0,
   "fallback_count": 12,
   "wav_count": 12,
-  "metrics_csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/mmaudio_baseline_metrics.csv",
-  "failures_json": "/home/GRT/work/audio_engineering_repo_skeleton_v1/reports/mmaudio_baseline_failures.json",
+  "metrics_csv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/reports/mmaudio_baseline_metrics.csv",
+  "failures_json": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/reports/mmaudio_baseline_failures.json",
   "boundary": {
     "local_mmaudio_success_claimed": false,
     "fallback_control_is_not_video_conditioned_v2a": true,

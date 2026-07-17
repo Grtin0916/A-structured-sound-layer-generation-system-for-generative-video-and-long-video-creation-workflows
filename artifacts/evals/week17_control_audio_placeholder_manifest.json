@@ -2,7 +2,7 @@
   "decision": "PASS_WEEK17_CONTROL_AUDIO_PLACEHOLDERS_MATERIALIZED",
   "generatedAtUtc": "2026-06-23T10:08:15.717754+00:00",
   "schemaVersion": "week17.control_audio_placeholder_manifest.v0",
-  "sourcePlan": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.json",
+  "sourcePlan": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_layer_mix_plan_v0.json",
   "sourcePlanSha256": "42ad7d42b689bcae5e075507c468ded9e5f0281e9c77083fbb55beb8021aa440",
   "artifactTotal": 7,
   "sampleRate": 22050,
@@ -14,7 +14,7 @@
   "records": [
     {
       "candidateId": "procedural_v0_0001",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0001_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0001_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,
@@ -27,7 +27,7 @@
     },
     {
       "candidateId": "procedural_v0_0002",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0002_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0002_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,
@@ -40,7 +40,7 @@
     },
     {
       "candidateId": "procedural_v0_0003",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0003_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0003_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,
@@ -53,7 +53,7 @@
     },
     {
       "candidateId": "procedural_v0_0005",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0005_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0005_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,
@@ -66,7 +66,7 @@
     },
     {
       "candidateId": "procedural_v0_0006",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0006_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0006_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,
@@ -79,7 +79,7 @@
     },
     {
       "candidateId": "procedural_v0_0008",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0008_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0008_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,
@@ -92,7 +92,7 @@
     },
     {
       "candidateId": "procedural_v0_0009",
-      "artifactPath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0009_control_placeholder.wav",
+      "artifactPath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders/procedural_v0_0009_control_placeholder.wav",
       "artifactType": "synthetic_control_placeholder_wav",
       "sampleRate": 22050,
       "durationSec": 2.0,

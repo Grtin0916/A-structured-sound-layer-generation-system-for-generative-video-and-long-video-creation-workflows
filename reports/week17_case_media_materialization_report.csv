@@ -1,5 +1,5 @@
 case_id,video_status,video_path,video_kind,ffmpeg_message
-forest_bird_branch_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/forest_bird_branch_001/input_video.mp4,synthetic_placeholder_video,"   skip:100.0%
+forest_bird_branch_001,created,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/forest_bird_branch_001/input_video.mp4,synthetic_placeholder_video,"   skip:100.0%
 [libx264 @ 0x64e2515c9e80] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0: 0.0% L1:100.0% BI: 0.0%
 [libx264 @ 0x64e2515c9e80] 8x8 transform intra:86.8% inter:2.8%
 [libx264 @ 0x64e2515c9e80] coded y,uvDC,uvAC intra: 3.4% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
@@ -12,7 +12,7 @@ forest_bird_branch_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1
 [libx264 @ 0x64e2515c9e80] kb/s:16.38
 [aac @ 0x64e2515eb300] Qavg: 65536.000
 "
-glass_drop_room_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/glass_drop_room_001/input_video.mp4,synthetic_placeholder_video,"irect: 0.0%  skip:100.0%  L0:46.4% L1:53.6% BI: 0.0%
+glass_drop_room_001,created,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/glass_drop_room_001/input_video.mp4,synthetic_placeholder_video,"irect: 0.0%  skip:100.0%  L0:46.4% L1:53.6% BI: 0.0%
 [libx264 @ 0x580aa7815f80] 8x8 transform intra:86.7% inter:5.0%
 [libx264 @ 0x580aa7815f80] coded y,uvDC,uvAC intra: 3.3% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
 [libx264 @ 0x580aa7815f80] i16 v,h,dc,p: 73%  0% 27%  0%
@@ -26,7 +26,7 @@ glass_drop_room_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1/ca
 [libx264 @ 0x580aa7815f80] kb/s:18.20
 [aac @ 0x580aa784d3c0] Qavg: 65536.000
 "
-kitchen_chop_sizzle_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/kitchen_chop_sizzle_001/input_video.mp4,synthetic_placeholder_video,":  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0: 1.1% L1:98.9% BI: 0.0%
+kitchen_chop_sizzle_001,created,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/kitchen_chop_sizzle_001/input_video.mp4,synthetic_placeholder_video,":  0.0%  0.0%  0.0%  B16..8:  0.0%  0.0%  0.0%  direct: 0.0%  skip:100.0%  L0: 1.1% L1:98.9% BI: 0.0%
 [libx264 @ 0x585e0a534e80] 8x8 transform intra:86.7% inter:1.9%
 [libx264 @ 0x585e0a534e80] coded y,uvDC,uvAC intra: 3.3% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
 [libx264 @ 0x585e0a534e80] i16 v,h,dc,p: 73%  0% 27%  0%
@@ -39,7 +39,7 @@ kitchen_chop_sizzle_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v
 [libx264 @ 0x585e0a534e80] kb/s:14.94
 [aac @ 0x585e0a5480c0] Qavg: 65536.000
 "
-robot_warehouse_pick_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/robot_warehouse_pick_001/input_video.mp4,synthetic_placeholder_video,"irect: 0.0%  skip:100.0%  L0:54.9% L1:45.1% BI: 0.0%
+robot_warehouse_pick_001,created,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/robot_warehouse_pick_001/input_video.mp4,synthetic_placeholder_video,"irect: 0.0%  skip:100.0%  L0:54.9% L1:45.1% BI: 0.0%
 [libx264 @ 0x5803d1d31e80] 8x8 transform intra:86.7% inter:1.8%
 [libx264 @ 0x5803d1d31e80] coded y,uvDC,uvAC intra: 3.3% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
 [libx264 @ 0x5803d1d31e80] i16 v,h,dc,p: 73%  0% 27%  0%
@@ -53,8 +53,8 @@ robot_warehouse_pick_001,created,/home/GRT/work/audio_engineering_repo_skeleton_
 [libx264 @ 0x5803d1d31e80] kb/s:21.25
 [aac @ 0x5803d1d45680] Qavg: 65536.000
 "
-street_rain_crosswalk_001,exists,/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/street_rain_crosswalk_001/input_video.mp4,local_video,
-subway_arrival_door_001,created,/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/subway_arrival_door_001/input_video.mp4,synthetic_placeholder_video,"irect: 0.0%  skip:100.0%  L0: 8.1% L1:91.9% BI: 0.0%
+street_rain_crosswalk_001,exists,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/street_rain_crosswalk_001/input_video.mp4,local_video,
+subway_arrival_door_001,created,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/subway_arrival_door_001/input_video.mp4,synthetic_placeholder_video,"irect: 0.0%  skip:100.0%  L0: 8.1% L1:91.9% BI: 0.0%
 [libx264 @ 0x61bf157f7f80] 8x8 transform intra:61.2% inter:0.0%
 [libx264 @ 0x61bf157f7f80] coded y,uvDC,uvAC intra: 3.3% 0.0% 0.0% inter: 0.0% 0.0% 0.0%
 [libx264 @ 0x61bf157f7f80] i16 v,h,dc,p: 92%  1%  7%  0%

@@ -1,4 +1,4 @@
-/home/GRT/work/audio_engineering_repo_skeleton_v1/tools/media_probe/probe_media.py:76: UserWarning: PySoundFile failed. Trying audioread instead.
+/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/tools/media_probe/probe_media.py:76: UserWarning: PySoundFile failed. Trying audioread instead.
   y, sr = librosa.load(path, sr=None, mono=False)
 /home/GRT/anaconda3/envs/audio-mini/lib/python3.9/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
 	Deprecated as of librosa version 0.10.0.

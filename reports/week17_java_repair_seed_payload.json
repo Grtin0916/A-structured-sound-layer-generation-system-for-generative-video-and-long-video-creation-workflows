@@ -18,7 +18,7 @@
       "case_id": "kitchen_chop_sizzle_001",
       "source_candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0",
       "repaired_candidate_id": "kitchen_chop_sizzle_001__control_rule_foley_v0_repair_v1",
-      "repaired_path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_repaired/kitchen_chop_sizzle_001/kitchen_chop_sizzle_001__control_rule_foley_v0_repair_v1.wav",
+      "repaired_path": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/model_runs/week17_control_repaired/kitchen_chop_sizzle_001/kitchen_chop_sizzle_001__control_rule_foley_v0_repair_v1.wav",
       "repair_status": "repaired_to_winner",
       "before_score": 0.75,
       "after_score": 1.0,

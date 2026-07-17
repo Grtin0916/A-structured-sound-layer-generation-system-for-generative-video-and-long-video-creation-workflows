@@ -4,9 +4,9 @@
   "status": "PASS",
   "gateDecision": "TEMPORAL_ALIGNMENT_REMEDIATION_REGRESSION_GUARDED",
   "inputs": {
-    "originalSummary": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json",
-    "remediationPlan": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediation_plan.json",
-    "remediatedSummary": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_summary.json"
+    "originalSummary": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json",
+    "remediationPlan": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediation_plan.json",
+    "remediatedSummary": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_remediated_summary.json"
   },
   "checks": {
     "originalStatusFail": true,

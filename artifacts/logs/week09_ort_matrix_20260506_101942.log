@@ -14,7 +14,7 @@ runs: 200
 [RUN] sample_index=0
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -32,7 +32,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-177957-C-40.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -50,7 +50,7 @@ runs: 200
 [RUN] sample_index=1
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-A-41.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-A-41.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -68,7 +68,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-A-41.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-A-41.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -86,7 +86,7 @@ runs: 200
 [RUN] sample_index=2
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-B-41.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-B-41.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -104,7 +104,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-B-41.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-185579-B-41.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -122,7 +122,7 @@ runs: 200
 [RUN] sample_index=3
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-186924-A-12.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-186924-A-12.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -140,7 +140,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-186924-A-12.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-186924-A-12.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -158,7 +158,7 @@ runs: 200
 [RUN] sample_index=4
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-191131-A-40.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-191131-A-40.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -176,7 +176,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-191131-A-40.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-191131-A-40.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -194,7 +194,7 @@ runs: 200
 [RUN] sample_index=5
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-193339-A-10.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-193339-A-10.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -212,7 +212,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-193339-A-10.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-193339-A-10.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -230,7 +230,7 @@ runs: 200
 [RUN] sample_index=6
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-194930-A-1.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-194930-A-1.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -248,7 +248,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-194930-A-1.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-194930-A-1.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -266,7 +266,7 @@ runs: 200
 [RUN] sample_index=7
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-195710-A-10.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-195710-A-10.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -284,7 +284,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-195710-A-10.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-195710-A-10.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -302,7 +302,7 @@ runs: 200
 [RUN] sample_index=8
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-A-20.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-A-20.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -320,7 +320,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-A-20.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-A-20.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200
@@ -338,7 +338,7 @@ runs: 200
 [RUN] sample_index=9
 ================================================================================
 [OK] PT vs ONNX comparison finished.
-[Info] Sample source : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-G-20.wav
+[Info] Sample source : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-G-20.wav
 [Info] Input shape   : (1, 1, 64, 313)
 [Info] PT shape      : (1, 1, 64, 313)
 [Info] ONNX shape    : (1, 1, 64, 313)
@@ -356,7 +356,7 @@ runs: 200
 [Info] ONNX path       : artifacts/onnx/baseline_v1.onnx
 [Info] Provider req    : CPUExecutionProvider
 [Info] Provider actual : ['CPUExecutionProvider']
-[Info] Input source    : /home/GRT/work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-G-20.wav
+[Info] Input source    : /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/data/processed/esc10_miniset/valid/5-198411-G-20.wav
 [Info] Input shape     : (1, 1, 64, 313)
 [Info] Output shape    : (1, 1, 64, 313)
 [Info] Warmup / runs   : 20 / 200

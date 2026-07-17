@@ -5,7 +5,7 @@
   "sourceRepo": "mainbase",
   "sourceHead": "0d7e146",
   "bundleName": "week12_soundlayer_blueprint_v1_cloud_handoff",
-  "bundleDir": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/exports/week12_soundlayer_blueprint_v1_cloud_handoff",
+  "bundleDir": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/exports/week12_soundlayer_blueprint_v1_cloud_handoff",
   "mainbaseGate": {
     "status": "PASS",
     "blueprintCount": 5,
@@ -17,7 +17,7 @@
   "files": {
     "summary": {
       "role": "summary",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_final_summary.json",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_final_summary.json",
       "bundlePath": "metadata/week12_blueprint_v1_final_summary.json",
       "filename": "week12_blueprint_v1_final_summary.json",
       "sizeBytes": 1170,
@@ -25,7 +25,7 @@
     },
     "manifest": {
       "role": "manifest",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_manifest.json",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_manifest.json",
       "bundlePath": "manifests/week12_blueprint_v1_manifest.json",
       "filename": "week12_blueprint_v1_manifest.json",
       "sizeBytes": 19694,
@@ -33,7 +33,7 @@
     },
     "timeline_jsonl": {
       "role": "timeline_jsonl",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_event_timeline.jsonl",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_event_timeline.jsonl",
       "bundlePath": "manifests/week12_event_timeline.jsonl",
       "filename": "week12_event_timeline.jsonl",
       "sizeBytes": 7198,
@@ -41,7 +41,7 @@
     },
     "timeline_csv": {
       "role": "timeline_csv",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_event_timeline.csv",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_event_timeline.csv",
       "bundlePath": "manifests/week12_event_timeline.csv",
       "filename": "week12_event_timeline.csv",
       "sizeBytes": 4650,
@@ -49,7 +49,7 @@
     },
     "semantic_report": {
       "role": "semantic_report",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_semantic_report.json",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_semantic_report.json",
       "bundlePath": "metadata/week12_blueprint_v1_semantic_report.json",
       "filename": "week12_blueprint_v1_semantic_report.json",
       "sizeBytes": 2369,
@@ -57,7 +57,7 @@
     },
     "validation_report": {
       "role": "validation_report",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_validation_report.json",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_blueprint_v1_validation_report.json",
       "bundlePath": "metadata/week12_blueprint_v1_validation_report.json",
       "filename": "week12_blueprint_v1_validation_report.json",
       "sizeBytes": 1941,
@@ -65,7 +65,7 @@
     },
     "contact_sheet_png": {
       "role": "contact_sheet_png",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/visuals/week12_event_timeline_contact_sheet.png",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/visuals/week12_event_timeline_contact_sheet.png",
       "bundlePath": "visuals/week12_event_timeline_contact_sheet.png",
       "filename": "week12_event_timeline_contact_sheet.png",
       "sizeBytes": 149771,
@@ -73,7 +73,7 @@
     },
     "schema": {
       "role": "schema",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/schemas/soundlayer_blueprint_v1.schema.json",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/schemas/soundlayer_blueprint_v1.schema.json",
       "bundlePath": "schema/soundlayer_blueprint_v1.schema.json",
       "filename": "soundlayer_blueprint_v1.schema.json",
       "sizeBytes": 3786,
@@ -81,7 +81,7 @@
     },
     "contact_sheet_svg": {
       "role": "contact_sheet_svg",
-      "sourcePath": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/visuals/week12_event_timeline_contact_sheet.svg",
+      "sourcePath": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/visuals/week12_event_timeline_contact_sheet.svg",
       "bundlePath": "visuals/week12_event_timeline_contact_sheet.svg",
       "filename": "week12_event_timeline_contact_sheet.svg",
       "sizeBytes": 5378,

@@ -4,8 +4,8 @@
   "status": "REVIEW_READY",
   "purpose": "Provide a human-facing packet for visual and audio inspection of Week15 temporal alignment remediation evidence.",
   "inputs": {
-    "mainbaseWaveformRmsIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
-    "cloudEvidenceGate": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week15_temporal_alignment_evidence_gate.json"
+    "mainbaseWaveformRmsIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_waveform_rms_index.json",
+    "cloudEvidenceGate": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week15_temporal_alignment_evidence_gate.json"
   },
   "sourceHeads": {
     "mainbaseWaveformRmsCommitHead": "3a5b12a",

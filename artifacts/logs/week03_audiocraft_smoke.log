@@ -2,7 +2,7 @@ torch: 2.1.0+cu118
 torchaudio: 2.1.0+cu118
 cuda_available: True
 device: NVIDIA A100-PCIE-40GB
-pythonpath_ok: /home/GRT/work/audio_engineering_repo_skeleton_v1
+pythonpath_ok: /home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1
 audiocraft_installed: True
 ffmpeg_in_path: /home/GRT/anaconda3/envs/audio-mini/bin/ffmpeg
 ffprobe_in_path: /home/GRT/anaconda3/envs/audio-mini/bin/ffprobe

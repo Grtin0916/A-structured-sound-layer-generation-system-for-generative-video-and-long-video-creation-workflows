@@ -1,7 +1,7 @@
 {
   "status": "FAIL",
-  "csv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment.csv",
-  "json": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json",
+  "csv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment.csv",
+  "json": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json",
   "summary": {
     "candidateCount": 10,
     "passCount": 7,

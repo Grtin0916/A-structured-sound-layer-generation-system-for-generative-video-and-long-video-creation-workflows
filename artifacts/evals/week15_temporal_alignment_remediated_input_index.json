@@ -4,11 +4,11 @@
   "status": "PASS",
   "purpose": "Remediated temporal alignment input index with trimmed event_local candidates for onset/energy proxy rescoring.",
   "inputs": {
-    "stageGateFeedback": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
-    "candidateBankDemoIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_demo_index.json",
-    "mixPlacementManifest": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_mix_placement_manifest.json",
-    "mixGlobalPlacementTableCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.csv",
-    "mixPreviewManifest": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio_mix/week13_mix_preview_manifest.json"
+    "stageGateFeedback": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_v1_stage_gate_feedback.json",
+    "candidateBankDemoIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_candidate_bank_demo_index.json",
+    "mixPlacementManifest": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week13_mix_placement_manifest.json",
+    "mixGlobalPlacementTableCsv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week13_mix_global_placement_table.csv",
+    "mixPreviewManifest": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio_mix/week13_mix_preview_manifest.json"
   },
   "summary": {
     "candidateCount": 10,
@@ -314,6 +314,6 @@
     "does_not_claim_human_audition_passed",
     "does_not_claim_final_mix_readiness"
   ],
-  "sourceInputIndex": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_input_index.json",
-  "sourceScoreSummary": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json"
+  "sourceInputIndex": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_input_index.json",
+  "sourceScoreSummary": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week15_temporal_alignment_summary.json"
 }

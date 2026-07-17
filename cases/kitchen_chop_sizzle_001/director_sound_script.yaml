@@ -4,7 +4,7 @@
   "video": {
     "duration_s": 10.0,
     "input_kind": "synthetic_placeholder_video",
-    "path": "/home/GRT/work/audio_engineering_repo_skeleton_v1/cases/kitchen_chop_sizzle_001/input_video.mp4",
+    "path": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/cases/kitchen_chop_sizzle_001/input_video.mp4",
     "expected_silence": true,
     "semantic_evidence_level": "pipeline_only_not_real_scene"
   },

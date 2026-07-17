@@ -1,10 +1,10 @@
 {
   "decision": "PASS_WEEK17_CONTROL_AUDIO_PLACEHOLDERS_MATERIALIZED",
   "artifactTotal": 7,
-  "audioDir": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders",
-  "outJson": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_control_audio_placeholder_manifest.json",
-  "outCsv": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_control_audio_placeholder_manifest.csv",
-  "outDoc": "/home/GRT/work/audio_engineering_repo_skeleton_v1/docs/evals/week17_control_audio_placeholder_manifest.md",
+  "audioDir": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/audio/week17_control_placeholders",
+  "outJson": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_control_audio_placeholder_manifest.json",
+  "outCsv": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/evals/week17_control_audio_placeholder_manifest.csv",
+  "outDoc": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/docs/evals/week17_control_audio_placeholder_manifest.md",
   "candidateIds": [
     "procedural_v0_0001",
     "procedural_v0_0002",

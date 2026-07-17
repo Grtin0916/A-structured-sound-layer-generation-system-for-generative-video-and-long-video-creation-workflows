@@ -35,9 +35,9 @@ def load_json(path: Path) -> dict:
 
 
 def main() -> int:
-    mainbase = Path.home() / "work" / "audio_engineering_repo_skeleton_v1"
-    java = Path.home() / "work" / "media-task-platform-java"
-    cloud = Path.home() / "work" / "ai-job-platform-cloud"
+    mainbase = Path.home() / "work" / "grt_work" / "audio_engineering_repo_skeleton_v1"
+    java = Path.home() / "work" / "grt_work" / "media-task-platform-java"
+    cloud = Path.home() / "work" / "grt_work" / "ai-job-platform-cloud"
 
     blueprint_manifest = mainbase / "artifacts/manifests/week12_blueprint_v1_manifest.json"
     timeline_jsonl = mainbase / "artifacts/manifests/week12_event_timeline.jsonl"

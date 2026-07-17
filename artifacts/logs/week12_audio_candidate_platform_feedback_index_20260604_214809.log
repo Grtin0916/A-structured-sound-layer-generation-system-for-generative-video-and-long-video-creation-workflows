@@ -7,7 +7,7 @@
   "semanticFidelityClaimedAny": false,
   "mixReadyClaimedAny": false,
   "blockers": [],
-  "output": "/home/GRT/work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_audio_candidate_platform_feedback_index.json",
+  "output": "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/artifacts/manifests/week12_audio_candidate_platform_feedback_index.json",
   "remainingGaps": [
     "human_audition_not_performed",
     "semantic_audio_quality_not_verified",

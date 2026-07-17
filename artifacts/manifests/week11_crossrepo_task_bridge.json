@@ -26,8 +26,8 @@
   "cloud_week11_k6_slo_summary_gate": {
     "schema_version": "week11_k6_slo_summary_v0",
     "cloud_commit": "65c838e",
-    "summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
-    "summary_doc": "/home/GRT/work/ai-job-platform-cloud/docs/benchmarks/cloud_k6_week11.md",
+    "summary_json": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
+    "summary_doc": "/home/GRT/work/grt_work/ai-job-platform-cloud/docs/benchmarks/cloud_k6_week11.md",
     "bound_at": "2026-05-20T15:53:54+0800",
     "scope": "Cloud Week11 local k6 SLO summary. Local smoke gate only; not production SLO.",
     "aggregate": {
@@ -67,14 +67,14 @@
     ]
   },
   "cloud_commit": "65c838e",
-  "cloud_week11_k6_slo_summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
+  "cloud_week11_k6_slo_summary_json": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week11_k6_slo_summary.json",
   "cloud_week11_k6_slo_summary_passed": true,
   "cloud_week11_k6_slo_summary_bound_at_epoch": 1779263634,
   "cloud_week11_eval_artifact_link_consumer_gate": {
     "schema_version": "week11_k6_eval_artifact_link_summary_v0",
     "cloud_commit": "08e075c",
-    "summary_json": "/home/GRT/work/ai-job-platform-cloud/loadtest/reports/week11_k6_eval_artifact_link_summary.json",
-    "k6_script": "/home/GRT/work/ai-job-platform-cloud/loadtest/k6_eval_artifact_link.js",
+    "summary_json": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/week11_k6_eval_artifact_link_summary.json",
+    "k6_script": "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/k6_eval_artifact_link.js",
     "bound_at": "2026-05-20T16:56:55+0800",
     "scope": "Cloud k6 external consumer smoke verifying Java MediaTask eval artifact link fields.",
     "passed": true,

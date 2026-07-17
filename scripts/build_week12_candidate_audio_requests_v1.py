@@ -156,7 +156,7 @@ def build_prompt(flat: dict[str, Any], event_label: str, layer: str) -> str:
 
 
 def main() -> int:
-    mainbase = Path.home() / "work" / "audio_engineering_repo_skeleton_v1"
+    mainbase = Path.home() / "work" / "grt_work" / "audio_engineering_repo_skeleton_v1"
 
     timeline_jsonl = mainbase / "artifacts/manifests/week12_event_timeline.jsonl"
     feedback_index = mainbase / "artifacts/manifests/week12_blueprint_runtime_feedback_index.json"
