@@ -1,0 +1,14 @@
+[
+  {
+    "action": "candidate_replace",
+    "candidate": "robot_warehouse_pick_001|naive",
+    "failure_id": "fb_004",
+    "reason": "deterministic_action_not_available"
+  },
+  {
+    "action": "candidate_replace",
+    "candidate": "subway_arrival_door_001|naive",
+    "failure_id": "fb_005",
+    "reason": "deterministic_action_not_available"
+  }
+]

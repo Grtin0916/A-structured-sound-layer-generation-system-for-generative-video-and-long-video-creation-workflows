@@ -1,0 +1,27 @@
+{
+  "allowedActions": [
+    "attenuate_limit",
+    "delay_or_pad",
+    "shift_left",
+    "trim"
+  ],
+  "availableFailureTypes": [
+    "clipping",
+    "excessive_silence",
+    "silence"
+  ],
+  "executionFailureCount": 0,
+  "gateStatus": "PASS",
+  "limitation": "No real onset_late/onset_early failure exists in the W18 evidence; none was fabricated.",
+  "onsetBoundaryCaseAvailable": false,
+  "preflightCount": 4,
+  "readableAfterCount": 4,
+  "requestedCount": 4,
+  "runnerInputReady": true,
+  "severeRegressionCount": 0,
+  "targetMetricImprovedCount": 3,
+  "targetMetricNotImprovedCount": 1,
+  "targetMetricNotImprovedFailureIds": [
+    "fb_011"
+  ]
+}

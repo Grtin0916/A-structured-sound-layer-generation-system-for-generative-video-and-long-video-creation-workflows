@@ -1,0 +1,11 @@
+{
+  "executionFailures": [],
+  "nonImprovingCases": [
+    {
+      "action": "trim",
+      "failure_id": "fb_011",
+      "reason": "target_metric_not_improved_in_preflight",
+      "severity": "non_fatal"
+    }
+  ]
+}

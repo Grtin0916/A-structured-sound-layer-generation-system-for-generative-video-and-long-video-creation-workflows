@@ -1,0 +1,15 @@
+{
+  "existingSeedCount": 12,
+  "missingCount": 5,
+  "missingSourceCount": 0,
+  "newUniqueFailureCount": 3,
+  "overlapWithSeedCount": 0,
+  "status": "HONEST_PARTIAL",
+  "targetNewCount": 8,
+  "thresholds": {
+    "clippedRatioMin": 1e-05,
+    "excessiveSilenceRatioMin": 0.12,
+    "loudRmsDbfsMin": -12.0
+  },
+  "thresholdsLoweredToFillTarget": false
+}

@@ -1,0 +1,19 @@
+{
+  "actualCount": 15,
+  "categoryCounts": {
+    "clipping": 9,
+    "excessive_silence": 2,
+    "layer_conflict_or_repairable": 1,
+    "naive_less_controllable": 2,
+    "silence": 1
+  },
+  "failureCount": 0,
+  "gateStatus": "YELLOW_HONEST_PARTIAL",
+  "missingCount": 5,
+  "missingSourceCount": 0,
+  "plotCount": 15,
+  "sourceExistsCount": 15,
+  "targetCount": 20,
+  "thresholdsLoweredToFillTarget": false,
+  "uniqueFailureCount": 15
+}

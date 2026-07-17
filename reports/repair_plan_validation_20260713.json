@@ -1,0 +1,72 @@
+{
+  "details": [
+    {
+      "errors": [],
+      "failure_id": "fb_001"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_002"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_003"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_004"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_005"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_006"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_007"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_008"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_009"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_010"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_011"
+    },
+    {
+      "errors": [],
+      "failure_id": "fb_012"
+    },
+    {
+      "errors": [],
+      "failure_id": "hn_001"
+    },
+    {
+      "errors": [],
+      "failure_id": "hn_002"
+    },
+    {
+      "errors": [],
+      "failure_id": "hn_003"
+    }
+  ],
+  "executionReadyCount": 13,
+  "gateStatus": "PASS",
+  "inapplicableActionBlockedCount": 2,
+  "invalidIntervalCount": 0,
+  "minimumExecutionReady": 10,
+  "missingSourceCount": 0,
+  "planCount": 15,
+  "unsafeParameterCount": 0
+}

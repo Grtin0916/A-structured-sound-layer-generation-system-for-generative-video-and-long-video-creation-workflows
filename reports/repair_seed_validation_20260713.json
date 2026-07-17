@@ -1,0 +1,20 @@
+{
+  "duplicateCandidateCount": 0,
+  "duplicateFailureIdCount": 0,
+  "duplicates": {
+    "candidates": [],
+    "failureIds": []
+  },
+  "gateStatus": "PASS",
+  "invalidMetricCount": 0,
+  "invalidMetrics": [],
+  "missingActions": [],
+  "missingCount": 8,
+  "missingSourceCount": 0,
+  "missingSources": [],
+  "missingTargetActionCount": 0,
+  "seedCount": 12,
+  "targetCount": 20,
+  "uniqueCandidateCount": 12,
+  "uniqueFailureCount": 12
+}

@@ -1,0 +1,11 @@
+{
+  "blockedCount": 2,
+  "compiledPlanCount": 15,
+  "executionReadyCount": 13,
+  "fallbackCoverageRatio": 1.0,
+  "gateStatus": "PASS",
+  "guardMetricCoverageRatio": 1.0,
+  "policyCoverageRatio": 1.0,
+  "repairBankCount": 15,
+  "targetMetricCoverageRatio": 1.0
+}
