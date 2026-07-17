@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W18 SoundLayer Experiment</title>
+<style>body{font:16px/1.5 system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:.5rem}
+code{background:#eee;padding:.1rem .3rem}</style></head><body>
+<h1>W18 SoundLayer Experiment Release</h1>
+<p>Six cases, 30 candidates, six selector winners, 12 failures and six micro-repair pairs.
+Java binds 12 results; Cloud aggregates six gauges and four local alert rules.</p>
+<h2>Selector winners</h2><table><thead><tr><th>Case</th><th>Variant</th>
+<th>Score</th><th>Audio</th></tr></thead><tbody><tr><td>forest_bird_branch_001</td><td>naive_rich</td><td>0.6950</td><td><audio controls preload="none" src="audio/winner__forest_bird_branch_001__naive_rich.wav"></audio></td></tr>
+<tr><td>glass_drop_room_001</td><td>dss_layer_avoid</td><td>0.7610</td><td><audio controls preload="none" src="audio/winner__glass_drop_room_001__dss_layer_avoid.wav"></audio></td></tr>
+<tr><td>kitchen_chop_sizzle_001</td><td>dss_layer_avoid</td><td>0.7161</td><td><audio controls preload="none" src="audio/winner__kitchen_chop_sizzle_001__dss_layer_avoid.wav"></audio></td></tr>
+<tr><td>robot_warehouse_pick_001</td><td>dss_layer_avoid</td><td>0.5805</td><td><audio controls preload="none" src="audio/winner__robot_warehouse_pick_001__dss_layer_avoid.wav"></audio></td></tr>
+<tr><td>street_rain_crosswalk_001</td><td>dss_event_timeline</td><td>0.8009</td><td><audio controls preload="none" src="audio/winner__street_rain_crosswalk_001__dss_event_timeline.wav"></audio></td></tr>
+<tr><td>subway_arrival_door_001</td><td>dss_global</td><td>0.6850</td><td><audio controls preload="none" src="audio/winner__subway_arrival_door_001__dss_global.wav"></audio></td></tr></tbody></table>
+<h2>Interpretation boundary</h2>
+<p>Micro-repair gains are proxy metrics. The dashboard is provisionable but was not imported
+into live Grafana. Local Prometheus verification is not production monitoring.</p>
+<p>See <code>reports/claim_boundary.json</code> and the copied source reports.</p>
+</body></html>

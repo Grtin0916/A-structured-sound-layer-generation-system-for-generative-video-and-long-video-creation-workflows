@@ -1,0 +1,37 @@
+{
+  "task": "w18_micro_repair_probe",
+  "input_failure_bank": "reports/w18_failure_bank_20260708.csv",
+  "probe_count": 6,
+  "after_wav_count": 6,
+  "plot_count": 6,
+  "proxy_improve_count": 6,
+  "read_error_count": 0,
+  "write_error_count": 0,
+  "action_counts": {
+    "silence_trim_or_gain": 1,
+    "event_local_gain": 1,
+    "peak_normalize_only": 1,
+    "clipping_attenuation": 3
+  },
+  "category_counts": {
+    "silence": 1,
+    "layer_conflict_or_repairable": 1,
+    "naive_less_controllable": 1,
+    "clipping": 3
+  },
+  "dod": {
+    "probe_count_ge_6": true,
+    "after_wav_count_ge_6": true,
+    "plot_count_ge_6": true,
+    "proxy_improve_count_ge_2": true,
+    "read_error_count_eq_0": true,
+    "write_error_count_eq_0": true
+  },
+  "outputs": {
+    "csv": "reports/w18_micro_repair_probe_20260708.csv",
+    "json": "reports/w18_micro_repair_probe_20260708.json",
+    "summary": "reports/w18_micro_repair_probe_summary_20260708.json",
+    "out_dir": "artifacts/repair/w18_micro_repair_20260708"
+  },
+  "boundary": "Non-destructive micro repair probe only; not a full repair engine and not a subjective audio-quality claim."
+}

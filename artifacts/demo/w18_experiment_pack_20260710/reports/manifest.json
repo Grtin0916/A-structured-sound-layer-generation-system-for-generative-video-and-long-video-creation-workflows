@@ -1,0 +1,168 @@
+{
+  "audio": [
+    {
+      "caseId": "forest_bird_branch_001",
+      "path": "audio/winner__forest_bird_branch_001__naive_rich.wav",
+      "role": "winner"
+    },
+    {
+      "caseId": "glass_drop_room_001",
+      "path": "audio/winner__glass_drop_room_001__dss_layer_avoid.wav",
+      "role": "winner"
+    },
+    {
+      "caseId": "kitchen_chop_sizzle_001",
+      "path": "audio/winner__kitchen_chop_sizzle_001__dss_layer_avoid.wav",
+      "role": "winner"
+    },
+    {
+      "caseId": "robot_warehouse_pick_001",
+      "path": "audio/winner__robot_warehouse_pick_001__dss_layer_avoid.wav",
+      "role": "winner"
+    },
+    {
+      "caseId": "street_rain_crosswalk_001",
+      "path": "audio/winner__street_rain_crosswalk_001__dss_event_timeline.wav",
+      "role": "winner"
+    },
+    {
+      "caseId": "subway_arrival_door_001",
+      "path": "audio/winner__subway_arrival_door_001__dss_global.wav",
+      "role": "winner"
+    },
+    {
+      "caseId": "glass_drop_room_001",
+      "path": "audio/repair_before__mr_001__glass_drop_room_001.wav",
+      "probeId": "mr_001",
+      "role": "repair_before"
+    },
+    {
+      "caseId": "glass_drop_room_001",
+      "path": "audio/repair_after__mr_001__glass_drop_room_001.wav",
+      "probeId": "mr_001",
+      "role": "repair_after"
+    },
+    {
+      "caseId": "robot_warehouse_pick_001",
+      "path": "audio/repair_before__mr_002__robot_warehouse_pick_001.wav",
+      "probeId": "mr_002",
+      "role": "repair_before"
+    },
+    {
+      "caseId": "robot_warehouse_pick_001",
+      "path": "audio/repair_after__mr_002__robot_warehouse_pick_001.wav",
+      "probeId": "mr_002",
+      "role": "repair_after"
+    },
+    {
+      "caseId": "robot_warehouse_pick_001",
+      "path": "audio/repair_before__mr_003__robot_warehouse_pick_001.wav",
+      "probeId": "mr_003",
+      "role": "repair_before"
+    },
+    {
+      "caseId": "robot_warehouse_pick_001",
+      "path": "audio/repair_after__mr_003__robot_warehouse_pick_001.wav",
+      "probeId": "mr_003",
+      "role": "repair_after"
+    },
+    {
+      "caseId": "forest_bird_branch_001",
+      "path": "audio/repair_before__mr_004__forest_bird_branch_001.wav",
+      "probeId": "mr_004",
+      "role": "repair_before"
+    },
+    {
+      "caseId": "forest_bird_branch_001",
+      "path": "audio/repair_after__mr_004__forest_bird_branch_001.wav",
+      "probeId": "mr_004",
+      "role": "repair_after"
+    },
+    {
+      "caseId": "forest_bird_branch_001",
+      "path": "audio/repair_before__mr_005__forest_bird_branch_001.wav",
+      "probeId": "mr_005",
+      "role": "repair_before"
+    },
+    {
+      "caseId": "forest_bird_branch_001",
+      "path": "audio/repair_after__mr_005__forest_bird_branch_001.wav",
+      "probeId": "mr_005",
+      "role": "repair_after"
+    },
+    {
+      "caseId": "glass_drop_room_001",
+      "path": "audio/repair_before__mr_006__glass_drop_room_001.wav",
+      "probeId": "mr_006",
+      "role": "repair_before"
+    },
+    {
+      "caseId": "glass_drop_room_001",
+      "path": "audio/repair_after__mr_006__glass_drop_room_001.wav",
+      "probeId": "mr_006",
+      "role": "repair_after"
+    }
+  ],
+  "claimBoundary": {
+    "alertmanagerConfigured": false,
+    "dockerDesktopEngineHealthy": false,
+    "liveGrafanaImportVerified": false,
+    "notes": [
+      "The 30-candidate ablation is the recorded local experiment set.",
+      "Micro repair improvements are objective proxies, not listening-test claims.",
+      "Dashboard and provisioning files are versioned artifacts, not a live Grafana claim."
+    ],
+    "productionAlertingVerified": false,
+    "productionPrometheusVerified": false,
+    "subjectiveRepairQualityVerified": false,
+    "trueMmaudioBatchVerified": false
+  },
+  "counts": {
+    "alertRuleCount": 4,
+    "candidateCount": 30,
+    "caseCount": 6,
+    "dashboardPanelCount": 9,
+    "failureCount": 12,
+    "javaGaugeCount": 6,
+    "javaTaskCount": 12,
+    "repairBeforeAfterCount": 6,
+    "winnerCount": 6
+  },
+  "entrypoint": "index.html",
+  "failureCategories": {
+    "clipping": 8,
+    "layer_conflict_or_repairable": 1,
+    "naive_less_controllable": 2,
+    "silence": 1
+  },
+  "plots": [
+    "plots/mr_001__glass_drop_room_001__naive_rich__silence_trim_or_gain__before_after.png",
+    "plots/mr_002__robot_warehouse_pick_001__dss_event_timeline__event_local_gain__before_after.png",
+    "plots/mr_003__robot_warehouse_pick_001__naive__peak_normalize_only__before_after.png",
+    "plots/mr_004__forest_bird_branch_001__dss_global__clipping_attenuation__before_after.png",
+    "plots/mr_005__forest_bird_branch_001__dss_event_timeline__clipping_attenuation__before_after.png",
+    "plots/mr_006__glass_drop_room_001__dss_global__clipping_attenuation__before_after.png"
+  ],
+  "promptVariants": [
+    "naive",
+    "naive_rich",
+    "dss_global",
+    "dss_event_timeline",
+    "dss_layer_avoid"
+  ],
+  "repairProxyImproveCount": 6,
+  "reports": [
+    "reports/prompt_summary.json",
+    "reports/generation_summary.json",
+    "reports/selector_summary.json",
+    "reports/failure_summary.json",
+    "reports/repair_summary.json",
+    "reports/java_lifecycle.json",
+    "reports/cloud_aggregation.json",
+    "reports/cloud_dashboard.json",
+    "reports/cloud_provider.yml",
+    "reports/cloud_alert_summary.json",
+    "reports/claim_boundary.json"
+  ],
+  "schemaVersion": "w18-experiment-pack-v1"
+}

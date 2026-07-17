@@ -1,0 +1,33 @@
+{
+  "task": "w18_failure_bank_v0",
+  "input_selector_v2": "reports/w18_selector_v2_scores_20260708.csv",
+  "failure_count": 12,
+  "plot_count": 12,
+  "case_count": 6,
+  "category_counts": {
+    "clipping": 8,
+    "layer_conflict_or_repairable": 1,
+    "naive_less_controllable": 2,
+    "silence": 1
+  },
+  "action_counts": {
+    "clipping_attenuation": 8,
+    "layer_priority_remix": 1,
+    "replace_with_dss_variant": 2,
+    "silence_trim_or_gain": 1
+  },
+  "blocked_audio_count": 0,
+  "dod": {
+    "failure_count_ge_12": true,
+    "plot_count_ge_12": true,
+    "each_failure_has_category": true,
+    "each_failure_has_next_action": true,
+    "case_count_ge_6": true
+  },
+  "outputs": {
+    "csv": "reports/w18_failure_bank_20260708.csv",
+    "json": "reports/w18_failure_bank_20260708.json",
+    "summary": "reports/w18_failure_bank_summary_20260708.json",
+    "plot_dir": "artifacts/failures/w18_failure_bank_20260708"
+  }
+}

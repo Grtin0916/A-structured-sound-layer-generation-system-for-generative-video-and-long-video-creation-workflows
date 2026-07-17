@@ -1,0 +1,36 @@
+{
+  "audioLinkCount": 6,
+  "audioLinks": true,
+  "checks": {
+    "alertRuleCountExpected": true,
+    "audioLinks": true,
+    "candidateCountExpected": true,
+    "caseCountExpected": true,
+    "claimBoundary": true,
+    "dashboardPanelCountGe9": true,
+    "failureCountExpected": true,
+    "indexHtml": true,
+    "javaGaugeCountExpected": true,
+    "javaTaskCountExpected": true,
+    "repairBeforeAfterCountExpected": true,
+    "winnerCountExpected": true,
+    "zipContainsIndex": true,
+    "zipValid": true
+  },
+  "claimBoundary": true,
+  "counts": {
+    "alertRuleCount": 4,
+    "candidateCount": 30,
+    "caseCount": 6,
+    "dashboardPanelCount": 9,
+    "failureCount": 12,
+    "javaGaugeCount": 6,
+    "javaTaskCount": 12,
+    "repairBeforeAfterCount": 6,
+    "winnerCount": 6
+  },
+  "gateStatus": "PASS",
+  "indexHtml": true,
+  "zipMemberCount": 37,
+  "zipValid": true
+}

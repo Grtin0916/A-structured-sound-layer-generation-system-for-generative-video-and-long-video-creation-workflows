@@ -1,0 +1,168 @@
+{
+  "date": "2026-07-06",
+  "scope": "w18_full_30job_generation",
+  "status": "success",
+  "case_count": 6,
+  "expected_case_count": 6,
+  "job_count": 30,
+  "expected_job_count": 30,
+  "generated_count": 30,
+  "variant_counts": {
+    "naive": 6,
+    "naive_rich": 6,
+    "dss_global": 6,
+    "dss_event_timeline": 6,
+    "dss_layer_avoid": 6
+  },
+  "missing_reports": [],
+  "case_summaries": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "report": "reports/w18_forest_5_variant_generation_20260706.json",
+      "status": "success",
+      "variant_count": 5,
+      "generated_count": 5,
+      "duration_values": [
+        7.9644
+      ],
+      "sample_rates": [
+        44100
+      ],
+      "review_flags": []
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "report": "reports/w18_glass_5_variant_generation_20260706.json",
+      "status": "success",
+      "variant_count": 5,
+      "generated_count": 5,
+      "duration_values": [
+        6.966
+      ],
+      "sample_rates": [
+        44100
+      ],
+      "review_flags": []
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "report": "reports/w18_kitchen_chop_sizzle_5_variant_generation_20260706.json",
+      "status": "success",
+      "variant_count": 5,
+      "generated_count": 5,
+      "duration_values": [
+        9.9614
+      ],
+      "sample_rates": [
+        44100
+      ],
+      "review_flags": []
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "report": "reports/w18_robot_warehouse_pick_5_variant_generation_20260706.json",
+      "status": "success",
+      "variant_count": 5,
+      "generated_count": 5,
+      "duration_values": [
+        10.0078
+      ],
+      "sample_rates": [
+        44100
+      ],
+      "review_flags": []
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "report": "reports/w18_street_rain_crosswalk_5_variant_generation_20260706.json",
+      "status": "success",
+      "variant_count": 5,
+      "generated_count": 5,
+      "duration_values": [
+        8.9397
+      ],
+      "sample_rates": [
+        44100
+      ],
+      "review_flags": []
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "report": "reports/w18_subway_arrival_door_5_variant_generation_20260706.json",
+      "status": "success",
+      "variant_count": 5,
+      "generated_count": 5,
+      "duration_values": [
+        10.0078
+      ],
+      "sample_rates": [
+        44100
+      ],
+      "review_flags": [
+        {
+          "variant": "dss_event_timeline",
+          "status": "clipping_review",
+          "rms_dbfs": -9.6374,
+          "peak_dbfs": 0.0,
+          "clipped_ratio": 0.00260341
+        },
+        {
+          "variant": "dss_layer_avoid",
+          "status": "clipping_review",
+          "rms_dbfs": -10.2822,
+          "peak_dbfs": 0.0,
+          "clipped_ratio": 0.00129831
+        }
+      ]
+    }
+  ],
+  "review_row_count": 2,
+  "review_rows": [
+    {
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_event_timeline",
+      "job_id": "w18_029_subway_arrival_door_001_dss_event_timeline",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 823,
+      "flac_exists": true,
+      "flac_size_bytes": 475339,
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -9.6374,
+      "peak_dbfs": 0.0,
+      "clipped_ratio": 0.00260341,
+      "active_ratio": 0.88923833,
+      "status": "clipping_review",
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline.flac",
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline.wav"
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "variant": "dss_layer_avoid",
+      "job_id": "w18_030_subway_arrival_door_001_dss_layer_avoid",
+      "generation_duration_sec": 10.0,
+      "prompt_chars": 967,
+      "flac_exists": true,
+      "flac_size_bytes": 467283,
+      "wav_exists": true,
+      "wav_size_bytes": 882766,
+      "sample_rate": 44100,
+      "duration_sec": 10.0078,
+      "rms_dbfs": -10.2822,
+      "peak_dbfs": 0.0,
+      "clipped_ratio": 0.00129831,
+      "active_ratio": 0.89343687,
+      "status": "clipping_review",
+      "flac_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid.flac",
+      "wav_path": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_layer_avoid/w18_030_subway_arrival_door_001_dss_layer_avoid.wav"
+    }
+  ],
+  "claim_boundary": [
+    "This records generation coverage and basic audio sanity for 6 cases x 5 variants.",
+    "This does not claim DSS superiority over baselines.",
+    "Audio files are local artifacts and are intentionally ignored by Git.",
+    "Semantic quality, event timing, and preference ranking require later listening or metric evaluation."
+  ]
+}

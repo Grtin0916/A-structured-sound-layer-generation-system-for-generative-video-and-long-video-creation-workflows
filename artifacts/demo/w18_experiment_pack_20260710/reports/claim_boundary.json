@@ -1,0 +1,14 @@
+{
+  "alertmanagerConfigured": false,
+  "dockerDesktopEngineHealthy": false,
+  "liveGrafanaImportVerified": false,
+  "notes": [
+    "The 30-candidate ablation is the recorded local experiment set.",
+    "Micro repair improvements are objective proxies, not listening-test claims.",
+    "Dashboard and provisioning files are versioned artifacts, not a live Grafana claim."
+  ],
+  "productionAlertingVerified": false,
+  "productionPrometheusVerified": false,
+  "subjectiveRepairQualityVerified": false,
+  "trueMmaudioBatchVerified": false
+}
