@@ -1,0 +1,499 @@
+{
+  "automatic_forbidden_event_detection_available": false,
+  "human_listening_completed_count": 0,
+  "records": [
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_001/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_001/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.0006100281682028367",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-2.0"
+      },
+      "parent_candidate_id": "forest_bird_branch_001|dss_global",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "repair_id": "fb_001_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_002/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_002/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.7852874405146198",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-0.016082763671875"
+      },
+      "parent_candidate_id": "robot_warehouse_pick_001|dss_global",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "HEADROOM_ONLY",
+      "repair_id": "fb_002_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_003/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_003/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.12021344900131226",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-0.008130957266400271"
+      },
+      "parent_candidate_id": "robot_warehouse_pick_001|dss_event_timeline",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "SMOOTH_REGION_GAIN",
+      "repair_id": "fb_003_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_006/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_006/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "9.211904796964916e-06",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-4.0"
+      },
+      "parent_candidate_id": "kitchen_chop_sizzle_001|naive_rich",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "repair_id": "fb_006_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_007/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_007/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "4.601575833656293e-06",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-1.0"
+      },
+      "parent_candidate_id": "kitchen_chop_sizzle_001|naive",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "repair_id": "fb_007_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_009/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_009/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "1.642813285191854e-05",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-3.0"
+      },
+      "parent_candidate_id": "glass_drop_room_001|naive",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "repair_id": "fb_009_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_010/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_010/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.9120979801813762",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-0.012176513671875"
+      },
+      "parent_candidate_id": "glass_drop_room_001|dss_global",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "HEADROOM_ONLY",
+      "repair_id": "fb_010_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_011/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_011/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.02069354514280955",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "0.00152716227287732"
+      },
+      "parent_candidate_id": "glass_drop_room_001|naive_rich",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "SMOOTH_REGION_GAIN",
+      "repair_id": "fb_011_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/fb_012/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/fb_012/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.9773834987214981",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-0.019989013671875"
+      },
+      "parent_candidate_id": "forest_bird_branch_001|dss_event_timeline",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "HEADROOM_ONLY",
+      "repair_id": "fb_012_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/hn_001/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/hn_001/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "2.0658815061891234e-05",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-4.0"
+      },
+      "parent_candidate_id": "street_rain_crosswalk_001|naive",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "repair_id": "hn_001_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/hn_002/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/hn_002/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.10805176914153132",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-1081.3605442176872"
+      },
+      "parent_candidate_id": "subway_arrival_door_001|dss_layer_avoid",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "SILENCE_AWARE_TRIM",
+      "repair_id": "hn_002_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/batch_20260714/hn_003/after.wav",
+      "before_artifact": "artifacts/repair/batch_20260714/hn_003/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.11162267981438515",
+        "ordering_correct": true,
+        "outside_window_delta_db": "",
+        "severe_regression": false,
+        "target_delta": "-1117.0975056689342"
+      },
+      "parent_candidate_id": "subway_arrival_door_001|dss_event_timeline",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "SILENCE_AWARE_TRIM",
+      "repair_id": "hn_003_tuesday_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/fb_003/after.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/fb_003/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.1195212804524362",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "-1.607175660962641"
+      },
+      "parent_candidate_id": "robot_warehouse_pick_001|dss_event_timeline",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "smooth_region_attenuation",
+      "repair_id": "fb_003_semantic_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/fb_011/after.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/fb_011/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.020595703125",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "1.1893643575405912"
+      },
+      "parent_candidate_id": "glass_drop_room_001|naive_rich",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "event_region_gain",
+      "repair_id": "fb_011_semantic_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/hn_002/after.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/hn_002/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.13420854756437092",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "1.5265552661467543"
+      },
+      "parent_candidate_id": "subway_arrival_door_001|dss_layer_avoid",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "event_region_gain",
+      "repair_id": "hn_002_semantic_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/hn_003/after.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/hn_003/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {},
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.13475311160987555",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "1.519206411119346"
+      },
+      "parent_candidate_id": "subway_arrival_door_001|dss_event_timeline",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "event_region_gain",
+      "repair_id": "hn_003_semantic_repair",
+      "source_mode": "mixed_only"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/fb_004/variant_1.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/fb_004/before.wav",
+      "decision": "REPAIR_REJECTED",
+      "donor_lineage": {
+        "crossfade_ms": 40,
+        "donor_audio": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.wav",
+        "donor_candidate": "robot_warehouse_pick_001|dss_event_timeline",
+        "source_window": [
+          4.6,
+          5.8
+        ]
+      },
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": false
+      },
+      "metrics": {
+        "edit_cost": "0.11974106366009281",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "0.5370803406757656"
+      },
+      "parent_candidate_id": "robot_warehouse_pick_001|naive",
+      "reason": "not selected after constrained variant comparison",
+      "repair_action": "event_transplant",
+      "repair_id": "fb_004_transplant_v1",
+      "source_mode": "candidate_replace"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/fb_004/variant_2.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/fb_004/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {
+        "crossfade_ms": 100,
+        "donor_audio": "artifacts/model_runs/w18_dss_ablation/robot_warehouse_pick_001/dss_event_timeline/w18_019_robot_warehouse_pick_001_dss_event_timeline.wav",
+        "donor_candidate": "robot_warehouse_pick_001|dss_event_timeline",
+        "source_window": [
+          4.6,
+          5.8
+        ]
+      },
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.1195439385150812",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "0.5096854463032869"
+      },
+      "parent_candidate_id": "robot_warehouse_pick_001|naive",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "event_transplant",
+      "repair_id": "fb_004_transplant_v2",
+      "source_mode": "candidate_replace"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/fb_005/variant_1.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/fb_005/before.wav",
+      "decision": "REPAIR_REJECTED",
+      "donor_lineage": {
+        "crossfade_ms": 40,
+        "donor_audio": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline_repaired_peak_m3db.wav",
+        "donor_candidate": "subway_arrival_door_001|dss_event_timeline",
+        "source_window": [
+          5.7,
+          6.9
+        ]
+      },
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": false
+      },
+      "metrics": {
+        "edit_cost": "0.11981810107308585",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "5.8654708760621865"
+      },
+      "parent_candidate_id": "subway_arrival_door_001|naive",
+      "reason": "not selected after constrained variant comparison",
+      "repair_action": "event_transplant",
+      "repair_id": "fb_005_transplant_v1",
+      "source_mode": "candidate_replace"
+    },
+    {
+      "after_artifact": "artifacts/repair/layer_semantic_20260715/fb_005/variant_2.wav",
+      "before_artifact": "artifacts/repair/layer_semantic_20260715/fb_005/before.wav",
+      "decision": "MANUAL_REVIEW",
+      "donor_lineage": {
+        "crossfade_ms": 100,
+        "donor_audio": "artifacts/model_runs/w18_dss_ablation/subway_arrival_door_001/dss_event_timeline/w18_029_subway_arrival_door_001_dss_event_timeline_repaired_peak_m3db.wav",
+        "donor_candidate": "subway_arrival_door_001|dss_event_timeline",
+        "source_window": [
+          5.7,
+          6.9
+        ]
+      },
+      "manual_review": {
+        "completed": false,
+        "forbidden_event_status": "unknown",
+        "required": true
+      },
+      "metrics": {
+        "edit_cost": "0.1197070765661253",
+        "ordering_correct": true,
+        "outside_window_delta_db": "0.0",
+        "severe_regression": false,
+        "target_delta": "5.665381912145692"
+      },
+      "parent_candidate_id": "subway_arrival_door_001|naive",
+      "reason": "forbidden-event detector unavailable; human label required",
+      "repair_action": "event_transplant",
+      "repair_id": "fb_005_transplant_v2",
+      "source_mode": "candidate_replace"
+    }
+  ],
+  "schema_version": "repair.handoff.v1"
+}

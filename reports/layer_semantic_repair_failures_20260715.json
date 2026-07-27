@@ -1,0 +1,9 @@
+{
+  "failures": [
+    {
+      "failure_id": "capability_inventory",
+      "reason": "true_stem_count=0; all layer repairs correctly routed to mixed_only",
+      "status": "STEM_REMIX_BLOCKED"
+    }
+  ]
+}

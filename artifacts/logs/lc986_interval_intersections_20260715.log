@@ -1,0 +1,9 @@
+PASS case_1: []
+PASS case_2: []
+PASS case_3: [[1, 5]]
+PASS case_4: [[2, 3]]
+PASS case_5: [[2, 2]]
+PASS case_6: [[3, 4], [6, 8]]
+PASS case_7: [[1, 2], [5, 5], [8, 10]]
+PASS case_8: []
+PASS 8 tests
