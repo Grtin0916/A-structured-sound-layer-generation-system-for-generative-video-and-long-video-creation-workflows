@@ -1,0 +1,61 @@
+{
+  "A": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.079345703125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.00875
+  },
+  "B": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.079345703125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.00875,
+    "proxy_score": 0.05609250568610967
+  },
+  "C": {
+    "readable": true,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 10.00780045351474,
+    "peak_abs": 0.44140625,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.21937309672273783,
+    "proxy_score": 0.3121213526331245
+  },
+  "D": {
+    "readable": true,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 10.00780045351474,
+    "peak_abs": 0.5208740234375,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.21701892401392112,
+    "proxy_score": 0.08271546813314082
+  },
+  "b_detail": {
+    "duration_match": true,
+    "clip_ratio": 0.0,
+    "rms_before": 0.05609250568610967,
+    "rms_after": 0.05609250568610967,
+    "proxy_score": 0.05609250568610967,
+    "windows": [
+      {
+        "event_id": "warehouse_hum",
+        "start_frame": 0,
+        "end_frame": 16000,
+        "priority": 1
+      }
+    ],
+    "avoid_constraints": [
+      "alarm",
+      "human speech",
+      "music"
+    ]
+  }
+}

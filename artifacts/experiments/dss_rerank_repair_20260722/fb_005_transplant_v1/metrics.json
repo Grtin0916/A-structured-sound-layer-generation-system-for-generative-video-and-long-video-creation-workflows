@@ -1,0 +1,43 @@
+{
+  "A": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.079345703125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.005
+  },
+  "B": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.08172607421875,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.005,
+    "proxy_score": 0.057743633251664275
+  },
+  "C": null,
+  "D": null,
+  "b_detail": {
+    "duration_match": true,
+    "clip_ratio": 0.0,
+    "rms_before": 0.05609323226402881,
+    "rms_after": 0.057743633251664275,
+    "proxy_score": 0.057743633251664275,
+    "windows": [
+      {
+        "event_id": "platform_bed",
+        "start_frame": 0,
+        "end_frame": 16000,
+        "priority": 2
+      }
+    ],
+    "avoid_constraints": [
+      "announcement voice",
+      "clear speech",
+      "music"
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "selections": [
+    {
+      "case_id": "fb_001_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_001/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_012_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_012/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_009_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_009/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_010_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_010/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_011_semantic_repair",
+      "selected": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_semantic_repair/strategy_b_dss_scheduled.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_011_tuesday_repair",
+      "selected": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_006_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_006/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_007_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_007/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_002_tuesday_repair",
+      "selected": "artifacts/repair/batch_20260714/fb_002/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_003_semantic_repair",
+      "selected": "artifacts/repair/layer_semantic_20260715/fb_003/after.wav",
+      "decision": "PROVISIONAL_SELECTED",
+      "reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      }
+    },
+    {
+      "case_id": "fb_004_transplant_v1",
+      "selected": "",
+      "decision": "BLOCKED",
+      "reason": {
+        "blocked_reason": "NO_AVAILABLE_CANDIDATE",
+        "rejected": [
+          {
+            "artifact": "artifacts/experiments/dss_rerank_repair_20260722/fb_004_transplant_v1/strategy_b_dss_scheduled.wav",
+            "reason": "REPAIR_REJECTED"
+          },
+          {
+            "artifact": "artifacts/repair/layer_semantic_20260715/fb_004/variant_1.wav",
+            "reason": "REPAIR_REJECTED"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "fb_005_transplant_v1",
+      "selected": "",
+      "decision": "BLOCKED",
+      "reason": {
+        "blocked_reason": "NO_AVAILABLE_CANDIDATE",
+        "rejected": [
+          {
+            "artifact": "artifacts/experiments/dss_rerank_repair_20260722/fb_005_transplant_v1/strategy_b_dss_scheduled.wav",
+            "reason": "REPAIR_REJECTED"
+          },
+          {
+            "artifact": "artifacts/repair/layer_semantic_20260715/fb_005/variant_1.wav",
+            "reason": "REPAIR_REJECTED"
+          }
+        ]
+      }
+    }
+  ]
+}

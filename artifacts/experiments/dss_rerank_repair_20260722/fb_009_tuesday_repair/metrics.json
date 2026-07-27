@@ -1,0 +1,61 @@
+{
+  "A": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.079345703125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.009375
+  },
+  "B": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.079345703125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.009375,
+    "proxy_score": 0.0560912828061415
+  },
+  "C": {
+    "readable": true,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 6.965986394557823,
+    "peak_abs": 0.99609375,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.048486328125,
+    "proxy_score": 0.7043446453225376
+  },
+  "D": {
+    "readable": true,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 6.965986394557823,
+    "peak_abs": 0.891204833984375,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.05433268229166666,
+    "proxy_score": 0.03244977352114784
+  },
+  "b_detail": {
+    "duration_match": true,
+    "clip_ratio": 0.0,
+    "rms_before": 0.0560912828061415,
+    "rms_after": 0.0560912828061415,
+    "proxy_score": 0.0560912828061415,
+    "windows": [
+      {
+        "event_id": "quiet_room_tone",
+        "start_frame": 0,
+        "end_frame": 16000,
+        "priority": 1
+      }
+    ],
+    "avoid_constraints": [
+      "cartoon effect",
+      "music",
+      "speech"
+    ]
+  }
+}

@@ -1,0 +1,1841 @@
+{
+  "schemaVersion": "dss-rerank-repair-ablation/v1",
+  "summary": {
+    "caseCount": 12,
+    "strategyRecordCount": 48,
+    "dssScheduledWavCount": 12,
+    "rerankSelectionCount": 10,
+    "rerankBlockedCount": 2,
+    "repairEvaluatedCount": 12,
+    "editAppliedCount": 10,
+    "severeRegressionCount": 0,
+    "materializedWavCount": 44,
+    "newlyComputedWavCount": 32,
+    "uniqueDigestCount": 29,
+    "finalSelectedCount": 0,
+    "manualDecisionMutationCount": 0,
+    "liveQualityDenominator": 0
+  },
+  "contracts": [
+    {
+      "case_id": "fb_001_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 0,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:8672b47c3d943ecbe5f7df1c2de361bc35217c2e35aa9c7b629e4c07bbde88a1"
+    },
+    {
+      "case_id": "fb_001_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 0,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:cd572c2c11b004f44ecb88c039be371807901e454a63a6e0cb04116c383c7b81"
+    },
+    {
+      "case_id": "fb_001_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 0,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:cdbb7b2da746023950e21b1be4127dc8c2494a37363641c5dc5e63de8c16f6cf"
+    },
+    {
+      "case_id": "fb_001_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 0,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:90493ccdabeb79abae81e63153165331d2bfacef6656e3f2959d5fb908d1dac2"
+    },
+    {
+      "case_id": "fb_012_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 1,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:61eb2002dd9472e11e0760c536e28ae98b23aa842554119990983273af100860"
+    },
+    {
+      "case_id": "fb_012_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 1,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:6bb3dfabcedadc611baff46393f5a50ae3043d18a86919abddefb100a48a28f3"
+    },
+    {
+      "case_id": "fb_012_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 1,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:bf4398dc008c53f132e91c31e16901cd4eb3df68213e5e3668a017c026d2cf2c"
+    },
+    {
+      "case_id": "fb_012_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 1,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:c90477faea9e8e34d55bf4df7f78749557690b1be6f120e052996be989c40765"
+    },
+    {
+      "case_id": "fb_009_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 2,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:bec3fb508656189cf6ad25472f8257f7d701bcd6b2a5b4c331786f13a2140382"
+    },
+    {
+      "case_id": "fb_009_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 2,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:0065cb6eed41ce633b857e5f81b795530262a750d5d47b4ecf7ff2fbe274a986"
+    },
+    {
+      "case_id": "fb_009_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 2,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:305dd14b25461d4d0fb2bba39d0ff3d078ccdca6ac3411fefbff80468a650af8"
+    },
+    {
+      "case_id": "fb_009_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 2,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:636776c386996b476acb5f17ffe01edf6ce38807a59a6ae71ca6b0882a0f422a"
+    },
+    {
+      "case_id": "fb_010_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 3,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:a309f8cbf3433e06f3e2ae6980a236e2f87eec50790c6611b9a5c943ff57a09c"
+    },
+    {
+      "case_id": "fb_010_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 3,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:c923ba8b32403cc83a8970952bbe28a55304eb4016ade3714d3cae0440b20f6a"
+    },
+    {
+      "case_id": "fb_010_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 3,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:642155cd61c1e0660f201bc30af7f5007a2a64ea226fa5b8b92c74ab2e311c25"
+    },
+    {
+      "case_id": "fb_010_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 3,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:b7c1536b423f5a1a5441319f5084d09cbf7f5673a6b5c20147b4307876f15936"
+    },
+    {
+      "case_id": "fb_011_semantic_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 4,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:6b857ce7904e3229994360c2ef856c8826b0d3782689cea32535f69387104ced"
+    },
+    {
+      "case_id": "fb_011_semantic_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 4,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:8b080f6aba51afa3c62fcd78223d3bb2d90cdc2a5a9640d15765763b0ce1b241"
+    },
+    {
+      "case_id": "fb_011_semantic_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 4,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:123ebb9ab5ac1e2ef5c299adcfc89b5f9522b5190baa15c5a2e1035525a36b80"
+    },
+    {
+      "case_id": "fb_011_semantic_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 4,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:499678b1d995d5ff62549349bab534d639caf3447ebcd32bf3c5c0e5a76c9582"
+    },
+    {
+      "case_id": "fb_011_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 5,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:bd54fef8614d16195d06d4d2fa717db1353ac68523d85d63c9dbcdaa57408078"
+    },
+    {
+      "case_id": "fb_011_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 5,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:b6ccd3f15f3208d0ea0dc4f32839ee92260633d2726180a26dddbba63f1dc90d"
+    },
+    {
+      "case_id": "fb_011_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 5,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:72554f55e2927c3d752d3910a7260d6e223f4ece75c0b7e19f96be477a6d6383"
+    },
+    {
+      "case_id": "fb_011_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 5,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:7d4a5b395807df00b485ab41575fd2e93033bf4d54aee6057cd0f97d81cd6e6d"
+    },
+    {
+      "case_id": "fb_006_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 6,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:1b54f3a03bca12c36f683c078b35d5a65d012eb4f59140c4a37d0e239f706856"
+    },
+    {
+      "case_id": "fb_006_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 6,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:95770e5d8b68307f1bbc44cc9d46f0443f9de3e02dd0ffc9fda0d76e304aebbd"
+    },
+    {
+      "case_id": "fb_006_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 6,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:93793f5d83b0c2a25495b76000d66083aae0f605093f1ed19bef2702362c8213"
+    },
+    {
+      "case_id": "fb_006_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 6,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:e5bdfcb7827cce23ec4385a5304d8bf6e882a056618d21fb7aa0535b1d2ac6f5"
+    },
+    {
+      "case_id": "fb_007_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 7,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:c1a3d458d0d3e31f2d5b64bdcae98379064b73a41ff85eb82a79e575e9d64f5c"
+    },
+    {
+      "case_id": "fb_007_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 7,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:b85418c0f7af8e09ba16ea72c7b2d8ec25f66939d45dfdb650eb726b16b29846"
+    },
+    {
+      "case_id": "fb_007_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 7,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:d7109ed4dbb8d1eba076dcab74e4d4adb7bbcf1a0960dd2e6ef9b72a90714989"
+    },
+    {
+      "case_id": "fb_007_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 7,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:cbbc2fa36b92eec423c2ae101559978cb918d99f0e0be484b09ea61e1707d1c7"
+    },
+    {
+      "case_id": "fb_002_tuesday_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 8,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:01e4d1ca73f9130636b3541f73435503c82ec6992266a10023dad889511181e1"
+    },
+    {
+      "case_id": "fb_002_tuesday_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 8,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:defc5501d20a8464e3d83a716dda27f44ef3f82166bb07dffb316a8f07b6eb70"
+    },
+    {
+      "case_id": "fb_002_tuesday_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 8,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:3cf69747df7b099fcfc16181a48f4fc8ddedb7953e85405436d7eecb51d91022"
+    },
+    {
+      "case_id": "fb_002_tuesday_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 8,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:112b7d79b1e385381495e07607a51e7b9a7d1b53d24d61e7f109b71549748fd2"
+    },
+    {
+      "case_id": "fb_003_semantic_repair",
+      "strategy_id": "A_CONTROL",
+      "case_order": 9,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:b1f0e99a5a456503e667ac82224fe2bee5d2569490113493d81a35b8892c5d1d"
+    },
+    {
+      "case_id": "fb_003_semantic_repair",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 9,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:b3560a799f1120f37d773d81afc80324203f64490bfed4553c9840aa1b9ee051"
+    },
+    {
+      "case_id": "fb_003_semantic_repair",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 9,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:ed43f81958db3dc389bae97c888cfd03d17534c043041c46ab098d16efe2eb6a"
+    },
+    {
+      "case_id": "fb_003_semantic_repair",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 9,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:248bb7262f614963d0a74f2e1afa3c5dd6f9a582041fe2f92c184b83e33eeca5"
+    },
+    {
+      "case_id": "fb_004_transplant_v1",
+      "strategy_id": "A_CONTROL",
+      "case_order": 10,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:16ab39164d46493950d99b38e2fe85459aca769fac83fb941ccd5e86c48262e4"
+    },
+    {
+      "case_id": "fb_004_transplant_v1",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 10,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:696b1d633a426e9aaaf61a08c949e6d21a2670416043e62508b42b38e89a776d"
+    },
+    {
+      "case_id": "fb_004_transplant_v1",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 10,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:30c791466fbdac099256864302402a31473a7f47f6f540c1eb61b09ee1b76c3c"
+    },
+    {
+      "case_id": "fb_004_transplant_v1",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 10,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:1215d6efe009571c7b381cd49f03293acd34bc68f2bb5642c81e98630f106949"
+    },
+    {
+      "case_id": "fb_005_transplant_v1",
+      "strategy_id": "A_CONTROL",
+      "case_order": 11,
+      "strategy_order": 0,
+      "source_group": "CONTROL",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:727e598a4d37508dd0abe40119fc6c0b53bbf6352fdee7eae0673b772bb75c1f"
+    },
+    {
+      "case_id": "fb_005_transplant_v1",
+      "strategy_id": "B_DSS_SCHEDULE",
+      "case_order": 11,
+      "strategy_order": 1,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:b2d266d16574ae7a01733b2903959ab66ff6a41636f3d85d07e66d57f41ec2fc"
+    },
+    {
+      "case_id": "fb_005_transplant_v1",
+      "strategy_id": "C_AVAILABILITY_RERANK",
+      "case_order": 11,
+      "strategy_order": 2,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:f4cdbdefc709e6f5436f4ab94d5ff2e87ee802df8edbdca0e51ab18062de32ba"
+    },
+    {
+      "case_id": "fb_005_transplant_v1",
+      "strategy_id": "D_TARGETED_REPAIR",
+      "case_order": 11,
+      "strategy_order": 3,
+      "source_group": "CONTROL_TRANSFORM",
+      "live_group_available": false,
+      "metric_available": true,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "contract_key": "sha256:225100ce4fc08a7efab21ee787b72e8bdb6d44757b811cbf9e0827b30d8dc518"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "fb_001_tuesday_repair",
+      "source_case_id": "forest_bird_branch_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_001_tuesday_repair/control.wav",
+      "source_digest": "sha256:5688631aa7ae39d6f0fa1b88a6e96cc2d37ae11cfbfe5b1a83c5171b84fec81a",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_001_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_001_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_001_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_001_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_001/after.wav",
+      "selected_digest": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.08172607421875,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125,
+          "proxy_score": 0.05774165422837744
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 7.964444444444444,
+          "peak_abs": 0.99609375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.0311702806122449,
+          "proxy_score": 0.7043446453225376
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 7.964444444444444,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.03493702168367347,
+          "proxy_score": 0.14768224822178233
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609203398342367,
+          "rms_after": 0.05774165422837744,
+          "proxy_score": 0.05774165422837744,
+          "windows": [
+            {
+              "event_id": "forest_wind",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 2
+            }
+          ],
+          "avoid_constraints": [
+            "music",
+            "speech",
+            "waterfall"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:d75527e7c6f78633996f0a09377610f1138d72e21939cc97d5c5623e47004b36"
+    },
+    {
+      "case_id": "fb_012_tuesday_repair",
+      "source_case_id": "forest_bird_branch_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_012_tuesday_repair/control.wav",
+      "source_digest": "sha256:6c5e3331bb27ccc1f72d25601390b70a939bcf2afc75dffa8f5c97cd38a71313",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_012_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_012_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_012_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_012_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_012/after.wav",
+      "selected_digest": "sha256:67c9f436b13d3375a9e3c8a5a5b1fbe7eb563ebdd2ed3fee19465831470c217f",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.08172607421875,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875,
+          "proxy_score": 0.05774197763162403
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 7.964444444444444,
+          "peak_abs": 0.980010986328125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.030948205174927114,
+          "proxy_score": 0.6929724140699342
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 7.964444444444444,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.03348498997813411,
+          "proxy_score": 0.05085619474255186
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609250568610967,
+          "rms_after": 0.05774197763162403,
+          "proxy_score": 0.05774197763162403,
+          "windows": [
+            {
+              "event_id": "forest_wind",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 2
+            }
+          ],
+          "avoid_constraints": [
+            "music",
+            "speech",
+            "waterfall"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:f3249c0736fe371fe2c9094e8952a393b8bc795ff86a6b30fe3bd992985ffc80"
+    },
+    {
+      "case_id": "fb_009_tuesday_repair",
+      "source_case_id": "glass_drop_room_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_009_tuesday_repair/control.wav",
+      "source_digest": "sha256:918f31f60ee948b8f0517216852edbf7f04de614a11bd6e37b21cfa04b02a0bf",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_009_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_009_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_009_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_009_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_009/after.wav",
+      "selected_digest": "sha256:3ca9e8078c88fda925b71a5ea40c29b940f23c8ee0b4165764ad43b964feb6b9",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.009375
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.009375,
+          "proxy_score": 0.0560912828061415
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 6.965986394557823,
+          "peak_abs": 0.99609375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.048486328125,
+          "proxy_score": 0.7043446453225376
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 6.965986394557823,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.05433268229166666,
+          "proxy_score": 0.03244977352114784
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.0560912828061415,
+          "rms_after": 0.0560912828061415,
+          "proxy_score": 0.0560912828061415,
+          "windows": [
+            {
+              "event_id": "quiet_room_tone",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "cartoon effect",
+            "music",
+            "speech"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:a747d54ca576efac07e64165ac2cde35dda2d10a1df172a4cf5160ca75a9b4ca"
+    },
+    {
+      "case_id": "fb_010_tuesday_repair",
+      "source_case_id": "glass_drop_room_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_010_tuesday_repair/control.wav",
+      "source_digest": "sha256:50a017c1c5b9994e49a37446e3af9777796262bb6a1158c277c8bbdf12db549f",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_010_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_010_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_010_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_010_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_010/after.wav",
+      "selected_digest": "sha256:2eb7189de4d66bf9d00ff5183964ddb3b2de62804409729211f0480eb2c97a09",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.005
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.005,
+          "proxy_score": 0.05609323226402881
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 6.965986394557823,
+          "peak_abs": 0.980010986328125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.06834309895833333,
+          "proxy_score": 0.6929724140699342
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 6.965986394557823,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.07494466145833334,
+          "proxy_score": 0.03359663183122161
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609323226402881,
+          "rms_after": 0.05609323226402881,
+          "proxy_score": 0.05609323226402881,
+          "windows": [
+            {
+              "event_id": "quiet_room_tone",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "cartoon effect",
+            "music",
+            "speech"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:33dc3e679188da099a95003acb43ef32cc9e926ea27036e4e1db6877100071f5"
+    },
+    {
+      "case_id": "fb_011_semantic_repair",
+      "source_case_id": "glass_drop_room_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_011_semantic_repair/control.wav",
+      "source_digest": "sha256:c04e9c0db9a5a484e8df721d445484f2227c31f6cc1397535d0258e99becdb22",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_semantic_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_semantic_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_semantic_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_semantic_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_semantic_repair/strategy_b_dss_scheduled.wav",
+      "selected_digest": "sha256:c04e9c0db9a5a484e8df721d445484f2227c31f6cc1397535d0258e99becdb22",
+      "edit_applied": true,
+      "repair_action": "EVENT_LOCAL_GAIN",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125,
+          "proxy_score": 0.05609203398342367
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125,
+          "proxy_score": 0.05609203398342367
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.0936279296875,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.006875,
+          "proxy_score": 0.0661885189559741
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609203398342367,
+          "rms_after": 0.05609203398342367,
+          "proxy_score": 0.05609203398342367,
+          "windows": [
+            {
+              "event_id": "quiet_room_tone",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "cartoon effect",
+            "music",
+            "speech"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:6b30bf8c18f0125f03c970846b1bd5ee54510fa5170ed8b9424f754ddf194959"
+    },
+    {
+      "case_id": "fb_011_tuesday_repair",
+      "source_case_id": "glass_drop_room_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_011_tuesday_repair/control.wav",
+      "source_digest": "sha256:ac239dba3cdee9abc85bf597d2d37eeff3f135d9f1b0c86f10f1cedbc88481bf",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/experiments/dss_rerank_repair_20260722/fb_011_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "selected_digest": "sha256:ac239dba3cdee9abc85bf597d2d37eeff3f135d9f1b0c86f10f1cedbc88481bf",
+      "edit_applied": true,
+      "repair_action": "EVENT_LOCAL_GAIN",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875,
+          "proxy_score": 0.05609250568610967
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875,
+          "proxy_score": 0.05609250568610967
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.0936279296875,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00625,
+          "proxy_score": 0.06618898667508255
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609250568610967,
+          "rms_after": 0.05609250568610967,
+          "proxy_score": 0.05609250568610967,
+          "windows": [
+            {
+              "event_id": "quiet_room_tone",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "cartoon effect",
+            "music",
+            "speech"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:cf25cfd2c70904bb8d687b98712c7830feb3c8e76c2b8ce0be2e9f9cae7a6d78"
+    },
+    {
+      "case_id": "fb_006_tuesday_repair",
+      "source_case_id": "kitchen_chop_sizzle_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_006_tuesday_repair/control.wav",
+      "source_digest": "sha256:904c785320b7f06981bf3fb456911292df7fa29e048ae72a66e5b8e9124b6364",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_006_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_006_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_006_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_006_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_006/after.wav",
+      "selected_digest": "sha256:65786473598076b752b319930eb261f27e2b79dfbdfe7da1acfe3fe41289103d",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125,
+          "proxy_score": 0.05609203398342367
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 9.961360544217687,
+          "peak_abs": 0.98828125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.41720388986013984,
+          "proxy_score": 0.6988203735945177
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 9.961360544217687,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.45200957896270394,
+          "proxy_score": 0.06041160820606789
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609203398342367,
+          "rms_after": 0.05609203398342367,
+          "proxy_score": 0.05609203398342367,
+          "windows": [
+            {
+              "event_id": "room_tone",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "music",
+            "restaurant crowd",
+            "speech"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:5d5e5be75eca7be1cf972637c94fed925b91a3d474a1ea83ad57aab08236b366"
+    },
+    {
+      "case_id": "fb_007_tuesday_repair",
+      "source_case_id": "kitchen_chop_sizzle_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_007_tuesday_repair/control.wav",
+      "source_digest": "sha256:0fa297b7ee3fecbac7edbe3d5032db1be07f27e7e3c729b628445a412b6fae39",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_007_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_007_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_007_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_007_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_007/after.wav",
+      "selected_digest": "sha256:5b222294d3d882aef051e4eebc7eb88cac5b2c8dd92c61ecb10b45d902b5525a",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.0075
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.0075,
+          "proxy_score": 0.05609221983824223
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 9.961360544217687,
+          "peak_abs": 0.99609375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.22035484047202797,
+          "proxy_score": 0.7043446453225376
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 9.961360544217687,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.23389468604312355,
+          "proxy_score": 0.1137397192416537
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609221983824223,
+          "rms_after": 0.05609221983824223,
+          "proxy_score": 0.05609221983824223,
+          "windows": [
+            {
+              "event_id": "room_tone",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "music",
+            "restaurant crowd",
+            "speech"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:fa3aa57b2422e12c0183265c9ab04fbbb41a504ecf71a9acc465f24cf9d53214"
+    },
+    {
+      "case_id": "fb_002_tuesday_repair",
+      "source_case_id": "robot_warehouse_pick_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_002_tuesday_repair/control.wav",
+      "source_digest": "sha256:5688631aa7ae39d6f0fa1b88a6e96cc2d37ae11cfbfe5b1a83c5171b84fec81a",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_002_tuesday_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_002_tuesday_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_002_tuesday_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_002_tuesday_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/batch_20260714/fb_002/after.wav",
+      "selected_digest": "sha256:ee86e7336556491776f67ec3c79fb715ced9cf194dfabc33ec00103859de1f21",
+      "edit_applied": true,
+      "repair_action": "ADAPTIVE_HEADROOM",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.008125,
+          "proxy_score": 0.05609203398342367
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 10.00780045351474,
+          "peak_abs": 0.980010986328125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.21747208526682135,
+          "proxy_score": 0.6929724140699342
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 10.00780045351474,
+          "peak_abs": 0.891204833984375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.21822659875290024,
+          "proxy_score": 0.1751201062685597
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609203398342367,
+          "rms_after": 0.05609203398342367,
+          "proxy_score": 0.05609203398342367,
+          "windows": [
+            {
+              "event_id": "warehouse_hum",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "alarm",
+            "human speech",
+            "music"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:8499598e0c12f8223720ea002e761f9c6bfaa96eedf184b96d95a433454ed87c"
+    },
+    {
+      "case_id": "fb_003_semantic_repair",
+      "source_case_id": "robot_warehouse_pick_001",
+      "repair_decision": "MANUAL_REVIEW",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_003_semantic_repair/control.wav",
+      "source_digest": "sha256:6c5e3331bb27ccc1f72d25601390b70a939bcf2afc75dffa8f5c97cd38a71313",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_003_semantic_repair/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_003_semantic_repair/strategy_b_dss_scheduled.wav",
+      "strategy_c": "artifacts/experiments/dss_rerank_repair_20260722/fb_003_semantic_repair/strategy_c_selected.wav",
+      "strategy_d": "artifacts/experiments/dss_rerank_repair_20260722/fb_003_semantic_repair/strategy_d_repaired.wav",
+      "selected_artifact": "artifacts/repair/layer_semantic_20260715/fb_003/after.wav",
+      "selected_digest": "sha256:9df53f63f62082020f8defa57bd00f3a4a0f430698126e767ae365ebfc078076",
+      "edit_applied": true,
+      "repair_action": "EVENT_LOCAL_GAIN",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.00875,
+          "proxy_score": 0.05609250568610967
+        },
+        "C": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 10.00780045351474,
+          "peak_abs": 0.44140625,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.21937309672273783,
+          "proxy_score": 0.3121213526331245
+        },
+        "D": {
+          "readable": true,
+          "sample_rate": 44100,
+          "channels": 1,
+          "duration_sec": 10.00780045351474,
+          "peak_abs": 0.5208740234375,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.21701892401392112,
+          "proxy_score": 0.08271546813314082
+        },
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609250568610967,
+          "rms_after": 0.05609250568610967,
+          "proxy_score": 0.05609250568610967,
+          "windows": [
+            {
+              "event_id": "warehouse_hum",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "alarm",
+            "human speech",
+            "music"
+          ]
+        }
+      },
+      "selection_reason": {
+        "why_selected": "availability gates passed, then proxy score and edit cost",
+        "rejected": []
+      },
+      "publish_decision": "PROVISIONAL_SELECTED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:fbc7c1bf09f46dfaf5121c06f7e6cf3af3bf530e7460430bdd5c9844dcaf1e54"
+    },
+    {
+      "case_id": "fb_004_transplant_v1",
+      "source_case_id": "robot_warehouse_pick_001",
+      "repair_decision": "REPAIR_REJECTED",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_004_transplant_v1/control.wav",
+      "source_digest": "sha256:918f31f60ee948b8f0517216852edbf7f04de614a11bd6e37b21cfa04b02a0bf",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_004_transplant_v1/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_004_transplant_v1/strategy_b_dss_scheduled.wav",
+      "strategy_c": "",
+      "strategy_d": "",
+      "selected_artifact": "",
+      "selected_digest": "",
+      "edit_applied": false,
+      "repair_action": "REPAIR_BLOCKED",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.009375
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.009375,
+          "proxy_score": 0.0560912828061415
+        },
+        "C": null,
+        "D": null,
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.0560912828061415,
+          "rms_after": 0.0560912828061415,
+          "proxy_score": 0.0560912828061415,
+          "windows": [
+            {
+              "event_id": "warehouse_hum",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 1
+            }
+          ],
+          "avoid_constraints": [
+            "alarm",
+            "human speech",
+            "music"
+          ]
+        }
+      },
+      "selection_reason": {
+        "blocked_reason": "NO_AVAILABLE_CANDIDATE",
+        "rejected": [
+          {
+            "artifact": "artifacts/experiments/dss_rerank_repair_20260722/fb_004_transplant_v1/strategy_b_dss_scheduled.wav",
+            "reason": "REPAIR_REJECTED"
+          },
+          {
+            "artifact": "artifacts/repair/layer_semantic_20260715/fb_004/variant_1.wav",
+            "reason": "REPAIR_REJECTED"
+          }
+        ]
+      },
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:375f6f03ff890d4bcadc49dc2df3ecbb5504070821d3120de64d408c3186bb7a"
+    },
+    {
+      "case_id": "fb_005_transplant_v1",
+      "source_case_id": "subway_arrival_door_001",
+      "repair_decision": "REPAIR_REJECTED",
+      "source_group": "CONTROL_WITH_REPLAY_BASELINE",
+      "live_group_available": false,
+      "unavailable_reason": "LIVE_RUNTIME_BLOCKED",
+      "source_artifact": "artifacts/model_runs/w20_candidate_matrix_20260721/fb_005_transplant_v1/control.wav",
+      "source_digest": "sha256:50a017c1c5b9994e49a37446e3af9777796262bb6a1158c277c8bbdf12db549f",
+      "strategy_a": "artifacts/experiments/dss_rerank_repair_20260722/fb_005_transplant_v1/strategy_a_control.wav",
+      "strategy_b": "artifacts/experiments/dss_rerank_repair_20260722/fb_005_transplant_v1/strategy_b_dss_scheduled.wav",
+      "strategy_c": "",
+      "strategy_d": "",
+      "selected_artifact": "",
+      "selected_digest": "",
+      "edit_applied": false,
+      "repair_action": "REPAIR_BLOCKED",
+      "metrics": {
+        "A": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.079345703125,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.005
+        },
+        "B": {
+          "readable": true,
+          "sample_rate": 16000,
+          "channels": 1,
+          "duration_sec": 1.0,
+          "peak_abs": 0.08172607421875,
+          "clip_ratio": 0.0,
+          "silence_ratio": 0.005,
+          "proxy_score": 0.057743633251664275
+        },
+        "C": null,
+        "D": null,
+        "b_detail": {
+          "duration_match": true,
+          "clip_ratio": 0.0,
+          "rms_before": 0.05609323226402881,
+          "rms_after": 0.057743633251664275,
+          "proxy_score": 0.057743633251664275,
+          "windows": [
+            {
+              "event_id": "platform_bed",
+              "start_frame": 0,
+              "end_frame": 16000,
+              "priority": 2
+            }
+          ],
+          "avoid_constraints": [
+            "announcement voice",
+            "clear speech",
+            "music"
+          ]
+        }
+      },
+      "selection_reason": {
+        "blocked_reason": "NO_AVAILABLE_CANDIDATE",
+        "rejected": [
+          {
+            "artifact": "artifacts/experiments/dss_rerank_repair_20260722/fb_005_transplant_v1/strategy_b_dss_scheduled.wav",
+            "reason": "REPAIR_REJECTED"
+          },
+          {
+            "artifact": "artifacts/repair/layer_semantic_20260715/fb_005/variant_1.wav",
+            "reason": "REPAIR_REJECTED"
+          }
+        ]
+      },
+      "publish_decision": "BLOCKED",
+      "claim_boundary": {
+        "human_preference_proven": false,
+        "final_selected": false
+      },
+      "result_digest": "sha256:819966a6ac55b6de37fb7e052be21ea2064f9736f4729c0475a073c8147a80f8"
+    }
+  ]
+}

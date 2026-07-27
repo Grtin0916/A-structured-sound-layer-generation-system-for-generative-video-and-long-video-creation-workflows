@@ -1,0 +1,82 @@
+test_48_records (test_ablation_contract.ContractTest) ... ok
+test_four_each (test_ablation_contract.ContractTest) ... ok
+test_no_final (test_ablation_contract.ContractTest) ... ok
+test_stable_key (test_ablation_contract.ContractTest) ... ok
+test_stable_order (test_ablation_contract.ContractTest) ... ok
+test_available (test_availability_mask.AvailabilityTest) ... ok
+test_blocked_excluded (test_availability_mask.AvailabilityTest) ... ok
+test_failed_excluded (test_availability_mask.AvailabilityTest) ... ok
+test_missing_artifact_excluded (test_availability_mask.AvailabilityTest) ... ok
+test_missing_metric_not_zero (test_availability_mask.AvailabilityTest) ... ok
+test_rejected_excluded (test_availability_mask.AvailabilityTest) ... ok
+test_all_zero_p (test_paired_analysis.PairedTest) ... ok
+test_bootstrap_reproducible (test_paired_analysis.PairedTest) ... ok
+test_counts (test_paired_analysis.PairedTest) ... ok
+test_direction (test_paired_analysis.PairedTest) ... ok
+test_empty_unavailable (test_paired_analysis.PairedTest) ... ok
+test_holm_monotone (test_paired_analysis.PairedTest) ... ok
+test_signed_rank_all_zero (test_paired_analysis.PairedTest) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.005s
+
+OK
+test_code_changes_key (test_cache.CacheTest) ... ok
+test_config_changes_key (test_cache.CacheTest) ... ok
+test_input_changes_key (test_cache.CacheTest) ... ok
+test_missing_output_is_not_reused (test_cache.CacheTest) ... ok
+test_valid_output_reused (test_cache.CacheTest) ... ok
+test_wrong_digest_is_stale (test_cache.CacheTest) ... ok
+test_12_cases (test_candidate_matrix.MatrixTest) ... ok
+test_48_slots (test_candidate_matrix.MatrixTest) ... ok
+test_four_slots_each (test_candidate_matrix.MatrixTest) ... ok
+test_no_output_collision (test_candidate_matrix.MatrixTest) ... ok
+test_order_stable (test_candidate_matrix.MatrixTest) ... ok
+test_plan_digest_stable (test_candidate_matrix.MatrixTest) ... ok
+test_publish_gate (test_candidate_matrix.MatrixTest) ... ok
+test_rejected_cases_block_publish (test_candidate_matrix.MatrixTest) ... ok
+test_seed_changes_slot_key (test_candidate_matrix.MatrixTest) ... ok
+test_slot_key_stable (test_candidate_matrix.MatrixTest) ... ok
+test_fail_resume_and_idempotency (test_demo_runner.DemoRunnerTest) ... ok
+test_inventory_selects_real_complete_case (test_demo_runner.DemoRunnerTest) ... ok
+test_manual_review_is_provisional (test_demo_runner.DemoRunnerTest) ... ok
+test_plan_has_eleven_stages (test_demo_runner.DemoRunnerTest) ... ok
+test_rejected_cannot_be_chosen (test_demo_runner.DemoRunnerTest) ... ok
+test_run_key_is_stable (test_demo_runner.DemoRunnerTest) ... ok
+test_capability_reason_preserved (test_model_registry.RegistryTest) ... ok
+test_control_ready (test_model_registry.RegistryTest) ... ok
+test_duplicate_adapter_rejected (test_model_registry.RegistryTest) ... ok
+test_missing_repository_explicit (test_model_registry.RegistryTest) ... ok
+test_unknown_adapter_rejected (test_model_registry.RegistryTest) ... ok
+test_failure_isolated (test_resource_scheduler.SchedulerTest) ... ok
+test_gpu_capacity_one (test_resource_scheduler.SchedulerTest) ... ok
+test_queue_wait_recorded (test_resource_scheduler.SchedulerTest) ... ok
+test_timeout_classified (test_resource_scheduler.SchedulerTest) ... ok
+test_acyclic (test_stage_graph.StageGraphTest) ... ok
+test_cycle (test_stage_graph.StageGraphTest) ... ok
+test_duplicate_output (test_stage_graph.StageGraphTest) ... ok
+test_unknown_dependency (test_stage_graph.StageGraphTest) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 3.387s
+
+OK
+test_avoid_preserved (test_dss_control_compiler.CompilerTest) ... ok
+test_duration_unchanged (test_dss_control_compiler.CompilerTest) ... ok
+test_no_clip_regression (test_dss_control_compiler.CompilerTest) ... ok
+test_out_of_bounds_safe (test_dss_control_compiler.CompilerTest) ... ok
+test_priority_gain_applied (test_dss_control_compiler.CompilerTest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK
+test_edit_cost_tiebreak (test_availability_aware_reranker.RerankerTest) ... ok
+test_higher_proxy_selected (test_availability_aware_reranker.RerankerTest) ... ok
+test_missing_blocked (test_availability_aware_reranker.RerankerTest) ... ok
+test_rejected_blocked (test_availability_aware_reranker.RerankerTest) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

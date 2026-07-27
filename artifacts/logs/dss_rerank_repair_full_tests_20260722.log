@@ -1,0 +1,106 @@
+test_48_records (experiments.test_ablation_contract.ContractTest) ... ok
+test_four_each (experiments.test_ablation_contract.ContractTest) ... ok
+test_no_final (experiments.test_ablation_contract.ContractTest) ... ok
+test_stable_key (experiments.test_ablation_contract.ContractTest) ... ok
+test_stable_order (experiments.test_ablation_contract.ContractTest) ... ok
+test_available (experiments.test_availability_mask.AvailabilityTest) ... ok
+test_blocked_excluded (experiments.test_availability_mask.AvailabilityTest) ... ok
+test_failed_excluded (experiments.test_availability_mask.AvailabilityTest) ... ok
+test_missing_artifact_excluded (experiments.test_availability_mask.AvailabilityTest) ... ok
+test_missing_metric_not_zero (experiments.test_availability_mask.AvailabilityTest) ... ok
+test_rejected_excluded (experiments.test_availability_mask.AvailabilityTest) ... ok
+test_all_zero_p (experiments.test_paired_analysis.PairedTest) ... ok
+test_bootstrap_reproducible (experiments.test_paired_analysis.PairedTest) ... ok
+test_counts (experiments.test_paired_analysis.PairedTest) ... ok
+test_direction (experiments.test_paired_analysis.PairedTest) ... ok
+test_empty_unavailable (experiments.test_paired_analysis.PairedTest) ... ok
+test_holm_monotone (experiments.test_paired_analysis.PairedTest) ... ok
+test_signed_rank_all_zero (experiments.test_paired_analysis.PairedTest) ... ok
+test_code_changes_key (runner.test_cache.CacheTest) ... ok
+test_config_changes_key (runner.test_cache.CacheTest) ... ok
+test_input_changes_key (runner.test_cache.CacheTest) ... ok
+test_missing_output_is_not_reused (runner.test_cache.CacheTest) ... ok
+test_valid_output_reused (runner.test_cache.CacheTest) ... ok
+test_wrong_digest_is_stale (runner.test_cache.CacheTest) ... ok
+test_12_cases (runner.test_candidate_matrix.MatrixTest) ... ok
+test_48_slots (runner.test_candidate_matrix.MatrixTest) ... ok
+test_four_slots_each (runner.test_candidate_matrix.MatrixTest) ... ok
+test_no_output_collision (runner.test_candidate_matrix.MatrixTest) ... ok
+test_order_stable (runner.test_candidate_matrix.MatrixTest) ... ok
+test_plan_digest_stable (runner.test_candidate_matrix.MatrixTest) ... ok
+test_publish_gate (runner.test_candidate_matrix.MatrixTest) ... ok
+test_rejected_cases_block_publish (runner.test_candidate_matrix.MatrixTest) ... ok
+test_seed_changes_slot_key (runner.test_candidate_matrix.MatrixTest) ... ok
+test_slot_key_stable (runner.test_candidate_matrix.MatrixTest) ... ok
+test_fail_resume_and_idempotency (runner.test_demo_runner.DemoRunnerTest) ... ok
+test_inventory_selects_real_complete_case (runner.test_demo_runner.DemoRunnerTest) ... ok
+test_manual_review_is_provisional (runner.test_demo_runner.DemoRunnerTest) ... ok
+test_plan_has_eleven_stages (runner.test_demo_runner.DemoRunnerTest) ... ok
+test_rejected_cannot_be_chosen (runner.test_demo_runner.DemoRunnerTest) ... ok
+test_run_key_is_stable (runner.test_demo_runner.DemoRunnerTest) ... ok
+test_capability_reason_preserved (runner.test_model_registry.RegistryTest) ... ok
+test_control_ready (runner.test_model_registry.RegistryTest) ... ok
+test_duplicate_adapter_rejected (runner.test_model_registry.RegistryTest) ... ok
+test_missing_repository_explicit (runner.test_model_registry.RegistryTest) ... ok
+test_unknown_adapter_rejected (runner.test_model_registry.RegistryTest) ... ok
+test_failure_isolated (runner.test_resource_scheduler.SchedulerTest) ... ok
+test_gpu_capacity_one (runner.test_resource_scheduler.SchedulerTest) ... ok
+test_queue_wait_recorded (runner.test_resource_scheduler.SchedulerTest) ... ok
+test_timeout_classified (runner.test_resource_scheduler.SchedulerTest) ... ok
+test_acyclic (runner.test_stage_graph.StageGraphTest) ... ok
+test_cycle (runner.test_stage_graph.StageGraphTest) ... ok
+test_duplicate_output (runner.test_stage_graph.StageGraphTest) ... ok
+test_unknown_dependency (runner.test_stage_graph.StageGraphTest) ... ok
+test_api_smoke (unittest.loader._FailedTest) ... ERROR
+test_edit_cost_tiebreak (test_availability_aware_reranker.RerankerTest) ... ok
+test_higher_proxy_selected (test_availability_aware_reranker.RerankerTest) ... ok
+test_missing_blocked (test_availability_aware_reranker.RerankerTest) ... ok
+test_rejected_blocked (test_availability_aware_reranker.RerankerTest) ... ok
+test_avoid_preserved (test_dss_control_compiler.CompilerTest) ... ok
+test_duration_unchanged (test_dss_control_compiler.CompilerTest) ... ok
+test_no_clip_regression (test_dss_control_compiler.CompilerTest) ... ok
+test_out_of_bounds_safe (test_dss_control_compiler.CompilerTest) ... ok
+test_priority_gain_applied (test_dss_control_compiler.CompilerTest) ... ok
+test_long_flat_top_is_blocked (test_repair_metrics.RepairMetricsTest) ... ok
+test_peak_without_run_is_near_ceiling (test_repair_metrics.RepairMetricsTest) ... ok
+test_silence_edges_and_event_energy_are_reported (test_repair_metrics.RepairMetricsTest) ... ok
+test_stereo_geometry_uses_frames (test_repair_metrics.RepairMetricsTest) ... ok
+test_candidate_replace_is_explicitly_blocked (test_repair_policy.RepairPolicyTest) ... ok
+test_clipping_compiles_to_bounded_attenuation (test_repair_policy.RepairPolicyTest) ... ok
+test_unknown_failure_has_no_policy (test_repair_policy.RepairPolicyTest) ... ok
+test_crossfade_is_clamped_to_event_duration (test_semantic_repair.SemanticRepairTest) ... ok
+test_distinct_declared_stems_pass_initial_inventory (test_semantic_repair.SemanticRepairTest) ... ok
+test_duplicate_stem_path_does_not_claim_true_stems (test_semantic_repair.SemanticRepairTest) ... ok
+test_missing_handoff_path_is_blocked (test_semantic_repair.SemanticRepairTest) ... ok
+test_missing_stems_degrades_to_mixed_only (test_semantic_repair.SemanticRepairTest) ... ok
+test_mixed_repair_is_local (test_semantic_repair.SemanticRepairTest) ... ok
+test_transplant_rejects_too_short_window (test_semantic_repair.SemanticRepairTest) ... ok
+test_unknown_forbidden_label_forces_manual_review (test_semantic_repair.SemanticRepairTest) ... ok
+test_zero_target_does_not_authorize_transplant (test_semantic_repair.SemanticRepairTest) ... ok
+test_headroom_is_noop_below_ceiling (test_signal_repair.SignalRepairTest) ... ok
+test_headroom_reduces_peak_without_nonfinite_values (test_signal_repair.SignalRepairTest) ... ok
+test_micro_declip_blocks_long_run (test_signal_repair.SignalRepairTest) ... ok
+test_micro_declip_changes_short_run (test_signal_repair.SignalRepairTest) ... ok
+test_region_gain_clamps_boundary_window (test_signal_repair.SignalRepairTest) ... ok
+test_region_gain_does_not_change_outside_window (test_signal_repair.SignalRepairTest) ... ok
+test_trim_preserves_all_silent_input (test_signal_repair.SignalRepairTest) ... ok
+test_trim_removes_edges_and_preserves_channels (test_signal_repair.SignalRepairTest) ... ok
+
+======================================================================
+ERROR: test_api_smoke (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_api_smoke
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/usr/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1/tests/test_api_smoke.py", line 3, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+
+----------------------------------------------------------------------
+Ran 87 tests in 3.574s
+
+FAILED (errors=1)

@@ -1,0 +1,61 @@
+{
+  "A": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.079345703125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.00875
+  },
+  "B": {
+    "readable": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "duration_sec": 1.0,
+    "peak_abs": 0.08172607421875,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.00875,
+    "proxy_score": 0.05774197763162403
+  },
+  "C": {
+    "readable": true,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 7.964444444444444,
+    "peak_abs": 0.980010986328125,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.030948205174927114,
+    "proxy_score": 0.6929724140699342
+  },
+  "D": {
+    "readable": true,
+    "sample_rate": 44100,
+    "channels": 1,
+    "duration_sec": 7.964444444444444,
+    "peak_abs": 0.891204833984375,
+    "clip_ratio": 0.0,
+    "silence_ratio": 0.03348498997813411,
+    "proxy_score": 0.05085619474255186
+  },
+  "b_detail": {
+    "duration_match": true,
+    "clip_ratio": 0.0,
+    "rms_before": 0.05609250568610967,
+    "rms_after": 0.05774197763162403,
+    "proxy_score": 0.05774197763162403,
+    "windows": [
+      {
+        "event_id": "forest_wind",
+        "start_frame": 0,
+        "end_frame": 16000,
+        "priority": 2
+      }
+    ],
+    "avoid_constraints": [
+      "music",
+      "speech",
+      "waterfall"
+    ]
+  }
+}

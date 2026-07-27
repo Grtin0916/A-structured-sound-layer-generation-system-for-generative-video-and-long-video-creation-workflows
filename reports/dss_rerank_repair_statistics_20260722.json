@@ -1,0 +1,101 @@
+{
+  "comparisons": [
+    {
+      "comparison": "B-A",
+      "n_available": 12,
+      "available": true,
+      "mean_delta": 0.0003988149413570406,
+      "median_delta": -1.3521975526186586e-05,
+      "bootstrap_95_ci": [
+        -1.3642823484925556e-05,
+        0.0008115256053179611
+      ],
+      "positive_case_count": 3,
+      "negative_case_count": 9,
+      "zero_case_count": 0,
+      "permutation_p": 0.25,
+      "wilcoxon_p": 0.67724609375,
+      "effect_direction": "POSITIVE",
+      "availability_denominator": 12,
+      "case_deltas": [
+        0.0016357694906753012,
+        0.0016360928939218936,
+        -1.460193156063716e-05,
+        -1.2652473673324671e-05,
+        -1.3850754278468824e-05,
+        -1.3379051592467273e-05,
+        -1.3850754278468824e-05,
+        -1.36648994599059e-05,
+        -1.3850754278468824e-05,
+        -1.3379051592467273e-05,
+        -1.460193156063716e-05,
+        0.001637748513962138
+      ],
+      "holm_adjusted_p": 0.25
+    },
+    {
+      "comparison": "C-B",
+      "n_available": 10,
+      "available": true,
+      "mean_delta": 0.47508559639836867,
+      "median_delta": 0.6368797809462079,
+      "bootstrap_95_ci": [
+        0.30693010547411514,
+        0.6402166923709636
+      ],
+      "positive_case_count": 8,
+      "negative_case_count": 0,
+      "zero_case_count": 2,
+      "permutation_p": 0.0078125,
+      "wilcoxon_p": 0.0078125,
+      "effect_direction": "POSITIVE",
+      "availability_denominator": 10,
+      "case_deltas": [
+        0.6466029910941602,
+        0.6352304364383101,
+        0.6482533625163961,
+        0.6368791818059053,
+        0.0,
+        0.0,
+        0.642728339611094,
+        0.6482524254842954,
+        0.6368803800865105,
+        0.25602884694701483
+      ],
+      "holm_adjusted_p": 0.0234375
+    },
+    {
+      "comparison": "D-C",
+      "n_available": 10,
+      "available": true,
+      "mean_delta": -0.44861281882774084,
+      "median_delta": -0.5736336615908195,
+      "bootstrap_95_ci": [
+        -0.5989420004279526,
+        -0.2761904541252633
+      ],
+      "positive_case_count": 2,
+      "negative_case_count": 8,
+      "zero_case_count": 0,
+      "permutation_p": 0.0078125,
+      "wilcoxon_p": 0.009765625,
+      "effect_direction": "NEGATIVE",
+      "availability_denominator": 10,
+      "case_deltas": [
+        -0.5566623971007553,
+        -0.6421162193273823,
+        -0.6718948718013897,
+        -0.6593757822387125,
+        0.010096484972550425,
+        0.01009648098897288,
+        -0.6384087653884498,
+        -0.5906049260808839,
+        -0.5178523078013745,
+        -0.2294058844999837
+      ],
+      "holm_adjusted_p": 0.0234375
+    }
+  ],
+  "interpretation": "proxy evidence on available Control/Replay cases only",
+  "counterexample_analysis": "RMS-style proxy is not a universal quality score: headroom repair intentionally reduces it while improving clipping safety; B-A is also mixed across cases. No human preference is inferred."
+}

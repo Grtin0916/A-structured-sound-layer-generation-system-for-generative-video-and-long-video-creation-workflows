@@ -1,0 +1,10 @@
+{
+  "experiment_id": "dss_rerank_repair_20260722",
+  "source_commit": "0334abe",
+  "priority_gain": {"0": 1.0, "1": 1.0, "2": 1.03, "3": 1.06, "4": 1.10, "5": 1.15},
+  "peak_ceiling_dbfs": -1.0,
+  "weak_event_rms_threshold": 0.10,
+  "repair_gain": 1.18,
+  "bootstrap_resamples": 10000,
+  "seed": 20260722
+}

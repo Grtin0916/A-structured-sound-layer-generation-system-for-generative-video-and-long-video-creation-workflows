@@ -1,0 +1,16 @@
+{
+  "caseCount": 12,
+  "strategyRecordCount": 48,
+  "dssScheduledWavCount": 12,
+  "rerankSelectionCount": 10,
+  "rerankBlockedCount": 2,
+  "repairEvaluatedCount": 12,
+  "editAppliedCount": 10,
+  "severeRegressionCount": 0,
+  "materializedWavCount": 44,
+  "newlyComputedWavCount": 32,
+  "uniqueDigestCount": 29,
+  "finalSelectedCount": 0,
+  "manualDecisionMutationCount": 0,
+  "liveQualityDenominator": 0
+}

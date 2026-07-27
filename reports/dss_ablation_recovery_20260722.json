@@ -1,0 +1,17 @@
+{
+  "faultInjectionCount": 3,
+  "recoverySuccessCount": 3,
+  "affectedCases": [
+    "fb_003_semantic_repair",
+    "fb_004_transplant_v1",
+    "fb_006_tuesday_repair"
+  ],
+  "recomputedCases": [
+    "fb_003_semantic_repair",
+    "fb_004_transplant_v1",
+    "fb_006_tuesday_repair"
+  ],
+  "unaffectedDigestMatch": true,
+  "duplicateArtifactCount": 0,
+  "decisionMutationCount": 0
+}
