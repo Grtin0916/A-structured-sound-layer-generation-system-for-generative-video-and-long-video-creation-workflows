@@ -1,0 +1,21 @@
+test_code_changes_key (test_cache.CacheTest) ... ok
+test_config_changes_key (test_cache.CacheTest) ... ok
+test_input_changes_key (test_cache.CacheTest) ... ok
+test_missing_output_is_not_reused (test_cache.CacheTest) ... ok
+test_valid_output_reused (test_cache.CacheTest) ... ok
+test_wrong_digest_is_stale (test_cache.CacheTest) ... ok
+test_fail_resume_and_idempotency (test_demo_runner.DemoRunnerTest) ... ok
+test_inventory_selects_real_complete_case (test_demo_runner.DemoRunnerTest) ... ok
+test_manual_review_is_provisional (test_demo_runner.DemoRunnerTest) ... ok
+test_plan_has_eleven_stages (test_demo_runner.DemoRunnerTest) ... ok
+test_rejected_cannot_be_chosen (test_demo_runner.DemoRunnerTest) ... ok
+test_run_key_is_stable (test_demo_runner.DemoRunnerTest) ... ok
+test_acyclic (test_stage_graph.StageGraphTest) ... ok
+test_cycle (test_stage_graph.StageGraphTest) ... ok
+test_duplicate_output (test_stage_graph.StageGraphTest) ... ok
+test_unknown_dependency (test_stage_graph.StageGraphTest) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.152s
+
+OK

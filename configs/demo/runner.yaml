@@ -1,0 +1,6 @@
+{
+  "pipeline_version": "demo-runner-v1",
+  "rerank_csv": "reports/repaired_candidate_rerank_20260715.csv",
+  "repair_handoff": "artifacts/manifests/repair_handoff_20260715.json",
+  "allowed_mode": "replay"
+}

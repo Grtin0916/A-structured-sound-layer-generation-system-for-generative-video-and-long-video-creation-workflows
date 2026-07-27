@@ -1,0 +1,2 @@
+schemaVersion,caseId,failedRunId,resumedRunId,idempotentRunId,coldRunMs,failedRunMs,resumeRunMs,idempotentRerunMs,stagesExecuted,stagesReused,cacheHits,cacheMisses,duplicateArtifactCount,sameRunKey,resultDigestMatch,provisionalOutputCount,finalOutputCount,blockedOutputCount,generationMode,decision
+demo-runner-recovery/v1,forest_bird_branch_001,forest_bird_branch_001-20260727T130007Z-db6c56f3-718df2,forest_bird_branch_001-20260727T130007Z-db6c56f3-718df2,forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41,135,71,64,92,3,8,8,3,0,True,True,2,0,0,REPLAY,MANUAL_REVIEW

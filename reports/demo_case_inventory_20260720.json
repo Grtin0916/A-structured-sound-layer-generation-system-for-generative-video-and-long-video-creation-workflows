@@ -1,0 +1,424 @@
+{
+  "cases": [
+    {
+      "case_id": "forest_bird_branch_001",
+      "repair_id": "fb_001_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/forest_bird_branch_001/input_video.mp4",
+        "dss": "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_001/after.wav"
+      },
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "metrics_available": true
+    },
+    {
+      "case_id": "forest_bird_branch_001",
+      "repair_id": "fb_012_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/forest_bird_branch_001/input_video.mp4",
+        "dss": "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_012/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_012/after.wav"
+      },
+      "repair_action": "HEADROOM_ONLY",
+      "metrics_available": true
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "repair_id": "fb_009_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/glass_drop_room_001/input_video.mp4",
+        "dss": "cases/glass_drop_room_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_009/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_009/after.wav"
+      },
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "metrics_available": true
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "repair_id": "fb_010_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/glass_drop_room_001/input_video.mp4",
+        "dss": "cases/glass_drop_room_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_010/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_010/after.wav"
+      },
+      "repair_action": "HEADROOM_ONLY",
+      "metrics_available": true
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "repair_id": "fb_011_semantic_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/glass_drop_room_001/input_video.mp4",
+        "dss": "cases/glass_drop_room_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/fb_011/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/fb_011/after.wav"
+      },
+      "repair_action": "event_region_gain",
+      "metrics_available": true
+    },
+    {
+      "case_id": "glass_drop_room_001",
+      "repair_id": "fb_011_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/glass_drop_room_001/input_video.mp4",
+        "dss": "cases/glass_drop_room_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_011/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_011/after.wav"
+      },
+      "repair_action": "SMOOTH_REGION_GAIN",
+      "metrics_available": true
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "repair_id": "fb_006_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/kitchen_chop_sizzle_001/input_video.mp4",
+        "dss": "cases/kitchen_chop_sizzle_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_006/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_006/after.wav"
+      },
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "metrics_available": true
+    },
+    {
+      "case_id": "kitchen_chop_sizzle_001",
+      "repair_id": "fb_007_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/kitchen_chop_sizzle_001/input_video.mp4",
+        "dss": "cases/kitchen_chop_sizzle_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_007/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_007/after.wav"
+      },
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "metrics_available": true
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "repair_id": "fb_002_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/robot_warehouse_pick_001/input_video.mp4",
+        "dss": "cases/robot_warehouse_pick_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_002/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_002/after.wav"
+      },
+      "repair_action": "HEADROOM_ONLY",
+      "metrics_available": true
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "repair_id": "fb_003_semantic_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/robot_warehouse_pick_001/input_video.mp4",
+        "dss": "cases/robot_warehouse_pick_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/fb_003/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/fb_003/after.wav"
+      },
+      "repair_action": "smooth_region_attenuation",
+      "metrics_available": true
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "repair_id": "fb_003_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/robot_warehouse_pick_001/input_video.mp4",
+        "dss": "cases/robot_warehouse_pick_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/fb_003/before.wav",
+        "after": "artifacts/repair/batch_20260714/fb_003/after.wav"
+      },
+      "repair_action": "SMOOTH_REGION_GAIN",
+      "metrics_available": true
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "repair_id": "fb_004_transplant_v2",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/robot_warehouse_pick_001/input_video.mp4",
+        "dss": "cases/robot_warehouse_pick_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/fb_004/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/fb_004/variant_2.wav"
+      },
+      "repair_action": "event_transplant",
+      "metrics_available": true
+    },
+    {
+      "case_id": "street_rain_crosswalk_001",
+      "repair_id": "hn_001_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/street_rain_crosswalk_001/input_video.mp4",
+        "dss": "cases/street_rain_crosswalk_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/hn_001/before.wav",
+        "after": "artifacts/repair/batch_20260714/hn_001/after.wav"
+      },
+      "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+      "metrics_available": true
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "repair_id": "fb_005_transplant_v2",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+        "dss": "cases/subway_arrival_door_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/fb_005/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/fb_005/variant_2.wav"
+      },
+      "repair_action": "event_transplant",
+      "metrics_available": true
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "repair_id": "hn_002_semantic_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+        "dss": "cases/subway_arrival_door_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/hn_002/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/hn_002/after.wav"
+      },
+      "repair_action": "event_region_gain",
+      "metrics_available": true
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "repair_id": "hn_002_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+        "dss": "cases/subway_arrival_door_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/hn_002/before.wav",
+        "after": "artifacts/repair/batch_20260714/hn_002/after.wav"
+      },
+      "repair_action": "SILENCE_AWARE_TRIM",
+      "metrics_available": true
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "repair_id": "hn_003_semantic_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+        "dss": "cases/subway_arrival_door_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/hn_003/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/hn_003/after.wav"
+      },
+      "repair_action": "event_region_gain",
+      "metrics_available": true
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "repair_id": "hn_003_tuesday_repair",
+      "decision": "MANUAL_REVIEW",
+      "score": 7,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+        "dss": "cases/subway_arrival_door_001/director_sound_script.yaml",
+        "before": "artifacts/repair/batch_20260714/hn_003/before.wav",
+        "after": "artifacts/repair/batch_20260714/hn_003/after.wav"
+      },
+      "repair_action": "SILENCE_AWARE_TRIM",
+      "metrics_available": true
+    },
+    {
+      "case_id": "robot_warehouse_pick_001",
+      "repair_id": "fb_004_transplant_v1",
+      "decision": "REPAIR_REJECTED",
+      "score": 5,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/robot_warehouse_pick_001/input_video.mp4",
+        "dss": "cases/robot_warehouse_pick_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/fb_004/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/fb_004/variant_1.wav"
+      },
+      "repair_action": "event_transplant",
+      "metrics_available": true
+    },
+    {
+      "case_id": "subway_arrival_door_001",
+      "repair_id": "fb_005_transplant_v1",
+      "decision": "REPAIR_REJECTED",
+      "score": 5,
+      "checks": {
+        "input_video": true,
+        "dss": true,
+        "before": true,
+        "after": true
+      },
+      "paths": {
+        "input_video": "cases/subway_arrival_door_001/input_video.mp4",
+        "dss": "cases/subway_arrival_door_001/director_sound_script.yaml",
+        "before": "artifacts/repair/layer_semantic_20260715/fb_005/before.wav",
+        "after": "artifacts/repair/layer_semantic_20260715/fb_005/variant_1.wav"
+      },
+      "repair_action": "event_transplant",
+      "metrics_available": true
+    }
+  ],
+  "selected": {
+    "case_id": "forest_bird_branch_001",
+    "repair_id": "fb_001_tuesday_repair",
+    "decision": "MANUAL_REVIEW",
+    "score": 7,
+    "checks": {
+      "input_video": true,
+      "dss": true,
+      "before": true,
+      "after": true
+    },
+    "paths": {
+      "input_video": "cases/forest_bird_branch_001/input_video.mp4",
+      "dss": "cases/forest_bird_branch_001/director_sound_script.yaml",
+      "before": "artifacts/repair/batch_20260714/fb_001/before.wav",
+      "after": "artifacts/repair/batch_20260714/fb_001/after.wav"
+    },
+    "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+    "metrics_available": true
+  }
+}

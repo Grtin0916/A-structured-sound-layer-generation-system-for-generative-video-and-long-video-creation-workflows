@@ -1,0 +1,406 @@
+{
+  "schema_version": "demo-run/v1",
+  "run_id": "forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41",
+  "run_key": "sha256:db6c56f397e615949464ccd7cc5c0475d26e6b489532d501954a251af6cb0dde",
+  "case": {
+    "case_id": "forest_bird_branch_001",
+    "repair_id": "fb_001_tuesday_repair",
+    "decision": "MANUAL_REVIEW",
+    "score": 7,
+    "checks": {
+      "input_video": true,
+      "dss": true,
+      "before": true,
+      "after": true
+    },
+    "paths": {
+      "input_video": "cases/forest_bird_branch_001/input_video.mp4",
+      "dss": "cases/forest_bird_branch_001/director_sound_script.yaml",
+      "before": "artifacts/repair/batch_20260714/fb_001/before.wav",
+      "after": "artifacts/repair/batch_20260714/fb_001/after.wav"
+    },
+    "repair_action": "MICRO_DECLIP_LINEAR_PROBE",
+    "metrics_available": true
+  },
+  "input_digests": {
+    "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+    "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+    "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+    "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+  },
+  "generation_mode": "REPLAY",
+  "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+  "status": "SUCCEEDED",
+  "attempts": [
+    {
+      "attempt_id": "attempt-001",
+      "started_ns": 1785157207552684683,
+      "ended_ns": 1785157207574743528,
+      "executed": 3,
+      "reused": 8
+    }
+  ],
+  "stages": [
+    {
+      "stage_id": "inventory",
+      "implementation_version": "inventory-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "cases/forest_bird_branch_001/director_sound_script.yaml"
+      ],
+      "output_digests": {
+        "cases/forest_bird_branch_001/director_sound_script.yaml": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:b972468e783664ed92bc1f503e8394133d041b07f866680ab4010ec272de67d4",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "preflight",
+      "implementation_version": "preflight-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "cases/forest_bird_branch_001/director_sound_script.yaml"
+      ],
+      "output_digests": {
+        "cases/forest_bird_branch_001/director_sound_script.yaml": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:68c40474d1fb8a2b9c17626e8922fb085d5822609fe192da8b7ff14ba6c434ce",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "resolve_case",
+      "implementation_version": "resolve_case-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "cases/forest_bird_branch_001/director_sound_script.yaml"
+      ],
+      "output_digests": {
+        "cases/forest_bird_branch_001/director_sound_script.yaml": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:9705143e6ee3879783ee58eb8b55a11882c9b1f8a73e95baa4cfac2633442313",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "compile_dss",
+      "implementation_version": "compile_dss-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "cases/forest_bird_branch_001/director_sound_script.yaml"
+      ],
+      "output_digests": {
+        "cases/forest_bird_branch_001/director_sound_script.yaml": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:14d6c10005bff83cda3f06016ddd993f715da4c283f20cee96d8885eecb9fc4f",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "acquire_candidates",
+      "implementation_version": "acquire_candidates-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "cases/forest_bird_branch_001/director_sound_script.yaml"
+      ],
+      "output_digests": {
+        "cases/forest_bird_branch_001/director_sound_script.yaml": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:aec0a9bd48860c9ca7f1ac91d4bcc3c592158606204f8d31372b8c73f0a2ef63",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "evaluate",
+      "implementation_version": "evaluate-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "output_digests": {
+        "artifacts/repair/batch_20260714/fb_001/after.wav": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:dd08e4100a4cf50682c0a2cbe100e57b9f2446af96bf82abb04cbde491903367",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "rerank",
+      "implementation_version": "rerank-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "output_digests": {
+        "artifacts/repair/batch_20260714/fb_001/after.wav": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:b2424d2108914d9a994d5709225df5dbd5197a0edbe97ddc3df3a095187b909e",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "repair",
+      "implementation_version": "repair-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "REUSE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "output_digests": {
+        "artifacts/repair/batch_20260714/fb_001/after.wav": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:feb6686166766d4e33072680c5a001ea50b952f11dee33946328a60c5b7874ad",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": true,
+      "stale_reason": null
+    },
+    {
+      "stage_id": "mix",
+      "implementation_version": "mix-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "EXECUTE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "artifacts/runs/forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41/outputs/provisional_mix.wav"
+      ],
+      "output_digests": {
+        "artifacts/runs/forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41/outputs/provisional_mix.wav": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:1843eefb515cee9b1d08ca548130d2a3e3338762c21bcdc564ac5c7fd87a15d7",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 1,
+      "return_code": 0,
+      "failure": null,
+      "reused": false,
+      "stale_reason": "MISS"
+    },
+    {
+      "stage_id": "report",
+      "implementation_version": "report-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "EXECUTE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [],
+      "output_digests": {},
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:971ec4df3aa1be9c0e8145c549530c9a835ec9138c9a5061aee8e82729ceade4",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": false,
+      "stale_reason": "MISS"
+    },
+    {
+      "stage_id": "publish",
+      "implementation_version": "publish-v1",
+      "implementation_digest": "sha256:1b716597e7f733b586f5da2e7629375c160ca6439e7626bd3f8b7dd7a0ffed60",
+      "status": "SUCCEEDED",
+      "execution_mode": "EXECUTE",
+      "inputs": [
+        "cases/forest_bird_branch_001/input_video.mp4",
+        "cases/forest_bird_branch_001/director_sound_script.yaml",
+        "artifacts/repair/batch_20260714/fb_001/before.wav",
+        "artifacts/repair/batch_20260714/fb_001/after.wav"
+      ],
+      "input_digests": {
+        "input_video": "sha256:c07ee2f6e97468e7eee13c23fb629c0d4ce99fc72c0519aaf53b97ef973a998a",
+        "dss": "sha256:b974e74e248cb1d8b272575bfb902a4704ec0217dcf4005f8b87986e380cb323",
+        "before": "sha256:9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "after": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "outputs": [
+        "artifacts/runs/forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41/outputs/provisional_mix.wav"
+      ],
+      "output_digests": {
+        "artifacts/runs/forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41/outputs/provisional_mix.wav": "sha256:a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b"
+      },
+      "config_digest": "sha256:091fafaec9ea7828856b8505aef18adf87622f2cb4abe2892bb4155961616494",
+      "cache_key": "sha256:7ae5aad4773a0efc174240e2c0cd748209ab195ed862284e79bd4874cfc6b508",
+      "source_commit": "12cfc5de2323504653d8b90ef406464117336762",
+      "duration_ms": 0,
+      "return_code": 0,
+      "failure": null,
+      "reused": false,
+      "stale_reason": "MISS"
+    }
+  ],
+  "reusedStageCount": 8,
+  "duplicateArtifactCount": 0
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/demo_run_manifest.schema.json",
+  "type": "object",
+  "required": ["run_id", "run_key", "generation_mode", "status", "stages"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "run_key": {"type": "string", "pattern": "^sha256:"},
+    "generation_mode": {"const": "REPLAY"},
+    "status": {"enum": ["RUNNING", "SUCCEEDED", "FAILED", "BLOCKED"]},
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage_id", "status", "input_digests"],
+        "properties": {
+          "stage_id": {"type": "string"},
+          "status": {"type": "string"},
+          "input_digests": {"type": "object"},
+          "output_digests": {"type": "object"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "run_id": "forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41",
+  "run_key": "sha256:db6c56f397e615949464ccd7cc5c0475d26e6b489532d501954a251af6cb0dde",
+  "case_id": "forest_bird_branch_001",
+  "decision": "MANUAL_REVIEW",
+  "generation_mode": "REPLAY",
+  "publish": "provisional_mix.wav"
+}

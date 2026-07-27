@@ -1,0 +1,11 @@
+{"mode": "REUSE", "stage_id": "inventory", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "preflight", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "resolve_case", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "compile_dss", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "acquire_candidates", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "evaluate", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "rerank", "status": "SUCCEEDED"}
+{"mode": "REUSE", "stage_id": "repair", "status": "SUCCEEDED"}
+{"mode": "EXECUTE", "stage_id": "mix", "status": "SUCCEEDED"}
+{"mode": "EXECUTE", "stage_id": "report", "status": "SUCCEEDED"}
+{"mode": "EXECUTE", "stage_id": "publish", "status": "SUCCEEDED"}

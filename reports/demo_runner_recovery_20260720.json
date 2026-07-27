@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "demo-runner-recovery/v1",
+  "caseId": "forest_bird_branch_001",
+  "failedRunId": "forest_bird_branch_001-20260727T130007Z-db6c56f3-718df2",
+  "resumedRunId": "forest_bird_branch_001-20260727T130007Z-db6c56f3-718df2",
+  "idempotentRunId": "forest_bird_branch_001-20260727T130007Z-db6c56f3-7f7f41",
+  "coldRunMs": 135,
+  "failedRunMs": 71,
+  "resumeRunMs": 64,
+  "idempotentRerunMs": 92,
+  "stagesExecuted": 3,
+  "stagesReused": 8,
+  "cacheHits": 8,
+  "cacheMisses": 3,
+  "duplicateArtifactCount": 0,
+  "sameRunKey": true,
+  "resultDigestMatch": true,
+  "provisionalOutputCount": 2,
+  "finalOutputCount": 0,
+  "blockedOutputCount": 0,
+  "generationMode": "REPLAY",
+  "decision": "MANUAL_REVIEW"
+}
