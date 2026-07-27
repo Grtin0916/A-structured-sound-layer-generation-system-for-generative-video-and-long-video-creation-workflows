@@ -1,0 +1,14 @@
+{
+  "proxyImprovementIsHumanPreference": false,
+  "manualListeningCompletedCount": 0,
+  "finalSelectedCount": 0,
+  "automaticForbiddenEventDetectionAvailable": false,
+  "onsetMetricAvailable": false,
+  "productionPrometheusVerified": false,
+  "liveGrafanaImportVerified": false,
+  "alertmanagerConfigured": false,
+  "productionAlertingVerified": false,
+  "notClaimFullRepairEngine": true,
+  "slsaCompliant": false,
+  "signedAttestation": false
+}

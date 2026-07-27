@@ -1,0 +1,406 @@
+[
+  {
+    "repairId": "fb_004_transplant_v1",
+    "failureId": "fb_004",
+    "repairAction": "event_transplant",
+    "sourceMode": "candidate_replace",
+    "decision": "REPAIR_REJECTED",
+    "workflowState": "REVIEW_COMPLETED",
+    "statusLabel": "REPAIR_REJECTED",
+    "metrics": {
+      "edit_cost": "0.11974106366009281",
+      "ordering_correct": true,
+      "outside_window_delta_db": "0.0",
+      "severe_regression": false,
+      "target_delta": "0.5370803406757656"
+    },
+    "reason": "not selected after constrained variant comparison",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_004_transplant_v1__before.wav",
+        "sha256": "c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be.wav"
+      },
+      "after": {
+        "path": "audio/fb_004_transplant_v1__after.wav",
+        "sha256": "65e8287b36bea92de3cff2aa411e5cce60ec9f48b7e33147d6298a666572a3c5",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/65e8287b36bea92de3cff2aa411e5cce60ec9f48b7e33147d6298a666572a3c5.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": false,
+      "status": "METRIC_UNAVAILABLE"
+    }
+  },
+  {
+    "repairId": "fb_005_transplant_v1",
+    "failureId": "fb_005",
+    "repairAction": "event_transplant",
+    "sourceMode": "candidate_replace",
+    "decision": "REPAIR_REJECTED",
+    "workflowState": "REVIEW_COMPLETED",
+    "statusLabel": "REPAIR_REJECTED",
+    "metrics": {
+      "edit_cost": "0.11981810107308585",
+      "ordering_correct": true,
+      "outside_window_delta_db": "0.0",
+      "severe_regression": false,
+      "target_delta": "5.8654708760621865"
+    },
+    "reason": "not selected after constrained variant comparison",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_005_transplant_v1__before.wav",
+        "sha256": "757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1.wav"
+      },
+      "after": {
+        "path": "audio/fb_005_transplant_v1__after.wav",
+        "sha256": "29956405f600760a071c699af399b638d09b830afb6c408e527b7644d281b97b",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/29956405f600760a071c699af399b638d09b830afb6c408e527b7644d281b97b.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": false,
+      "status": "METRIC_UNAVAILABLE"
+    }
+  },
+  {
+    "repairId": "fb_004_transplant_v2",
+    "failureId": "fb_004",
+    "repairAction": "event_transplant",
+    "sourceMode": "candidate_replace",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.1195439385150812",
+      "ordering_correct": true,
+      "outside_window_delta_db": "0.0",
+      "severe_regression": false,
+      "target_delta": "0.5096854463032869"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_004_transplant_v2__before.wav",
+        "sha256": "c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be.wav"
+      },
+      "after": {
+        "path": "audio/fb_004_transplant_v2__after.wav",
+        "sha256": "8a005ac152a326d483723582e89732dbad7edde50c0314814621c3403d800836",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/8a005ac152a326d483723582e89732dbad7edde50c0314814621c3403d800836.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": false,
+      "status": "METRIC_UNAVAILABLE"
+    }
+  },
+  {
+    "repairId": "fb_005_transplant_v2",
+    "failureId": "fb_005",
+    "repairAction": "event_transplant",
+    "sourceMode": "candidate_replace",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.1197070765661253",
+      "ordering_correct": true,
+      "outside_window_delta_db": "0.0",
+      "severe_regression": false,
+      "target_delta": "5.665381912145692"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_005_transplant_v2__before.wav",
+        "sha256": "757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1.wav"
+      },
+      "after": {
+        "path": "audio/fb_005_transplant_v2__after.wav",
+        "sha256": "264c9ae21730dda35c2d1e14e972535f1533758ef3240525f5f184df08134249",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/264c9ae21730dda35c2d1e14e972535f1533758ef3240525f5f184df08134249.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": false,
+      "status": "METRIC_UNAVAILABLE"
+    }
+  },
+  {
+    "repairId": "fb_001_tuesday_repair",
+    "failureId": "fb_001",
+    "repairAction": "MICRO_DECLIP_LINEAR_PROBE",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.0006100281682028367",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-2.0"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_001_tuesday_repair__before.wav",
+        "sha256": "9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7.wav"
+      },
+      "after": {
+        "path": "audio/fb_001_tuesday_repair__after.wav",
+        "sha256": "a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_001_tuesday_repair.png",
+      "sha256": "b1aa5a390ea8f6cad4d4ce5e8d667fe85763af73273bdd92bd87c005346b84ed"
+    }
+  },
+  {
+    "repairId": "fb_002_tuesday_repair",
+    "failureId": "fb_002",
+    "repairAction": "HEADROOM_ONLY",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.7852874405146198",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-0.016082763671875"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_002_tuesday_repair__before.wav",
+        "sha256": "0c3104de35bd3a63d69fcadaa59dca3bdbb007fcbffe3663be52f8ebaceea30d",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/0c3104de35bd3a63d69fcadaa59dca3bdbb007fcbffe3663be52f8ebaceea30d.wav"
+      },
+      "after": {
+        "path": "audio/fb_002_tuesday_repair__after.wav",
+        "sha256": "ee86e7336556491776f67ec3c79fb715ced9cf194dfabc33ec00103859de1f21",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/ee86e7336556491776f67ec3c79fb715ced9cf194dfabc33ec00103859de1f21.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_002_tuesday_repair.png",
+      "sha256": "9020e98f302e4384c30942082186691a295e32817cfcd7e174b525413848364c"
+    }
+  },
+  {
+    "repairId": "fb_003_semantic_repair",
+    "failureId": "fb_003",
+    "repairAction": "smooth_region_attenuation",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.1195212804524362",
+      "ordering_correct": true,
+      "outside_window_delta_db": "0.0",
+      "severe_regression": false,
+      "target_delta": "-1.607175660962641"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_003_semantic_repair__before.wav",
+        "sha256": "4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438.wav"
+      },
+      "after": {
+        "path": "audio/fb_003_semantic_repair__after.wav",
+        "sha256": "9df53f63f62082020f8defa57bd00f3a4a0f430698126e767ae365ebfc078076",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/9df53f63f62082020f8defa57bd00f3a4a0f430698126e767ae365ebfc078076.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_003_semantic_repair.png",
+      "sha256": "8cb931bf63c69b09850e2980f73b77c2884e78375322e7c3cd61241e80eaa79f"
+    }
+  },
+  {
+    "repairId": "fb_003_tuesday_repair",
+    "failureId": "fb_003",
+    "repairAction": "SMOOTH_REGION_GAIN",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.12021344900131226",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-0.008130957266400271"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_003_tuesday_repair__before.wav",
+        "sha256": "3b536b36b0cb67d930076eb103f029065649a4988a1c9fc9ddc76b220943f3f5",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/3b536b36b0cb67d930076eb103f029065649a4988a1c9fc9ddc76b220943f3f5.wav"
+      },
+      "after": {
+        "path": "audio/fb_003_tuesday_repair__after.wav",
+        "sha256": "4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_003_tuesday_repair.png",
+      "sha256": "8cb931bf63c69b09850e2980f73b77c2884e78375322e7c3cd61241e80eaa79f"
+    }
+  },
+  {
+    "repairId": "fb_006_tuesday_repair",
+    "failureId": "fb_006",
+    "repairAction": "MICRO_DECLIP_LINEAR_PROBE",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "9.211904796964916e-06",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-4.0"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_006_tuesday_repair__before.wav",
+        "sha256": "951c7cbafd1cb10ddabdf0fbb3fe43409909cc45bf82c2bd16cf55a22ae5284e",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/951c7cbafd1cb10ddabdf0fbb3fe43409909cc45bf82c2bd16cf55a22ae5284e.wav"
+      },
+      "after": {
+        "path": "audio/fb_006_tuesday_repair__after.wav",
+        "sha256": "65786473598076b752b319930eb261f27e2b79dfbdfe7da1acfe3fe41289103d",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/65786473598076b752b319930eb261f27e2b79dfbdfe7da1acfe3fe41289103d.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_006_tuesday_repair.png",
+      "sha256": "682f088773df67d1adf516f5df009a76c3766d2f240be0322f347fdead28b6f1"
+    }
+  },
+  {
+    "repairId": "fb_007_tuesday_repair",
+    "failureId": "fb_007",
+    "repairAction": "MICRO_DECLIP_LINEAR_PROBE",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "4.601575833656293e-06",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-1.0"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_007_tuesday_repair__before.wav",
+        "sha256": "6866aa239e29a8799890e4699d91b7017fed86ac88ead373eacc822981356bb2",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/6866aa239e29a8799890e4699d91b7017fed86ac88ead373eacc822981356bb2.wav"
+      },
+      "after": {
+        "path": "audio/fb_007_tuesday_repair__after.wav",
+        "sha256": "5b222294d3d882aef051e4eebc7eb88cac5b2c8dd92c61ecb10b45d902b5525a",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/5b222294d3d882aef051e4eebc7eb88cac5b2c8dd92c61ecb10b45d902b5525a.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_007_tuesday_repair.png",
+      "sha256": "27ee08a0a11572c3a04f5082a4f64ab069d09a73a6ad52db0c0629c1ce6a0e3a"
+    }
+  },
+  {
+    "repairId": "fb_009_tuesday_repair",
+    "failureId": "fb_009",
+    "repairAction": "MICRO_DECLIP_LINEAR_PROBE",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "1.642813285191854e-05",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-3.0"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_009_tuesday_repair__before.wav",
+        "sha256": "e16780d42b3e2121962ed1772c830ebb248c66defbf96637299b4c1da23186e5",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/e16780d42b3e2121962ed1772c830ebb248c66defbf96637299b4c1da23186e5.wav"
+      },
+      "after": {
+        "path": "audio/fb_009_tuesday_repair__after.wav",
+        "sha256": "3ca9e8078c88fda925b71a5ea40c29b940f23c8ee0b4165764ad43b964feb6b9",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/3ca9e8078c88fda925b71a5ea40c29b940f23c8ee0b4165764ad43b964feb6b9.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_009_tuesday_repair.png",
+      "sha256": "8cdcb19e470ea06bf09d71c8e79950bb9782b19e8e5720b0024470ada5a3b288"
+    }
+  },
+  {
+    "repairId": "fb_010_tuesday_repair",
+    "failureId": "fb_010",
+    "repairAction": "HEADROOM_ONLY",
+    "sourceMode": "mixed_only",
+    "decision": "MANUAL_REVIEW",
+    "workflowState": "REVIEW_PENDING",
+    "statusLabel": "PROXY_IMPROVED · REVIEW_PENDING",
+    "metrics": {
+      "edit_cost": "0.9120979801813762",
+      "ordering_correct": true,
+      "outside_window_delta_db": "",
+      "severe_regression": false,
+      "target_delta": "-0.012176513671875"
+    },
+    "reason": "forbidden-event detector unavailable; human label required",
+    "artifacts": {
+      "before": {
+        "path": "audio/fb_010_tuesday_repair__before.wav",
+        "sha256": "a9bd6f330ebf58f17c51ca3659f52b8d879a93323a526ea0c091fd9dc009c8d4",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/a9bd6f330ebf58f17c51ca3659f52b8d879a93323a526ea0c091fd9dc009c8d4.wav"
+      },
+      "after": {
+        "path": "audio/fb_010_tuesday_repair__after.wav",
+        "sha256": "2eb7189de4d66bf9d00ff5183964ddb3b2de62804409729211f0480eb2c97a09",
+        "javaMaterializedPath": "artifacts/week19/blobs/sha256/2eb7189de4d66bf9d00ff5183964ddb3b2de62804409729211f0480eb2c97a09.wav"
+      }
+    },
+    "comparisonPlot": {
+      "available": true,
+      "path": "plots/fb_010_tuesday_repair.png",
+      "sha256": "4088f5316725537ba7e2290dcdbd8b629aa9d776ef6a29b792ab873cea1a8d15"
+    }
+  }
+]

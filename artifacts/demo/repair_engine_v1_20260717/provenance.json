@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "repair-demo-provenance/v1",
+  "commits": {
+    "mainbase": "b1e19c18ac35e9f5384d62708a2929f24940a361",
+    "java": "02760092cb2bbbf1656357fc983b6a5fec5635a3",
+    "cloud": "5cd18aabf9685edcbdf3e8e031d1ad95e71a3fdc"
+  },
+  "inputs": [
+    "/home/GRT/work/grt_work/media-task-platform-java/artifacts/manifests/repair_workflow_report_20260716.json",
+    "/home/GRT/work/grt_work/media-task-platform-java/artifacts/manifests/repair_artifact_index_20260716.json",
+    "/home/GRT/work/grt_work/ai-job-platform-cloud/loadtest/reports/repair_observability_20260717.json"
+  ],
+  "builder": "scripts/build_repair_demo_pack.py",
+  "slsaCompliant": false,
+  "signedAttestation": false
+}

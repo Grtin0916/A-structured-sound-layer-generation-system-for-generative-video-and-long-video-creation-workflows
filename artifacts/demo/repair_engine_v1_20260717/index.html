@@ -1,0 +1,443 @@
+<!doctype html><html><head><meta charset="utf-8"><title>W19 Repair Demo</title>
+<style>body{font-family:sans-serif;max-width:1100px;margin:auto}article{border:1px solid #bbb;padding:1rem;margin:1rem 0}audio,img{display:block;max-width:100%;margin:.5rem 0}.status{font-weight:bold}</style>
+</head><body><h1>Integrity-aware repair demo</h1><p>Proxy improvement is not human preference. Manual listening completed: 0. Final selected: 0.</p><article><h2>fb_004_transplant_v1</h2><p class="status">REPAIR_REJECTED</p>
+<p>event_transplant · candidate_replace</p>
+<label>Before<audio controls src="audio/fb_004_transplant_v1__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_004_transplant_v1__after.wav"></audio></label><p>Comparison plot: METRIC_UNAVAILABLE</p>
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_004_transplant_v1&quot;,
+  &quot;failureId&quot;: &quot;fb_004&quot;,
+  &quot;repairAction&quot;: &quot;event_transplant&quot;,
+  &quot;sourceMode&quot;: &quot;candidate_replace&quot;,
+  &quot;decision&quot;: &quot;REPAIR_REJECTED&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_COMPLETED&quot;,
+  &quot;statusLabel&quot;: &quot;REPAIR_REJECTED&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.11974106366009281&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;0.0&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;0.5370803406757656&quot;
+  },
+  &quot;reason&quot;: &quot;not selected after constrained variant comparison&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_004_transplant_v1__before.wav&quot;,
+      &quot;sha256&quot;: &quot;c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_004_transplant_v1__after.wav&quot;,
+      &quot;sha256&quot;: &quot;65e8287b36bea92de3cff2aa411e5cce60ec9f48b7e33147d6298a666572a3c5&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/65e8287b36bea92de3cff2aa411e5cce60ec9f48b7e33147d6298a666572a3c5.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: false,
+    &quot;status&quot;: &quot;METRIC_UNAVAILABLE&quot;
+  }
+}</pre></details></article><article><h2>fb_005_transplant_v1</h2><p class="status">REPAIR_REJECTED</p>
+<p>event_transplant · candidate_replace</p>
+<label>Before<audio controls src="audio/fb_005_transplant_v1__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_005_transplant_v1__after.wav"></audio></label><p>Comparison plot: METRIC_UNAVAILABLE</p>
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_005_transplant_v1&quot;,
+  &quot;failureId&quot;: &quot;fb_005&quot;,
+  &quot;repairAction&quot;: &quot;event_transplant&quot;,
+  &quot;sourceMode&quot;: &quot;candidate_replace&quot;,
+  &quot;decision&quot;: &quot;REPAIR_REJECTED&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_COMPLETED&quot;,
+  &quot;statusLabel&quot;: &quot;REPAIR_REJECTED&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.11981810107308585&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;0.0&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;5.8654708760621865&quot;
+  },
+  &quot;reason&quot;: &quot;not selected after constrained variant comparison&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_005_transplant_v1__before.wav&quot;,
+      &quot;sha256&quot;: &quot;757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_005_transplant_v1__after.wav&quot;,
+      &quot;sha256&quot;: &quot;29956405f600760a071c699af399b638d09b830afb6c408e527b7644d281b97b&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/29956405f600760a071c699af399b638d09b830afb6c408e527b7644d281b97b.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: false,
+    &quot;status&quot;: &quot;METRIC_UNAVAILABLE&quot;
+  }
+}</pre></details></article><article><h2>fb_004_transplant_v2</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>event_transplant · candidate_replace</p>
+<label>Before<audio controls src="audio/fb_004_transplant_v2__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_004_transplant_v2__after.wav"></audio></label><p>Comparison plot: METRIC_UNAVAILABLE</p>
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_004_transplant_v2&quot;,
+  &quot;failureId&quot;: &quot;fb_004&quot;,
+  &quot;repairAction&quot;: &quot;event_transplant&quot;,
+  &quot;sourceMode&quot;: &quot;candidate_replace&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.1195439385150812&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;0.0&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;0.5096854463032869&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_004_transplant_v2__before.wav&quot;,
+      &quot;sha256&quot;: &quot;c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_004_transplant_v2__after.wav&quot;,
+      &quot;sha256&quot;: &quot;8a005ac152a326d483723582e89732dbad7edde50c0314814621c3403d800836&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/8a005ac152a326d483723582e89732dbad7edde50c0314814621c3403d800836.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: false,
+    &quot;status&quot;: &quot;METRIC_UNAVAILABLE&quot;
+  }
+}</pre></details></article><article><h2>fb_005_transplant_v2</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>event_transplant · candidate_replace</p>
+<label>Before<audio controls src="audio/fb_005_transplant_v2__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_005_transplant_v2__after.wav"></audio></label><p>Comparison plot: METRIC_UNAVAILABLE</p>
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_005_transplant_v2&quot;,
+  &quot;failureId&quot;: &quot;fb_005&quot;,
+  &quot;repairAction&quot;: &quot;event_transplant&quot;,
+  &quot;sourceMode&quot;: &quot;candidate_replace&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.1197070765661253&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;0.0&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;5.665381912145692&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_005_transplant_v2__before.wav&quot;,
+      &quot;sha256&quot;: &quot;757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_005_transplant_v2__after.wav&quot;,
+      &quot;sha256&quot;: &quot;264c9ae21730dda35c2d1e14e972535f1533758ef3240525f5f184df08134249&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/264c9ae21730dda35c2d1e14e972535f1533758ef3240525f5f184df08134249.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: false,
+    &quot;status&quot;: &quot;METRIC_UNAVAILABLE&quot;
+  }
+}</pre></details></article><article><h2>fb_001_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>MICRO_DECLIP_LINEAR_PROBE · mixed_only</p>
+<label>Before<audio controls src="audio/fb_001_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_001_tuesday_repair__after.wav"></audio></label><img src="plots/fb_001_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_001_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_001&quot;,
+  &quot;repairAction&quot;: &quot;MICRO_DECLIP_LINEAR_PROBE&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.0006100281682028367&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-2.0&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_001_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_001_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_001_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;b1aa5a390ea8f6cad4d4ce5e8d667fe85763af73273bdd92bd87c005346b84ed&quot;
+  }
+}</pre></details></article><article><h2>fb_002_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>HEADROOM_ONLY · mixed_only</p>
+<label>Before<audio controls src="audio/fb_002_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_002_tuesday_repair__after.wav"></audio></label><img src="plots/fb_002_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_002_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_002&quot;,
+  &quot;repairAction&quot;: &quot;HEADROOM_ONLY&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.7852874405146198&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-0.016082763671875&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_002_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;0c3104de35bd3a63d69fcadaa59dca3bdbb007fcbffe3663be52f8ebaceea30d&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/0c3104de35bd3a63d69fcadaa59dca3bdbb007fcbffe3663be52f8ebaceea30d.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_002_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;ee86e7336556491776f67ec3c79fb715ced9cf194dfabc33ec00103859de1f21&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/ee86e7336556491776f67ec3c79fb715ced9cf194dfabc33ec00103859de1f21.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_002_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;9020e98f302e4384c30942082186691a295e32817cfcd7e174b525413848364c&quot;
+  }
+}</pre></details></article><article><h2>fb_003_semantic_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>smooth_region_attenuation · mixed_only</p>
+<label>Before<audio controls src="audio/fb_003_semantic_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_003_semantic_repair__after.wav"></audio></label><img src="plots/fb_003_semantic_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_003_semantic_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_003&quot;,
+  &quot;repairAction&quot;: &quot;smooth_region_attenuation&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.1195212804524362&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;0.0&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-1.607175660962641&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_003_semantic_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_003_semantic_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;9df53f63f62082020f8defa57bd00f3a4a0f430698126e767ae365ebfc078076&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/9df53f63f62082020f8defa57bd00f3a4a0f430698126e767ae365ebfc078076.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_003_semantic_repair.png&quot;,
+    &quot;sha256&quot;: &quot;8cb931bf63c69b09850e2980f73b77c2884e78375322e7c3cd61241e80eaa79f&quot;
+  }
+}</pre></details></article><article><h2>fb_003_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>SMOOTH_REGION_GAIN · mixed_only</p>
+<label>Before<audio controls src="audio/fb_003_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_003_tuesday_repair__after.wav"></audio></label><img src="plots/fb_003_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_003_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_003&quot;,
+  &quot;repairAction&quot;: &quot;SMOOTH_REGION_GAIN&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.12021344900131226&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-0.008130957266400271&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_003_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;3b536b36b0cb67d930076eb103f029065649a4988a1c9fc9ddc76b220943f3f5&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/3b536b36b0cb67d930076eb103f029065649a4988a1c9fc9ddc76b220943f3f5.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_003_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_003_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;8cb931bf63c69b09850e2980f73b77c2884e78375322e7c3cd61241e80eaa79f&quot;
+  }
+}</pre></details></article><article><h2>fb_006_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>MICRO_DECLIP_LINEAR_PROBE · mixed_only</p>
+<label>Before<audio controls src="audio/fb_006_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_006_tuesday_repair__after.wav"></audio></label><img src="plots/fb_006_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_006_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_006&quot;,
+  &quot;repairAction&quot;: &quot;MICRO_DECLIP_LINEAR_PROBE&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;9.211904796964916e-06&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-4.0&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_006_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;951c7cbafd1cb10ddabdf0fbb3fe43409909cc45bf82c2bd16cf55a22ae5284e&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/951c7cbafd1cb10ddabdf0fbb3fe43409909cc45bf82c2bd16cf55a22ae5284e.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_006_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;65786473598076b752b319930eb261f27e2b79dfbdfe7da1acfe3fe41289103d&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/65786473598076b752b319930eb261f27e2b79dfbdfe7da1acfe3fe41289103d.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_006_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;682f088773df67d1adf516f5df009a76c3766d2f240be0322f347fdead28b6f1&quot;
+  }
+}</pre></details></article><article><h2>fb_007_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>MICRO_DECLIP_LINEAR_PROBE · mixed_only</p>
+<label>Before<audio controls src="audio/fb_007_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_007_tuesday_repair__after.wav"></audio></label><img src="plots/fb_007_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_007_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_007&quot;,
+  &quot;repairAction&quot;: &quot;MICRO_DECLIP_LINEAR_PROBE&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;4.601575833656293e-06&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-1.0&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_007_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;6866aa239e29a8799890e4699d91b7017fed86ac88ead373eacc822981356bb2&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/6866aa239e29a8799890e4699d91b7017fed86ac88ead373eacc822981356bb2.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_007_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;5b222294d3d882aef051e4eebc7eb88cac5b2c8dd92c61ecb10b45d902b5525a&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/5b222294d3d882aef051e4eebc7eb88cac5b2c8dd92c61ecb10b45d902b5525a.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_007_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;27ee08a0a11572c3a04f5082a4f64ab069d09a73a6ad52db0c0629c1ce6a0e3a&quot;
+  }
+}</pre></details></article><article><h2>fb_009_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>MICRO_DECLIP_LINEAR_PROBE · mixed_only</p>
+<label>Before<audio controls src="audio/fb_009_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_009_tuesday_repair__after.wav"></audio></label><img src="plots/fb_009_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_009_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_009&quot;,
+  &quot;repairAction&quot;: &quot;MICRO_DECLIP_LINEAR_PROBE&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;1.642813285191854e-05&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-3.0&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_009_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;e16780d42b3e2121962ed1772c830ebb248c66defbf96637299b4c1da23186e5&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/e16780d42b3e2121962ed1772c830ebb248c66defbf96637299b4c1da23186e5.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_009_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;3ca9e8078c88fda925b71a5ea40c29b940f23c8ee0b4165764ad43b964feb6b9&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/3ca9e8078c88fda925b71a5ea40c29b940f23c8ee0b4165764ad43b964feb6b9.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_009_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;8cdcb19e470ea06bf09d71c8e79950bb9782b19e8e5720b0024470ada5a3b288&quot;
+  }
+}</pre></details></article><article><h2>fb_010_tuesday_repair</h2><p class="status">PROXY_IMPROVED · REVIEW_PENDING</p>
+<p>HEADROOM_ONLY · mixed_only</p>
+<label>Before<audio controls src="audio/fb_010_tuesday_repair__before.wav"></audio></label>
+<label>After<audio controls src="audio/fb_010_tuesday_repair__after.wav"></audio></label><img src="plots/fb_010_tuesday_repair.png" alt="comparison plot">
+<details><summary>Decision and integrity evidence</summary><pre>{
+  &quot;repairId&quot;: &quot;fb_010_tuesday_repair&quot;,
+  &quot;failureId&quot;: &quot;fb_010&quot;,
+  &quot;repairAction&quot;: &quot;HEADROOM_ONLY&quot;,
+  &quot;sourceMode&quot;: &quot;mixed_only&quot;,
+  &quot;decision&quot;: &quot;MANUAL_REVIEW&quot;,
+  &quot;workflowState&quot;: &quot;REVIEW_PENDING&quot;,
+  &quot;statusLabel&quot;: &quot;PROXY_IMPROVED \u00b7 REVIEW_PENDING&quot;,
+  &quot;metrics&quot;: {
+    &quot;edit_cost&quot;: &quot;0.9120979801813762&quot;,
+    &quot;ordering_correct&quot;: true,
+    &quot;outside_window_delta_db&quot;: &quot;&quot;,
+    &quot;severe_regression&quot;: false,
+    &quot;target_delta&quot;: &quot;-0.012176513671875&quot;
+  },
+  &quot;reason&quot;: &quot;forbidden-event detector unavailable; human label required&quot;,
+  &quot;artifacts&quot;: {
+    &quot;before&quot;: {
+      &quot;path&quot;: &quot;audio/fb_010_tuesday_repair__before.wav&quot;,
+      &quot;sha256&quot;: &quot;a9bd6f330ebf58f17c51ca3659f52b8d879a93323a526ea0c091fd9dc009c8d4&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/a9bd6f330ebf58f17c51ca3659f52b8d879a93323a526ea0c091fd9dc009c8d4.wav&quot;
+    },
+    &quot;after&quot;: {
+      &quot;path&quot;: &quot;audio/fb_010_tuesday_repair__after.wav&quot;,
+      &quot;sha256&quot;: &quot;2eb7189de4d66bf9d00ff5183964ddb3b2de62804409729211f0480eb2c97a09&quot;,
+      &quot;javaMaterializedPath&quot;: &quot;artifacts/week19/blobs/sha256/2eb7189de4d66bf9d00ff5183964ddb3b2de62804409729211f0480eb2c97a09.wav&quot;
+    }
+  },
+  &quot;comparisonPlot&quot;: {
+    &quot;available&quot;: true,
+    &quot;path&quot;: &quot;plots/fb_010_tuesday_repair.png&quot;,
+    &quot;sha256&quot;: &quot;4088f5316725537ba7e2290dcdbd8b629aa9d776ef6a29b792ab873cea1a8d15&quot;
+  }
+}</pre></details></article></body></html>

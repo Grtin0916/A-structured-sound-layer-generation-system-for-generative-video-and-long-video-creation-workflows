@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "recordCount": 12,
+  "rejectedCount": 2,
+  "uniqueRepairIds": 12,
+  "audioFiles": 24,
+  "zipCrcVerified": true,
+  "zipMemberSetVerified": true,
+  "checksumsVerified": true,
+  "finalSelectedCount": 0
+}

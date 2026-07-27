@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "repair-demo-manifest/v1",
+  "recordCount": 12,
+  "rejectedCount": 2,
+  "records": [
+    "fb_004_transplant_v1",
+    "fb_005_transplant_v1",
+    "fb_004_transplant_v2",
+    "fb_005_transplant_v2",
+    "fb_001_tuesday_repair",
+    "fb_002_tuesday_repair",
+    "fb_003_semantic_repair",
+    "fb_003_tuesday_repair",
+    "fb_006_tuesday_repair",
+    "fb_007_tuesday_repair",
+    "fb_009_tuesday_repair",
+    "fb_010_tuesday_repair"
+  ],
+  "files": [
+    {
+      "path": "audio/fb_001_tuesday_repair__after.wav",
+      "sha256": "a943c04eee778438d70468bbaa5533faa55ff4c72b426b0c6e71cb3f6e33f85b",
+      "sizeBytes": 702508
+    },
+    {
+      "path": "audio/fb_001_tuesday_repair__before.wav",
+      "sha256": "9a1af8895ee9fcb68f5f0768b9e6c0282a31a7bf3ca617dfc0a32a5236a631d7",
+      "sizeBytes": 702542
+    },
+    {
+      "path": "audio/fb_002_tuesday_repair__after.wav",
+      "sha256": "ee86e7336556491776f67ec3c79fb715ced9cf194dfabc33ec00103859de1f21",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_002_tuesday_repair__before.wav",
+      "sha256": "0c3104de35bd3a63d69fcadaa59dca3bdbb007fcbffe3663be52f8ebaceea30d",
+      "sizeBytes": 882766
+    },
+    {
+      "path": "audio/fb_003_semantic_repair__after.wav",
+      "sha256": "9df53f63f62082020f8defa57bd00f3a4a0f430698126e767ae365ebfc078076",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_003_semantic_repair__before.wav",
+      "sha256": "4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_003_tuesday_repair__after.wav",
+      "sha256": "4b5e7e2118972b8c800340bf1ccb61e2bd85e19549ad477c806515b13a228438",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_003_tuesday_repair__before.wav",
+      "sha256": "3b536b36b0cb67d930076eb103f029065649a4988a1c9fc9ddc76b220943f3f5",
+      "sizeBytes": 882766
+    },
+    {
+      "path": "audio/fb_004_transplant_v1__after.wav",
+      "sha256": "65e8287b36bea92de3cff2aa411e5cce60ec9f48b7e33147d6298a666572a3c5",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_004_transplant_v1__before.wav",
+      "sha256": "c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be",
+      "sizeBytes": 882766
+    },
+    {
+      "path": "audio/fb_004_transplant_v2__after.wav",
+      "sha256": "8a005ac152a326d483723582e89732dbad7edde50c0314814621c3403d800836",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_004_transplant_v2__before.wav",
+      "sha256": "c64f5f8a93b8225cc165032376cc30328e6dabf0de9712d384e2d0ec378c36be",
+      "sizeBytes": 882766
+    },
+    {
+      "path": "audio/fb_005_transplant_v1__after.wav",
+      "sha256": "29956405f600760a071c699af399b638d09b830afb6c408e527b7644d281b97b",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_005_transplant_v1__before.wav",
+      "sha256": "757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1",
+      "sizeBytes": 882766
+    },
+    {
+      "path": "audio/fb_005_transplant_v2__after.wav",
+      "sha256": "264c9ae21730dda35c2d1e14e972535f1533758ef3240525f5f184df08134249",
+      "sizeBytes": 882732
+    },
+    {
+      "path": "audio/fb_005_transplant_v2__before.wav",
+      "sha256": "757f55df30cacaae9c222bd5b2ee547b3841ca3098ad9ef9be63eaba9ff45db1",
+      "sizeBytes": 882766
+    },
+    {
+      "path": "audio/fb_006_tuesday_repair__after.wav",
+      "sha256": "65786473598076b752b319930eb261f27e2b79dfbdfe7da1acfe3fe41289103d",
+      "sizeBytes": 878636
+    },
+    {
+      "path": "audio/fb_006_tuesday_repair__before.wav",
+      "sha256": "951c7cbafd1cb10ddabdf0fbb3fe43409909cc45bf82c2bd16cf55a22ae5284e",
+      "sizeBytes": 878670
+    },
+    {
+      "path": "audio/fb_007_tuesday_repair__after.wav",
+      "sha256": "5b222294d3d882aef051e4eebc7eb88cac5b2c8dd92c61ecb10b45d902b5525a",
+      "sizeBytes": 878636
+    },
+    {
+      "path": "audio/fb_007_tuesday_repair__before.wav",
+      "sha256": "6866aa239e29a8799890e4699d91b7017fed86ac88ead373eacc822981356bb2",
+      "sizeBytes": 878670
+    },
+    {
+      "path": "audio/fb_009_tuesday_repair__after.wav",
+      "sha256": "3ca9e8078c88fda925b71a5ea40c29b940f23c8ee0b4165764ad43b964feb6b9",
+      "sizeBytes": 614444
+    },
+    {
+      "path": "audio/fb_009_tuesday_repair__before.wav",
+      "sha256": "e16780d42b3e2121962ed1772c830ebb248c66defbf96637299b4c1da23186e5",
+      "sizeBytes": 614478
+    },
+    {
+      "path": "audio/fb_010_tuesday_repair__after.wav",
+      "sha256": "2eb7189de4d66bf9d00ff5183964ddb3b2de62804409729211f0480eb2c97a09",
+      "sizeBytes": 614444
+    },
+    {
+      "path": "audio/fb_010_tuesday_repair__before.wav",
+      "sha256": "a9bd6f330ebf58f17c51ca3659f52b8d879a93323a526ea0c091fd9dc009c8d4",
+      "sizeBytes": 614478
+    },
+    {
+      "path": "data/records.json",
+      "sha256": "6168b469789fb2a680e57c2131534d1a5e92179af117fd486eec0fd39fb2ad63",
+      "sizeBytes": 16216
+    },
+    {
+      "path": "index.html",
+      "sha256": "f1a353de89d023676702639ce2d84714c9eb2176448c032d3d8d2529e8300fa9",
+      "sizeBytes": 26876
+    },
+    {
+      "path": "plots/fb_001_tuesday_repair.png",
+      "sha256": "b1aa5a390ea8f6cad4d4ce5e8d667fe85763af73273bdd92bd87c005346b84ed",
+      "sizeBytes": 5842
+    },
+    {
+      "path": "plots/fb_002_tuesday_repair.png",
+      "sha256": "9020e98f302e4384c30942082186691a295e32817cfcd7e174b525413848364c",
+      "sizeBytes": 3547
+    },
+    {
+      "path": "plots/fb_003_semantic_repair.png",
+      "sha256": "8cb931bf63c69b09850e2980f73b77c2884e78375322e7c3cd61241e80eaa79f",
+      "sizeBytes": 5603
+    },
+    {
+      "path": "plots/fb_003_tuesday_repair.png",
+      "sha256": "8cb931bf63c69b09850e2980f73b77c2884e78375322e7c3cd61241e80eaa79f",
+      "sizeBytes": 5603
+    },
+    {
+      "path": "plots/fb_006_tuesday_repair.png",
+      "sha256": "682f088773df67d1adf516f5df009a76c3766d2f240be0322f347fdead28b6f1",
+      "sizeBytes": 4300
+    },
+    {
+      "path": "plots/fb_007_tuesday_repair.png",
+      "sha256": "27ee08a0a11572c3a04f5082a4f64ab069d09a73a6ad52db0c0629c1ce6a0e3a",
+      "sizeBytes": 5019
+    },
+    {
+      "path": "plots/fb_009_tuesday_repair.png",
+      "sha256": "8cdcb19e470ea06bf09d71c8e79950bb9782b19e8e5720b0024470ada5a3b288",
+      "sizeBytes": 5705
+    },
+    {
+      "path": "plots/fb_010_tuesday_repair.png",
+      "sha256": "4088f5316725537ba7e2290dcdbd8b629aa9d776ef6a29b792ab873cea1a8d15",
+      "sizeBytes": 4263
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "ccec2b12afc939bc0f080b23b9d665c7734929da8e052ab113ae52c5d22db5ee",
+      "sizeBytes": 697
+    }
+  ]
+}
