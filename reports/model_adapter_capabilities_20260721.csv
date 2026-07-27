@@ -1,0 +1,7 @@
+adapter_id,task_type,resource_class,status,repository,imports,checkpoint,checkpoint_digest,checkpoint_size_bytes,device,dtype,entrypoint,model_revision,license_url,license_accepted,estimated_vram_mb,failure_code,reason
+replay,replay,io,READY,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1,,,,0,cpu,float32,,,,False,0,,stdlib execution path
+control,control,cpu,READY,/home/GRT/work/grt_work/audio_engineering_repo_skeleton_v1,,,,0,cpu,float32,,stdlib-sine-v1,,False,0,,stdlib execution path
+mmaudio,v2a,gpu,DEPENDENCY_MISSING,/home/GRT/work/_external/MMAudio,"torch,torchaudio",/home/GRT/work/_external/MMAudio/weights/mmaudio_small_44k.pth,sha256:11fd92e860a58f0fac972706dd06034e49dceff2e1450bbde5703785c812b0f1,629946624,cpu,float32,demo.py,local-checkout,https://github.com/hkchengrex/MMAudio,False,6144,DEPENDENCY_MISSING,"missing imports: torch,torchaudio"
+mmaudio_missing_checkpoint_probe,v2a,gpu,CHECKPOINT_MISSING,/home/GRT/work/_external/MMAudio,torch,,,0,cpu,float32,demo.py,failure-injection,,False,0,CHECKPOINT_MISSING,no configured checkpoint exists
+foleycrafter,v2a,gpu,REPOSITORY_MISSING,/home/GRT/work/_external/FoleyCrafter,"torch,diffusers",,,0,cpu,float32,inference.py,unknown,,False,0,REPOSITORY_MISSING,repository not found: /home/GRT/work/_external/FoleyCrafter
+tangoflux,t2a,gpu,REPOSITORY_MISSING,/home/GRT/work/_external/TangoFlux,"torch,transformers",,,0,cpu,float32,inference.py,unknown,,False,0,REPOSITORY_MISSING,repository not found: /home/GRT/work/_external/TangoFlux

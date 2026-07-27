@@ -1,0 +1,23 @@
+{
+  "matrix_id": "w20_candidate_matrix_20260721",
+  "source_commit": "18fb9ae",
+  "inventory": "reports/demo_case_inventory_20260720.json",
+  "output_dir": "artifacts/model_runs/w20_candidate_matrix_20260721",
+  "case_count": 12,
+  "seed_base": 20260721,
+  "resources": {"gpu": 1, "cpu": 4, "io": 8},
+  "slots": [
+    {"slot_id": "v2a_primary", "adapter_id": "mmaudio", "requested_mode": "LIVE", "resource_class": "gpu", "timeout_sec": 900},
+    {"slot_id": "v2a_temporal", "adapter_id": "foleycrafter", "requested_mode": "LIVE", "resource_class": "gpu", "timeout_sec": 900},
+    {"slot_id": "t2a_dss", "adapter_id": "tangoflux", "requested_mode": "LIVE", "resource_class": "gpu", "timeout_sec": 600},
+    {"slot_id": "control", "adapter_id": "control", "requested_mode": "CONTROL", "resource_class": "cpu", "timeout_sec": 30}
+  ],
+  "adapters": [
+    {"adapter_id": "replay", "task_type": "replay", "resource_class": "io"},
+    {"adapter_id": "control", "task_type": "control", "resource_class": "cpu", "model_revision": "stdlib-sine-v1"},
+    {"adapter_id": "mmaudio", "task_type": "v2a", "resource_class": "gpu", "repository": "/home/GRT/work/_external/MMAudio", "required_imports": ["torch", "torchaudio"], "checkpoint_candidates": ["weights/mmaudio_small_44k.pth"], "entrypoint": "demo.py", "model_revision": "local-checkout", "license_url": "https://github.com/hkchengrex/MMAudio", "license_accepted": false, "estimated_vram_mb": 6144},
+    {"adapter_id": "mmaudio_missing_checkpoint_probe", "task_type": "v2a", "resource_class": "gpu", "repository": "/home/GRT/work/_external/MMAudio", "required_imports": ["torch"], "checkpoint_candidates": ["weights/intentionally_missing.pth"], "entrypoint": "demo.py", "model_revision": "failure-injection", "license_accepted": false},
+    {"adapter_id": "foleycrafter", "task_type": "v2a", "resource_class": "gpu", "repository": "/home/GRT/work/_external/FoleyCrafter", "required_imports": ["torch", "diffusers"], "checkpoint_candidates": ["checkpoints"], "entrypoint": "inference.py", "model_revision": "unknown", "license_accepted": false},
+    {"adapter_id": "tangoflux", "task_type": "t2a", "resource_class": "gpu", "repository": "/home/GRT/work/_external/TangoFlux", "required_imports": ["torch", "transformers"], "checkpoint_candidates": ["model.safetensors"], "entrypoint": "inference.py", "model_revision": "unknown", "license_accepted": false}
+  ]
+}

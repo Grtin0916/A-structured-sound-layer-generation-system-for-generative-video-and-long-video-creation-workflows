@@ -1,0 +1,15 @@
+{
+  "initialRunMs": 824,
+  "resumeRunMs": 739,
+  "deletedSlotKey": "sha256:7eb05b4518c908f7721fa31b55bf4e2427231f20146bf28e4327b8763cf17e43",
+  "staleRerunCount": 1,
+  "resumeReusedCount": 11,
+  "unaffectedDigestMatch": true,
+  "duplicateArtifactCount": 0,
+  "gpuCapacity": 1,
+  "cpuCapacity": 4,
+  "ioCapacity": 8,
+  "timeoutFailureCode": "TIMEOUT",
+  "timeoutIsolationVerified": true,
+  "status": "PASS"
+}
