@@ -1,0 +1,41 @@
+{
+  "doNotOpenBeforeReview": true,
+  "pairs": [
+    {
+      "a_role": "after_or_rejected",
+      "b_role": "before",
+      "failure_id": "fb_001",
+      "pair_id": "ab_01"
+    },
+    {
+      "a_role": "after_or_rejected",
+      "b_role": "before",
+      "failure_id": "fb_002",
+      "pair_id": "ab_02"
+    },
+    {
+      "a_role": "before",
+      "b_role": "after_or_rejected",
+      "failure_id": "fb_003",
+      "pair_id": "ab_03"
+    },
+    {
+      "a_role": "after_or_rejected",
+      "b_role": "before",
+      "failure_id": "fb_008",
+      "pair_id": "ab_04"
+    },
+    {
+      "a_role": "before",
+      "b_role": "after_or_rejected",
+      "failure_id": "fb_006",
+      "pair_id": "ab_05"
+    },
+    {
+      "a_role": "after_or_rejected",
+      "b_role": "before",
+      "failure_id": "fb_007",
+      "pair_id": "ab_06"
+    }
+  ]
+}

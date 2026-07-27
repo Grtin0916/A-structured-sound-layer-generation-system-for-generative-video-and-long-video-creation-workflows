@@ -1,0 +1,10 @@
+{
+  "failures": [
+    {
+      "detected_subtype": "long_flat_top",
+      "failure_id": "fb_008",
+      "reason": "long flat-top cannot be reconstructed deterministically",
+      "status": "REPAIR_BLOCKED"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+test_candidate_replace_is_explicitly_blocked (tests.test_repair_policy.RepairPolicyTest) ... ok
+test_clipping_compiles_to_bounded_attenuation (tests.test_repair_policy.RepairPolicyTest) ... ok
+test_unknown_failure_has_no_policy (tests.test_repair_policy.RepairPolicyTest) ... ok
+test_long_flat_top_is_blocked (tests.test_repair_metrics.RepairMetricsTest) ... ok
+test_peak_without_run_is_near_ceiling (tests.test_repair_metrics.RepairMetricsTest) ... ok
+test_silence_edges_and_event_energy_are_reported (tests.test_repair_metrics.RepairMetricsTest) ... ok
+test_stereo_geometry_uses_frames (tests.test_repair_metrics.RepairMetricsTest) ... ok
+test_headroom_is_noop_below_ceiling (tests.test_signal_repair.SignalRepairTest) ... ok
+test_headroom_reduces_peak_without_nonfinite_values (tests.test_signal_repair.SignalRepairTest) ... ok
+test_micro_declip_blocks_long_run (tests.test_signal_repair.SignalRepairTest) ... ok
+test_micro_declip_changes_short_run (tests.test_signal_repair.SignalRepairTest) ... ok
+test_region_gain_clamps_boundary_window (tests.test_signal_repair.SignalRepairTest) ... ok
+test_region_gain_does_not_change_outside_window (tests.test_signal_repair.SignalRepairTest) ... ok
+test_trim_preserves_all_silent_input (tests.test_signal_repair.SignalRepairTest) ... ok
+test_trim_removes_edges_and_preserves_channels (tests.test_signal_repair.SignalRepairTest) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+OK

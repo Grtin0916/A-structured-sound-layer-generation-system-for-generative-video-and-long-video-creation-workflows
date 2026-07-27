@@ -120,3 +120,20 @@ def compile_policy(failure_type: str, has_stems: bool = False) -> dict[str, Any]
         result["blocked_reason"] = ""
         result["execution_ready"] = True
     return result
+
+
+def route_action(
+    failure_type: str, detected_subtype: str, planned_action: str
+) -> tuple[str, str]:
+    """Correct an action only when the diagnosed subtype makes it incompatible."""
+    if failure_type in {"silence", "excessive_silence"}:
+        if detected_subtype == "weak_event_window":
+            return "event_local_gain", "global trim cannot improve a weak event window"
+        return "trim", "edge silence is compatible with bounded trimming"
+    if failure_type == "clipping":
+        if detected_subtype == "short_flat_top":
+            return "micro_declip", "short flat-top permits a conservative interpolation probe"
+        if detected_subtype == "long_flat_top":
+            return "manual_review", "long flat-top has insufficient deterministic information"
+        return "attenuate_limit", "near-ceiling peak permits headroom-only attenuation"
+    return planned_action, "planned action retained"

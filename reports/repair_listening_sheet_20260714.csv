@@ -1,0 +1,7 @@
+pair_id,failure_id,audio_a,audio_b,preference,reason,confidence,audible_artifact,review_status,mapping_hidden
+ab_01,fb_001,artifacts/repair/listening_20260714/pair_01/a.wav,artifacts/repair/listening_20260714/pair_01/b.wav,,,,,PENDING_HUMAN_LISTENING,true
+ab_02,fb_002,artifacts/repair/listening_20260714/pair_02/a.wav,artifacts/repair/listening_20260714/pair_02/b.wav,,,,,PENDING_HUMAN_LISTENING,true
+ab_03,fb_003,artifacts/repair/listening_20260714/pair_03/a.wav,artifacts/repair/listening_20260714/pair_03/b.wav,,,,,PENDING_HUMAN_LISTENING,true
+ab_04,fb_008,artifacts/repair/listening_20260714/pair_04/a.wav,artifacts/repair/listening_20260714/pair_04/b.wav,,,,,PENDING_HUMAN_LISTENING,true
+ab_05,fb_006,artifacts/repair/listening_20260714/pair_05/a.wav,artifacts/repair/listening_20260714/pair_05/b.wav,,,,,PENDING_HUMAN_LISTENING,true
+ab_06,fb_007,artifacts/repair/listening_20260714/pair_06/a.wav,artifacts/repair/listening_20260714/pair_06/b.wav,,,,,PENDING_HUMAN_LISTENING,true

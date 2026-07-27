@@ -1,0 +1,9 @@
+PASS case_1: 0
+PASS case_2: -1
+PASS case_3: 1
+PASS case_4: 2
+PASS case_5: -1
+PASS case_6: 2
+PASS case_7: 3
+PASS case_8: 3
+PASS 8 tests
