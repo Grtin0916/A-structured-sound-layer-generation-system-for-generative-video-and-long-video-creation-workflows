@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "preference-pair-inventory/v1",
+  "status": "PAIR_POOL_READY",
+  "summary": {
+    "requestedUniquePairCount": 36,
+    "uniquePairCount": 36,
+    "uniquePairShortfall": 0,
+    "hiddenRepeatCount": 8,
+    "auditPairCount": 4,
+    "judgmentCount": 48,
+    "caseCoverage": 12,
+    "sameDigestPairCount": 0,
+    "connectedCaseGraphCount": 12,
+    "uniqueContentPairCount": 32,
+    "duplicateContentComparisonCount": 4,
+    "insufficientVariationCaseCount": 0,
+    "finalSelectedMutationCount": 0
+  }
+}

@@ -1,0 +1,10 @@
+LC528 PASS 9/9
+PASS single_weight
+PASS indices_in_range
+PASS heavier_bucket_wins
+PASS seed_reproducible
+PASS prefix_sum
+PASS total_weight
+PASS reject_empty
+PASS reject_zero
+PASS reject_negative

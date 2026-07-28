@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "blind-review-pack/v1",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "pairCount": 48,
+  "mediaFileCount": 108,
+  "missingArtifactCount": 0,
+  "progressPersistence": "localStorage",
+  "exports": [
+    "CSV",
+    "JSON"
+  ],
+  "finalSelectedMutationCount": 0
+}

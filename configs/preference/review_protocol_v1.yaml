@@ -1,0 +1,29 @@
+{
+  "protocol_version": "preference-v1",
+  "reviewer_count": 1,
+  "calibration_pair_count": 4,
+  "pilot_pair_count": 8,
+  "formal_block_count": 4,
+  "rest_minutes_between_blocks": 5,
+  "preferences": ["LEFT", "RIGHT", "TIE", "UNJUDGEABLE"],
+  "dimensions": ["timing", "event_coverage", "audio_quality", "unwanted_event"],
+  "confidence_scale": [1, 2, 3, 4, 5],
+  "reason_codes": [
+    "BETTER_SYNC",
+    "BETTER_EVENT_COVERAGE",
+    "CLEANER_AUDIO",
+    "FEWER_UNWANTED_EVENTS",
+    "BETTER_BALANCE",
+    "NO_MEANINGFUL_DIFFERENCE",
+    "PLAYBACK_OR_CONTENT_ISSUE"
+  ],
+  "training_gate": {
+    "judgment_count": 48,
+    "unique_pair_count": 36,
+    "valid_unique_non_tie_count": 30,
+    "case_coverage": 12,
+    "connected_case_graph_count": 12,
+    "hidden_repeat_valid_count": 6,
+    "hidden_repeat_consistency": 0.75
+  }
+}

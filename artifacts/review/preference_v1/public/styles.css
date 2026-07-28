@@ -1,0 +1,6 @@
+body{font-family:system-ui,sans-serif;background:#f5f3ee;color:#202020;margin:0}
+main{max-width:900px;margin:auto;padding:24px}header,.media,form,nav{background:white;padding:18px;margin:12px 0;border-radius:10px}
+video{display:block;width:100%;max-height:360px;background:#111}.players{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+button{padding:12px;border:1px solid #333;border-radius:7px;background:#f8f8f8;cursor:pointer}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:flex;flex-direction:column;gap:5px}.wide{grid-column:1/-1}
+select,input,textarea{font:inherit;padding:8px}nav{display:flex;gap:10px;flex-wrap:wrap}.note{color:#555}@media(max-width:650px){form{grid-template-columns:1fr}.wide{grid-column:auto}}

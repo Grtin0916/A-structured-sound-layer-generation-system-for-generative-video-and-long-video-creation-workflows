@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "preference-quality-gate/v1",
+  "status": "REVIEW_QUALITY_BLOCKED",
+  "metrics": {
+    "judgmentCount": 0,
+    "validJudgmentCount": 0,
+    "uniquePairCount": 36,
+    "uniqueContentPairCount": 32,
+    "duplicateContentComparisonCount": 4,
+    "validUniqueNonTieCount": 0,
+    "caseCoverage": 0,
+    "connectedCaseGraphCount": 12,
+    "hiddenRepeatValidCount": 0,
+    "hiddenRepeatConsistency": null,
+    "sameDigestPairCount": 0,
+    "missingArtifactCount": 0,
+    "blindLeakCount": 0,
+    "finalSelectedMutationCount": 0,
+    "leftPreferenceCount": 0,
+    "rightPreferenceCount": 0,
+    "tieCount": 0,
+    "unjudgeableCount": 0,
+    "invalidJudgmentCount": 0
+  },
+  "checks": {
+    "judgmentCount": false,
+    "uniquePairCount": true,
+    "uniqueContentPairCount": true,
+    "validUniqueNonTieCount": false,
+    "caseCoverage": false,
+    "connectedCaseGraphCount": true,
+    "hiddenRepeatValidCount": false,
+    "hiddenRepeatConsistency": false,
+    "sameDigestPairCount": true,
+    "missingArtifactCount": true,
+    "blindLeakCount": true,
+    "finalSelectedMutationCount": true,
+    "validJudgments": true
+  },
+  "invalidJudgments": [],
+  "blindLeakTokens": [],
+  "claimBoundary": {
+    "humanPairPreferenceOnly": true,
+    "rankerTrainingPerformed": false,
+    "finalSelectedMutationAllowed": false,
+    "interRaterAgreementClaimed": false
+  }
+}

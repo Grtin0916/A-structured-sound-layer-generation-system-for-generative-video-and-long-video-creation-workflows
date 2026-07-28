@@ -1,0 +1,1 @@
+"""Preference-lab tests."""

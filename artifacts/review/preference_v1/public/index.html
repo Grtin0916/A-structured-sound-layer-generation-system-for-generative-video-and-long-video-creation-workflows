@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>声音偏好盲测</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header><h1>声音偏好盲测</h1><p id="progress">正在载入…</p></header>
+  <section class="media">
+    <video id="video" muted playsinline controls></video>
+    <div class="players">
+      <button id="playA">播放声音 A</button>
+      <button id="playB">播放声音 B</button>
+    </div>
+    <audio id="audioA"></audio><audio id="audioB"></audio>
+  </section>
+  <form id="form">
+    <label>总体偏好<select name="overall_preference" required></select></label>
+    <label>时序<select name="timing_preference"></select></label>
+    <label>事件覆盖<select name="event_coverage_preference"></select></label>
+    <label>音质<select name="audio_quality_preference"></select></label>
+    <label>多余声音<select name="unwanted_event_preference"></select></label>
+    <label>置信度（1-5）<input name="confidence" type="number" min="1" max="5" required></label>
+    <label>原因代码<select name="reason_codes"></select></label>
+    <label class="wide">简短原因<textarea name="free_text_reason" rows="2"></textarea></label>
+    <label>评审人代号<input name="reviewer_id" autocomplete="off"></label>
+  </form>
+  <nav>
+    <button id="prev">上一组</button>
+    <button id="save">保存并下一组</button>
+    <button id="exportJson">导出 JSON</button>
+    <button id="exportCsv">导出 CSV</button>
+  </nav>
+  <p class="note">页面仅保存本机浏览器进度。TIE/UNJUDGEABLE 可用于确实无法判断的情况。</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
