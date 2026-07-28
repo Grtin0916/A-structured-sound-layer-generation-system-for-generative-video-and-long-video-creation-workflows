@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "preference-dataset-leakage-audit/v1",
+  "status": "DATA_BLOCKED",
+  "qualityGateStatus": "REVIEW_QUALITY_BLOCKED",
+  "groupLeakageRiskCount": 0,
+  "identityFeatureCount": 0,
+  "identityFeatures": [],
+  "canonicalDuplicateCount": 0,
+  "hiddenRepeatTrainingCount": 0,
+  "auditTrainingCount": 0,
+  "missingCoreFeatureCount": 0,
+  "featureNames": [
+    "event_coverage",
+    "priority_weighted_coverage",
+    "onset_error_ms",
+    "tolerance_violation_count",
+    "event_window_energy",
+    "outside_window_energy",
+    "clip_ratio",
+    "silence_ratio",
+    "peak_abs",
+    "duration_error_ms",
+    "changed_sample_ratio",
+    "repair_action_count",
+    "source_reliability"
+  ],
+  "blockedReasons": [
+    "human preference quality gate is not TRAINING_ELIGIBLE",
+    "no model training is authorized"
+  ]
+}

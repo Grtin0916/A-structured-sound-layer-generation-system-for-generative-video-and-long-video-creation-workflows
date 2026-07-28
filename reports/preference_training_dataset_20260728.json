@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "preference-training-dataset/v1",
+  "status": "DATA_BLOCKED",
+  "trainingAllowedByQualityGate": false,
+  "independentPairCount": 0,
+  "caseCount": 0,
+  "canonicalDuplicateCount": 0,
+  "hiddenRepeatTrainingCount": 0,
+  "auditTrainingCount": 0,
+  "missingCoreFeatureCount": 0,
+  "datasetDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "exclusionCounts": {
+    "not_submitted": 48,
+    "hidden_repeat": 0,
+    "audit": 0,
+    "tie_or_unjudgeable": 0,
+    "canonical_duplicate": 0,
+    "missing_feature": 0,
+    "same_digest": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "ranker_version": "preference-ranker-v1",
+  "algorithm": "l2-pairwise-logistic",
+  "l2": 1.0,
+  "learning_rate": 0.08,
+  "epochs": 1200,
+  "random_seed": 20260728,
+  "outer_cv": "leave-one-case-out",
+  "reverse_augmentation": "train-fold-only",
+  "minimum_independent_pairs": 30,
+  "minimum_test_cases": 8,
+  "candidate_balanced_accuracy": 0.65,
+  "candidate_rule_delta": 0.05,
+  "maximum_symmetry_error": 0.000001,
+  "recommendation_state": "RANKER_RECOMMENDED",
+  "allow_final_selected_mutation": false
+}

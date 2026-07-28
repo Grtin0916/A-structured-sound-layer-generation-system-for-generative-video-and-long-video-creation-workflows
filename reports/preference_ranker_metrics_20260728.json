@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "preference-ranker-metrics/v1",
+  "status": "DATA_BLOCKED",
+  "promotionStatus": "DATA_BLOCKED",
+  "independentPairCount": 0,
+  "oofTestCaseCount": 0,
+  "metrics": {},
+  "blockedReasons": [
+    "independent pair count 0 is below 30; human quality gate remains blocked"
+  ],
+  "rankerRecommendationCount": 0,
+  "finalSelectedMutationCount": 0
+}

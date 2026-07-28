@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "preference-ranker-symmetry/v1",
+  "status": "NOT_RUN_DATA_BLOCKED",
+  "meanSymmetryError": null,
+  "maxSymmetryError": null,
+  "violationCount": null
+}

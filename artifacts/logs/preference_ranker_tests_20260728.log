@@ -1,0 +1,31 @@
+test_audit_is_excluded (test_preference_ranker.DatasetTests) ... ok
+test_canonical_duplicate_is_removed (test_preference_ranker.DatasetTests) ... ok
+test_canonical_key_is_unordered (test_preference_ranker.DatasetTests) ... ok
+test_digest_orientation_controls_feature_sign (test_preference_ranker.DatasetTests) ... ok
+test_hidden_repeat_is_excluded (test_preference_ranker.DatasetTests) ... ok
+test_hydration_restores_private_truth (test_preference_ranker.DatasetTests) ... ok
+test_quality_gate_blocks_all_training_rows (test_preference_ranker.DatasetTests) ... ok
+test_tie_is_excluded (test_preference_ranker.DatasetTests) ... ok
+test_training_eligible_builds_canonical_row (test_preference_ranker.DatasetTests) ... ok
+test_audio_feature_extraction_is_complete (test_preference_ranker.FeatureTests) ... ok
+test_difference_uses_left_minus_right (test_preference_ranker.FeatureTests) ... ok
+test_disjoint_groups_pass (test_preference_ranker.LeakageTests) ... ok
+test_group_overlap_detected (test_preference_ranker.LeakageTests) ... ok
+test_identity_features_rejected (test_preference_ranker.LeakageTests) ... ok
+test_identity_names_detected (test_preference_ranker.LeakageTests) ... ok
+test_safe_features_pass (test_preference_ranker.LeakageTests) ... ok
+test_cluster_bootstrap_empty (test_preference_ranker.LogisticTests) ... ok
+test_cluster_bootstrap_is_deterministic (test_preference_ranker.LogisticTests) ... ok
+test_leave_one_case_out_emits_original_rows_only (test_preference_ranker.LogisticTests) ... ok
+test_logistic_learns_separable_data (test_preference_ranker.LogisticTests) ... ok
+test_logistic_rejects_one_class (test_preference_ranker.LogisticTests) ... ok
+test_reverse_augmentation (test_preference_ranker.LogisticTests) ... ok
+test_scaler_is_train_data_only_primitive (test_preference_ranker.LogisticTests) ... ok
+test_sigmoid_extremes_are_stable (test_preference_ranker.LogisticTests) ... ok
+test_sigmoid_zero (test_preference_ranker.LogisticTests) ... ok
+test_symmetry_with_zero_intercept (test_preference_ranker.LogisticTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.222s
+
+OK

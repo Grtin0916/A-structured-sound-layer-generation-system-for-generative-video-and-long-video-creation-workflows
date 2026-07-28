@@ -1,0 +1,6 @@
+{
+  "python": "3.10.12",
+  "implementation": "CPython",
+  "sklearnAvailable": false,
+  "joblibAvailable": false
+}

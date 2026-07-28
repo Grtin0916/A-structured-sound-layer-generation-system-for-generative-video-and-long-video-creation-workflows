@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "preference-ranker-evaluation/v1",
+  "status": "NOT_RUN_DATA_BLOCKED",
+  "promotionStatus": "DATA_BLOCKED",
+  "bootstrapUnit": "case_id",
+  "bootstrapResamples": 10000,
+  "metricsAvailable": false,
+  "explanationsAvailable": false,
+  "finalSelectedMutationCount": 0
+}

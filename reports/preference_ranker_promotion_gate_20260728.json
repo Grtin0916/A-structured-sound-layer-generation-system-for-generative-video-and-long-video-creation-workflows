@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "preference-ranker-promotion/v1",
+  "promotionStatus": "DATA_BLOCKED",
+  "checks": {
+    "qualityGate": false,
+    "independentPairs": false
+  },
+  "reason": "independent pair count 0 is below 30; human quality gate remains blocked",
+  "finalSelectedMutationCount": 0
+}
