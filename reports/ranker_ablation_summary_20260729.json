@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "ranker-ablation-summary/v1",
+  "status": "RANKER_ABLATION_BLOCKED",
+  "rowCount": 48,
+  "caseCount": 12,
+  "strategyCounts": {
+    "A": 12,
+    "B": 12,
+    "C": 12,
+    "D": 12
+  },
+  "recommendationStatusCounts": {
+    "PUBLISH_BLOCKED": 32,
+    "ABLATION_DATA_BLOCKED": 16
+  },
+  "humanReferenceStatusCounts": {
+    "INSUFFICIENT_COMPARISON": 12
+  },
+  "learnedMetricAvailable": false,
+  "riskCoverageAvailable": false,
+  "highConfidenceErrorCount": 0,
+  "finalSelectedMutationCount": 0,
+  "blockedReasons": [
+    "no real OOF probabilities; learned ablation is not authorized"
+  ]
+}

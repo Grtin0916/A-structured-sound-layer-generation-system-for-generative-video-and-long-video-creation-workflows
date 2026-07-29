@@ -1,0 +1,15 @@
+{
+  "schema_version": "ranker-ablation-v1",
+  "strategies": ["R0_RULE", "R1_LEARNED", "R2_DSS_INTERACTION", "R3_SELECTIVE_HYBRID"],
+  "dss_interaction_allowlist": [
+    "priority_coverage_x_event_energy",
+    "priority_coverage_x_inverse_onset",
+    "tolerance_violation_x_priority",
+    "outside_energy_x_repair_count"
+  ],
+  "minimum_margin": 0.12,
+  "maximum_clip_ratio": 0.001,
+  "maximum_duration_error_ms": 1500,
+  "active_pair_count": 12,
+  "allow_final_selected_mutation": false
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "active-pair-selection/v1",
+  "status": "ACTIVE_LEARNING_BLOCKED",
+  "requestedPairCount": 12,
+  "selectedPairCount": 0,
+  "remainingValidPairCount": 9,
+  "modelAvailable": false,
+  "oofAvailable": false,
+  "sameDigestPairCount": 0,
+  "crossCasePairCount": 0,
+  "alreadyLabeledPairCount": 0,
+  "finalSelectedMutationCount": 0,
+  "blockedReasons": [
+    "portable ranker contract is unavailable",
+    "real OOF probabilities are unavailable"
+  ]
+}

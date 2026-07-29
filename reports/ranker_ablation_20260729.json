@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "ranker-ablation/v1",
+  "status": "RANKER_ABLATION_BLOCKED",
+  "summary": {
+    "rowCount": 48,
+    "caseCount": 12,
+    "strategyCount": 4,
+    "ruleDiagnosticCount": 48,
+    "ruleDiagnosticWinnerCaseCount": 8,
+    "learnedScoreCount": 0,
+    "rankerRecommendationCount": 0,
+    "publishBlockedCount": 32,
+    "dataBlockedCount": 16,
+    "finalSelectedMutationCount": 0
+  },
+  "modelAvailable": false,
+  "humanReferenceAvailable": false,
+  "blockedReasons": [
+    "real OOF model is unavailable because human labels are not submitted"
+  ]
+}

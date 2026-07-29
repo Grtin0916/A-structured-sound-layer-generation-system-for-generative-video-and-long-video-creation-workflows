@@ -1,0 +1,13 @@
+case_id,candidate_count,observed_edge_count,decisive_edge_count,tie_count,unjudgeable_count,cycle_count,transitivity_violation_count,reference_status,human_top_candidates
+fb_001_tuesday_repair,4,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_002_tuesday_repair,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_003_semantic_repair,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_004_transplant_v1,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_005_transplant_v1,4,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_006_tuesday_repair,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_007_tuesday_repair,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_009_tuesday_repair,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_010_tuesday_repair,3,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_011_semantic_repair,2,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_011_tuesday_repair,2,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]
+fb_012_tuesday_repair,4,0,0,0,0,0,0,INSUFFICIENT_COMPARISON,[]

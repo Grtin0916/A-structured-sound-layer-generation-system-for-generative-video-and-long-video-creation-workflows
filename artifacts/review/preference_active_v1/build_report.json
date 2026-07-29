@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "active-review-pack/v1",
+  "status": "ACTIVE_LEARNING_BLOCKED",
+  "pairCount": 0,
+  "mediaCopiedCount": 0,
+  "reason": "active pair queue is empty",
+  "finalSelectedMutationCount": 0
+}

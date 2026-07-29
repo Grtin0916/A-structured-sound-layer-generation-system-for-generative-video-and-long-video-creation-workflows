@@ -1,0 +1,13 @@
+case_id,reference_status,human_top_candidates
+fb_001_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_002_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_003_semantic_repair,INSUFFICIENT_COMPARISON,[]
+fb_004_transplant_v1,INSUFFICIENT_COMPARISON,[]
+fb_005_transplant_v1,INSUFFICIENT_COMPARISON,[]
+fb_006_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_007_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_009_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_010_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_011_semantic_repair,INSUFFICIENT_COMPARISON,[]
+fb_011_tuesday_repair,INSUFFICIENT_COMPARISON,[]
+fb_012_tuesday_repair,INSUFFICIENT_COMPARISON,[]
