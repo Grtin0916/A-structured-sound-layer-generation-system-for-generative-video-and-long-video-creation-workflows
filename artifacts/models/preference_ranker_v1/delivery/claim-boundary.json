@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "ranker-claim-boundary/v1",
+  "proxyOnly": true,
+  "humanGateRequired": true,
+  "autoFinalForbidden": true,
+  "humanPairPreferenceOnly": true,
+  "rankerRecommendationIsPublishDecision": false,
+  "finalSelectedMutationCount": 0
+}

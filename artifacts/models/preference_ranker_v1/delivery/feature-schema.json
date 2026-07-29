@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "preference-features-v1",
+  "featureNames": [
+    "event_coverage",
+    "priority_weighted_coverage",
+    "onset_error_ms",
+    "tolerance_violation_count",
+    "event_window_energy",
+    "outside_window_energy",
+    "clip_ratio",
+    "silence_ratio",
+    "peak_abs",
+    "duration_error_ms",
+    "changed_sample_ratio",
+    "repair_action_count",
+    "source_reliability"
+  ],
+  "identityFeaturesAllowed": false
+}

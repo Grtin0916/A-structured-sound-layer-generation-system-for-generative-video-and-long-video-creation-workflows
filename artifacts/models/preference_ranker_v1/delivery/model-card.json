@@ -1,0 +1,13 @@
+{
+  "rankerVersion": "preference-ranker-v1",
+  "algorithm": "L2 pairwise logistic regression",
+  "promotionStatus": "DATA_BLOCKED",
+  "trainingPerformed": false,
+  "knownLimitations": [
+    "independent pair count 0 is below 30; human quality gate remains blocked",
+    "scikit-learn and joblib are unavailable in the current environment"
+  ],
+  "modelArtifactProduced": false,
+  "portableContractProduced": false,
+  "finalSelectedMutationCount": 0
+}
